@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>SUPER JUNIOR-K.R.Y.</title>
+
+  <style>
+    /* Estilos para el header */
+
+    header {
+      background-color: black;
+      position: relative;
+      z-index: 1;
+    }
+
+    div.cabecera {
+      position: relative;
+      color: white;
+      margin: 0px;
+      padding: 0px;
+      z-index: 1;
+    }
+
+    div.menucab {
+      position: absolute;
+      bottom: 2px;
+      left: 16px;
+      z-index: 1;
+    }
+
+    img.cabecera {
+      max-height: 200px;
+      position: relative;
+      z-index: 1;
+    }
+
+    table.cabecera {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    td.cabecera {
+      padding-right: 40px;
+      vertical-align: text-bottom;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Estilos de los enlaces */
+
+    a {
+      color: violet;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: purple;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: darkviolet;
+      text-decoration: none;
+    }
+
+    a:active {
+      color: darkred;
+      text-decoration: none;
+    }
+
+    /* Estilos para el contenido de la página */
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: whitesmoke;
+      background-image: url(./img/sjlogo.svg);
+      background-repeat: repeat;
+    }
+
+    main {
+      margin-left: 150px;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
+
+    /* Estilos para el menú lateral */
+
+    nav ol {
+      list-style-type: none;
+      padding-left: 20px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    div.nav {
+      height: 100%;
+      position: fixed;
+      bottom: 0%;
+      float: left;
+      z-index: 0;
+      top: 0px;
+      left: 0;
+      overflow-x: hidden;
+      width: 120px;
+      background-color: black;
+      color: white;
+      padding-top: 220px;
+    }
+
+    /* Estilos para el footer */
+
+    footer {
+      text-align: center;
+      background-color: black;
+      width: 100%;
+      bottom: 0;
+      position: fixed;
+    }
+
+    /* Estilos de las fichas */
+
+    table.ficha {
+      border: black 1px solid;
+      background-color: whitesmoke;
+      width: 80%;
+      border-collapse: collapse;
+      margin: auto;
+      box-shadow: grey 4px 4px 8px;
+    }
+
+    th.ficha {
+      width: fit-content;
+      margin: initial;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color: black;
+      color: white;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+
+    tr.ficha:nth-child(even) {
+      background-color: rgb(239, 231, 253);
+    }
+
+    td.ficha {
+      margin: initial;
+      width: fit-content;
+      padding: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+
+    td.fichaimg {
+      border: black 1px solid;
+      background-color: black;
+      width: 1;
+      white-space: nowrap;
+      padding: 0px;
+      margin: 0px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+
+    img.ficha {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    ul.ficha {
+      padding-left: 20px;
+      margin: 0px;
+      padding: 0px;
+      list-style-position: outside;
+    }
+
+    table table {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    table table td {
+      text-align: center;
+    }
+
+    img.icon {
+      width: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="cabecera">
+      <img class="cabecera" src="./img/cabecera.png"
+        alt="Cabecera de la web mostrando a los miembros de SUPER JUNIOR-K.R.Y." />
+      <div class="menucab">
+        <nav>
+          <table class="cabecera">
+            <tr>
+              <td class="cabecera">
+                <a href="./index.html">Home</a>
+              </td>
+              <td class="cabecera">
+                <a href="./ryeowook.html">Ryeowook</a>
+              </td>
+              <td class="cabecera">
+                <a href="./kyuhyun.html">Kyuhyun</a>
+              </td>
+              <td class="cabecera">
+                <a href="./yesung.html">Yesung</a>
+              </td>
+              <td class="cabecera">
+                <a href="./kry.html">K.R.Y.</a>
+              </td>
+              <td class="cabecera">
+                <a href="./noticias.html">Noticias</a>
+              </td>
+              <td class="cabecera">
+                <a href="./log-in.html">Iniciar sesión</a>
+              </td>
+              <td class="cabecera">
+                <a href="./registro.html">Regístrate</a>
+              </td>
+            </tr>
+          </table>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1>SUPER JUNIOR-K.R.Y.</h1>
+    <table class="ficha">
+      <tr class="ficha">
+        <td class="fichaimg" rowspan="13">
+          <img class="ficha" src="img/fic_kry.jpg"
+            alt="Fotografía de Yesung, Kyuhyun y Ryeowook (en ese orden) para la portada de la revista japonesa star1." />
+        </td>
+        <th colspan="2" class="ficha">Grupo</th>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Nombre inglés</strong></td>
+        <td class="ficha">SUPER JUNIOR-K.R.Y.</td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Nombre coreano</strong></td>
+        <td class="ficha">슈퍼주니어-K.R.Y</td>
+      </tr>
+      <tr class="ficha">
+        <th colspan="2" class="ficha">Carrera</th>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Fecha de debut</strong></td>
+        <td class="ficha">5 de noviembre de 2006</td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Años en activo</strong></td>
+        <td class="ficha">2006 - hoy</td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Origen</strong></td>
+        <td class="ficha">Seúl, Corea del Sur</td>
+      </tr>
+      <tr class="ficha">
+        <th colspan="2" class="ficha"><a href="discografia.html#kry">Discografía</a></th>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Coreano</strong></td>
+        <td class="ficha">
+          <ul class="ficha">
+            <li>1 mini-album</li>
+            <li>7 singles</li>
+            <li>7 bandas sonoras</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Japonés</strong></td>
+        <td class="ficha">
+          <ul class="ficha">
+            <li>3 single albums</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="ficha">
+        <th colspan="2" class="ficha">Miembros</th>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>En activo</strong></td>
+        <td class="ficha">
+          <ul class="ficha">
+            <li><a href="kyuhyun.html">Kyuhyun</a></li>
+            <li><a href="ryeowook.html">Ryeowook</a></li>
+            <li><a href="yesung.html">Yesung</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="ficha">
+        <th colspan="2" class="ficha">Redes Sociales</th>
+      </tr>
+      <tr class="ficha">
+        <th class="ficha">
+          Miembros de SUPER JUNIOR-K.R.Y. <br />
+          Yesung, Kyuhyun y Ryeowook.
+        </th>
+        <td class="ficha" colspan="2">
+          <table>
+            <tr>
+              <td>
+                <a href="https://www.youtube.com/user/SUPERJUNIOR"><img class="icon" src="./img/icon_youtube.svg"
+                    alt="Icono Youtube" /></a>
+              </td>
+              <td>
+                <a href="https://twitter.com/SJofficial"><img class="icon" src="./img/icon_twitter.svg"
+                    alt="Icono Twitter" /></a>
+              </td>
+              <td>
+                <a href="https://www.facebook.com/superjunior"><img class="icon" src="./img/icon_fb.svg"
+                    alt="Icono Facebook" /></a>
+              </td>
+              <td>
+                <a href="https://www.instagram.com/superjunior/"><img class="icon" src="./img/icon_insta.svg"
+                    alt="Icono Instagram" /></a>
+              </td>
+              <td>
+                <a href="https://open.spotify.com/artist/5Kdp1Iq26eCz7XbPxOgt7F"><img class="icon"
+                    src="./img/icon_spoti.svg" alt="Icono Spotify" /></a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </main>
+
+  <!-- Menú lateral-->
+  <div class="nav">
+    <nav>
+      <details>
+        <summary><strong>K.R.Y.</strong></summary>
+        <ol>
+          <li><a href="./kry.html">Ficha</a></li>
+          <li><a href="./discografia.html#kry">Discografía</a></li>
+          <li><a href="./musica.html#kry">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Kyuhyun</strong></summary>
+        <ol>
+          <li><a href="./kyuhyun.html">Ficha</a></li>
+          <li><a href="./discografia.html#kyuhyun">Discografía</a></li>
+          <li><a href="./musica.html#kyuhyun">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Ryeowook</strong></summary>
+        <ol>
+          <li><a href="./ryeowook.html">Ficha</a></li>
+          <li><a href="./discografia.html#ryeowook">Discografía</a></li>
+          <li><a href="./musica.html#ryeowook">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Yesung</strong></summary>
+        <ol>
+          <li><a href="./yesung.html">Ficha</a></li>
+          <li><a href="./discografia.html#yesung">Discografía</a></li>
+          <li><a href="./musica.html#yesung">Música</a></li>
+        </ol>
+      </details>
+    </nav>
+  </div>
+
+  <footer>
+    <a href="./quienes.html">¿Quiénes somos?</a> -
+    <a href="./location.html">Localización</a> -
+    <a href="./contacto.html">Contacto</a>
+  </footer>
+</body>
+
+</html>

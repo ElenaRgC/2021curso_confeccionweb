@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Últimas Novedades</title>
+
+    <style>
+        /* Estilos para el header */
+
+        header {
+            background-color: black;
+            position: relative;
+            z-index: 1;
+        }
+
+        div.cabecera {
+            position: relative;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+            z-index: 1;
+        }
+
+        div.menucab {
+            position: absolute;
+            bottom: 2px;
+            left: 16px;
+            z-index: 1;
+        }
+
+        img.cabecera {
+            max-height: 200px;
+            position: relative;
+            z-index: 1;
+        }
+
+        table.cabecera {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        td.cabecera {
+            padding-right: 40px;
+            vertical-align: text-bottom;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Estilos de los enlaces */
+
+        a {
+            color: violet;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: purple;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: darkviolet;
+            text-decoration: none;
+        }
+
+        a:active {
+            color: darkred;
+            text-decoration: none;
+        }
+
+        /* Estilos para el contenido de la página */
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+            background-image: url(./img/sjlogo.svg);
+            background-repeat: repeat;
+        }
+
+        main {
+            margin-left: 150px;
+            margin-right: auto;
+            margin-bottom: 40px;
+        }
+
+        section {
+            width: 90%;
+            height: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        fieldset {
+            margin: 20px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        legend.titulo {
+            border: 1px black solid;
+        }
+
+        iframe {
+            width: 100%;
+            display: inline-block;
+        }
+
+        /* Estilos para el menú lateral */
+
+        nav ol {
+            list-style-type: none;
+            padding-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        div.nav {
+            height: 100%;
+            position: fixed;
+            bottom: 0%;
+            float: left;
+            z-index: 0;
+            top: 0px;
+            left: 0;
+            overflow-x: hidden;
+            width: 120px;
+            background-color: black;
+            color: white;
+            padding-top: 220px;
+        }
+
+        /* Estilos para el footer */
+
+        footer {
+            text-align: center;
+            background-color: black;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+        }
+
+        /* Estilos para las noticias */
+
+        iframe.youtube {
+            height: 315px;
+        }
+
+        aside {
+            width: 50%;
+            display: block;
+        }
+
+        aside:nth-child(even) {
+            float: left;
+            margin-right: 30px;
+        }
+
+        aside:nth-child(odd) {
+            float: right;
+            margin-left: 30px;
+        }
+
+        img.news {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="cabecera">
+            <img class="cabecera" src="./img/cabecera.png"
+                alt="Cabecera de la web mostrando a los miembros de SUPER JUNIOR-K.R.Y." />
+            <div class="menucab">
+                <nav>
+                    <table class="cabecera">
+                        <tr>
+                            <td class="cabecera">
+                                <a href="./index.html">Home</a>
+                            </td>
+                            <td class="cabecera">
+                                <a href="./ryeowook.html">Ryeowook</a>
+                            </td>
+                            <td class="cabecera">
+                                <a href="./kyuhyun.html">Kyuhyun</a>
+                            </td>
+                            <td class="cabecera">
+                                <a href="./yesung.html">Yesung</a>
+                            </td>
+                            <td class="cabecera">
+                                <a href="./kry.html">K.R.Y.</a>
+                            </td>
+                            <td class="cabecera">
+                                <a href="./noticias.html">Noticias</a>
+                            </td>
+                            <td class="cabecera">
+                                <a href="./log-in.html">Iniciar sesión</a>
+                            </td>
+                            <td class="cabecera">
+                                <a href="./registro.html">Regístrate</a>
+                            </td>
+                        </tr>
+                    </table>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Últimas noticias</h1>
+        <section>
+            <h2>Primer teaser de "We Became a Family" con Yesung</h2>
+
+            <aside> <iframe class="youtube" src="https://www.youtube.com/embed/TtVvK_kO16Q" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></aside>
+
+            <article>
+                <h3>El programa contará con doce artistas coreanos de diferentes ámbitos</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis condimentum mollis. Quisque augue
+                libero, congue in ullamcorper vitae, egestas sed sem. Pellentesque sodales aliquam nibh vel euismod.
+                Aliquam augue lectus, sodales ut nisi at, aliquam ullamcorper ligula. Praesent vehicula elit ac pulvinar
+                rhoncus. Sed eget turpis tristique, lacinia elit eget, malesuada diam. Curabitur sapien erat, molestie
+                eget est ac, porta tristique lorem. Sed varius mauris massa, a vehicula felis finibus vitae. Suspendisse
+                malesuada, orci id suscipit iaculis, justo purus varius ligula, a elementum leo nibh ac neque.
+                <table>
+                    <tr>
+                        <td><strong>Fecha:</strong></td>
+                        <td>24-11-2021</td>
+                        <td><strong>Fuente:</strong></td>
+                        <td><a href="https://www.youtube.com/watch?v=TtVvK_kO16Q">
+                                Canal Oficial de Discovery Channel Korea</a></td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <section>
+            <h2>Ryeowook participará en un evento online con sus compañeros del musical FAN LETTER</h2>
+            <article>
+                <aside>
+                    <blockquote class="twitter-tweet" data-theme="dark" data-cards="hidden">
+                        <p lang="ko" dir="ltr">[<a
+                                href="https://twitter.com/hashtag/%EB%AE%A4%EC%A7%80%EC%BB%AC%ED%8C%AC%EB%A0%88%ED%84%B0?src=hash&amp;ref_src=twsrc%5Etfw">#뮤지컬팬레터</a>]
+                            시츠프로브&amp;이벤트 안내<br><br>오는 12월의 첫 날, &lt;<a
+                                href="https://twitter.com/hashtag/%ED%8C%AC%EB%A0%88%ED%84%B0?src=hash&amp;ref_src=twsrc%5Etfw">#팬레터</a>&gt;
+                            <a
+                                href="https://twitter.com/hashtag/%EC%8B%9C%EC%B8%A0%ED%94%84%EB%A1%9C%EB%B8%8C?src=hash&amp;ref_src=twsrc%5Etfw">#시츠프로브</a>
+                            현장을 함께 해주세요 !<br><br>▶일정: 12/1(수) 8시<br>▶채널: <a
+                                href="https://t.co/2yGKhRz8sk">https://t.co/2yGKhRz8sk</a><br><br>🔎이벤트<br>자세한 참여 방법은
+                            이미지를 확인해주세요!<br>추첨을 통해 초대권을 선물드립니다.<a
+                                href="https://twitter.com/hashtag/%EC%9D%8C%EC%95%85%EC%9D%B4%EB%B0%98%EC%A7%9D%EC%9D%B4%EB%8A%94%EC%8B%9C%EA%B0%84?src=hash&amp;ref_src=twsrc%5Etfw">#음악이반짝이는시간</a>
+                            <a
+                                href="https://twitter.com/hashtag/%EC%8B%9C%EC%B8%A0%EC%9D%B4%EB%B2%A4%ED%8A%B8?src=hash&amp;ref_src=twsrc%5Etfw">#시츠이벤트</a>
+                            <a href="https://t.co/6d3g3muo7A">pic.twitter.com/6d3g3muo7A</a>
+                        </p>&mdash; 콘텐츠제작사 라이브 LIVE
+                        (@livecorp2011) <a
+                            href="https://twitter.com/livecorp2011/status/1463341637497540609?ref_src=twsrc%5Etfw">November
+                            24, 2021</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </aside>
+
+                <h3>El evento se retransmitirá el 1 de diciembre a las 20:00 KST en Naver Live</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis condimentum mollis. Quisque augue
+                libero, congue in ullamcorper vitae, egestas sed sem. Pellentesque sodales aliquam nibh vel euismod.
+                Aliquam augue lectus, sodales ut nisi at, aliquam ullamcorper ligula. Praesent vehicula elit ac pulvinar
+                rhoncus. Sed eget turpis tristique, lacinia elit eget, malesuada diam. Curabitur sapien erat, molestie
+                eget est ac, porta tristique lorem. Sed varius mauris massa, a vehicula felis finibus vitae. Suspendisse
+                malesuada, orci id suscipit iaculis, justo purus varius ligula, a elementum leo nibh ac neque.
+
+                <table>
+                    <tr>
+                        <td><strong>Fecha:</strong></td>
+                        <td>24-11-2021</td>
+                        <td><strong>Fuente:</strong></td>
+                        <td><a href="https://twitter.com/livecorp2011/status/1463341637497540609">
+                                Twitter Oficial de livecorp</a></td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <section>
+            <h2>SUPER JUNIOR lanza el primer teaser de los Season's Greetings 2022</h2>
+
+            <aside> <iframe class="youtube" src="https://www.youtube.com/embed/PQlIaD1Vygs" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></aside>
+
+            <article>
+                <h3>Los Season's Greetings de este año tendrán una temática de cine</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis condimentum mollis. Quisque augue
+                libero, congue in ullamcorper vitae, egestas sed sem. Pellentesque sodales aliquam nibh vel euismod.
+                Aliquam augue lectus, sodales ut nisi at, aliquam ullamcorper ligula. Praesent vehicula elit ac pulvinar
+                rhoncus. Sed eget turpis tristique, lacinia elit eget, malesuada diam. Curabitur sapien erat, molestie
+                eget est ac, porta tristique lorem. Sed varius mauris massa, a vehicula felis finibus vitae. Suspendisse
+                malesuada, orci id suscipit iaculis, justo purus varius ligula, a elementum leo nibh ac neque.
+                <table>
+                    <tr>
+                        <td><strong>Fecha:</strong></td>
+                        <td>01-11-2021</td>
+                        <td><strong>Fuente:</strong></td>
+                        <td><a href="https://www.youtube.com/embed/PQlIaD1Vygs">
+                                Canal Oficial de YouTube de Super Junior</a></td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <section>
+            <h2>Poster de la adaptación del musical PHANTOM con Kyuhyun</h2>
+            <article>
+                <aside>
+                    <blockquote class="twitter-tweet" data-theme="dark" data-cards="hidden">
+                        <p lang="ko" dir="ltr">❝ 평생을 기다렸어, 내 세상을 가득 채우는 그 노래 ❞<br><br>&lt;팬텀: 더 뮤지컬 라이브&gt; 메인 포스터
+                            공개!<br>규릭
+                            X
+                            선크리가 노래하는, 이 곳은 내 고향🎵<br>동화 같은 세상, 파리의 오페라하우스로 당신을 초대합니다 ✿ڿڰۣ— <a
+                                href="https://t.co/QAeopR5csy">pic.twitter.com/QAeopR5csy</a> </p>&mdash; gramfilms
+                        (@gramfilms)
+                        <a href="https://twitter.com/gramfilms/status/1458298914549874688?ref_src=twsrc%5Etfw">November
+                            10,
+                            2021</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js"></script>
+                </aside>
+
+                <h3>Gramfilms ha publicado el poster de la adaptación cinematográfica del musical</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis condimentum mollis. Quisque augue
+                libero, congue in ullamcorper vitae, egestas sed sem. Pellentesque sodales aliquam nibh vel euismod.
+                Aliquam augue lectus, sodales ut nisi at, aliquam ullamcorper ligula. Praesent vehicula elit ac pulvinar
+                rhoncus. Sed eget turpis tristique, lacinia elit eget, malesuada diam. Curabitur sapien erat, molestie
+                eget est ac, porta tristique lorem. Sed varius mauris massa, a vehicula felis finibus vitae. Suspendisse
+                malesuada, orci id suscipit iaculis, justo purus varius ligula, a elementum leo nibh ac neque.
+
+                <table>
+                    <tr>
+                        <td><strong>Fecha:</strong></td>
+                        <td>10-11-2021</td>
+                        <td><strong>Fuente:</strong></td>
+                        <td><a href="https://twitter.com/gramfilms/status/1458298914549874688?ref_src=twsrc%5Etfw">
+                                Twitter Oficial de gramfilms</a></td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <section>
+            <h2>Segundo teaser de los Season's Greetings 2022</h2>
+
+            <aside> <iframe class="youtube" src="https://www.youtube.com/embed/T0HEN8iLV8E" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></aside>
+
+            <article>
+                <h3>Podemos ver algunas escenas detrás de las cámaras</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis condimentum mollis. Quisque augue
+                libero, congue in ullamcorper vitae, egestas sed sem. Pellentesque sodales aliquam nibh vel euismod.
+                Aliquam augue lectus, sodales ut nisi at, aliquam ullamcorper ligula. Praesent vehicula elit ac pulvinar
+                rhoncus. Sed eget turpis tristique, lacinia elit eget, malesuada diam. Curabitur sapien erat, molestie
+                eget est ac, porta tristique lorem. Sed varius mauris massa, a vehicula felis finibus vitae. Suspendisse
+                malesuada, orci id suscipit iaculis, justo purus varius ligula, a elementum leo nibh ac neque.
+                <table>
+                    <tr>
+                        <td><strong>Fecha:</strong></td>
+                        <td>10-11-2021</td>
+                        <td><strong>Fuente:</strong></td>
+                        <td><a href="https://www.youtube.com/watch?v=T0HEN8iLV8E">
+                                Canal Oficial de YouTube de Super Junior</a></td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <section>
+            <h2>SUPER JUNIOR-K.R.Y. se encarga de la segunda OST del drama The King's Affection</h2>
+            <aside>
+                <figure> <img class="news" src="img/not_kings.jpg"
+                        alt="Poster promocional del drama The Kings Affection con los personajes principales">
+                    <figcaption>Poster del drama "The King's Affection" en el que Kyuhyun, Ryeowook y Yesung han
+                        colaborado para su OST. </figcaption>
+                </figure>
+
+            </aside>
+            <article>
+                <h3>Shadow of You nos presenta una bella armonización de las voces del trio de vocalistas</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis condimentum mollis. Quisque augue
+                libero, congue in ullamcorper vitae, egestas sed sem. Pellentesque sodales aliquam nibh vel euismod.
+                Aliquam augue lectus, sodales ut nisi at, aliquam ullamcorper ligula. Praesent vehicula elit ac pulvinar
+                rhoncus. Sed eget turpis tristique, lacinia elit eget, malesuada diam. Curabitur sapien erat, molestie
+                eget est ac, porta tristique lorem. Sed varius mauris massa, a vehicula felis finibus vitae. Suspendisse
+                malesuada, orci id suscipit iaculis, justo purus varius ligula, a elementum leo nibh ac neque.
+                <table>
+                    <tr>
+                        <td><strong>Fecha:</strong></td>
+                        <td>12-10-2021</td>
+                        <td><strong>Fuente:</strong></td>
+                        <td><a href="https://youtu.be/v0AOm0SadbU">
+                                Canal Oficial de YouTube de 1theK</a></td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    <!-- Menú lateral-->
+    <div class="nav">
+        <nav>
+            <details>
+                <summary><strong>K.R.Y.</strong></summary>
+                <ol>
+                    <li><a href="./kry.html">Ficha</a></li>
+                    <li><a href="./discografia.html#kry">Discografía</a></li>
+                    <li><a href="./musica.html#kry">Música</a></li>
+                </ol>
+            </details>
+            <details>
+                <summary><strong>Kyuhyun</strong></summary>
+                <ol>
+                    <li><a href="./kyuhyun.html">Ficha</a></li>
+                    <li><a href="./discografia.html#kyuhyun">Discografía</a></li>
+                    <li><a href="./musica.html#kyuhyun">Música</a></li>
+                </ol>
+            </details>
+            <details>
+                <summary><strong>Ryeowook</strong></summary>
+                <ol>
+                    <li><a href="./ryeowook.html">Ficha</a></li>
+                    <li><a href="./discografia.html#ryeowook">Discografía</a></li>
+                    <li><a href="./musica.html#ryeowook">Música</a></li>
+                </ol>
+            </details>
+            <details>
+                <summary><strong>Yesung</strong></summary>
+                <ol>
+                    <li><a href="./yesung.html">Ficha</a></li>
+                    <li><a href="./discografia.html#yesung">Discografía</a></li>
+                    <li><a href="./musica.html#yesung">Música</a></li>
+                </ol>
+            </details>
+        </nav>
+    </div>
+    
+    <footer>
+        <a href="./quienes.html">¿Quiénes somos?</a> -
+        <a href="./location.html">Localización</a> -
+        <a href="./contacto.html">Contacto</a>
+    </footer>
+</body>
+
+</html>

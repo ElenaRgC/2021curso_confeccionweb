@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contacto</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        fieldset {
+            background-color: #BBBBBB;
+        }
+
+        legend {
+            border: 1px solid black;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>HOJA DE INSCRIPCIÓN</h2>
+    <h2>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h2>
+    <form action="#">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text" id="nombre" placeholder="Nombre" required>
+                    </td>
+                    <td>
+                        <label for="apellido">Apellidos</label><br>
+                        <input type="text" id="apellido" placeholder="Apellidos" required>
+                    </td>
+                    <td>
+                        <label for="dni">DNI:</label><br>
+                        <input type="text" id="dni" placeholder="00000000A" required pattern="[0-9]{8}[A-Z]$">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="localidad">Localidad de nacimiento:</label><br>
+                        <input type="text" id="localidad" placeholder="Localidad" required>
+                    </td>
+                    <td>
+                        <label for="province">Provincia:</label><br>
+                        <select id="province" required>
+                            <option value="" selected disabled>Seleccione...</option>
+                            <optgroup label="Castilla-La Mancha">
+                                <option value="al">Albacete</option>
+                                <option value="cr">Ciudad Real</option>
+                                <option value="cu">Cuenca</option>
+                                <option value="gu">Guadalajara</option>
+                                <option value="to">Toledo</option>
+                            </optgroup>
+                            <optgroup label="Extremadura">
+                                <option value="ba">Badajoz</option>
+                                <option value="ca">Cáceres</option>
+                            </optgroup>
+
+                        </select>
+                    </td>
+                    <td>
+                        <label for="fechan">Fecha de nacimiento:</label><br>
+                        <input type="date" id="fechan" name="fechan" required>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="direccion">Dirección:</label><br>
+                        <input type="text" id="direccion" placeholder="Calle Ejemplo Nº X Piso Y Letra Z" required>
+                    </td>
+                    <td>
+                        <label for="cpostal">Código postal:</label><br>
+                        <input type="text" id="cpostal" placeholder="00000" pattern="[0-9]{5}" required>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Forma de Acceso</legend>
+            <ul>
+                <li><input type="radio" id="directo" name="acceso">
+                    <label for="directo">Directo</label>
+                    <ul>
+                        <li><input type="radio" id="bachi" name="acceso">
+                            <label for="bachi">Bachillerato Log Modalidad: </label>
+                            <input type="text" id="bachitext" name="acceso">
+                        </li>
+                        <li><input type="radio" id="exp" name="acceso">
+                            <label for="exp">Experimental</label>
+                        </li>
+                        <li><input type="radio" id="cou" name="acceso">
+                            <label for="cou">COU Opción:</label>
+                            <input type="text" id="coutext" name="acceso">
+                        </li>
+                        <li><input type="radio" id="fp2" name="acceso">
+                            <label for="fp2">FP2</label>
+                        </li>
+                        <li><input type="radio" id="otrosest" name="acceso">
+                            <label for="otrosest">Otros (especifique): </label>
+                            <input type="text" id="ottext" name="acceso">
+                        </li>
+                    </ul>
+                </li>
+                <li><input type="radio" id="libre" name="acceso">
+                    <label for="libre">Prueba libre</label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Documentos Adjuntados</legend>
+            <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="copiadni" name="docu">
+                        <label for="copiadni">Fotocopia DNI</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="certif" name="docu">
+                        <label for="certif">Certificado Académico</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="otrdoc" name="docu">
+                        <label for="otrdoc">Otros documentos (especifique): </label>
+                        <input type="text" id="doctext" name="docu">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="adjunto">Adjuntar:</label>
+                        <input type="file" id="adjunto" name="adjunto" accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <input type="submit" value="Enviar Solicitud" />
+    </form>
+</body>
+
+</html>

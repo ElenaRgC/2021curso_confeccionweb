@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tabla Span</title>
+
+    <style>
+        table {
+            border: solid 1px black;
+        }
+
+        td {
+            border: solid 1px black;
+            padding: 30px 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <!-- Primera fila-->
+            <td></td>
+            <td colspan="2" bgcolor="yellow"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <!-- Segunda fila-->
+            <td></td>
+            <td rowspan="2" bgcolor="blue"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <!-- Tercera fila-->
+            <td></td>
+            <td colspan="2" rowspan="2" bgcolor="red"></td>
+        </tr>
+        <tr>
+            <!-- Cuarta fila-->
+            <td rowspan="2" bgcolor="black"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <!-- Quinta fila-->
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+<details> <summary>Tabla 2</summary> <table>
+        <tr>
+            <!-- Primera fila-->
+            <td>&nbsp;</td>
+            <td colspan="2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <!-- Segunda fila-->
+            <td>&nbsp;</td>
+            <td rowspan="3">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <!-- Tercera fila-->
+            <td rowspan="3">&nbsp;</td>
+            <td colspan="2" rowspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <!-- Cuarta fila-->
+        </tr>
+        <tr>
+            <!-- Quinta fila-->
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table> </details> 
+</body>
+
+</html>

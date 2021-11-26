@@ -1,0 +1,15 @@
+{
+  "empleado": [
+    { "nombre": "Jorge", "apellido": "Mesa", "edad": 25 },
+    {
+      "nombre": "Ana",
+      "apellido": "Sánchez",
+      "edad": 21
+    },
+    {
+      "nombre": "Pedro",
+      "apellido": "Lee",
+      "edad": 44
+    }
+  ]
+}

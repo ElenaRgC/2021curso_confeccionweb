@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Doctor Who</title>
+
+    <style>
+      header {
+        color: whitesmoke;
+      }
+
+      footer {
+        color: whitesmoke;
+      }
+
+      body {
+        background-image: url("./img/starrybg.jpg");
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: whitesmoke;
+      }
+
+      table {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(22, 32, 56);
+        border-collapse: collapse;
+        white-space: nowrap;
+      }
+
+      table table {
+        /* border:whitesmoke 1px solid; */
+        width: 100%;
+        border-collapse: collapse;
+        white-space: nowrap;
+        margin: initial;
+      }
+
+      th {
+        background-color: rgb(46, 22, 56);
+        color: white;
+        padding: 8px;
+      }
+
+      table table th {
+        background-color: rgb(29, 22, 56);
+        border-collapse: collapse;
+        vertical-align: center;
+      }
+
+      td {
+        padding: 1px;
+        vertical-align: center;
+      }
+
+      table table td {
+        background-color: rgb(49, 59, 82);
+      }
+
+      td.poster {
+        width: 1%;
+        white-space: nowrap;
+        padding: 0px;
+      }
+
+      td.char {
+        text-align: center;
+        background-color: rgb(22, 32, 56);
+      }
+
+      table table img {
+        width: 100%;
+        max-width: 200px;
+      }
+
+      img.poster {
+        width: 1;
+        white-space:nowrap;
+        padding: 0px;
+      }
+
+      img.icon {
+        max-width: 40px;
+      }
+
+      img.flag {
+        width: 100%;
+        max-width: 120px;
+      }
+
+      ul {
+        list-style-position: inside;
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        color: whitesmoke;
+      }
+
+      poster {
+        display: block;
+      }
+
+      a:link {
+        color: orange;
+      }
+
+      a:visited {
+        color: beige;
+      }
+
+      a:hover {
+        color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Doctor Who</h1>
+      <p>Un fanpage del reboot de Doctor Who de 2005.</p>
+    </header>
+    <hr />
+    <main>
+      <section>
+        <article>
+          <table>
+            <tr>
+              <!-- Fila 1 -->
+              <th colspan="3">Era del 9º Doctor</th>
+            </tr>
+            <tr>
+              <!-- Fila 2 -->
+              <th>Carátula</th>
+              <th>Ficha Técnica</th>
+              <th>Protagonistas</th>
+            </tr>
+            <tr>
+              <!-- Fila 3 -->
+              <td class="poster" rowspan="2">
+                <a
+                  href="https://en.wikipedia.org/wiki/Doctor_Who_(series_1)"
+                ></a>
+                <img
+                  class="poster"
+                  src="./img/series01.jpg"
+                  alt="Poster temporada 1 de Doctor Who"
+                />
+              </td>
+              <td>
+                <table>
+                  <tr>
+                    <!-- Subfila 1-->
+                    <th>Temporadas</th>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 2-->
+                    <th>Showrunner</th>
+                    <td>Rusell T. Davies</td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 3-->
+                    <th>Producción</th>
+                    <td>
+                      <ul>
+                        <li>Rusell T. Davies</li>
+                        <li>Julie Gardner</li>
+                        <li>Mal Young</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 4-->
+                    <th>Música</th>
+                    <td>Murray Gold</td>
+                  </tr>
+                </table>
+              </td>
+              <td rowspan="2">
+                <table>
+                  <!-- Primer personaje-->
+                  <tr>
+                    <th>El Doctor</th>
+                    <td class="char" rowspan="3">
+                      <img
+                        src="./img/eccleston.jpg"
+                        alt="Foto de Christopher Eccleston"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a
+                        href="https://en.wikipedia.org/wiki/Christopher_Eccleston"
+                        >Christopher Eccleston</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>16 febrero 1964 (57 años)</td>
+                  </tr>
+                  <!-- Segundo personaje-->
+                  <tr>
+                    <th>Rose Tyler</th>
+                    <td class="char" rowspan="3">
+                      <img src="./img/piper.jpg" alt="Foto de Billie Piper" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://en.wikipedia.org/wiki/Billie_Piper"
+                        >Billie_Piper</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>22 septiembre 1982 (39 años)</td>
+                  </tr>
+                  <!-- Tercer personaje-->
+                  <tr>
+                    <th>Mickey Smith</th>
+                    <td class="char" rowspan="3">
+                      <img src="./img/clarke.jpg" alt="Foto de Noel Clarke" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://en.wikipedia.org/wiki/Noel_Clarke"
+                        >Noel Clarke</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6 diciembre 1975 (45 años)</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <!-- Fila 4 -->
+              <td>
+                <table>
+                  <tr>
+                    <!-- Subfila 1 -->
+                    <th>País</th>
+                    <td>
+                      <img
+                        class="flag"
+                        src="./img/ukflag.jpg"
+                        alt="Bandera Reino Unido"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 2 -->
+                    <th>Año/s</th>
+                    <td>2005</td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 3 -->
+                    <th>Género</th>
+                    <td>
+                      <ul>
+                        <li>Ciencia Ficción</li>
+                        <li>Fantasía</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 4 -->
+                    <th>Clasificación</th>
+                    <td>
+                      <img
+                        class="icon"
+                        src="./img/pgicon.png"
+                        alt="Icono clasificación de menores acompañados."
+                      />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Aquí empieza la segunda tabla.-->
+            <tr>
+              <!-- Fila 1 -->
+              <th colspan="3">Era del 10º Doctor</th>
+            </tr>
+            <tr>
+              <!-- Fila 2 -->
+              <th>Carátula</th>
+              <th>Ficha Técnica</th>
+              <th>Protagonistas</th>
+            </tr>
+            <tr>
+              <!-- Fila 3 -->
+              <td class="poster" rowspan="2">
+                <a
+                  href="https://en.wikipedia.org/wiki/Doctor_Who_(series_1)"
+                ></a>
+                <img
+                  class="poster"
+                  src="./img/series04.jpg"
+                  alt="Poster temporada 4 de Doctor Who"
+                />
+              </td>
+              <td>
+                <table>
+                  <tr>
+                    <!-- Subfila 1-->
+                    <th>Temporadas</th>
+                    <td>2 - 4</td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 2-->
+                    <th>Showrunner</th>
+                    <td>Rusell T. Davies</td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 3-->
+                    <th>Producción</th>
+                    <td>
+                      <ul>
+                        <li>Rusell T. Davies</li>
+                        <li>Julie Gardner</li>
+                        <li>Phil Collinson</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 4-->
+                    <th>Música</th>
+                    <td>Murray Gold</td>
+                  </tr>
+                </table>
+              </td>
+              <td rowspan="2">
+                <table>
+                  <!-- Primer personaje-->
+                  <tr>
+                    <th>El Doctor</th>
+                    <td class="char" rowspan="3">
+                      <img
+                        src="./img/tennant.jpg"
+                        alt="Foto de David Tennant"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://en.wikipedia.org/wiki/David_Tennant"
+                        >David Tennant</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>18 abril 1971 (50 años)</td>
+                  </tr>
+                  <!-- Segundo personaje-->
+                  <tr>
+                    <th>Rose Tyler</th>
+                    <td class="char" rowspan="3">
+                      <img src="./img/piper.jpg" alt="Foto de Billie Piper" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://en.wikipedia.org/wiki/Billie_Piper"
+                        >Billie_Piper</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>22 septiembre 1982 (39 años)</td>
+                  </tr>
+                  <!-- Tercer personaje-->
+                  <tr>
+                    <th>Martha Jones</th>
+                    <td class="char" rowspan="3">
+                      <img
+                        src="./img/agyeman.jpg"
+                        alt="Foto de Freema Agyeman"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://en.wikipedia.org/wiki/Freema_Agyeman"
+                        >Freema Agyeman</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>20 marzo 1979 (42 años)</td>
+                  </tr>
+                  <!-- Cuarto personaje-->
+                  <tr>
+                    <th>Donna Noble</th>
+                    <td class="char" rowspan="3">
+                      <img src="./img/tate.jpg" alt="Foto de Catherine Tate" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://en.wikipedia.org/wiki/Catherine_Tate"
+                        >Catherine Tate</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>12 mayo 1968 (53 años)</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <!-- Fila 4 -->
+              <td>
+                <table>
+                  <tr>
+                    <!-- Subfila 1 -->
+                    <th>País</th>
+                    <td>
+                      <img
+                        class="flag"
+                        src="./img/ukflag.jpg"
+                        alt="Bandera Reino Unido"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 2 -->
+                    <th>Año/s</th>
+                    <td>2005 - 2010</td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 3 -->
+                    <th>Género</th>
+                    <td>
+                      <ul>
+                        <li>Ciencia Ficción</li>
+                        <li>Fantasía</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 4 -->
+                    <th>Clasificación</th>
+                    <td>
+                      <img
+                        class="icon"
+                        src="./img/pgicon.png"
+                        alt="Icono clasificación de menores acompañados."
+                      />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Aquí empieza la tercera tabla.-->
+            <tr>
+              <!-- Fila 1 -->
+              <th colspan="3">Era del 11º Doctor</th>
+            </tr>
+            <tr>
+              <!-- Fila 2 -->
+              <th>Carátula</th>
+              <th>Ficha Técnica</th>
+              <th>Protagonistas</th>
+            </tr>
+            <tr>
+              <!-- Fila 3 -->
+              <td class="poster" rowspan="2">
+                <a href="https://en.wikipedia.org/wiki/Doctor_Who_(2005)"></a>
+                <img
+                  class="poster"
+                  src="./img/series05.jpg"
+                  alt="Poster temporada 5 de Doctor Who"
+                />
+              </td>
+              <td>
+                <table>
+                  <tr>
+                    <!-- Subfila 1-->
+                    <th>Temporadas</th>
+                    <td>5 - 7</td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 2-->
+                    <th>Showrunner</th>
+                    <td>Steven Moffat</td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 3-->
+                    <th>Producción</th>
+                    <td>
+                      <ul>
+                        <li>Steven Moffat</li>
+                        <li>Piers Wenger</li>
+                        <li>Beth Willis</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 4-->
+                    <th>Música</th>
+                    <td>Murray Gold</td>
+                  </tr>
+                </table>
+              </td>
+              <td rowspan="2">
+                <table>
+                  <!-- Primer personaje-->
+                  <tr>
+                    <th>El Doctor</th>
+                    <td class="char" rowspan="3">
+                      <img src="./img/smith.jpg" alt="Foto de Matt Smith" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://en.wikipedia.org/wiki/Matt_Smith"
+                        >Matt Smith</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>28 octubre 1982 (39 años)</td>
+                  </tr>
+                  <!-- Segundo personaje-->
+                  <tr>
+                    <th>Amy Pond</th>
+                    <td class="char" rowspan="3">
+                      <img src="./img/gillan.jpg" alt="Foto de Karen Gillan" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://en.wikipedia.org/wiki/Karen_Gillan"
+                        >Karen Gillan</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>28 noviembre 1987</td>
+                  </tr>
+                  <!-- Tercer personaje-->
+                  <tr>
+                    <th>Rory Williams</th>
+                    <td class="char" rowspan="3">
+                      <img
+                        src="./img/darvill.jpg"
+                        alt="Foto de Arthur Darvill"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://en.wikipedia.org/wiki/Arthur_Darvill"
+                        >Arthur Darvill</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>17 junio 1982 (39 años)</td>
+                  </tr>
+                  <!-- Cuarto personaje-->
+                  <tr>
+                    <th>Clara Oswald</th>
+                    <td class="char" rowspan="3">
+                      <img
+                        src="./img/coleman.jpg"
+                        alt="Foto de Jenna Coleman"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://en.wikipedia.org/wiki/Jenna_Coleman"
+                        >Jenna Coleman</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>27 abril 1986 (35 años)</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <!-- Fila 4 -->
+              <td>
+                <table>
+                  <tr>
+                    <!-- Subfila 1 -->
+                    <th>País</th>
+                    <td>
+                      <img
+                        class="flag"
+                        src="./img/ukflag.jpg"
+                        alt="Bandera Reino Unido"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 2 -->
+                    <th>Año/s</th>
+                    <td>2005</td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 3 -->
+                    <th>Género</th>
+                    <td>
+                      <ul>
+                        <li>Ciencia Ficción</li>
+                        <li>Fantasía</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- Subfila 4 -->
+                    <th>Clasificación</th>
+                    <td>
+                      <img
+                        class="icon"
+                        src="./img/pgicon.png"
+                        alt="Icono clasificación de menores acompañados."
+                      />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </article>
+      </section>
+    </main>
+    <hr />
+    <footer>
+      <span>Contacto:</span
+      ><a href="mailto:elenarodriguezcalderon@gmail.com"> Elena Rodríguez</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: whitesmoke;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Los estilos están sacados de la w3school y ajustados un poco al contenido */
+        input,
+        select,
+        textarea {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=file] {
+            width: 100%;
+            padding: 9px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=color] {
+            width: 60px;
+            padding: 6px 6px;
+            margin: 8px 0;
+            display: initial;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: initial;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+
+<body>
+    <h1>Formulario de inscripción</h1>
+    <form action="#">
+        <table>
+            <tr>
+                <td>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" placeholder="Nombre" required pattern="[a-zA-Zá-úÁ-Ú\s]+">
+                </td>
+                <td>
+                    <label for="apellido">Apellidos:</label><br>
+                    <input type="text" id="apellido" placeholder="Apellidos" required pattern="[a-zA-Zá-úÁ-Ú\s]+">
+                </td>
+                <td>
+                    <label for="dni">DNI:</label><br>
+                    <input type="text" id="dni" placeholder="00000000X" required pattern="[0-9]{8}[A-Z]$">
+                </td>
+            <tr>
+                <td>
+                    <label for="tlf">Teléfono:</label><br>
+                    <input type="text" id="tlf" placeholder="000-00-00-00" required pattern="[0-9]{9}">
+                </td>
+                <td colspan="2">
+                    <label for="foto">Foto de perfil:</label><br>
+                    <input type="file" id="foto" accept="image/*">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="dni">Correo electrónico:</label><br>
+                    <input type=email id="email" required placeholder="micorreo@servicio.dominio">
+                </td>
+                <td>
+                    <label for="dni">Contraseña:</label><br>
+                    <input type="password" required pattern="(?=.*[1-9]){1,}(?=.*+-!?){1,}(?=.*[A-Z]){1,}.{8,}"
+                        title="Debe contener un mínimo de 8 caracteres, con mayúsculas, números y símbolos."
+                        placeholder="********">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fechan">Fecha de nacimiento:</label><br>
+                    <input type="date" id="fechan" name="fechan" required>
+                </td>
+                <td>
+                    <label for="province">Provincia:</label><br>
+                    <select id="province" required>
+                        <option value="" selected disabled>Seleccione...</option>
+                        <optgroup label="Castilla-La Mancha">
+                            <option value="al">Albacete</option>
+                            <option value="cr">Ciudad Real</option>
+                            <option value="cu">Cuenca</option>
+                            <option value="gu">Guadalajara</option>
+                            <option value="to">Toledo</option>
+                        </optgroup>
+                        <optgroup label="Extremadura">
+                            <option value="ba">Badajoz</option>
+                            <option value="ca">Cáceres</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td>
+                    <label for="poblacion">Población:</label><br>
+                    <select id="poblacion" required>
+                        <option value="" selected disabled>Seleccione...</option>
+                        <optgroup label="Castilla-La Mancha">
+                            <option value="alb">Albacete</option>
+                            <option value="ciu">Ciudad Real</option>
+                            <option value="cue">Cuenca</option>
+                            <option value="gua">Guadalajara</option>
+                            <option value="tol">Toledo</option>
+                        </optgroup>
+                        <optgroup label="Extremadura">
+                            <option value="bad">Badajoz</option>
+                            <option value="cac">Cáceres</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" placeholder="Calle Ejemplo X Piso Y Letra Z" required
+                        pattern="[a-zA-Z0-9\s]+">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <label for="url">URL de su negocio:</label>
+                    <input type="url" id="url" name="url" placeholder="https://www.minegocio.ejemplo"
+                        pattern="https?://.+\.[a-zA-Z]{2,}/?">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="color">Color favorito:</label><br>
+                    <input type="color" id="color" name="color">
+                </td>
+                <td colspan="2" rowspan="2">
+                    <label for="bio">Biografía:</label><br>
+                    <textarea rows="3" cols="50" id="bio" placeholder="Háblanos sobre ti."></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Enviar" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

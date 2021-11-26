@@ -1,0 +1,16 @@
+{
+  "libros": [
+    {
+      "-id": "1",
+      "-year": "1999",
+      "autores": [
+        {
+          "nombre": "Ricardo Pérez"
+        },
+        {
+          "nombre": "Marta Gómez"
+        }
+      ]
+    }
+  ]
+}

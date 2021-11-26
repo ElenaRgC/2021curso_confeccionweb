@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border: black solid 1px;
+        }
+
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <table>
+            <tr>
+                <td>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                </td>
+                <td>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="birthdate">Fecha de nacimiento:</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="micorreo@email.com">
+                </td>
+                <td>
+                    <label for="password">Contraseña:</label>
+                    <input type="text" id="password" name="password" placeholder="Contraseña">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" name="address" size=60
+                        placeholder="Calle Domicilio X, piso Y, letra Z">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="city">Localidad:</label>
+                    <input type="text" id="city" name="city" placeholder="Localidad">
+                </td>
+                <td>
+                    <label for="province">Provincia:</label>
+                    <select id="province">
+                        <option value="" selected disabled>Seleccione...</option>
+                        <optgroup label="Castilla-La Mancha">
+                            <option value="al">Albacete</option>
+                            <option value="cr">Ciudad Real</option>
+                            <option value="cu">Cuenca</option>
+                            <option value="gu">Guadalajara</option>
+                            <option value="to">Toledo</option>
+                        </optgroup>
+                        <optgroup label="Extremadura">
+                            <option value="ba">Badajoz</option>
+                            <option value="ca">Cáceres</option>
+                        </optgroup>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="url">URL de su negocio:</label>
+                    <input type="url" id="url" name="url" size=50 placeholder="www.minegocio.ejemplo">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="avatar">Avatar:</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                </td>
+                <td>
+                    <label for="color">Color favorito:</label>
+                    <input type="color" id="color" name="color">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button>Enviar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

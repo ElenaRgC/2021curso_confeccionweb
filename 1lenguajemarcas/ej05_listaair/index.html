@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Listas Aviación y AB</title>
+
+    <style>
+        ul.a {
+            list-style-type: square;
+        }
+
+        ul.b {
+            list-style-type: disc;
+        }
+
+        ol.c {
+            list-style-type: lower-roman;
+        }
+
+        ol.d {
+            list-style-type: lower-alpha;
+        }
+
+        ol.e {
+            list-style-type: decimal;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Aircraft Types</h1>
+    <ol class="c">
+        <li>General Aviation
+            <ol class="d">
+                <li>Single Aviation Aircraft</li>
+                <li>Dual-Engine Aircraft</li>
+            </ol>
+        </li>
+        <li>Commercial Aviation
+            <ul class="b">
+                <li>Dual Engine</li>
+                <li>Tri-Engine</li>
+            </ul>
+        </li>
+    </ol>
+
+    <ul class="a">
+        <li>A
+            <ul class="b">
+                <li>B
+                    <ol class="e">
+                        <li>C</li>
+                        <li>D</li>
+                    </ol>
+                </li>
+                <li>E
+                    <ul class="a">
+                        <li>F</li>
+                        <li>G</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>B</li>
+    </ul>
+</body>
+
+</html>

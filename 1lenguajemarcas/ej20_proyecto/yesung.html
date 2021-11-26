@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>YESUNG</title>
+
+  <style>
+    /* Estilos para el header */
+
+    header {
+      background-color: black;
+      position: relative;
+      z-index: 1;
+    }
+
+    div.cabecera {
+      position: relative;
+      color: white;
+      margin: 0px;
+      padding: 0px;
+      z-index: 1;
+    }
+
+    div.menucab {
+      position: absolute;
+      bottom: 2px;
+      left: 16px;
+      z-index: 1;
+    }
+
+    img.cabecera {
+      max-height: 200px;
+      position: relative;
+      z-index: 1;
+    }
+
+    table.cabecera {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    td.cabecera {
+      padding-right: 40px;
+      vertical-align: text-bottom;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Estilos de los enlaces */
+
+    a {
+      color: violet;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: purple;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: darkviolet;
+      text-decoration: none;
+    }
+
+    a:active {
+      color: darkred;
+      text-decoration: none;
+    }
+
+    /* Estilos para el contenido de la página */
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: whitesmoke;
+      background-image: url(./img/sjlogo.svg);
+      background-repeat: repeat;
+    }
+
+    main {
+      margin-left: 150px;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
+
+    /* Estilos para el menú lateral */
+
+    nav ol {
+      list-style-type: none;
+      padding-left: 20px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    div.nav {
+      height: 100%;
+      position: fixed;
+      bottom: 0%;
+      float: left;
+      z-index: 0;
+      top: 0px;
+      left: 0;
+      overflow-x: hidden;
+      width: 120px;
+      background-color: black;
+      color: white;
+      padding-top: 220px;
+    }
+
+    /* Estilos para el footer */
+
+    footer {
+      text-align: center;
+      background-color: black;
+      width: 100%;
+      bottom: 0;
+      position: fixed;
+    }
+
+    /* Estilos de las fichas */
+
+    table.ficha {
+      border: black 1px solid;
+      background-color: whitesmoke;
+      width: 80%;
+      border-collapse: collapse;
+      margin: auto;
+      box-shadow: grey 4px 4px 8px;
+    }
+
+    th.ficha {
+      width: fit-content;
+      margin: initial;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color: black;
+      color: white;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+
+    tr.ficha:nth-child(even) {
+      background-color: rgb(239, 231, 253);
+    }
+
+    td.ficha {
+      margin: initial;
+      width: fit-content;
+      padding: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+
+    td.fichaimg {
+      border: black 1px solid;
+      background-color: black;
+      width: 1;
+      white-space: nowrap;
+      padding: 0px;
+      margin: 0px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+
+    img.ficha {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    ul.ficha {
+      padding-left: 20px;
+      margin: 0px;
+      padding: 0px;
+      list-style-position: outside;
+    }
+
+    table table {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    table table td {
+      text-align: center;
+    }
+
+    img.icon {
+      width: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="cabecera">
+      <img class="cabecera" src="./img/cabecera.png"
+        alt="Cabecera de la web mostrando a los miembros de SUPER JUNIOR-K.R.Y." />
+      <div class="menucab">
+        <nav>
+          <table class="cabecera">
+            <tr>
+              <td class="cabecera">
+                <a href="./index.html">Home</a>
+              </td>
+              <td class="cabecera">
+                <a href="./ryeowook.html">Ryeowook</a>
+              </td>
+              <td class="cabecera">
+                <a href="./kyuhyun.html">Kyuhyun</a>
+              </td>
+              <td class="cabecera">
+                <a href="./yesung.html">Yesung</a>
+              </td>
+              <td class="cabecera">
+                <a href="./kry.html">K.R.Y.</a>
+              </td>
+              <td class="cabecera">
+                <a href="./noticias.html">Noticias</a>
+              </td>
+              <td class="cabecera">
+                <a href="./log-in.html">Iniciar sesión</a>
+              </td>
+              <td class="cabecera">
+                <a href="./registro.html">Regístrate</a>
+              </td>
+            </tr>
+          </table>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1>YESUNG</h1>
+    <table class="ficha">
+      <tr class="ficha">
+        <td class="fichaimg" rowspan="19">
+          <img class="ficha" src="img/fic_yesung.jpg"
+            alt="Yesung en una imagen promocional de la canción Beautiful Night." height="650" />
+        </td>
+        <th colspan="2" class="ficha">Datos personales</th>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Nombre <br> occidentalizado</strong></td>
+        <td class="ficha">Yesung</td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Nombre <br> artístico</strong></td>
+        <td class="ficha">예성</td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Nombre</strong></td>
+        <td class="ficha">김종훈</td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Fecha <br> de nacimiento</strong></td>
+        <td class="ficha">24 de agosto de 1984 (37 años)</td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Lugar <br> de nacimiento</strong></td>
+        <td class="ficha">Seúl, Corea del Sur</td>
+      </tr>
+      <tr class="ficha">
+        <th colspan="2" class="ficha">Carrera</th>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Ocupación</strong></td>
+        <td class="ficha">Cantante, actor</td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Debut</strong></td>
+        <td class="ficha">
+          <ul class="ficha">
+            <li>En grupo: <br> 6 de noviembre de 2005</li>
+            <li>En solitario: <br> 19 de abril de 2016</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>En activo</strong></td>
+        <td>2005 - hoy</td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Agencias</strong></td>
+        <td>
+          <ul class="ficha">
+            <li>S.M. Entertainment</li>
+            <li>SJLabel</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Grupos</strong></td>
+        <td>
+          <ul class="ficha">
+            <li>SUPER JUNIOR</li>
+            <li>SUPER JUNIOR-K.R.Y.</li>
+            <li>SUPER JUNIOR-Happy</li>
+            <li>S.M. THE BALLAD</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="ficha">
+        <th colspan="2" class="ficha"><a href="discografia.html#yesung">Discografía</a></th>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Coreano</strong></td>
+        <td class="ficha">
+          <ul class="ficha">
+            <li>4 mini-albums</li>
+            <li>10 colaboraciones</li>
+            <li>15 bandas sonoras</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Japonés</strong></td>
+        <td class="ficha">
+          <ul class="ficha">
+            <li>1 album</li>
+            <li>2 single</li>
+          </ul>
+        </td>
+      </tr>
+      <th colspan="2" class="ficha">Fandom</th>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Nombre</strong></td>
+        <td class="ficha">Clouds</td>
+      </tr>
+      <tr class="ficha">
+        <td class="ficha"><strong>Icono</strong></td>
+        <td class="ficha">☁️</td>
+      </tr>
+      <tr class="ficha">
+        <th colspan="2" class="ficha">Redes Sociales</th>
+      </tr>
+      <tr class="ficha">
+        <th class="ficha">
+          Yesung en la imagen de portada <br /> del disco Beautiful Night.
+        </th>
+        <td class="ficha" colspan="2">
+          <table>
+            <tr>
+              <td>
+                <a href="https://twitter.com/shfly3424"><img class="icon" src="./img/icon_twitter.svg"
+                    alt="Icono Twitter" /></a>
+              </td>
+              <td>
+                <a href="https://www.instagram.com/yesung1106"><img class="icon" src="./img/icon_insta.svg"
+                    alt="Icono Instagram" /></a>
+              </td>
+              <td>
+                <a href="https://www.tiktok.com/@yesung003"><img class="icon" src="./img/icon_tiktok.svg"
+                    alt="Icono TikTok" /></a>
+              </td>
+              <td>
+                <a href="https://open.spotify.com/artist/4hyF8Vtc73RYJr3RgTE2Zf"><img class="icon"
+                    src="./img/icon_spoti.svg" alt="Icono Spotify" /></a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </main>
+
+  <!-- Menú lateral-->
+  <div class="nav">
+    <nav>
+      <details>
+        <summary><strong>K.R.Y.</strong></summary>
+        <ol>
+          <li><a href="./kry.html">Ficha</a></li>
+          <li><a href="./discografia.html#kry">Discografía</a></li>
+          <li><a href="./musica.html#kry">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Kyuhyun</strong></summary>
+        <ol>
+          <li><a href="./kyuhyun.html">Ficha</a></li>
+          <li><a href="./discografia.html#kyuhyun">Discografía</a></li>
+          <li><a href="./musica.html#kyuhyun">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Ryeowook</strong></summary>
+        <ol>
+          <li><a href="./ryeowook.html">Ficha</a></li>
+          <li><a href="./discografia.html#ryeowook">Discografía</a></li>
+          <li><a href="./musica.html#ryeowook">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Yesung</strong></summary>
+        <ol>
+          <li><a href="./yesung.html">Ficha</a></li>
+          <li><a href="./discografia.html#yesung">Discografía</a></li>
+          <li><a href="./musica.html#yesung">Música</a></li>
+        </ol>
+      </details>
+    </nav>
+  </div>
+
+  <footer>
+    <a href="./quienes.html">¿Quiénes somos?</a> -
+    <a href="./location.html">Localización</a> -
+    <a href="./contacto.html">Contacto</a>
+  </footer>
+</body>
+
+</html>

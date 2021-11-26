@@ -1,0 +1,34 @@
+{
+    "peliculas": [
+        {
+            "titulo":"Dune",
+            "caratula": "https://pics.filmaffinity.com/dune-756528084-large.jpg",
+            "director": {
+                "nombre":"Denis Villeneuve",
+                "enlace":"https://es.wikipedia.org/wiki/Denis_Villeneuve"
+            },
+            "produccion": [
+                {
+                    "nombre": "Denis Villeneuve"
+                },
+                {
+                    "nombre": "Mary Parent"
+                },
+                {
+                    "nombre": "Cale Boyter"
+                },
+                {
+                    "nombre": "Joe Caracciolo, Jr."
+                }
+            ],
+            "musica": {
+                "nombre":"Hans Zimmer",
+                "enlace":"https://es.wikipedia.org/wiki/Hans_Zimmer"
+            },
+            "reparto": [
+                {
+                "nombre":"A"
+                }]
+        }
+    ]
+}

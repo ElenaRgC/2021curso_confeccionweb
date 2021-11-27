@@ -1,288 +1,303 @@
 <!DOCTYPE html>
 <html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SUPER JUNIOR-K.R.Y.</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>SUPER JUNIOR-K.R.Y.</title>
+    <style>
+      /* Estilos para el header */
 
-  <style>
-    /* Estilos para el header */
+      header {
+        background-color: black;
+        position: relative;
+        z-index: 1;
+      }
 
-    header {
-      background-color: black;
-      position: relative;
-      z-index: 1;
-    }
+      div.cabecera {
+        position: relative;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        z-index: 1;
+      }
 
-    div.cabecera {
-      position: relative;
-      color: white;
-      margin: 0px;
-      padding: 0px;
-      z-index: 1;
-    }
+      div.menucab {
+        position: absolute;
+        bottom: 2px;
+        left: 16px;
+        z-index: 1;
+      }
 
-    div.menucab {
-      position: absolute;
-      bottom: 2px;
-      left: 16px;
-      z-index: 1;
-    }
+      img.cabecera {
+        max-height: 200px;
+        position: relative;
+        z-index: 1;
+      }
 
-    img.cabecera {
-      max-height: 200px;
-      position: relative;
-      z-index: 1;
-    }
+      table.cabecera {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
 
-    table.cabecera {
-      width: 100%;
-      position: relative;
-      z-index: 1;
-    }
+      td.cabecera {
+        padding-right: 40px;
+        vertical-align: text-bottom;
+        position: relative;
+        z-index: 1;
+      }
 
-    td.cabecera {
-      padding-right: 40px;
-      vertical-align: text-bottom;
-      position: relative;
-      z-index: 1;
-    }
+      /* Estilos de los enlaces */
 
-    /* Estilos de los enlaces */
+      a {
+        color: violet;
+        text-decoration: none;
+      }
 
-    a {
-      color: violet;
-      text-decoration: none;
-    }
+      a:visited {
+        color: purple;
+        text-decoration: none;
+      }
 
-    a:visited {
-      color: purple;
-      text-decoration: none;
-    }
+      a:hover {
+        color: darkviolet;
+        text-decoration: none;
+      }
 
-    a:hover {
-      color: darkviolet;
-      text-decoration: none;
-    }
+      a:active {
+        color: darkred;
+        text-decoration: none;
+      }
 
-    a:active {
-      color: darkred;
-      text-decoration: none;
-    }
+      /* Estilos para el contenido de la página */
 
-    /* Estilos para el contenido de la página */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: whitesmoke;
+        background-image: url(./img/sjlogo.svg);
+        background-repeat: repeat;
+      }
 
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: whitesmoke;
-      background-image: url(./img/sjlogo.svg);
-      background-repeat: repeat;
-    }
+      main {
+        margin-left: 150px;
+        margin-right: auto;
+        margin-bottom: 40px;
+      }
 
-    main {
-      margin-left: 150px;
-      margin-right: auto;
-      margin-bottom: 40px;
-    }
+      section {
+        width: 90%;
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        padding: 5px;
+      }
 
-    section {
-      width: 90%;
-      height: fit-content;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 10px;
-      padding: 5px;
-    }
+      fieldset {
+        margin: 20px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-    fieldset {
-      margin: 20px;
-      width: fit-content;
-      margin-left: auto;
-      margin-right: auto;
-    }
+      legend.titulo {
+        border: 1px black solid;
+      }
 
-    legend.titulo {
-      border: 1px black solid;
-    }
+      iframe {
+        width: 100%;
+        display: inline-block;
+      }
 
-    iframe {
-      width: 100%;
-      display: inline-block;
-    }
+      /* Estilos para el menú lateral */
 
-    /* Estilos para el menú lateral */
+      nav ol {
+        list-style-type: none;
+        padding-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
 
-    nav ol {
-      list-style-type: none;
-      padding-left: 20px;
-      margin-top: 5px;
-      margin-bottom: 10px;
-    }
+      div.nav {
+        height: 100%;
+        position: fixed;
+        bottom: 0%;
+        float: left;
+        z-index: 0;
+        top: 0px;
+        left: 0;
+        overflow-x: hidden;
+        width: 120px;
+        background-color: black;
+        color: white;
+        padding-top: 220px;
+      }
 
-    div.nav {
-      height: 100%;
-      position: fixed;
-      bottom: 0%;
-      float: left;
-      z-index: 0;
-      top: 0px;
-      left: 0;
-      overflow-x: hidden;
-      width: 120px;
-      background-color: black;
-      color: white;
-      padding-top: 220px;
-    }
+      /* Estilos para el footer */
 
-    /* Estilos para el footer */
+      footer {
+        text-align: center;
+        background-color: black;
+        width: 100%;
+        bottom: 0;
+        position: fixed;
+      }
 
-    footer {
-      text-align: center;
-      background-color: black;
-      width: 100%;
-      bottom: 0;
-      position: fixed;
-    }
+      /* Estilo de home */
 
-    /* Estilo de home */
+      aside.home {
+        width: 50%;
+        display: block;
+        float: left;
+        margin-right: 30px;
+      }
 
-    aside.home {
-      width: 50%;
-      display: block;
-      float: left;
-      margin-right: 30px;
-    }
+      iframe.youtube {
+        height: 315px;
+      }
 
-    iframe.youtube {
-      height: 315px;
-    }
+      p {
+        margin-top: 0px;
+        margin-bottom: 6px;
+      }
+    </style>
+  </head>
 
-    p {
-      margin-top: 0px;
-      margin-bottom: 6px;
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <div class="cabecera">
-      <img class="cabecera" src="./img/cabecera.png"
-        alt="Cabecera de la web mostrando a los miembros de SUPER JUNIOR-K.R.Y." />
-      <div class="menucab">
-        <nav>
-          <table class="cabecera">
-            <tr>
-              <td class="cabecera">
-                <a href="./index.html">Home</a>
-              </td>
-              <td class="cabecera">
-                <a href="./ryeowook.html">Ryeowook</a>
-              </td>
-              <td class="cabecera">
-                <a href="./kyuhyun.html">Kyuhyun</a>
-              </td>
-              <td class="cabecera">
-                <a href="./yesung.html">Yesung</a>
-              </td>
-              <td class="cabecera">
-                <a href="./kry.html">K.R.Y.</a>
-              </td>
-              <td class="cabecera">
-                <a href="./noticias.html">Noticias</a>
-              </td>
-              <td class="cabecera">
-                <a href="./log-in.html">Iniciar sesión</a>
-              </td>
-              <td class="cabecera">
-                <a href="./registro.html">Regístrate</a>
-              </td>
-            </tr>
-          </table>
-        </nav>
+  <body>
+    <header>
+      <div class="cabecera">
+        <img
+          class="cabecera"
+          src="./img/cabecera.png"
+          alt="Cabecera de la web mostrando a los miembros de SUPER JUNIOR-K.R.Y."
+        />
+        <div class="menucab">
+          <nav>
+            <table class="cabecera">
+              <tr>
+                <td class="cabecera">
+                  <a href="./index.html">Home</a>
+                </td>
+                <td class="cabecera">
+                  <a href="./ryeowook.html">Ryeowook</a>
+                </td>
+                <td class="cabecera">
+                  <a href="./kyuhyun.html">Kyuhyun</a>
+                </td>
+                <td class="cabecera">
+                  <a href="./yesung.html">Yesung</a>
+                </td>
+                <td class="cabecera">
+                  <a href="./kry.html">K.R.Y.</a>
+                </td>
+                <td class="cabecera">
+                  <a href="./noticias.html">Noticias</a>
+                </td>
+                <td class="cabecera">
+                  <a href="./log-in.html">Iniciar sesión</a>
+                </td>
+                <td class="cabecera">
+                  <a href="./registro.html">Regístrate</a>
+                </td>
+              </tr>
+            </table>
+          </nav>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <h1>¿Quienes son SUPER JUNIOR-K.R.Y.?</h1>
-    <section>
-      <aside class="home">
-        <iframe class="youtube" src="https://www.youtube.com/embed/n0LZmB2UjxA" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen poster="./img/alb_wwwu.jpg"> </iframe>
-      </aside>
+    <main>
+      <h1>¿Quienes son SUPER JUNIOR-K.R.Y.?</h1>
+      <section>
+        <aside class="home">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Id_-W-gOthI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </aside>
 
-      <article>
-        <p><a href="./kry.html">SUPER JUNIOR-K.R.Y.</a> es un grupo de música de Corea del Sur que se formó como una sub
-          unidad vocal a partir del
-          grupo SUPER JUNIOR, de S.M. Entertainment. Se encuentra formado por los cantantes <a
-            href="./kyuhyun.html">Kyuhyun</a>, <a href="./ryeowook.html">Ryeowook</a> y <a
-            href="./yesung.html">Yesung</a>,
-          vocalistas principales de SUPER JUNIOR y cuyas iniciales dan nombre a la sub unidad.
-          Aunque debutaron el 5 de noviembre de 2006 y han participado en múltiples bandas sonoras, lanzado singles en
-          varios idiomas y participado con su propia marca bajo discos de SUPER JUNIOR, no lanzaron su primer mini-album
-          (When We Were Us) bajo su propio nombre hasta el 8 de junio de
-          2020, catorce años después.</p>
+        <article>
+          <p>
+            <a href="./kry.html">SUPER JUNIOR-K.R.Y.</a> es un grupo de música
+            de Corea del Sur que se formó como una sub unidad vocal a partir del
+            grupo SUPER JUNIOR, de S.M. Entertainment. Se encuentra formado por
+            los cantantes <a href="./kyuhyun.html">Kyuhyun</a>,
+            <a href="./ryeowook.html">Ryeowook</a> y
+            <a href="./yesung.html">Yesung</a>, vocalistas principales de SUPER
+            JUNIOR y cuyas iniciales dan nombre a la sub unidad. Aunque
+            debutaron el 5 de noviembre de 2006 y han participado en múltiples
+            bandas sonoras, lanzado singles en varios idiomas y participado con
+            su propia marca bajo discos de SUPER JUNIOR, no lanzaron su primer
+            mini-album (When We Were Us) bajo su propio nombre hasta el 8 de
+            junio de 2020, casi catorce años después.
+          </p>
 
-        <p>Aún así, los tres miembros constan de una inmensa popularidad en solitario y han declarado en múltiples
-          ocasiones que sus apretados horarios son los que les impiden
-          reunirse. Aunque cuentan con una larga cantidad de canciones a sus espaldas como solistas, también tienen
-          carrera en televisión como actores o presentadores, también como
-          actores de musicales, todo ello sumado a sus actividades como miembros de SUPER JUNIOR.</p>
+          <p>
+            Aún así, los tres miembros constan de una inmensa popularidad en
+            solitario y han declarado en múltiples ocasiones que sus apretados
+            horarios son los que les impiden reunirse. Aunque cuentan con una
+            larga cantidad de canciones a sus espaldas como solistas, también
+            tienen carrera en televisión como actores o presentadores, también
+            como actores de musicales, todo ello sumado a sus actividades como
+            miembros de SUPER JUNIOR.
+          </p>
 
-        <p>Sin embargo, esto no detiene su pasión por trabajar juntos, y hace sus colaboraciones aún más especiales.</p>
-      </article>
-
-    </section>
-  </main>
-
+          <p>
+            Sin embargo, esto no detiene su pasión por trabajar juntos, y hace
+            sus colaboraciones aún más especiales.
+          </p>
+        </article>
+      </section>
+    </main>
 
     <!-- Menú lateral-->
-  <div class="nav">
-    <nav>
-      <details>
-        <summary><strong>K.R.Y.</strong></summary>
-        <ol>
-          <li><a href="./kry.html">Ficha</a></li>
-          <li><a href="./discografia.html#kry">Discografía</a></li>
-          <li><a href="./musica.html#kry">Música</a></li>
-        </ol>
-      </details>
-      <details>
-        <summary><strong>Kyuhyun</strong></summary>
-        <ol>
-          <li><a href="./kyuhyun.html">Ficha</a></li>
-          <li><a href="./discografia.html#kyuhyun">Discografía</a></li>
-          <li><a href="./musica.html#kyuhyun">Música</a></li>
-        </ol>
-      </details>
-      <details>
-        <summary><strong>Ryeowook</strong></summary>
-        <ol>
-          <li><a href="./ryeowook.html">Ficha</a></li>
-          <li><a href="./discografia.html#ryeowook">Discografía</a></li>
-          <li><a href="./musica.html#ryeowook">Música</a></li>
-        </ol>
-      </details>
-      <details>
-        <summary><strong>Yesung</strong></summary>
-        <ol>
-          <li><a href="./yesung.html">Ficha</a></li>
-          <li><a href="./discografia.html#yesung">Discografía</a></li>
-          <li><a href="./musica.html#yesung">Música</a></li>
-        </ol>
-      </details>
-    </nav>
-  </div>
+    <div class="nav">
+      <nav>
+        <details>
+          <summary><strong>K.R.Y.</strong></summary>
+          <ol>
+            <li><a href="./kry.html">Ficha</a></li>
+            <li><a href="./discografia.html#kry">Discografía</a></li>
+            <li><a href="./musica.html#kry">Música</a></li>
+          </ol>
+        </details>
+        <details>
+          <summary><strong>Kyuhyun</strong></summary>
+          <ol>
+            <li><a href="./kyuhyun.html">Ficha</a></li>
+            <li><a href="./discografia.html#kyuhyun">Discografía</a></li>
+            <li><a href="./musica.html#kyuhyun">Música</a></li>
+          </ol>
+        </details>
+        <details>
+          <summary><strong>Ryeowook</strong></summary>
+          <ol>
+            <li><a href="./ryeowook.html">Ficha</a></li>
+            <li><a href="./discografia.html#ryeowook">Discografía</a></li>
+            <li><a href="./musica.html#ryeowook">Música</a></li>
+          </ol>
+        </details>
+        <details>
+          <summary><strong>Yesung</strong></summary>
+          <ol>
+            <li><a href="./yesung.html">Ficha</a></li>
+            <li><a href="./discografia.html#yesung">Discografía</a></li>
+            <li><a href="./musica.html#yesung">Música</a></li>
+          </ol>
+        </details>
+      </nav>
+    </div>
 
-  <footer>
-    <a href="./quienes.html">¿Quiénes somos?</a> -
-    <a href="./location.html">Localización</a> -
-    <a href="./contacto.html">Contacto</a>
-  </footer>
-</body>
-
+    <footer>
+      <a href="./quienes.html">¿Quiénes somos?</a> -
+      <a href="./location.html">Localización</a> -
+      <a href="./contacto.html">Contacto</a>
+    </footer>
+  </body>
 </html>

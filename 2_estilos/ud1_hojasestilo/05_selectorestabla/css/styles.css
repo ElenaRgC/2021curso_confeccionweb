@@ -1,0 +1,33 @@
+/* CSS styles */
+
+table {
+  border: 1px black solid;
+}
+
+th {
+  border: 1px black solid;
+}
+
+td {
+  border: 1px black solid;
+}
+
+#azul td {
+  color: blue;
+}
+
+#verde td {
+  color: darkgreen;
+}
+
+#rojo td {
+  color: red;
+}
+
+#morado td {
+  color: purple;
+}
+
+td:first-of-type {
+  background-color: lightblue;
+}

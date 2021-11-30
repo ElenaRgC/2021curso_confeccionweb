@@ -1,0 +1,26 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
+	<title>v982-d3-01-ai</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #9146ff } 
+		.shp1 { fill: #ffffff } 
+		.shp2 { fill: #000000 } 
+	</style>
+	<g id="Graphic Elements">
+		<g id="Twitch">
+			<path id="&lt;Path&gt;" class="shp0" d="M142.33 74.64C142.33 111.92 112.11 142.14 74.83 142.14C37.56 142.14 7.33 111.92 7.33 74.64C7.33 37.36 37.56 7.14 74.83 7.14C112.11 7.14 142.33 37.36 142.33 74.64Z" />
+			<g id="&lt;Group&gt;">
+				<g id="&lt;Group&gt;">
+					<path id="&lt;Path&gt;" class="shp1" d="M108.17 76.3L94.83 89.64L81.5 89.64L69.83 101.3L69.83 89.64L54.83 89.64L54.83 39.64L108.17 39.64L108.17 76.3Z" />
+					<g id="&lt;Group&gt;">
+						<g id="Layer 1-2 2 ">
+							<path id="&lt;Compound Path&gt;" fill-rule="evenodd" class="shp2" d="M114.83 32.97L114.83 79.64L84.83 109.64L71.5 109.64L54.83 126.3L54.83 109.64L34.83 109.64L34.83 49.64L51.5 32.97L114.83 32.97ZM108.17 39.64L54.83 39.64L54.83 89.64L69.83 89.64L69.83 101.3L81.5 89.64L94.83 89.64L108.17 76.3L108.17 39.64Z" />
+							<path id="&lt;Path&gt;" class="shp2" d="M91.5 51.3L98.17 51.3L98.17 71.3L91.5 71.3L91.5 51.3Z" />
+							<path id="&lt;Path&gt;" class="shp2" d="M73.17 51.3L79.83 51.3L79.83 71.3L73.17 71.3L73.17 51.3Z" />
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

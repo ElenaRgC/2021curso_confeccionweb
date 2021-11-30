@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Registrarse</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <img src="./img/cabecera.png" alt="Cabecera de la web mostrando a los miembros de SUPER JUNIOR-K.R.Y." />
+      <div>
+        <nav>
+          <table>
+            <tr>
+              <td>
+                <a href="./index.html">Home</a>
+              </td>
+              <td>
+                <a href="./ryeowook.html">Ryeowook</a>
+              </td>
+              <td>
+                <a href="./kyuhyun.html">Kyuhyun</a>
+              </td>
+              <td>
+                <a href="./yesung.html">Yesung</a>
+              </td>
+              <td>
+                <a href="./kry.html">K.R.Y.</a>
+              </td>
+              <td>
+                <a href="./noticias.html">Noticias</a>
+              </td>
+              <td>
+                <a href="./log-in.html">Iniciar sesión</a>
+              </td>
+              <td>
+                <a href="./registro.html">Regístrate</a>
+              </td>
+            </tr>
+          </table>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <form action="#">
+      <fieldset>
+        <legend>Introduce tus datos</legend>
+        <label for="usuario">Usuario:</label><br />
+        <input type="text" id="usuario" placeholder="Usuario" required pattern="[a-zA-Z0-9]+" /><br />
+        <label for="email">Correo electrónico:</label><br />
+        <input type="email" id="email" required placeholder="cuenta@ejemplo.com" /><br />
+        <label for="password">Contraseña:</label><br />
+        <input id="password" type="password" required pattern="(?=.*[1-9]){1,}(?=.*+-!?){1,}(?=.*[A-Z]){1,}.{8,}"
+          title="Debe contener un mínimo de 8 caracteres, con mayúsculas, números y símbolos."
+          placeholder="********" /><br />
+        Miembro favorito:
+        <ol>
+          <li>
+            <input type="radio" id="kyuhyun" name="bias" />
+            <label for="kyuhyun">Kyuhyun</label>
+          </li>
+          <li>
+            <input type="radio" id="ryeowook" name="bias" />
+            <label for="ryeowook">Ryeowook</label>
+          </li>
+          <li>
+            <input type="radio" id="yesung" name="bias" />
+            <label for="yesung">Yesung</label>
+          </li>
+        </ol>
+        <input type="submit" value="Registrarse" />
+      </fieldset>
+    </form>
+  </main>
+
+  <!-- Menú lateral-->
+  <div>
+    <nav>
+      <details>
+        <summary><strong>K.R.Y.</strong></summary>
+        <ol>
+          <li><a href="./kry.html">Ficha</a></li>
+          <li><a href="./discografia.html#kry">Discografía</a></li>
+          <li><a href="./musica.html#kry">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Kyuhyun</strong></summary>
+        <ol>
+          <li><a href="./kyuhyun.html">Ficha</a></li>
+          <li><a href="./discografia.html#kyuhyun">Discografía</a></li>
+          <li><a href="./musica.html#kyuhyun">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Ryeowook</strong></summary>
+        <ol>
+          <li><a href="./ryeowook.html">Ficha</a></li>
+          <li><a href="./discografia.html#ryeowook">Discografía</a></li>
+          <li><a href="./musica.html#ryeowook">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Yesung</strong></summary>
+        <ol>
+          <li><a href="./yesung.html">Ficha</a></li>
+          <li><a href="./discografia.html#yesung">Discografía</a></li>
+          <li><a href="./musica.html#yesung">Música</a></li>
+        </ol>
+      </details>
+    </nav>
+  </div>
+
+  <footer>
+    <a href="./quienes.html">¿Quiénes somos?</a> -
+    <a href="./location.html">Localización</a> -
+    <a href="./contacto.html">Contacto</a>
+  </footer>
+</body>
+
+</html>

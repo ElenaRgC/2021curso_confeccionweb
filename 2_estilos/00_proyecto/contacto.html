@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Contacto</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <img src="./img/cabecera.png" alt="Cabecera de la web mostrando a los miembros de SUPER JUNIOR-K.R.Y." />
+      <div>
+        <nav>
+          <table>
+            <tr>
+              <td>
+                <a href="./index.html">Home</a>
+              </td>
+              <td>
+                <a href="./ryeowook.html">Ryeowook</a>
+              </td>
+              <td>
+                <a href="./kyuhyun.html">Kyuhyun</a>
+              </td>
+              <td>
+                <a href="./yesung.html">Yesung</a>
+              </td>
+              <td>
+                <a href="./kry.html">K.R.Y.</a>
+              </td>
+              <td>
+                <a href="./noticias.html">Noticias</a>
+              </td>
+              <td>
+                <a href="./log-in.html">Iniciar sesión</a>
+              </td>
+              <td>
+                <a href="./registro.html">Regístrate</a>
+              </td>
+            </tr>
+          </table>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <form action="mailto:elenarodriguezcalderon@gmail.com" method="get">
+      <fieldset>
+        <legend>Contacta con nosotros</legend>
+        <label for="nombre">Nombre:</label><br />
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required
+          title="Nombre con el que quieras que te refiramos." /><br />
+        <label for="email">Correo electrónico:</label><br />
+        <input type="email" id="email" name="cc" required placeholder="cuenta@ejemplo.com"
+          title="Recibirás una copia de este email en tu correo." /><br />
+        <label for="asunto">Asunto:</label><br />
+        <input type="text" id="asunto" name="subject" placeholder="Asunto" required title="Asunto del mensaje." /><br />
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea rows="15" cols="60" id="mensaje" name="body" placeholder="Escriba aquí su mensaje." required
+          title="Cuerpo del mensaje."></textarea><br />
+        <input type="submit" value="Enviar" />
+      </fieldset>
+    </form>
+  </main>
+
+  <!-- Menú lateral-->
+  <div>
+    <nav>
+      <details>
+        <summary><strong>K.R.Y.</strong></summary>
+        <ol>
+          <li><a href="./kry.html">Ficha</a></li>
+          <li><a href="./discografia.html#kry">Discografía</a></li>
+          <li><a href="./musica.html#kry">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Kyuhyun</strong></summary>
+        <ol>
+          <li><a href="./kyuhyun.html">Ficha</a></li>
+          <li><a href="./discografia.html#kyuhyun">Discografía</a></li>
+          <li><a href="./musica.html#kyuhyun">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Ryeowook</strong></summary>
+        <ol>
+          <li><a href="./ryeowook.html">Ficha</a></li>
+          <li><a href="./discografia.html#ryeowook">Discografía</a></li>
+          <li><a href="./musica.html#ryeowook">Música</a></li>
+        </ol>
+      </details>
+      <details>
+        <summary><strong>Yesung</strong></summary>
+        <ol>
+          <li><a href="./yesung.html">Ficha</a></li>
+          <li><a href="./discografia.html#yesung">Discografía</a></li>
+          <li><a href="./musica.html#yesung">Música</a></li>
+        </ol>
+      </details>
+    </nav>
+  </div>
+
+  <footer>
+    <a href="./quienes.html">¿Quiénes somos?</a> -
+    <a href="./location.html">Localización</a> -
+    <a href="./contacto.html">Contacto</a>
+  </footer>
+</body>
+
+</html>

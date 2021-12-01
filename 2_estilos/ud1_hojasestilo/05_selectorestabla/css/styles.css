@@ -12,22 +12,34 @@ td {
   border: 1px black solid;
 }
 
-#azul td {
+tr:first-of-type {
   color: blue;
 }
 
-#verde td {
+tr:nth-child(2) {
   color: darkgreen;
 }
 
-#rojo td {
+tr:nth-child(3) {
   color: red;
 }
 
-#morado td {
+tr:nth-child(4) {
   color: purple;
 }
 
 td:first-of-type {
   background-color: lightblue;
+}
+
+td:nth-child(2) {
+  background-color: pink;
+}
+
+td:nth-child(3) {
+  background-color: lightgrey;
+}
+
+td:nth-child(4) {
+  background-color: lightgreen;
 }

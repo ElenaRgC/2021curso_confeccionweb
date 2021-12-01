@@ -1,0 +1,29 @@
+/* El tipo de letra de la página es Arial, con el tipo de respaldo Verdana.
+El encabezado de nivel 1 utiliza el tipo de letra Georgia, con un tamaño de letra de 32 px y en versalitas.
+El encabezado de nivel 2 utiliza el tipo de letra Georgia, con un tamaño de letra de 24 px, en cursiva y en versalitas.
+Los títulos de los elementos de las listas aparecen en negrita.
+El contenido de los elementos de las listas, aunque están etiquetados como <strong>, no se visualizan en negrita. */
+
+/* Orden: font-style, font-variant, font-weight, font-stretch, font-size, line-height y font-family*/
+
+/* Obligatorio font-size y font-family. La propiedad line-height se separa de font-size por una barra (/). */
+
+* {
+  font-family: Arial, Verdana, sans-serif;
+}
+
+h1 {
+  font: small-caps bold 32px Georgia, serif;
+}
+
+h2 {
+  font: small-caps italic bold 24px Georgia, serif;
+}
+
+li {
+  font-weight: bold;
+}
+
+li strong {
+  font-weight: normal;
+}

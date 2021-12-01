@@ -1,12 +1,22 @@
-h1 {
-    color:white;
-    background-color: black;
+/* CSS styles */
+h1 + p {
+  font-family: "Lucida Handwriting", cursive;
 }
 
-p {
-    color:brown;
+p:nth-child(3) {
+  font-weight: bold;
 }
 
-p span {
-    background-color: cadetblue;
+p:nth-child(4) {
+  line-height: 1, 5em;
+}
+
+p:nth-child(5) {
+  font-style: oblique;
+}
+/* Orden: font-style, font-variant, font-weight, font-stretch, 
+   * font-size, line-height y font-family*/
+
+p:nth-child(6) {
+    font: italic bold large Copperplate, fantasy;
 }

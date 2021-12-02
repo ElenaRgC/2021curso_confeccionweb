@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+body {
+  background-color: rgb(198,224,236);
+  font-family: sans-serif;
+}
+
+h1 {
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 48px;
+}
+
+h2 {
+  background-color: #4099bf;
+  font-size: 32px;
+}
+
+h3 {
+  color: white;
+  background-color: hsl(198,50%,65%);
+  font-size: 24px;
+}
+
+p {
+  word-spacing: 0.07em;
+}
+
+a {
+  color: #0000ff;
+}
+
+.mclibre {
+  background-color: white;
+  border-top: 2px black solid;
+  text-align: center;
+  font-size: 12.5px;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  margin: 0;
+  padding-top: 3px;
+  padding-bottom: 7px;
+  margin-left: -30px;
+  padding-left: 30px;
+  margin-right: -30px;
+  padding-right: 30px;
+}
+
+.mclibre::first-letter {
+  font-size: 16px;
+}
+
+a + cite {
+  font-style:normal
+}
+
+blockquote {
+  font-style: oblique;
+}
+
+pre {
+  font-family: monospace;
+  background-color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+address {
+  font-family: serif;
+  text-align: right;
+  font-style: normal;
+  padding-bottom: 30px;
+}

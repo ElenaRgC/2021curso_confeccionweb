@@ -1,45 +1,47 @@
 body {
+  background-color: rgb(198, 217, 238);
   font-family: sans-serif;
-  background-color: hsl(0, 0%, 93%);
 }
 
 h1 {
-  text-align: center;
-  text-transform: uppercase;
+  text-align: right;
+  font-size: 48px;
 }
 
 h2 {
-  background-color:rgb(136, 136, 136);
-  color: red;
-}
-
-h3 {
-  background-color: #aaaaaa;
-  color: purple;
+  font-family: monospace;
+  font-size: 48px;
+  font-variant: small-caps;
 }
 
 p {
-  background-color: #ccc;
-  line-height: 1.5em;
+  text-indent: 3em;
+  line-height: 2em;
+}
+
+span {
+  font-family: cursive;
+  color: red;
 }
 
 em {
-  color: blue;
-  font-style: normal;
-  font-weight: bold;
-  text-decoration: underline;
+  color:green;
+  background-color: white;
 }
 
 strong {
-  color: darkgreen;
-  font-weight: normal;
+  color:chocolate; 
+}
+
+time {
+  color: #ff8c00;
 }
 
 address {
-  margin-bottom: 40px;
-  text-align: right;
-  font-style: normal;
-  background-color: white;
+  font-variant: normal;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 45px;
 }
 
 .mclibre {

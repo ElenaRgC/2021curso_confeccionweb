@@ -1,4 +1,39 @@
+body {
+  background-color: rgb(45, 134, 82);
+}
 
+h1 {
+  font: 48px sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-size: 24px;
+}
+
+.infancia {
+  color: white;
+  font-style: oblique;
+}
+
+.animales {
+  color: hsl(35, 100%, 85%);
+  font-family: sans-serif
+}
+
+.literatura {
+  color: #ff9f1a;
+  font-family: monospace;
+}
+
+.numeros {
+  color:#d4244d;
+  font-family: cursive;
+}
+
+p:nth-child(9) {
+  margin-bottom: 50px;
+}
 
 .mclibre {
   background-color: white;
@@ -15,6 +50,8 @@
   padding-left: 30px;
   margin-right: -30px;
   padding-right: 30px;
+  margin-top: 30px;
+  font-family: sans-serif;
 }
 
 .mclibre::first-letter {

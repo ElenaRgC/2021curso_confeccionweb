@@ -31,6 +31,25 @@ a {
   color: #0000ff;
 }
 
+
+blockquote {
+  font-style: oblique;
+}
+
+pre {
+  font-family: monospace;
+  background-color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+address {
+  font-family: serif;
+  text-align: right;
+  font-style: normal;
+  padding-bottom: 30px;
+}
+
 .mclibre {
   background-color: white;
   border-top: 2px black solid;
@@ -54,22 +73,4 @@ a {
 
 a + cite {
   font-style:normal
-}
-
-blockquote {
-  font-style: oblique;
-}
-
-pre {
-  font-family: monospace;
-  background-color: white;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-address {
-  font-family: serif;
-  text-align: right;
-  font-style: normal;
-  padding-bottom: 30px;
 }

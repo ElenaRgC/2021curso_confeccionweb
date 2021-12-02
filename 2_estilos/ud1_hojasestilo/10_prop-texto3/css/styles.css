@@ -9,9 +9,7 @@ h1 {
 }
 
 h2 {
-  font-family: monospace;
-  font-size: 48px;
-  font-variant: small-caps;
+  font: small-caps bold 48px monospace;
 }
 
 p {
@@ -38,10 +36,13 @@ time {
 }
 
 address {
-  font-variant: normal;
+  font: oblique 12px sans-serif;
   text-align: center;
-  font-size: 12px;
   margin-bottom: 45px;
+}
+
+a {
+  color: blue;
 }
 
 .mclibre {

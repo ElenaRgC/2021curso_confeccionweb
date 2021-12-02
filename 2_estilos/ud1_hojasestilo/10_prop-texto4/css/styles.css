@@ -35,6 +35,10 @@ p:nth-child(9) {
   margin-bottom: 50px;
 }
 
+a {
+  color: blue;
+}
+
 .mclibre {
   background-color: white;
   border-top: 2px black solid;

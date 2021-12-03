@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+@font-face {
+  font-family: "Smooch";
+  src: url("../fonts/smooch-regular-webfont.woff") format("woff");
+  src: url("../fonts/smooch-regular-webfont.woff2") format ("woff2");
+}
+
+p.uno {
+  font-family: Smooch;
+  font-size: 1.5em;
+}
+
+p.dos {
+  font-family: "Roboto Mono";
+}

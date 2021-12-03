@@ -1,0 +1,46 @@
+/* CSS styles */
+p {
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.one {
+  border-color: red;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 10px 0px;
+}
+
+.two {
+  border: black 5px dotted;
+}
+
+.three {
+  border: blue 5px dashed;
+}
+
+.four {
+  border: lightblue 5px groove;
+  border-radius: 10px;
+}
+
+.five {
+  border-top: green 5px double;
+}
+
+.six {
+  border-left: orange 5px ridge;
+  border-right: orange 5px ridge;
+}
+
+.seven {
+  border: black 20px solid;
+  border-image-source: url("https://cdn.pixabay.com/photo/2020/08/20/18/05/frame-5504265_960_720.png");
+}
+
+.eight {
+  border: 30px solid;
+  border-image-source: url("https://cdn.pixabay.com/photo/2020/08/20/18/05/frame-5504265_960_720.png");
+  border-image-slice: 100;
+}

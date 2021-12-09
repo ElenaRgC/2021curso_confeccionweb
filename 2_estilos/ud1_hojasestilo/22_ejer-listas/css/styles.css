@@ -1,0 +1,248 @@
+body {
+  font-family: sans-serif;
+  background-color: #d3d3d3;
+}
+
+h2 {
+  clear: both;
+}
+
+.lista1 {
+  list-style-type: none;
+  float: left;
+  padding: 0.2rem;
+}
+
+.lista1 li {
+  display: block;
+  float: left;
+  width: 10rem;
+  background-color: #5ace77;
+  border: dashed 0.35rem #954a95;
+  text-align: center;
+  font-weight: bold;
+  color: #5e0272;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.lista2 {
+  list-style-type: none;
+  float: left;
+  width: 100%;
+}
+
+.lista2 li {
+  display: block;
+  float: left;
+  background-color: white;
+  border: outset 2px black;
+  padding: 0.25rem;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+}
+
+.lista2 li:hover {
+  display: block;
+  float: left;
+  background-color: #d3d3d3;
+  border: inset 2px black;
+}
+
+.lista3 {
+  list-style-type: none;
+  display: block;
+  float: left;
+  border: solid 1px black;
+  padding: 0.4rem 0.8rem;
+}
+
+.lista3 li {
+  background-color: white;
+  border: solid 1px black;
+  text-align: center;
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.lista4 {
+  list-style-type: none;
+  float: left;
+  width: 100%;
+}
+
+.lista4 li {
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 0.2rem;
+  width: 10rem;
+  padding: 0.5rem;
+}
+
+.lista4 li:nth-child(odd) {
+  background-color: white;
+  color: #3366cc;
+}
+
+.lista4 li:nth-child(even) {
+  background-color: #3366cc;
+  color: white;
+}
+
+.lista5 {
+  list-style-type: none;
+}
+
+.lista6 {
+}
+
+.icon-inicio::before {
+  content: "";
+  background-image: url(../img/house.svg);
+  background-size: 100% 100%;
+  display: inline-block;
+
+  /*size of your image*/
+  height: 1rem;
+  width: 1rem;
+
+  /*if you want to change the position you can use margins or:*/
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+
+.icon-anadir::before {
+  content: "";
+  background-image: url(../img/plus.svg);
+  background-size: 100% 100%;
+  display: inline-block;
+
+  /*size of your image*/
+  height: 1rem;
+  width: 1rem;
+
+  /*if you want to change the position you can use margins or:*/
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+
+.icon-listar::before {
+  content: "";
+  background-image: url(../img/file-lines.svg);
+  background-size: 100% 100%;
+  display: inline-block;
+
+  /*size of your image*/
+  height: 1rem;
+  width: 1rem;
+
+  /*if you want to change the position you can use margins or:*/
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+
+.icon-borrar::before {
+  content: "";
+  background-image: url(../img/minus.svg);
+  background-size: 100% 100%;
+  display: inline-block;
+
+  /*size of your image*/
+  height: 1rem;
+  width: 1rem;
+
+  /*if you want to change the position you can use margins or:*/
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+
+.icon-buscar::before {
+  content: "";
+  background-image: url(../img/magnifying-glass.svg);
+  background-size: 100% 100%;
+  display: inline-block;
+
+  /*size of your image*/
+  height: 1rem;
+  width: 1rem;
+
+  /*if you want to change the position you can use margins or:*/
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+
+.icon-modificar::before {
+  content: "";
+  background-image: url(../img/pencil.svg);
+  background-size: 100% 100%;
+  display: inline-block;
+
+  /*size of your image*/
+  height: 1rem;
+  width: 1rem;
+
+  /*if you want to change the position you can use margins or:*/
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+
+.icon-salir::before {
+  content: "";
+  background-image: url(../img/power-off.svg);
+  background-size: 100% 100%;
+  display: inline-block;
+
+  /*size of your image*/
+  height: 1rem;
+  width: 1rem;
+
+  /*if you want to change the position you can use margins or:*/
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+
+.lista5 li {
+}
+
+.lista6 {
+}
+
+.lista6 li {
+}
+
+.mclibre {
+  background-color: white;
+  border-top: 2px black solid;
+  text-align: center;
+  font-size: 12.5px;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  margin: 0;
+  padding-top: 3px;
+  padding-bottom: 7px;
+  margin-left: -30px;
+  padding-left: 30px;
+  margin-right: -30px;
+  padding-right: 30px;
+  margin-top: 30px;
+  font-family: sans-serif;
+}
+
+.mclibre::first-letter {
+  font-size: 16px;
+}
+
+a + cite {
+  font-style: normal;
+}

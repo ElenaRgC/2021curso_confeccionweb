@@ -1,0 +1,23 @@
+/* CSS styles */
+
+p::first-letter {
+  float: left;
+  font-size: 3rem;
+  border: dotted 1px red;
+  margin: -0.5rem 0.2rem -1rem 0;
+}
+
+.contenedor1 {
+  border: solid 2px blue;
+  overflow: hidden;
+}
+
+img {
+  float:right;
+}
+
+.ultimo {
+  border: solid 2px blue;
+  clear: both;
+}
+	  

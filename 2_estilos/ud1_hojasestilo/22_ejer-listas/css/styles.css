@@ -9,7 +9,6 @@ h2 {
 
 .lista1 {
   list-style-type: none;
-  float: left;
   padding: 0.2rem;
 }
 
@@ -29,13 +28,11 @@ h2 {
 
 .lista2 {
   list-style-type: none;
-  float: left;
-  width: 100%;
+  text-align: center;
 }
 
 .lista2 li {
-  display: block;
-  float: left;
+  display: inline-block;
   background-color: white;
   border: outset 2px black;
   padding: 0.25rem;
@@ -44,16 +41,13 @@ h2 {
 }
 
 .lista2 li:hover {
-  display: block;
-  float: left;
   background-color: #d3d3d3;
   border: inset 2px black;
 }
 
 .lista3 {
+  float:left;
   list-style-type: none;
-  display: block;
-  float: left;
   border: solid 1px black;
   padding: 0.4rem 0.8rem;
 }
@@ -69,12 +63,12 @@ h2 {
 
 .lista4 {
   list-style-type: none;
-  float: left;
   width: 100%;
+  text-align: center;
 }
 
 .lista4 li {
-  float: left;
+  display: inline-block;
   text-align: center;
   font-weight: bold;
   margin: 0 0.2rem;
@@ -96,128 +90,75 @@ h2 {
   list-style-type: none;
 }
 
-.lista6 {
-}
-
-.icon-inicio::before {
-  content: "";
-  background-image: url(../img/house.svg);
-  background-size: 100% 100%;
-  display: inline-block;
-
-  /*size of your image*/
-  height: 1rem;
-  width: 1rem;
-
-  /*if you want to change the position you can use margins or:*/
-  position: relative;
-  top: 1px;
-  right: 1px;
-}
-
-.icon-anadir::before {
-  content: "";
-  background-image: url(../img/plus.svg);
-  background-size: 100% 100%;
-  display: inline-block;
-
-  /*size of your image*/
-  height: 1rem;
-  width: 1rem;
-
-  /*if you want to change the position you can use margins or:*/
-  position: relative;
-  top: 1px;
-  right: 1px;
-}
-
-.icon-listar::before {
-  content: "";
-  background-image: url(../img/file-lines.svg);
-  background-size: 100% 100%;
-  display: inline-block;
-
-  /*size of your image*/
-  height: 1rem;
-  width: 1rem;
-
-  /*if you want to change the position you can use margins or:*/
-  position: relative;
-  top: 1px;
-  right: 1px;
-}
-
-.icon-borrar::before {
-  content: "";
-  background-image: url(../img/minus.svg);
-  background-size: 100% 100%;
-  display: inline-block;
-
-  /*size of your image*/
-  height: 1rem;
-  width: 1rem;
-
-  /*if you want to change the position you can use margins or:*/
-  position: relative;
-  top: 1px;
-  right: 1px;
-}
-
-.icon-buscar::before {
-  content: "";
-  background-image: url(../img/magnifying-glass.svg);
-  background-size: 100% 100%;
-  display: inline-block;
-
-  /*size of your image*/
-  height: 1rem;
-  width: 1rem;
-
-  /*if you want to change the position you can use margins or:*/
-  position: relative;
-  top: 1px;
-  right: 1px;
-}
-
-.icon-modificar::before {
-  content: "";
-  background-image: url(../img/pencil.svg);
-  background-size: 100% 100%;
-  display: inline-block;
-
-  /*size of your image*/
-  height: 1rem;
-  width: 1rem;
-
-  /*if you want to change the position you can use margins or:*/
-  position: relative;
-  top: 1px;
-  right: 1px;
-}
-
-.icon-salir::before {
-  content: "";
-  background-image: url(../img/power-off.svg);
-  background-size: 100% 100%;
-  display: inline-block;
-
-  /*size of your image*/
-  height: 1rem;
-  width: 1rem;
-
-  /*if you want to change the position you can use margins or:*/
-  position: relative;
-  top: 1px;
-  right: 1px;
-}
-
 .lista5 li {
+  margin: 0 1rem;
 }
 
 .lista6 {
+  list-style-type: none;
+  text-align: center;
 }
 
 .lista6 li {
+  display: inline-block;
+  margin: 0 1rem 2rem 1rem;
+}
+
+[class^="icon"]::before {
+  content: "";
+  background-image: url("");
+  background-size: 100% 100%;
+  display: inline-block;
+}
+
+.lista5 [class^="icon"]::before {
+  height: 1rem;
+  width: 1rem;
+
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+
+.lista6 [class^="icon"]::before {
+  height: 4rem;
+  width: 4rem;
+
+  background-color: white;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  border: solid 0.2rem black;
+  border-radius: 0.5rem;
+}
+
+.icon-inicio::before {
+  background-image: url(../img/house.svg);
+}
+
+.icon-anadir::before {
+  background-image: url(../img/plus.svg);
+}
+
+.icon-listar::before {
+  background-image: url(../img/file-lines.svg);
+}
+
+.icon-borrar::before {
+  background-image: url(../img/minus.svg);
+}
+
+.icon-buscar::before {
+  background-image: url(../img/magnifying-glass.svg);
+}
+
+.icon-modificar::before {
+  background-image: url(../img/pencil.svg);
+}
+
+.icon-salir::before {
+  background-image: url(../img/power-off.svg);
 }
 
 .mclibre {

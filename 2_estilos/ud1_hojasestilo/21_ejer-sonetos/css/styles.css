@@ -1,0 +1,48 @@
+body {
+  font-family: sans-serif;
+  background-image: url("../img/corazon-1.svg"), url("../img/corazon-2.svg");
+  background-position: left top, right top;
+  background-repeat: repeat-y, repeat-y;
+  background-size: 150px, 150px;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+div {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  border: solid 2px black;
+  width: 55%;
+  margin: 0.5rem auto;
+}
+
+.s1 {
+  color: white;
+  background-image: url("../img/manchas.png");
+}
+
+.s2 {
+  color: #ffdd00;
+  background-image: url("../img/fuego.svg"), url("../img/fuego.svg"), url("../img/tallos.jpg");
+  background-position: left bottom, right bottom, left top;
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+.s3 {
+    color: darkred;
+    background-image:  url("../img/ojo.svg"), url("../img/hexagonos.jpg");
+    background-position: center center, left top;
+    background-repeat: no-repeat, repeat;
+}
+
+.s4 {
+    color: darkgreen;
+    background-image: url("../img/caballo.svg"), url("../img/estrellas.png");
+    background-position: center bottom, left top;
+    background-repeat: repeat-x, repeat;
+    background-size: 30%, auto;
+    }

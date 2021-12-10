@@ -1,37 +1,97 @@
 * {
-    margin: 0;
-    padding: 0;
-    background-color: #c7c8d1;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #c7c8d1;
 }
 
 h1 {
-    color: #575a75;
-}
-
-h2 {
-
+  font-size: 4rem;
+  color: #575a75;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 article {
-    font-family: sans-serif;
+  font-family: sans-serif;
+  width: 80%;
+  margin: 1rem auto;
+  overflow: hidden;
 }
 
-.futbol {
-
+h2 {
+  color: white;
+  font-family: serif;
+  font-size: 2rem;
 }
 
-.literatura {
-
+article.futbol {
+  border: solid 3px #cc4400;
+  border-radius: 0 1rem 1rem 1rem;
 }
 
-div {
+.futbol h2 {
+  background-color: #cc5500;
+}
 
+.futbol .datos {
+  background-color: #db5b00;
+}
+
+.futbol .vida {
+  background-color: #ffa666;
+}
+
+article.literatura {
+  border: solid 3px #e600e6;
+  border-radius: 1rem 0 1rem 0;
+}
+
+.literatura h2 {
+  background-color: #e600e6;
+}
+
+.literatura .datos {
+  background-color: #ff80ff;
+}
+
+.literatura .vida {
+  background-color: #ffccff;
 }
 
 .datos {
-
+    padding: 0.5rem;
 }
 
 .vida {
-
+    padding: 0.5rem 1rem;
 }
+
+.mclibre {
+    background-color: white;
+    border-top: 2px black solid;
+    text-align: center;
+    font-size: 12.5px;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    margin: 0;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    margin-left: -100px;
+    padding-left: 50px;
+    margin-right: -100px;
+    padding-right: 50px;
+    margin-top: 30px;
+    font-family: sans-serif;
+  }
+  
+  .mclibre::first-letter {
+    font-size: 16px;
+  }
+  
+  a + cite {
+    font-style: normal;
+  }

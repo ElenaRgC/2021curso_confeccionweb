@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff280;
+    font-family: sans-serif;
+    margin: auto;
+    width: 95%;
+}
+
+h1 {
+
+}
+
+main {
+    background-color: white;
+}
+
+section {
+    background-color: #ffeb33;
+    border-color: solid 5px #ffc533;
+    width: 90%;
+}
+
+h2 {
+    background-color: #ffc533;
+}
+
+article {
+    background-color: #ffeb33;
+    border: solid 5px #ff7700;
+    float: left;
+    width: 45%;
+}
+
+h3 {
+    clear: both;
+    background-color: #ff7700;
+    color: white;
+}
+
+p {
+    background-color: #ffda33;
+    padding: 0.5rem;
+}
+
+footer {
+    clear: both;
+}

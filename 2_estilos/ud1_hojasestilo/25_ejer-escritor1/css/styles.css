@@ -1,0 +1,124 @@
+@font-face {
+    font-family: playball;
+    src: url(../font/playball.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: playball, cursive;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+    border-right: solid 5px #ff6633;
+    border-left: solid 5px #ff6633;
+    padding: 0 0.5rem;
+}
+
+header {
+    background-color: #e64d1a;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding: 1rem 0 3rem 0.5rem;
+}
+
+h2 {
+    clear: both;
+    color: white;
+    background-color: #ff6633;
+    font-size: 2rem;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+h3 {
+    clear: both;
+    color: white;
+    background-color: #ff6633;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+article {
+    background-color: white;
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+}
+
+article article {
+    width: 80%;
+    height: 90%;
+}
+
+.siglo {
+    background-color: #ffd9cc;
+    padding-bottom: 1rem;
+}
+
+p {
+    padding: 0.5rem 2rem 2rem 2rem;
+    text-align: justify;
+}
+
+aside {
+    background-color: white;
+    border-left: solid 5px #ff6633;
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+aside p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    margin: 1rem 2rem;
+}
+
+.mclibre {
+    background-color: white;
+    border-top: 2px black solid;
+    text-align: center;
+    font-size: 12.5px;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    margin: 0;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    margin-left: -200px;
+    padding-left: 100px;
+    margin-right: -200px;
+    padding-right: 100px;
+    margin-top: 30px;
+    font-family: sans-serif;
+  }
+  
+  .mclibre::first-letter {
+    font-size: 16px;
+  }
+
+  p.mclibre a {
+    font-family: sans-serif;
+  }
+  
+  a + cite {
+    font-style: normal;
+    font-family: sans-serif;
+  }

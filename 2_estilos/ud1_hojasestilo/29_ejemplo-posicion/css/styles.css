@@ -1,0 +1,29 @@
+h1 {
+    background-color: darkred;
+    position: relative;
+    z-index: 1;
+}
+
+.par {
+    background-color: purple;
+}
+
+
+div {
+    border: solid 2px blue;
+    background-color: darkslategrey;
+    width: 60%;
+}
+
+.contenedor {
+    position: relative;
+    left: 50px;
+    z-index: 1;
+}
+
+.contenedor + .par {
+    position: relative;
+    bottom: 80px;
+}
+
+

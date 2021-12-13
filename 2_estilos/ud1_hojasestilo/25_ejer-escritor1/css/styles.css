@@ -113,12 +113,7 @@ img {
   .mclibre::first-letter {
     font-size: 16px;
   }
-
-  p.mclibre a {
-    font-family: sans-serif;
-  }
   
   a + cite {
     font-style: normal;
-    font-family: sans-serif;
   }

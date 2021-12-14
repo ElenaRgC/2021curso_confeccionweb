@@ -1,84 +1,93 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #fff280;
 }
 
 body {
-    color: black;
-    background-color: #fff280;
-    font-family: sans-serif;
-    margin: auto;
-    width: 95%;
+  background-color: #fff280;
+  color: black;
+  font-family: sans-serif;
+  margin: auto;
+  width: 95%;
 }
 
 h1 {
-
 }
 
 main {
-    background-color: white;
-    box-sizing: border-box;
-    width: 95%;
-    padding: 1rem;
+  background-color: white;
+  box-sizing: border-box;
+  width: 95%;
+  padding: 1rem;
 }
 
 section {
-    background-color: #ffeb33;
-    border-color: solid 5px #ffc533;
-    width: 95%;
-    height: 95%;
+  float: left;
+  background-color: #ffeb33;
+  border: solid 5px #ffc533;
+  margin: 1rem;
+  width: 45%;
+  height: 95%;
 }
 
 h2 {
-    background-color: #ffc533;
+  background-color: #ffc533;
 }
 
 article {
-    background-color: #ffeb33;
-    border: solid 5px #ff7700;
-    display: inline-block;
-    margin: 1rem;
-    width: 45%;
+  display: block;
+  float: left;
+  background-color: #ffeb33;
+  border: solid 5px #ff7700;
+  display: inline-block;
+  margin: 1rem;
+  width: 45%;
 }
 
 h3 {
-    clear: both;
-    background-color: #ff7700;
-    color: white;
+  clear: both;
+  background-color: #ff7700;
+  color: white;
 }
 
 p {
-    background-color: #ffda33;
-    padding: 0.5rem;
+  background-color: #ffda33;
+  padding: 0.5rem;
 }
 
 footer {
-    clear: both;
+  clear: both;
 }
 
 .mclibre {
+  background-color: white;
+  border-top: 2px black solid;
+  bottom: 0%;
+  font-family: sans-serif;
+  font-size: 12.5px;
+  margin: 0;
+  margin-left: -200px;
+  margin-right: -200px;
+  margin-top: 30px;
+  padding-top: 3px;
+  padding-bottom: 7px;
+  padding-left: 100px;
+  padding-right: 100px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.mclibre::first-letter {
+  font-size: 16px;
+}
+
+.mclibre a {
     background-color: white;
-    border-top: 2px black solid;
-    bottom: 0%;
-    font-family: sans-serif;
-    font-size: 12.5px;
-    margin: 0;
-    margin-left: -200px;
-    margin-right: -200px;
-    margin-top: 30px;
-    padding-top: 3px;
-    padding-bottom: 7px;
-    padding-left: 100px;
-    padding-right: 100px;
-    position: fixed;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .mclibre::first-letter {
-    font-size: 16px;
-  }
-  
-  a + cite {
-    font-style: normal;
-  }
+}
+
+a + cite {
+  background-color: white;
+  font-style: normal;
+}

@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #33e7ff;
+    font-family: sans-serif;
+    margin: auto;
+    width: 95%;
+}
+
+h1 {
+    color: #005a66;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: 2rem;
+}
+
+p {
+    float: left;
+    background-color: #00b4cc; 
+    border: dashed 5px #005a66; 
+    font-size: 1.5rem;
+    font-style: oblique; 
+    margin: 0.6rem;     
+    width: 280px;
+    height: 280px;
+}
+
+p::first-letter {
+    color: #005a66;
+    float: left;
+    font-size: 5rem;
+    font-style: normal;
+    margin-top: 0.5rem;
+}

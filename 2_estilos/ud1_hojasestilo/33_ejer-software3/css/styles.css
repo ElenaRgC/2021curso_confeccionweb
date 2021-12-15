@@ -1,26 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e0e1eb;
+  color: black;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #33354d;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+nav {
+  background-color: #33354d;
+  border-radius: 5px;
+  position: fixed;
+  padding: 0.5rem;
+  top: 15%;
+  left: 1rem;
+}
+
+a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+article {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem auto;
+  text-align: justify;
+}
+
+main {
+  width: 65%;
+  margin: 6rem auto 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+  font-size: 4rem;
+  padding: 0.25rem 0;
+}
+
+h2 {
+  background-color: #29a333;
+  color: white;
+  font-size: 3rem;
+  padding: 0.5rem;
+}
+
+article p {
+  background-color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
 .mclibre {
-    background-color: white;
-    border-top: 2px black solid;
-    bottom: 0%;
-    font-family: sans-serif;
-    font-size: 12.5px;
-    margin: 0;
-    margin-left: -200px;
-    margin-right: -200px;
-    margin-top: 30px;
-    padding-top: 3px;
-    padding-bottom: 7px;
-    padding-left: 100px;
-    padding-right: 100px;
-    position: fixed;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .mclibre::first-letter {
-    font-size: 16px;
-  }
-  
-  a + cite {
-    font-style: normal;
-  }
+  background-color: white;
+  border-top: 2px black solid;
+  bottom: 0%;
+  font-family: sans-serif;
+  font-size: 12.5px;
+  margin: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.mclibre::first-letter {
+  font-size: 16px;
+}
+
+a + cite {
+  font-style: normal;
+}

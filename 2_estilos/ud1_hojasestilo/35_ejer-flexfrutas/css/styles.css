@@ -1,0 +1,25 @@
+p {
+    border: solid 1px black;
+}
+
+.a11 {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.a12 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.a13 {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.a12 {
+    display: flex;
+    flex-flow: row wrap;
+}

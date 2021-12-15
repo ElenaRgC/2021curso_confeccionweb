@@ -1,0 +1,60 @@
+body {
+  color: black;
+  font-size: 16px;
+}
+
+header {
+  background-color: lightyellow;
+  height: 10vh;
+  font-size: 2rem;
+}
+
+nav {
+  background-color: pink;
+  height: 6vh;
+  font-size: 2rem;
+}
+
+main {
+  background-color: lightblue;
+  height: 40vh;
+  font-size: 2rem;
+}
+
+aside {
+  background-color: beige;
+  height: 8vh;
+  font-size: 2rem;
+}
+
+footer {
+  background-color: aquamarine;
+  height: 6vh;
+  font-size: 0.5rem;
+}
+
+.contenedor_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 8px;
+  }
+
+  .contenedor_central_flex {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  nav {
+    width: 100%;
+  }
+  main {
+    width: 75%;
+  }
+  aside {
+    width: 25%;
+    height: 40vh;
+  }
+}

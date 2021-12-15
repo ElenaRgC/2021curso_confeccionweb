@@ -1,17 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e0e1eb;
+  color:black;
+  font-family: sans-serif;
+}
+
+h1 {
+  background-color: #33354d;
+  color: white;
+  font-size: 4rem;
+  padding: 0.25rem 0;  
+
+  position: relative;
+  width:100%;
+  top:0;
+}
+
+h2{
+  background-color: #33354d;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+h3 {
+  background-color: #29a333;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+}
+
+article {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem auto;
+  text-align: justify;
+  width: 85%;
+}
+
+p {
+  background-color: white;
+  padding: 0.5rem;
+}
+
+#escritorio {
+  box-sizing: border-box;
+  
+  border-right: solid 2px #33354d;
+  border-left: solid 2px #33354d;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+
+  position: absolute;
+  width: 35%;
+  left: 10%;
+  top: 6rem;
+}
+
+#internet {
+  box-sizing: border-box;
+
+  border-right: solid 2px #33354d;
+  border-left: solid 2px #33354d;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+
+  position: absolute;
+  width: 35%;
+  right: 10%;
+  top: 6rem;
+}
+
 .mclibre {
     background-color: white;
     border-top: 2px black solid;
     bottom: 0%;
     font-family: sans-serif;
     font-size: 12.5px;
-    margin: 0;
-    margin-left: -200px;
-    margin-right: -200px;
-    margin-top: 30px;
-    padding-top: 3px;
-    padding-bottom: 7px;
-    padding-left: 100px;
-    padding-right: 100px;
     position: fixed;
     text-align: center;
     width: 100%;

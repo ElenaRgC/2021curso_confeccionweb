@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: black;
+    font-family: sans-serif;
+}
+
+main {
+    background-color: #e5e1ee;
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    background-color: lightgrey;
+    padding: 1rem;
+    width: 100%;
+    margin: auto;
+}
+
+h2 {
+    text-align: right;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+}
+
+span {
+    color: #8980f5;
+}
+
+section {
+    box-sizing: content-box;
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+}
+
+article {
+    text-align: justify;
+    border-radius: 20px 0 20px 0;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.idiomas {
+    background-color: #ffa69e;
+    box-shadow: -3px -2px 2px #aa6a64;
+    width: 25%;
+    flex-grow: 1;
+}
+
+.libros {
+    background-color: #b4f0b4;
+    box-shadow: -3px -2px 2px #8abd8a;
+    width: 25%;
+    flex-grow: 1;
+}
+
+.juegos {
+    background-color: #fec59a;
+    box-shadow: -3px -2px 2px #af8768;
+    width: 25%;
+    flex-grow: 1;
+}
+
+.otros {
+    background-color: #82e9ed;
+    box-shadow: -3px -2px 2px #4da89e;
+    width: 100%;
+}
+
+.otros div {
+    background-color: #b9bedc;
+    box-shadow: 2px 2px 3px grey inset;
+    border: inset 1px lightgrey;
+    border-radius: 10px 0 10px 0;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+p {
+    margin-bottom: 0.3rem;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+@media screen and (max-width: 800px) {
+    .idiomas, .libros, .juegos {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .idiomas, .libros, .juegos, .otros {
+        width: 80%;
+    }
+}

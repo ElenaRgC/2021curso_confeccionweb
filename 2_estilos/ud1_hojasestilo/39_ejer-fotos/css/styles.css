@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Gloria+Hallelujah&display=swap");
+* {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: "Audiowide", cursive;
+}
+
+h1 {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 36px;
+  color: rgb(211, 95, 95);
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.6em;
+  text-shadow:  2px 2px white;
+}
+
+h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0 0 10px 0;
+  color: #fff;
+  margin-left: 20px;
+}
+
+h3 {
+  color: #fff;
+  font-size: 13px;
+  padding: 10px 0;
+  margin-top: -80px;
+  margin-left: 20px;
+}
+
+h4 {
+  background-color: #000;
+  font-size: 9px;
+  color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+.margen-interno {
+  padding: 0 50px;
+}
+
+.padre {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.section {
+  background-color: black;
+  display: flex;
+}
+
+.footer {
+  background-color: black;
+  justify-content: center;
+}
+
+.menu {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-flow: row nowrap;
+
+  align-items: center;
+  height: 60px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.7);
+}
+
+.logo {
+  /* background-color: #ea5455; */
+  flex: 1 1 auto;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: coral;
+  font-size: 20px;
+}
+
+.nav {
+  /* background-color: #ea5455; */
+  flex: 5 1 auto;
+}
+
+.nav a {
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+
+.nav a:hover,
+.navegacion a:hover {
+  color: coral;
+}
+
+.social {
+  /* background-color: #ea5455; */
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.social a {
+  font-size: 18px;
+  color: darkblue;
+  padding: 0 5px;
+}
+
+.texto-principal {
+  background-color: rgba(20, 20, 20, 0.5);
+  color: #f07b3f;
+  padding: 20px 40px;
+  font-size: 18px;
+
+  height: 180px;
+  display: flex;
+  align-items: center;
+}
+
+.articulos {
+  /* background-color: rgba(200, 250, 200, 0.2); */
+  flex: 2 1 auto;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.article {
+  /* background-color: #1f6cb0; */
+  color: #444;
+  font-size: 13px;
+  letter-spacing: 1px;
+  background-color: #ececec;
+  margin: 10px 10px 0 0;
+  flex: 1 1 40%;
+}
+
+article a {
+  background-color: #333;
+  color: white;
+  font-size: 13px;
+  margin: 10px 20px;
+  padding: 10px 6px;
+  display: inline-block;
+}
+
+article a:hover {
+  color: brown;
+}
+
+article p {
+  padding: 15px;
+  text-align: justify;
+}
+
+.navegacion {
+  background-color: #70a3c4;
+  flex: 1 1 100%;
+  margin: 10px 10px 0 0;
+}
+
+.navegacion a {
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  letter-spacing: 2px;
+}
+
+.aside {
+  /* background-color: #f73f52; */
+  flex: 1 1 auto;
+}
+
+.publicidad {
+  color: coral;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #ffea86; */
+}
+
+.pie {
+  color: #ea6f2e;
+  width: auto;
+}
+
+.pie span {
+  color: white;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.icono /* [class~="fab"] */ {
+  color: white;
+  font-size: 20px;
+}
+
+.header {
+  background-image: url(../img/fondo.jpg);
+  background-position: center;
+  background-size: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+@media all and (max-width: 800px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .menu {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .aside {
+    flex: 1 1 auto;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .articulos {
+    flex-direction: column;
+  }
+
+  .off {
+    display: none;
+  }
+  .nav a {
+    font-size: 30px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .aside {
+    flex-direction: column;
+  }
+}

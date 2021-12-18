@@ -17,7 +17,7 @@ h1 {
   font-weight: 300;
   text-align: center;
   line-height: 1.6em;
-  text-shadow:  2px 2px white;
+  text-shadow: 2px 2px white;
 }
 
 h2 {
@@ -133,7 +133,6 @@ a {
   padding: 20px 40px;
   font-size: 18px;
 
-  height: 180px;
   display: flex;
   align-items: center;
 }
@@ -191,6 +190,8 @@ article p {
 .aside {
   /* background-color: #f73f52; */
   flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .publicidad {
@@ -236,10 +237,13 @@ article p {
 
   .aside {
     flex: 1 1 auto;
+    flex-flow: row nowrap;
   }
-}
 
-@media all and (max-width: 800px) {
+  .texto-principal {
+    font-size: 14px;
+  }
+
   .articulos {
     flex-direction: column;
   }
@@ -247,13 +251,27 @@ article p {
   .off {
     display: none;
   }
+
   .nav a {
     font-size: 30px;
+  }
+
+  .publicidad {
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    flex: 1;
   }
 }
 
 @media all and (max-width: 600px) {
   .aside {
-    flex-direction: column;
+    flex-flow: column nowrap;
+    align-items: middle;
+  }
+
+  .publicidad {
+    width: 50%;
+    margin: auto;
   }
 }

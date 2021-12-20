@@ -31,3 +31,71 @@ footer {
 }
 .twitter {
 }
+
+/*********** ESTILOS DEL MENÚ **********/
+
+nav a {
+  display: flex;
+  background-color: black;
+  color: white;
+  width: 6rem;
+  height: 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+}
+
+.datos a {
+  width: 8rem;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #001247;
+}
+
+.principal {
+  /* background-color: lightblue; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.izquierda,
+.derecha {
+  display: flex;
+}
+
+.miembros {
+  display: none;
+  position: absolute;
+  border: solid 1px yellow;
+}
+
+.datos {
+  display: none;
+  flex-flow: column nowrap;
+  position: absolute;
+  left: 6rem;
+  bottom: 3rem;
+  border: solid 1px red;
+}
+
+/* TODO: Cambiar los miembros por sus nombres */
+
+.grupo:hover .miembros {
+  display: block;
+}
+
+.miembros:hover .datos {
+  display: block;
+}
+
+.burger {
+  display:none;
+}
+
+.kyuhyun {
+  top: 3rem;
+}

@@ -2,6 +2,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 header {
@@ -32,13 +33,31 @@ footer {
 .twitter {
 }
 
+/*********** ESTILOS DEL HEADER ********/
+
+header img {
+  width: 35%;
+  position: relative;
+  top: 0;
+}
+
+
 /*********** ESTILOS DEL MENÚ **********/
+
+/* FIXME: Sticky position */
+
+header nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: black;
+}
 
 nav a {
   display: flex;
   background-color: black;
   color: white;
-  width: 6rem;
+  width: 7rem;
   height: 3rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -46,17 +65,21 @@ nav a {
   align-items: center;
 }
 
-.datos a {
+[class^="datos-"] a {
   width: 8rem;
 }
 
 nav a:hover {
   color: white;
   background-color: #001247;
+  font-weight: bold;
+}
+
+.burger {
+  display:none;
 }
 
 .principal {
-  /* background-color: lightblue; */
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -70,32 +93,44 @@ nav a:hover {
 .miembros {
   display: none;
   position: absolute;
-  border: solid 1px yellow;
 }
 
-.datos {
+[class^="datos-"] {
   display: none;
   flex-flow: column nowrap;
   position: absolute;
-  left: 6rem;
+  left: 7rem;
   bottom: 3rem;
-  border: solid 1px red;
 }
-
-/* TODO: Cambiar los miembros por sus nombres */
 
 .grupo:hover .miembros {
   display: block;
 }
 
-.miembros:hover .datos {
+[class~="menu-kry"]:hover [class~="datos-kry"] {
   display: block;
 }
 
-.burger {
-  display:none;
+[class~="menu-kyuhyun"]:hover [class~="datos-kyuhyun"] {
+  display: block;
 }
 
-.kyuhyun {
+[class~="menu-ryeowook"]:hover [class~="datos-ryeowook"] {
+  display: block;
+}
+
+[class~="menu-yesung"]:hover [class~="datos-yesung"] {
+  display: block;
+}
+
+.datos-kyuhyun {
   top: 3rem;
+}
+
+.datos-ryeowook {
+  top: 6rem;
+}
+
+.datos-yesung {
+  top: 9rem;
 }

@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -47,6 +48,9 @@ article {
     border-radius: 20px 0 20px 0;
     padding: 0.5rem;
     margin: 0.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .idiomas {
@@ -83,6 +87,28 @@ article {
     border-radius: 10px 0 10px 0;
     margin: 1rem;
     padding: 0.5rem;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.otros p {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.otros .youtube {
+    width: 20%;
+    flex-grow: 1;
+}
+
+.otros iframe {
+    width: 100%;
+}
+
+.foto {
+    margin: 1rem auto;
+    width: 90%;
 }
 
 p {
@@ -93,9 +119,23 @@ ul {
     list-style-position: inside;
 }
 
+li {
+    padding: 0.1rem;
+}
+
+.bandera {
+    height: 0.9rem;
+    vertical-align: middle;
+}
+
 @media screen and (max-width: 800px) {
     .idiomas, .libros, .juegos {
         width: 40%;
+    }
+
+    .otros .youtube {
+        width: 100%;
+        flex-grow: 1;
     }
 }
 

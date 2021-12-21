@@ -7,51 +7,78 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+  <link rel="icon" type="image/png" href="./img/favicon.png">
 </head>
 
 <body>
 
-  <!-- TODO: Dropdown Menu-->
-
   <header>
-    <div>
-      <img src="./img/cabecera.png" alt="Cabecera de la web mostrando a los miembros de SUPER JUNIOR-K.R.Y." />
-      <div>
-        <nav>
-          <table>
-            <tr>
-              <td>
-                <a href="./index.html">Home</a>
-              </td>
-              <td>
-                <a href="./ryeowook.html">Ryeowook</a>
-              </td>
-              <td>
-                <a href="./kyuhyun.html">Kyuhyun</a>
-              </td>
-              <td>
-                <a href="./yesung.html">Yesung</a>
-              </td>
-              <td>
-                <a href="./kry.html">K.R.Y.</a>
-              </td>
-              <td>
-                <a href="./noticias.html">Noticias</a>
-              </td>
-              <td>
-                <a href="./log-in.html">Iniciar sesión</a>
-              </td>
-              <td>
-                <a href="./registro.html">Regístrate</a>
-              </td>
-            </tr>
-          </table>
-        </nav>
-      </div>
-    </div>
+
+    <img src="./img/cabecera.png" alt="Cabecera de la web mostrando a los miembros de SUPER JUNIOR-K.R.Y." />
+
   </header>
 
   <main>
+
+    <!-- Menú -->
+
+    <nav> <span class="burger"><i class="fas fa-bars"></i></span>
+      <div class="menu principal">
+        <div class="izquierda">
+          <a href="./index.html">Home</a>
+
+          <div class="grupo"><a href="./kry.html">Grupo</a>
+
+            <div class="miembros">
+              <div class="menu-kry"><a href="./kry.html">K.R.Y.</a>
+                <div class="datos-kry">
+                  <a href="./kry.html">Ficha</a>
+                  <a href="./discografia.html#kry">Discografía</a>
+                  <a href="./musica.html#kry">Música</a>
+                </div>
+              </div>
+
+              <div class="menu-kyuhyun"><a href="./kyuhyun.html">Kyuhyun</a>
+                <div class="datos-kyuhyun">
+                  <a href="./kyuhyun.html">Ficha</a>
+                  <a href="./discografia.html#kyuhyun">Discografía</a>
+                  <a href="./musica.html#kyuhyun">Música</a>
+                </div>
+              </div>
+
+              <div class="menu-ryeowook"><a href="./ryeowook.html">Ryeowook</a>
+                <div class="datos-ryeowook">
+                  <a href="./ryeowook.html">Ficha</a>
+                  <a href="./discografia.html#ryeowook">Discografía</a>
+                  <a href="./musica.html#ryeowook">Música</a>
+                </div>
+              </div>
+
+              <div class="menu-yesung"><a href="./yesung.html">Yesung</a>
+                <div class="datos-yesung">
+                  <div><a href="./yesung.html">Ficha</a></div>
+                  <div><a href="./discografia.html#yesung">Discografía</a></div>
+                  <div><a href="./musica.html#yesung">Música</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="./noticias.html">Noticias</a>
+        </div>
+
+        <div class="derecha">
+          <a href="./log-in.html">Log-In</a>
+          <a href="./registro.html">Regístrate</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Cuerpo de la página-->
+
     <h1>¿Dónde estamos?</h1>
     <section>
       <aside>
@@ -68,44 +95,6 @@
     </section>
   </main>
 
-  <!-- Menú lateral-->
-  <div>
-    <nav>
-      <details>
-        <summary><strong>K.R.Y.</strong></summary>
-        <ol>
-          <li><a href="./kry.html">Ficha</a></li>
-          <li><a href="./discografia.html#kry">Discografía</a></li>
-          <li><a href="./musica.html#kry">Música</a></li>
-        </ol>
-      </details>
-      <details>
-        <summary><strong>Kyuhyun</strong></summary>
-        <ol>
-          <li><a href="./kyuhyun.html">Ficha</a></li>
-          <li><a href="./discografia.html#kyuhyun">Discografía</a></li>
-          <li><a href="./musica.html#kyuhyun">Música</a></li>
-        </ol>
-      </details>
-      <details>
-        <summary><strong>Ryeowook</strong></summary>
-        <ol>
-          <li><a href="./ryeowook.html">Ficha</a></li>
-          <li><a href="./discografia.html#ryeowook">Discografía</a></li>
-          <li><a href="./musica.html#ryeowook">Música</a></li>
-        </ol>
-      </details>
-      <details>
-        <summary><strong>Yesung</strong></summary>
-        <ol>
-          <li><a href="./yesung.html">Ficha</a></li>
-          <li><a href="./discografia.html#yesung">Discografía</a></li>
-          <li><a href="./musica.html#yesung">Música</a></li>
-        </ol>
-      </details>
-    </nav>
-  </div>
-
   <!-- TODO: Añadir un "Volver Arriba"-->
 
   <footer>
@@ -115,7 +104,7 @@
   </footer>
 
   <!-- TODO: Añadir mapa del sitio.-->
-  
+
 </body>
 
 </html>

@@ -35,22 +35,23 @@ footer {
 
 /*********** ESTILOS DEL HEADER ********/
 
+/* FIXME: why do I change sizes on different pages? */
+
 header img {
   width: 35%;
   position: relative;
   top: 0;
 }
 
-
 /*********** ESTILOS DEL MENÚ **********/
 
-/* FIXME: Sticky position */
+/* FIXME: make hover work on mobile devices. Get rid of unnecesary links on the menu. */
 
-header nav {
+nav {
   position: sticky;
   top: 0;
-  width: 100%;
   background-color: black;
+  display: block;
 }
 
 nav a {

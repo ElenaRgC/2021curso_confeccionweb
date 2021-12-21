@@ -1,8 +1,14 @@
+/*********** ESTILOS GENERALES ********/
+
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 header {
@@ -11,8 +17,22 @@ header {
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: #222;
+  color: white;
   background-image: url("../img/sjlogo.svg");
+  font-size: 1rem;
+}
+
+h1 {
+  margin: 1rem auto;
+}
+
+h2, h3, h4, h5, h6 {
+  margin: 0.5rem auto;
+}
+
+article {
+  text-align: justify;
 }
 
 footer {
@@ -134,4 +154,34 @@ nav a:hover {
 
 .datos-yesung {
   top: 9rem;
+}
+
+/*********** ESTILOS DE LA DISCOGRAFÍA **********/
+
+article.discografia {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-left: 10%;
+  margin-right: auto;
+}
+
+article.discografia div {
+  font-size: 1.2rem;
+}
+
+img.discografia {
+  width: 350px;
+}
+
+/* TODO: mejorar h2 */
+
+.discografia h2 {
+  text-align: center;
+  background-color: black;
+}
+
+ol {
+  list-style-position: inside;
 }

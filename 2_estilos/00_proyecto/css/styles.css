@@ -1,4 +1,4 @@
-/*********** ESTILOS GENERALES ********/
+/***** ESTRUCTURA GENERAL ******/
 
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -11,14 +11,7 @@ html {
   font-size: 16px;
 }
 
-header {
-  background-color: black;
-  color: white;
-}
-
 body {
-  background-color: #222;
-  color: white;
   background-image: url("../img/sjlogo.svg");
   font-size: 1rem;
 }
@@ -27,7 +20,11 @@ h1 {
   margin: 1rem auto;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0.5rem auto;
 }
 
@@ -39,21 +36,10 @@ footer {
   width: 100%;
   position: fixed;
   bottom: 0;
-  background-color: black;
-  color: white;
   text-align: center;
 }
 
-.noticia {
-}
-.twitter-tweet {
-}
-.youtube {
-}
-.twitter {
-}
-
-/*********** ESTILOS DEL HEADER ********/
+/***** ESTRUCTURA DEL HEADER *****/
 
 /* FIXME: why do I change sizes on different pages? */
 
@@ -63,21 +49,18 @@ header img {
   top: 0;
 }
 
-/*********** ESTILOS DEL MENÚ **********/
+/***** ESTRUCTURA DEL MENÚ *****/
 
 /* FIXME: make hover work on mobile devices. Get rid of unnecesary links on the menu. */
 
 nav {
   position: sticky;
   top: 0;
-  background-color: black;
   display: block;
 }
 
 nav a {
   display: flex;
-  background-color: black;
-  color: white;
   width: 7rem;
   height: 3rem;
   text-decoration: none;
@@ -91,13 +74,11 @@ nav a {
 }
 
 nav a:hover {
-  color: white;
-  background-color: #001247;
   font-weight: bold;
 }
 
 .burger {
-  display:none;
+  display: none;
 }
 
 .principal {
@@ -156,15 +137,23 @@ nav a:hover {
   top: 9rem;
 }
 
-/*********** ESTILOS DE LA DISCOGRAFÍA **********/
+/***** ESTILOS DE LA DISCOGRAFÍA *****/
+
+ul.indice {
+  list-style-type: none;
+  list-style-position: inside;
+}
 
 article.discografia {
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
-  margin-top: 1rem;
-  margin-left: 10%;
-  margin-right: auto;
+  margin: 1rem auto;
+}
+
+article.discografia h2,
+article.discografia article {
+  flex-grow: 1;
 }
 
 article.discografia div {
@@ -173,15 +162,120 @@ article.discografia div {
 
 img.discografia {
   width: 350px;
+  box-shadow: 1px 1px 3px darkgray;
+  border: solid 1px white;
 }
 
-/* TODO: mejorar h2 */
-
-.discografia h2 {
-  text-align: center;
-  background-color: black;
+h2 {
+  border-bottom: solid 1px white;
 }
 
 ol {
   list-style-position: inside;
+}
+
+/***** TEMA OSCURO *****/
+
+@media (prefers-color-scheme: dark) {
+  /*** ESTILOS GLOBALES ***/
+
+  header {
+    background-color: black;
+    color: white;
+  }
+
+  body {
+    background-color: #222;
+    color: white;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+  }
+
+  h2 {
+    border-bottom: solid 1px white;
+  }
+
+  a {
+    color: #c77dff;
+  }
+
+  a:hover {
+    color: #9d4edd;
+  }
+
+  a:visited {
+    color: #7b2cbf;
+  }
+
+  /*** ESTILOS DEL MENÚ ***/
+
+  nav {
+    background-color: black;
+  }
+
+  nav a {
+    background-color: black;
+    color: white;
+  }
+
+  nav a:hover {
+    color: white;
+    background-color: #001247;
+  }
+
+  /*** ESTILOS DE LA DISCOGRAFÍA ***/
+
+  img.discografia {
+    border: solid 1px white;
+  }
+}
+
+/***** TEMA CLARO *****/
+
+@media (prefers-color-scheme: light) {
+  /*** ESTILOS GLOBALES ***/
+
+  header {
+    background-color: whitesmoke;
+    color: black;
+  }
+
+  body {
+    background-color: whitesmoke;
+    color: black;
+  }
+
+  footer {
+    background-color: whitesmoke;
+    color: black;
+  }
+
+  h2 {
+    border-bottom: solid 1px black;
+  }
+
+  /*** ESTILOS DEL MENÚ ***/
+
+  nav {
+    background-color: #655d5e;
+  }
+
+  nav a {
+    background-color: #655d5e;
+    color: white;
+  }
+
+  nav a:hover {
+    color: white;
+    background-color: #ce956c;
+  }
+
+  /*** ESTILOS DE LA DISCOGRAFÍA ***/
+
+  img.discografia {
+    border: solid 1px black;
+  }
 }

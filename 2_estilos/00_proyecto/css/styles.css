@@ -61,7 +61,7 @@ nav {
   display: block;
 }
 
-nav a {
+nav a, span.menu {
   display: flex;
   width: 7rem;
   height: 3rem;
@@ -75,7 +75,7 @@ nav a {
   width: 8rem;
 }
 
-nav a:hover {
+nav a:hover, span.menu:hover {
   font-weight: bold;
 }
 
@@ -212,15 +212,6 @@ ol {
     align-items: center;
   }
 
-/*   article.discografia div {
-    width: 100%;
-  }
-
-  img.discografia {
-    width: 100%;
-  } */
-
-
 }
 
 /***** TEMA OSCURO *****/
@@ -265,14 +256,18 @@ ol {
     background-color: black;
   }
 
-  nav a {
+  nav a, span.menu {
     background-color: black;
     color: white;
   }
 
-  nav a:hover {
+  nav a:hover, span.menu:hover {
     color: white;
     background-color: #001247;
+  }
+
+  nav a:visited {
+    color: white;
   }
 
   /*** ESTILOS DE LA DISCOGRAFÍA ***/
@@ -312,14 +307,18 @@ ol {
     background-color: #655d5e;
   }
 
-  nav a {
+  nav a, span.menu {
     background-color: #655d5e;
     color: white;
   }
 
-  nav a:hover {
+  nav a:hover, span.menu:hover {
     color: white;
     background-color: #ce956c;
+  }
+
+  nav a:visited {
+    color: white;
   }
 
   /*** ESTILOS DE LA DISCOGRAFÍA ***/

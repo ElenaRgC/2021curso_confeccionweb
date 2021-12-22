@@ -34,9 +34,7 @@ article {
   text-align: justify;
 }
 
-footer {
-  position: sticky;
-  bottom: 0;
+footer nav {
   width: 100%;
   height: 3rem;
   display: flex;
@@ -59,13 +57,14 @@ header img {
 
 /* FIXME: make hover work on mobile devices. Get rid of unnecesary links on the menu. */
 
-nav {
+nav.menu {
   position: sticky;
   top: 0;
   display: block;
 }
 
-nav a, span.menu {
+nav.menu a,
+span.menu {
   display: flex;
   width: 7rem;
   height: 3rem;
@@ -79,7 +78,8 @@ nav a, span.menu {
   width: 8rem;
 }
 
-nav a:hover, span.menu:hover {
+nav a.menu:hover,
+span.menu:hover {
   font-weight: bold;
 }
 
@@ -218,15 +218,15 @@ ol {
     flex-flow: column nowrap;
     gap: 1rem;
     align-items: center;
-    margin:0.5rem 0;
+    margin: 0.5rem 0;
   }
 
-  article.discografia div, img.discografia {
+  article.discografia div,
+  img.discografia {
     width: 90%;
     margin: auto;
     max-width: none;
   }
-
 }
 
 /***** TEMA OSCURO *****/
@@ -267,21 +267,23 @@ ol {
 
   /*** ESTILOS DEL MENÚ ***/
 
-  nav {
+  nav.menu {
     background-color: black;
   }
 
-  nav a, span.menu {
+  nav.menu a,
+  span.menu {
     background-color: black;
     color: white;
   }
 
-  nav a:hover, span.menu:hover {
+  nav.menu a:hover,
+  span.menu:hover {
     color: white;
     background-color: #001247;
   }
 
-  nav a:visited {
+  nav.menu a:visited {
     color: white;
   }
 
@@ -298,13 +300,15 @@ ol {
     color: white;
   }
 
-  footer a, footer a:hover, footer a:visited {
+  footer a,
+  footer a:hover,
+  footer a:visited {
     color: white;
     font-weight: bold;
     text-decoration: none;
   }
 
-  footer a:hover{
+  footer a:hover {
     color: #9d4edd;
     font-weight: bold;
     text-decoration: none;
@@ -337,21 +341,23 @@ ol {
 
   /*** ESTILOS DEL MENÚ ***/
 
-  nav {
+  nav.menu {
     background-color: #655d5e;
   }
 
-  nav a, span.menu {
+  nav.menu a,
+  span.menu {
     background-color: #655d5e;
     color: white;
   }
 
-  nav a:hover, span.menu:hover {
+  nav.menu a:hover,
+  span.menu:hover {
     color: white;
     background-color: #ce956c;
   }
 
-  nav a:visited {
+  nav.menu a:visited {
     color: white;
   }
 
@@ -361,22 +367,24 @@ ol {
     border: solid 1px black;
   }
 
-    /*** ESTILOS DEL FOOTER ***/
+  /*** ESTILOS DEL FOOTER ***/
 
-    footer {
-      background-color: #655d5e;
-      color: white;
-    }
+  footer, footer nav {
+    background-color: #655d5e;
+    color: white;
+  }
 
-    footer a, footer a:hover, footer a:visited {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-    }
+  footer a,
+  footer a:hover,
+  footer a:visited {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
 
-    footer a:hover{
-      color: #51af81;
-      font-weight: bold;
-      text-decoration: none;
-    }
+  footer a:hover {
+    color: #51af81;
+    font-weight: bold;
+    text-decoration: none;
+  }
 }

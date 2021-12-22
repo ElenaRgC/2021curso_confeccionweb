@@ -35,10 +35,14 @@ article {
 }
 
 footer {
-  width: 100%;
   position: fixed;
   bottom: 0;
-  text-align: center;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 /***** ESTRUCTURA DEL HEADER *****/
@@ -139,7 +143,7 @@ nav a:hover, span.menu:hover {
   top: 9rem;
 }
 
-/***** ESTILOS DE LA DISCOGRAFÍA *****/
+/***** ESTRUCTURA DE LA DISCOGRAFÍA *****/
 
 section.discografia {
   display: flex;
@@ -275,6 +279,25 @@ ol {
   img.discografia {
     border: solid 1px white;
   }
+
+  /*** ESTILOS DEL FOOTER ***/
+
+  footer {
+    background-color: black;
+    color: white;
+  }
+
+  footer a, footer a:hover, footer a:visited {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  footer a:hover{
+    color: #9d4edd;
+    font-weight: bold;
+    text-decoration: none;
+  }
 }
 
 /***** TEMA CLARO *****/
@@ -326,4 +349,23 @@ ol {
   img.discografia {
     border: solid 1px black;
   }
+
+    /*** ESTILOS DEL FOOTER ***/
+
+    footer {
+      background-color: #655d5e;
+      color: white;
+    }
+
+    footer a, footer a:hover, footer a:visited {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover{
+      color: #51af81;
+      font-weight: bold;
+      text-decoration: none;
+    }
 }

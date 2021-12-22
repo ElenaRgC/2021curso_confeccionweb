@@ -35,7 +35,7 @@ article {
 }
 
 footer {
-  position: fixed;
+  position: sticky;
   bottom: 0;
   width: 100%;
   height: 3rem;
@@ -199,6 +199,10 @@ ol {
 @media screen and (max-width: 800px) {
   /***** DISCOGRAFÍA *****/
 
+  html {
+    font-size: 11px;
+  }
+
   body {
     font-family: Verdana, sans-serif;
   }
@@ -206,7 +210,7 @@ ol {
   section.discografia {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    justify-content: center;
   }
 
   article.discografia {
@@ -214,6 +218,13 @@ ol {
     flex-flow: column nowrap;
     gap: 1rem;
     align-items: center;
+    margin:0.5rem 0;
+  }
+
+  article.discografia div, img.discografia {
+    width: 90%;
+    margin: auto;
+    max-width: none;
   }
 
 }

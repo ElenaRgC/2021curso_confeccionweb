@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-  margin: 1rem auto;
+  margin: 1rem;
 }
 
 h2,
@@ -25,6 +25,7 @@ h3,
 h4,
 h5,
 h6 {
+  padding-left: 2rem;
   margin: 0.5rem auto;
 }
 
@@ -142,17 +143,21 @@ nav a:hover {
 ul.indice {
   list-style-type: none;
   list-style-position: inside;
+  margin-left: 1rem;
 }
 
 article.discografia {
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
-  margin: 1rem auto;
+  margin: 1rem 2rem;
+
 }
 
-article.discografia h2,
-article.discografia article {
+article.discografia h3,
+article.discografia div {
+  /* margin: 1rem 2rem; */ /* FIXME: Añadir esta variable en pantallas pequeñas */
+  padding:0;
   flex-grow: 1;
 }
 
@@ -164,6 +169,7 @@ img.discografia {
   width: 350px;
   box-shadow: 1px 1px 3px darkgray;
   border: solid 1px white;
+  margin-left: 2rem;
 }
 
 h2 {

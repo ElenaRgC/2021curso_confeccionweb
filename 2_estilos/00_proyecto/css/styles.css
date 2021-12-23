@@ -34,6 +34,8 @@ article {
   text-align: justify;
 }
 
+/***** ESTRUCTURA DEL FOOTER *****/
+
 footer nav {
   width: 100%;
   height: 3rem;
@@ -165,14 +167,11 @@ article.discografia {
   flex-flow: row nowrap;
   gap: 1rem;
   margin: 1rem 2rem;
-  border: solid 3px blue;
 }
 
 article.discografia h3,
 article.discografia div {
-  /* margin: 1rem 2rem; */ /* FIXME: Añadir esta variable en pantallas pequeñas */
   padding: 0;
-  /* flex-grow: 1; */
 }
 
 article.discografia div {
@@ -192,6 +191,88 @@ h2 {
 
 ol {
   list-style-position: inside;
+}
+
+/***** ESTRUCTURA DE LAS FICHAS *****/
+
+.contenedor {
+  width: 90%;
+  margin: auto;
+  display:flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+figure.ficha {
+  flex: 1 0 40%;
+}
+
+img.ficha {
+  width: 100%;
+}
+
+.subcontenedor {
+  flex: 1 1 55%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+
+article.ficha {
+  flex: 1 1 12rem;
+}
+
+article.rrss {
+  flex: 1 0 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.rrss h2 {
+  width: 100%;
+  height: fit-content;
+}
+
+img.rrss {
+  width: 50px;
+} 
+
+h2.ficha, h3.ficha {
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  margin: 0;
+}
+
+h3.ficha {
+  padding: 0.5rem 1.5rem;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+}
+
+p.ficha, ul.ficha, ol.ficha {
+  font-size: 1.2rem;
+  list-style-position: inside;
+}
+
+p.ficha {
+  margin: 0.5rem;
+}
+
+ul.ficha, ol.ficha {
+  list-style-position: inside;
+}
+
+.ficha li {
+  padding-left: 0.5rem;
+}
+
+p.emoji {
+  font-size: 2rem;
 }
 
 /***** PANTALLAS 800px *****/
@@ -281,6 +362,7 @@ ol {
   span.menu:hover {
     color: white;
     background-color: #001247;
+    font-weight: bold;
   }
 
   nav.menu a:visited {
@@ -292,6 +374,17 @@ ol {
   img.discografia {
     border: solid 1px white;
   }
+
+    /*** ESTILOS DE LAS FICHAS ***/
+
+    h2.ficha, h3.ficha {
+      background-color: black;
+      color: white;
+    }
+  
+    h3.ficha {
+      background-color: #5a189a;
+    }
 
   /*** ESTILOS DEL FOOTER ***/
 
@@ -355,6 +448,7 @@ ol {
   span.menu:hover {
     color: white;
     background-color: #ce956c;
+    font-weight: bold;
   }
 
   nav.menu a:visited {
@@ -365,6 +459,17 @@ ol {
 
   img.discografia {
     border: solid 1px black;
+  }
+
+  /*** ESTILOS DE LAS FICHAS ***/
+
+  h2.ficha, h3.ficha {
+    background-color: #655d5e;
+    color: white;
+  }
+
+  h3.ficha {
+    background-color: #ce956c;
   }
 
   /*** ESTILOS DEL FOOTER ***/

@@ -184,37 +184,77 @@ ol {
 
 /***** ESTRUCTURA DE LAS FICHAS *****/
 
-div.ficha {
+div.contenedor {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
+  margin: 1rem;
 }
 
-img.ficha {
-  width: 40%;
-  float: left;
+div.contenedor * {
+  flex: 1;
+}
+
+div.img {
+  width: 50%;
+  height: 100%;
+}
+
+div.img img {
+  width: 100%;
+}
+
+div.ficha {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
 }
 
 article.ficha {
-  flex: 1 1 40%;
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
+  align-self: flex-start;
 }
 
 article.ficha * {
   flex: 1;
+  padding: 0.5rem;
 }
 
-h2.ficha, h3.ficha {
+section.grande {
+  flex: 1.3 0 0;
+}
+
+h2.ficha,
+h3.ficha {
   margin: 0;
   padding: 0;
   flex-basis: 100%;
   align-self: flex-start;
+  text-align: center;
+}
+
+h3.ficha {
+  height: 2rem;
+}
+
+section.rrss {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+section.rrss a {
+  flex-grow: 0;
+  padding: 0;
 }
 
 img.rrss {
-  width: 50px;
+  width: 4rem;
+}
+
+p.emoji {
+  font-size: 3rem;
 }
 
 p.ficha,
@@ -231,10 +271,6 @@ p.ficha {
 ul.ficha,
 ol.ficha {
   list-style-position: inside;
-}
-
-p.emoji {
-  font-size: 2rem;
 }
 
 /* .contenedor {
@@ -273,7 +309,6 @@ figure.ficha {
   height: fit-content;
 } */
 
-
 /* h2.ficha, h3.ficha {
   border: none;
   text-transform: uppercase;
@@ -300,7 +335,6 @@ footer {
   position: sticky;
   bottom: 0;
   width: 100%;
-
 }
 
 footer nav {
@@ -500,7 +534,7 @@ footer nav {
 
   /*** ESTILOS DE LAS FICHAS ***/
 
-/*   article.ficha {
+  /*   article.ficha {
     border: solid 0.5rem #655d5e;
     border-top: none;
   } */

@@ -73,7 +73,8 @@ span.menu:hover {
   font-weight: bold;
 }
 
-.burger {
+span.burger,
+span.miniatura {
   display: none;
 }
 
@@ -181,7 +182,8 @@ ol {
 
 /***** ESTRUCTURA DE LAS FICHAS *****/
 
-div.contenedor { /* TODO: crear un estilo para pantallas muy grandes */
+div.contenedor {
+  /* TODO: crear un estilo para pantallas muy grandes */
   width: 90%;
   margin: 1rem 5%;
 
@@ -212,7 +214,6 @@ div.ficha {
   flex-flow: row wrap;
   gap: 0.5rem;
 }
-
 
 h1.ficha {
   flex-basis: 100%;
@@ -268,7 +269,7 @@ section.rrss a {
 }
 
 .ficha ul {
-  list-style-type: '- ';
+  list-style-type: "- ";
 }
 
 .ficha p,
@@ -303,6 +304,49 @@ footer nav {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+/***** PANTALLAS 600px *****/
+
+@media screen and (max-width: 600px) {
+  span.burger {
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+    padding: 0.4rem 1rem;
+  }
+
+  div.izquierda,
+  span.grupo,
+  span.registro,
+  img.header {
+    display: none;
+  }
+
+  div.derecha a {
+    width: 3rem;
+    margin: 0 0.5rem;
+  }
+
+  span.miniatura {
+    display: block;
+    font-size: 1.8rem;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .burger:hover .izquierda {
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+  }
+
+  .burger:hover .miembros {
+    display: block;
+    position: absolute;
+  }
 }
 
 /***** PANTALLAS 800px *****/
@@ -413,29 +457,29 @@ footer nav {
     background-color: #5a189a;
   }
 
-    /*** ESTILOS DE LAS FICHAS ***/
+  /*** ESTILOS DE LAS FICHAS ***/
 
-    section.ficha {
-      background-color: #111;
-    }
-  
-    h2.ficha {
-      background-color: #5a189a;
-      color: white;
-      border: none;
-    }
+  section.ficha {
+    background-color: #111;
+  }
 
-    h3.ficha {
-      background-color: #111;
-    }
-  
-    .ficha a {
-      color: #c77dff;
-    }
-  
-    .ficha a:hover {
-      color: white;
-    }
+  h2.ficha {
+    background-color: #5a189a;
+    color: white;
+    border: none;
+  }
+
+  h3.ficha {
+    background-color: #111;
+  }
+
+  .ficha a {
+    color: #c77dff;
+  }
+
+  .ficha a:hover {
+    color: white;
+  }
 
   /*** ESTILOS DEL FOOTER ***/
 

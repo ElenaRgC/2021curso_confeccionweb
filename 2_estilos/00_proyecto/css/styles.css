@@ -13,7 +13,7 @@ html {
 
 body {
   background-image: url("../img/sjlogo.svg");
-  font-size: clamp(0.8rem, 1.2vmin, 1.3rem);
+  font-size: clamp(0.95rem, 1vw, 1.3rem);
 }
 
 h1 {
@@ -136,43 +136,51 @@ span.miniatura {
 
 /***** ESTRUCTURA DE LA DISCOGRAFÍA *****/
 
-section.discografia {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-section.discografia h2 {
-  width: 100%;
-}
-
 ul.indice {
   list-style-type: none;
   list-style-position: inside;
   margin-left: 1rem;
 }
 
-article.discografia {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 1rem;
-  margin: 1rem 2rem;
+.indice a {
+  text-decoration: none;
 }
 
-article.discografia h3,
-article.discografia div {
+section.discografia {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+section.discografia h2 {
+  flex-basis: 100%;
+}
+
+article.discografia {
+  flex: 1 1 45%;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+  margin: 1rem 1rem;
+}
+
+article.discografia:last-child {
+  flex: 0 0 47.8%;
+}
+
+article.discografia * {
   padding: 0;
 }
 
-article.discografia div {
-  width: 500px;
+div.contenido {
+  white-space: nowrap;
 }
 
 img.discografia {
+  width: 100%;
   max-width: 350px;
-  box-shadow: 1px 1px 3px darkgray;
 }
 
-h2 {
+.discografia h2 {
   border-bottom: solid 1px white;
 }
 
@@ -394,10 +402,6 @@ footer nav {
     color: white;
   }
 
-  h2 {
-    border-bottom: solid 1px white;
-  }
-
   a {
     color: #c77dff;
   }
@@ -436,7 +440,16 @@ footer nav {
   /*** ESTILOS DE LA DISCOGRAFÍA ***/
 
   img.discografia {
-    border: solid 1px white;
+    border: solid 1px black;
+    box-shadow: 3px 3px 2px #222;
+  }
+
+  .indice a {
+    color: #c77dff;
+  }
+
+  .indice a:hover {
+    color: white;
   }
 
   /*** ESTILOS DE LAS FICHAS ***/
@@ -517,7 +530,7 @@ footer nav {
     color: black;
   }
 
-  h2 {
+  .discografia h2 {
     border-bottom: solid 1px black;
   }
 
@@ -548,6 +561,15 @@ footer nav {
 
   img.discografia {
     border: solid 1px black;
+    box-shadow: 1px 1px 3px #444;
+  }
+
+  .indice a {
+    color: #51af81;
+  }
+
+  .indice a:hover {
+    color: #655d5e;
   }
 
   /*** ESTILOS DE LAS FICHAS ***/

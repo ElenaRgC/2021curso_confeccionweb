@@ -186,20 +186,14 @@ div.contenedor {
   /* TODO: crear un estilo para pantallas muy grandes */
   width: 90%;
   margin: 1rem 5%;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 1rem;
-  grid-row-gap: 0;
-
-  justify-items: center;
+  display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
 div.img {
-  grid-area: 1 / 1 / 2 / 2;
-  justify-self: end;
+  justify-self: flex-end;
+  flex-basis: 50%;
 }
 
 img.ficha {
@@ -209,7 +203,7 @@ img.ficha {
 }
 
 div.ficha {
-  grid-area: 1 / 2 / 2 / 3;
+  flex-basis: 50%;
   display: flex;
   flex-flow: row wrap;
   gap: 0.5rem;

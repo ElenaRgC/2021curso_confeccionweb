@@ -193,9 +193,9 @@ ol {
 div.contenedor {
   /* TODO: crear un estilo para pantallas muy grandes */
   width: 90%;
-  margin: 1rem 5%;
+  margin: 1rem clamp(2rem, 3%, 3rem);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 

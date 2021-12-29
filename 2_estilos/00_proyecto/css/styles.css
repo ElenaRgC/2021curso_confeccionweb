@@ -89,7 +89,7 @@ span.miniatura {
   display: flex;
 }
 
-.miembros {
+.menu-miembros {
   display: none;
   position: absolute;
 }
@@ -102,7 +102,7 @@ span.miniatura {
   bottom: 3rem;
 }
 
-.grupo:hover .miembros {
+.grupo:hover .menu-miembros {
   display: block;
 }
 
@@ -274,6 +274,12 @@ section.rrss a {
   list-style-type: "- ";
 }
 
+ul.miembros a {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .ficha p,
 .ficha li {
   text-align: left;
@@ -345,7 +351,7 @@ footer nav {
     position: absolute;
   }
 
-  .burger:hover .miembros {
+  .burger:hover .menu-miembros {
     display: block;
     position: absolute;
   }

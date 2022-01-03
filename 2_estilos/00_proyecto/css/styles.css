@@ -1,4 +1,4 @@
-/***** ESTRUCTURA GENERAL ******/
+/* GENERAL ESTRUCTURA*/
 
 * {
   /* TODO: Para bajas resoluciones: Verdana */
@@ -33,7 +33,7 @@ article {
   text-align: justify;
 }
 
-/***** ESTRUCTURA DEL HEADER *****/
+/*HEADER ESTRUCTURA*/
 
 /* FIXME: why do I change sizes on different pages? */
 
@@ -43,7 +43,7 @@ header img {
   top: 0;
 }
 
-/***** ESTRUCTURA DEL MENÚ *****/
+/* MENÚ ESTRUCTURA */
 
 /* FIXME: make hover work on mobile devices. Get rid of unnecesary links on the menu. */
 
@@ -134,7 +134,7 @@ span.miniatura {
   top: 9rem;
 }
 
-/***** ESTRUCTURA DE LA DISCOGRAFÍA *****/
+/* DISCOGRAFÍA ESTRUCTURA */
 
 ul.indice {
   list-style-type: none;
@@ -188,7 +188,7 @@ ol {
   list-style-position: inside;
 }
 
-/***** ESTRUCTURA DE LAS FICHAS *****/
+/* FICHAS ESTRUCTURA */
 
 div.contenedor {
   /* TODO: crear un estilo para pantallas muy grandes */
@@ -298,7 +298,7 @@ p.emoji {
   font-size: calc(1.5vw + 1rem);
 }
 
-/***** ESTRUCTURA DEL FOOTER *****/
+/* FOOTER ESTRUCTURA */
 
 footer {
   clear: both;
@@ -358,14 +358,15 @@ footer nav {
   }
 }
 
-/***** PANTALLAS 800px *****/
+/* 800px */
 
 @media screen and (max-width: 800px) {
-  /***** DISCOGRAFÍA *****/
 
   body {
     font-family: Verdana, sans-serif;
   }
+
+  /* DISCOGRAFÍA */
 
   section.discografia {
     display: flex;
@@ -389,10 +390,10 @@ footer nav {
   }
 }
 
-/***** TEMA OSCURO *****/
+/* TEMA OSCURO */
 
 @media (prefers-color-scheme: dark) {
-  /*** ESTILOS GLOBALES ***/
+  /* ESTILO GLOBAL */
 
   header {
     background-color: black;
@@ -421,7 +422,7 @@ footer nav {
     color: #7b2cbf;
   }
 
-  /*** ESTILOS DEL MENÚ ***/
+  /* MENÚ ESTILOS */
 
   nav.menu {
     background-color: black;
@@ -444,7 +445,7 @@ footer nav {
     color: white;
   }
 
-  /*** ESTILOS DE LA DISCOGRAFÍA ***/
+  /* DISCOGRAFÍA ESTILOS */
 
   img.discografia {
     border: solid 1px black;
@@ -459,7 +460,7 @@ footer nav {
     color: white;
   }
 
-  /*** ESTILOS DE LAS FICHAS ***/
+  /* FICHAS ESTILOS */
 
   h2.ficha,
   h3.ficha {
@@ -471,7 +472,7 @@ footer nav {
     background-color: #5a189a;
   }
 
-  /*** ESTILOS DE LAS FICHAS ***/
+  /* FICHAS ESTILOS*/
 
   section.ficha {
     background-color: #111;
@@ -495,7 +496,7 @@ footer nav {
     color: white;
   }
 
-  /*** ESTILOS DEL FOOTER ***/
+  /* FOOTER ESTILOS */
 
   footer {
     background-color: black;
@@ -517,10 +518,10 @@ footer nav {
   }
 }
 
-/***** TEMA CLARO *****/
+/* TEMA CLARO */
 
 @media (prefers-color-scheme: light) {
-  /*** ESTILOS GLOBALES ***/
+  /* ESTILOS GLOBALES */
 
   header {
     background-color: whitesmoke;
@@ -541,7 +542,7 @@ footer nav {
     border-bottom: solid 1px black;
   }
 
-  /*** ESTILOS DEL MENÚ ***/
+  /* MENÚ ESTILOS */
 
   nav.menu {
     background-color: #655d5e;
@@ -564,7 +565,7 @@ footer nav {
     color: white;
   }
 
-  /*** ESTILOS DE LA DISCOGRAFÍA ***/
+  /* DISCORAFÍA ESTILOS */
 
   img.discografia {
     border: solid 1px black;
@@ -579,7 +580,7 @@ footer nav {
     color: #655d5e;
   }
 
-  /*** ESTILOS DE LAS FICHAS ***/
+  /* FICHAS ESTILOS */
 
   section.ficha {
     background-color: #ce956c;
@@ -599,7 +600,7 @@ footer nav {
     color: white;
   }
 
-  /*** ESTILOS DEL FOOTER ***/
+  /* FOOTER ESTILOS */
 
   footer,
   footer nav {

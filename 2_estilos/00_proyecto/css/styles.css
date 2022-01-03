@@ -1,7 +1,6 @@
 /* GENERAL ESTRUCTURA*/
 
 * {
-  /* TODO: Para bajas resoluciones: Verdana */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,8 +43,6 @@ header img {
 }
 
 /* MENÚ ESTRUCTURA */
-
-/* FIXME: make hover work on mobile devices. Get rid of unnecesary links on the menu. */
 
 nav.menu {
   position: sticky;
@@ -315,7 +312,7 @@ footer nav {
   gap: 1rem;
 }
 
-/***** PANTALLAS 600px *****/
+/* 600px */
 
 @media screen and (max-width: 600px) {
   span.burger {

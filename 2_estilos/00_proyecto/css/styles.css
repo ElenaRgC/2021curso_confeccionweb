@@ -32,6 +32,10 @@ article {
   text-align: justify;
 }
 
+iframe.youtube {
+  aspect-ratio: 16 / 9;
+}
+
 /*HEADER ESTRUCTURA*/
 
 /* FIXME: why do I change sizes on different pages? */
@@ -129,6 +133,31 @@ span.miniatura {
 
 .datos-yesung {
   top: 9rem;
+}
+
+/* INDEX ESTRUCTURA */
+
+section.index {
+  width: 95%;
+  margin: auto;
+}
+
+.index aside {
+  float: left;
+  max-width: 50%;
+  margin: 0 1rem 1rem 0;
+}
+
+.index iframe {
+  width: 100%;
+}
+
+section.index * {
+flex: 1;
+}
+
+.index p {
+  margin-bottom: 1rem;
 }
 
 /* DISCOGRAFÍA ESTRUCTURA */
@@ -359,8 +388,16 @@ footer nav {
 
 @media screen and (max-width: 800px) {
 
-  body {
-    font-family: Verdana, sans-serif;
+  /* INDEX */
+
+  section.index {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .index aside {
+    max-width: 100%;
   }
 
   /* DISCOGRAFÍA */
@@ -537,6 +574,18 @@ footer nav {
 
   .discografia h2 {
     border-bottom: solid 1px black;
+  }
+
+  a {
+    color: #51af81;
+  }
+
+  a:hover {
+    color: #ce956c;
+  }
+
+  a:visited {
+    color: #655d5e;
   }
 
   /* MENÚ ESTILOS */

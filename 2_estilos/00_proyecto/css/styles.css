@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 
 /* GENERAL ESTRUCTURA*/
 
@@ -54,17 +54,19 @@ em {
 }
 
 :lang(ko) {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 300;
 }
 
-h1 :lang(ko), h2 :lang(ko), h3 :lang(ko) {
-  font-family: 'Nanum Gothic', sans-serif;
+h1 :lang(ko),
+h2 :lang(ko),
+h3 :lang(ko) {
+  font-family: "Nanum Gothic", sans-serif;
   font-weight: bold;
 }
 
 :lang(ja) {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 /*HEADER ESTRUCTURA*/
@@ -91,7 +93,7 @@ nav.menu {
 nav.menu a,
 span.menu {
   display: flex;
-  width: 7rem;
+  width: 8.5rem;
   height: 3rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -101,11 +103,6 @@ span.menu {
 
 [class^="datos-"] a {
   width: 8rem;
-}
-
-nav a.menu:hover,
-span.menu:hover {
-  font-weight: bold;
 }
 
 span.burger,
@@ -133,7 +130,7 @@ span.miniatura {
   display: none;
   flex-flow: column nowrap;
   position: absolute;
-  left: 7rem;
+  left: 8.5rem;
   bottom: 3rem;
 }
 
@@ -387,7 +384,6 @@ footer nav {
 /* 640px */
 
 @media screen and (max-width: 640px) {
-
   /* MENÚ */
   span.burger {
     display: block;
@@ -471,7 +467,8 @@ footer nav {
     margin: 0 auto;
   }
 
-  div.contenido, div.contenido ol {
+  div.contenido,
+  div.contenido ol {
     padding-left: 0.4rem;
   }
 }
@@ -525,7 +522,8 @@ footer nav {
   }
 
   nav.menu a:hover,
-  span.menu:hover, .burger:hover {
+  span.menu:hover,
+  .burger:hover {
     color: white;
     background-color: #001247;
     font-weight: bold;
@@ -614,11 +612,15 @@ footer nav {
   /* ESTILOS GLOBALES */
 
   header {
-    background: rgb(101,93,94);
-    background: linear-gradient(0deg, rgba(101,93,94,1) 2%, rgba(245,245,245,1) 60%, rgba(245,245,245,1) 100%);
+    background: rgb(101, 93, 94);
+    background: linear-gradient(
+      0deg,
+      rgba(101, 93, 94, 1) 2%,
+      rgba(245, 245, 245, 1) 60%,
+      rgba(245, 245, 245, 1) 100%
+    );
   }
 
-  
   .header.dark {
     display: none;
   }
@@ -661,8 +663,9 @@ footer nav {
     color: white;
   }
 
-  nav.menu a:hover,
-  span.menu:hover, .burger:hover {
+  /* FIXME: the bg color works, why doesn't the bold text? */
+
+  div.derecha a:hover, div.izquierda span.menu:hover, div.izquierda a:hover, .burger:hover {
     color: white;
     background-color: #ce956c;
     font-weight: bold;
@@ -672,7 +675,7 @@ footer nav {
     color: white;
   }
 
-  /* DISCORAFÍA ESTILOS */
+  /* DISCOGRAFÍA ESTILOS */
 
   img.discografia {
     border: solid 1px black;

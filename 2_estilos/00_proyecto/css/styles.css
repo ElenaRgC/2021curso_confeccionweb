@@ -210,7 +210,7 @@ article.discografia {
   display: flex;
   flex-flow: row nowrap;
   gap: 0.5rem;
-  margin: 1rem 1rem;
+  margin: 0.5rem 0.8rem;
 }
 
 article.discografia:last-child {
@@ -226,8 +226,7 @@ div.contenido {
 }
 
 img.discografia {
-  width: 100%;
-  max-width: 350px;
+  width: clamp(150px, 100%, 350px);
 }
 
 .discografia h2 {
@@ -370,9 +369,11 @@ footer nav {
   gap: 1rem;
 }
 
-/* 600px */
+/* 640px */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
+
+  /* MENÚ */
   span.burger {
     display: block;
     font-size: 1.8rem;
@@ -411,6 +412,14 @@ footer nav {
     display: block;
     position: absolute;
   }
+
+  /* DISCOGRAFÍA */
+
+  section.discografia {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
 }
 
 /* 800px */
@@ -427,14 +436,12 @@ footer nav {
   .index aside {
     max-width: 100%;
   }
+}
 
+/* 1024px */
+
+@media screen and (max-width: 1024px) {
   /* DISCOGRAFÍA */
-
-  section.discografia {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-  }
 
   article.discografia {
     display: flex;
@@ -521,6 +528,8 @@ footer nav {
   .indice a:hover {
     color: white;
   }
+
+  
 
   /* FICHAS ESTILOS */
 

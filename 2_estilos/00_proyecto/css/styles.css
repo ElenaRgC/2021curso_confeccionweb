@@ -217,6 +217,10 @@ article.discografia:last-child {
   flex: 0 0 47.8%;
 }
 
+article.discografia:nth-child(odd) {
+  flex: 1 1 45%;
+}
+
 article.discografia * {
   padding: 0;
 }
@@ -226,7 +230,8 @@ div.contenido {
 }
 
 img.discografia {
-  width: clamp(150px, 100%, 350px);
+  width: clamp(150px, 100%, 400px);
+  aspect-ratio: 1 / 1;
 }
 
 .discografia h2 {
@@ -447,15 +452,17 @@ footer nav {
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
-    align-items: center;
     margin: 0.5rem 0;
   }
 
   article.discografia div,
   img.discografia {
     width: 90%;
-    margin: auto;
-    max-width: none;
+    margin: 0 auto;
+  }
+
+  div.contenido, div.contenido ol {
+    padding-left: 1rem;
   }
 }
 

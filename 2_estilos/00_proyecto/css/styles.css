@@ -462,7 +462,7 @@ footer nav {
   }
 
   div.contenido, div.contenido ol {
-    padding-left: 1rem;
+    padding-left: 0.4rem;
   }
 }
 
@@ -511,7 +511,7 @@ footer nav {
   }
 
   nav.menu a:hover,
-  span.menu:hover {
+  span.menu:hover, .burger:hover {
     color: white;
     background-color: #001247;
     font-weight: bold;
@@ -535,8 +535,6 @@ footer nav {
   .indice a:hover {
     color: white;
   }
-
-  
 
   /* FICHAS ESTILOS */
 
@@ -645,7 +643,7 @@ footer nav {
   }
 
   nav.menu a:hover,
-  span.menu:hover {
+  span.menu:hover, .burger:hover {
     color: white;
     background-color: #ce956c;
     font-weight: bold;

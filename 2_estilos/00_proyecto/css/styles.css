@@ -69,12 +69,15 @@ h1 :lang(ko), h2 :lang(ko), h3 :lang(ko) {
 
 /*HEADER ESTRUCTURA*/
 
-/* FIXME: why do I change sizes on different pages? */
+header {
+  background-image: url("../img/sjlogo.svg");
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
 
 header img {
   width: 35%;
-  position: relative;
-  top: 0;
 }
 
 /* MENÚ ESTRUCTURA */
@@ -483,6 +486,10 @@ footer nav {
     color: white;
   }
 
+  .header.light {
+    display: none;
+  }
+
   body {
     background-color: #222;
     color: white;
@@ -607,8 +614,13 @@ footer nav {
   /* ESTILOS GLOBALES */
 
   header {
-    background-color: whitesmoke;
-    color: black;
+    background: rgb(101,93,94);
+    background: linear-gradient(0deg, rgba(101,93,94,1) 2%, rgba(245,245,245,1) 60%, rgba(245,245,245,1) 100%);
+  }
+
+  
+  .header.dark {
+    display: none;
   }
 
   body {

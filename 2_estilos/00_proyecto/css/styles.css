@@ -93,7 +93,7 @@ nav.menu {
 nav.menu a,
 span.menu {
   display: flex;
-  width: 8.5rem;
+  width: 8rem;
   height: 3rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -130,7 +130,7 @@ span.miniatura {
   display: none;
   flex-flow: column nowrap;
   position: absolute;
-  left: 8.5rem;
+  left: 8rem;
   bottom: 3rem;
 }
 
@@ -665,7 +665,7 @@ footer nav {
 
   /* FIXME: the bg color works, why doesn't the bold text? */
 
-  div.derecha a:hover, div.izquierda span.menu:hover, div.izquierda a:hover, .burger:hover {
+  div.derecha a:hover, div.izquierda span.menu:hover, div.izquierda a:hover, span.burger:hover {
     color: white;
     background-color: #ce956c;
     font-weight: bold;

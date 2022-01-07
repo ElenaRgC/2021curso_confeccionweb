@@ -84,18 +84,22 @@
 
     <!-- Cuerpo de la página-->
 
-    <form action="#">
-      <fieldset>
-        <legend>Introduce tus datos</legend>
-        <label for="usuario">Usuario:</label><br />
-        <input type="text" id="usuario" placeholder="Usuario" required pattern="[a-zA-Z0-9]+" /><br />
-        <label for="password">Contraseña:</label><br />
-        <input id="password" type="password" required pattern="(?=.*[1-9]){1,}(?=.*+-!?){1,}(?=.*[A-Z]){1,}.{8,}"
-          title="Debe contener un mínimo de 8 caracteres, con mayúsculas, números y símbolos."
-          placeholder="********" /><br /><br />
-        <input type="submit" value="Iniciar Sesión" />
-      </fieldset>
-    </form>
+    <div class="formulario">
+      <form action="#">
+        <fieldset class="shadow">
+          <legend>Introduce tus datos</legend>
+          <label for="usuario">Usuario:</label><br />
+          <input type="text" id="usuario" placeholder="Usuario" required autofocus pattern="[a-zA-Z0-9]+" /><br />
+          <label for="password">Contraseña:</label><br />
+          <input id="password" type="password" required pattern="(?=.*[1-9]){1,}(?=.*+-!?){1,}(?=.*[A-Z]){1,}.{8,}"
+            title="Debe contener un mínimo de 8 caracteres, con mayúsculas, números y símbolos."
+            placeholder="********" /><br />
+          <input type="checkbox" name="recordar" id="recordar">
+          <label for="recordar">Recordar mis datos</label> <br>
+          <input type="submit" value="Iniciar Sesión" />
+        </fieldset>
+      </form>
+    </div>
   </main>
 
   <!-- TODO: Añadir un "Volver Arriba"-->

@@ -14,6 +14,7 @@
 
 html {
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -39,7 +40,7 @@ article {
 }
 
 iframe.youtube {
-  aspect-ratio:  16 / 9;
+  aspect-ratio: 16 / 9;
 }
 
 small {
@@ -424,7 +425,9 @@ fieldset {
   padding: 1rem 2rem;
 }
 
-input, legend, label {
+input,
+legend,
+label {
   margin: 0.5rem;
 }
 
@@ -433,12 +436,12 @@ input, legend, label {
   margin-left: 1rem;
 }
 
-[type~="submit"], legend {
+[type~="submit"],
+legend {
   padding: 0.5rem;
   border-radius: 5px;
   font-weight: bold;
 }
-
 
 [type~="submit"] {
   width: 100%;
@@ -448,7 +451,9 @@ input, legend, label {
   text-indent: 3px;
 }
 
-input[type~="text"], input[type~="password"], input[type~="email"] {
+input[type~="text"],
+input[type~="password"],
+input[type~="email"] {
   width: 100%;
   height: 2rem;
   padding: 0.25rem;
@@ -461,6 +466,69 @@ label {
 
 form ol {
   list-style-type: none;
+}
+
+/* NOTICIAS ESTRUCTURA */
+
+.noticias {
+  border: solid 3px red;
+  display: grid;
+  gap: 1rem;
+}
+
+.noticias h2 {
+  grid-area: H2area;
+}
+
+.noticias .twitter {
+  grid-area: TWarea;
+}
+
+.noticias figure {
+  grid-area: IMGarea;
+}
+
+.noticias .youtube {
+  grid-area: YTarea;
+}
+
+.noticias article {
+  grid-area: ARTarea;
+}
+
+.noticias:nth-child(3) {
+  grid-template-areas:
+  "H2area H2area"
+  "TWarea IMGarea"
+  "ARTarea IMGarea"
+}
+
+.noticias:nth-child(3) article {
+  max-width: 550px;
+}
+
+.noticias:nth-child(4) {
+  grid-template-areas:
+  "H2area H2area H2area"
+  "YTarea YTarea ARTarea"
+}
+
+
+.noticias iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+article.noticia {
+  border: solid 10px blue;
+}
+
+article.noticia * {
+  border: solid 3px green;
+}
+
+.noticias img {
+  width: 100%;
 }
 
 /* FOOTER ESTRUCTURA */
@@ -559,7 +627,7 @@ footer nav {
     height: max(200px, 30vh);
   }
 
-/*   .location aside {
+  /*   .location aside {
     flex: 1 0 100%;
   } */
 }
@@ -591,7 +659,6 @@ footer nav {
   .location iframe {
     aspect-ratio: 4 / 3;
   }
-
 }
 
 /* TEMA OSCURO */
@@ -703,41 +770,44 @@ footer nav {
     color: white;
   }
 
-    /* FORMULARIO ESTILOS */
-  
-    fieldset {
-      background-color: black;
-    }
-    
-    [type~="submit"], legend {
-      color: white;
-      background-color: #9d4edd;
-    }
-    
-    [type~="submit"] {
-      border: outset 3px #9d4edd;
-    }
-    
-    [type~="submit"]:active {
-      border: inset 3px #9d4edd;
-    }
+  /* FORMULARIO ESTILOS */
 
-    input {
-      color: white;
-    }
+  fieldset {
+    background-color: black;
+  }
 
-    input::placeholder {
-      color: grey;
-    }
-    
-    input[type~="text"], input[type~="password"], input[type~="email"] {
-      border: none;
-      background-color: #001233;
-    }
-    
-    label {
-      color: #c77dff;
-    }
+  [type~="submit"],
+  legend {
+    color: white;
+    background-color: #9d4edd;
+  }
+
+  [type~="submit"] {
+    border: outset 3px #9d4edd;
+  }
+
+  [type~="submit"]:active {
+    border: inset 3px #9d4edd;
+  }
+
+  input {
+    color: white;
+  }
+
+  input::placeholder {
+    color: grey;
+  }
+
+  input[type~="text"],
+  input[type~="password"],
+  input[type~="email"] {
+    border: none;
+    background-color: #001233;
+  }
+
+  label {
+    color: #c77dff;
+  }
 
   /* FOOTER ESTILOS */
 
@@ -869,29 +939,31 @@ footer nav {
   }
 
   /* FORMULARIO ESTILOS */
-  
+
   fieldset {
     background-color: white;
   }
-  
-  [type~="submit"], legend {
+
+  [type~="submit"],
+  legend {
     color: white;
     background-color: #655d5e;
   }
-  
-  
+
   [type~="submit"] {
     border: outset 3px #655d5e;
   }
-  
+
   [type~="submit"]:active {
     border: inset 3px #655d5e;
   }
-  
-  input[type~="text"], input[type~="password"], input[type~="email"] {
+
+  input[type~="text"],
+  input[type~="password"],
+  input[type~="email"] {
     border: solid 1px lightgray;
   }
-  
+
   label {
     color: #655d5e;
   }

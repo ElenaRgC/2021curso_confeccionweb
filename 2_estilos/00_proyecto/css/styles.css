@@ -607,6 +607,29 @@ section.musica * {
   object-position: 8% 0%;
 }
 
+/* QUIENES SOMOS ESTRUCTURA */
+
+.quienes {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.quienes * {
+  flex: 1;
+}
+
+.quienes video {
+  width: 100%;
+}
+
+.quienes p,
+.quienes audio,
+.quienes summary {
+  margin-bottom: 1rem;
+}
+
 /* FOOTER ESTRUCTURA */
 
 footer {
@@ -755,6 +778,12 @@ footer nav {
   .noticias:nth-child(6) .twitter,
   .noticias:nth-child(8) .twitter {
     display: none;
+  }
+
+  /* QUIENES SOMOS */
+
+  .quienes {
+    flex-direction: column;
   }
 }
 

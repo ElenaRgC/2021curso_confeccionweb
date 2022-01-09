@@ -579,6 +579,23 @@ form ol {
   "IMGarea ARTarea"
 }
 
+/* MÚSICA ESTRUCTURA */
+
+section.musica {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+section.musica * {
+  flex: 1;
+  min-width: 30%;
+}
+
+.musica h2 {
+  flex-basis: 100%;
+}
+
 /* FOOTER ESTRUCTURA */
 
 footer {

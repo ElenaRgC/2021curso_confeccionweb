@@ -65,9 +65,9 @@ h3 :lang(ko) {
   font-family: "Noto Sans JP", sans-serif;
 }
 
-/* .shadow {
-  box-shadow: 16px 16px 32px #d1d1d1;
-} */
+.shadow {
+  box-shadow: 8px 8px 16px #d1d1d1;
+}
 
 /*HEADER ESTRUCTURA*/
 
@@ -273,7 +273,6 @@ div.img {
 img.ficha {
   width: 90%;
   margin-left: 10%;
-  box-shadow: 1px 1px 3px darkgray; /* TODO: create a better shadow */
 }
 
 div.ficha {
@@ -696,7 +695,7 @@ footer nav {
   .deezer {
     flex-basis: 100%;
     min-width: 55%;
-    height: 30vh;
+    height: 40vh;
   }
 }
 
@@ -854,6 +853,10 @@ footer nav {
     color: #7b2cbf;
   }
 
+  .border {
+    border: solid 1px white;
+  }
+
   /* MENÚ ESTILOS */
 
   nav.menu {
@@ -879,11 +882,6 @@ footer nav {
   }
 
   /* DISCOGRAFÍA ESTILOS */
-
-  img.discografia {
-    border: solid 1px black;
-    box-shadow: 3px 3px 2px #222;
-  }
 
   .indice a {
     color: #c77dff;
@@ -1033,6 +1031,10 @@ footer nav {
     color: #655d5e;
   }
 
+  .border {
+    border: solid 1px black;
+  }
+
   /* MENÚ ESTILOS */
 
   nav.menu {
@@ -1061,11 +1063,6 @@ footer nav {
   }
 
   /* DISCOGRAFÍA ESTILOS */
-
-  img.discografia {
-    border: solid 1px black;
-    box-shadow: 1px 1px 3px #444;
-  }
 
   .indice a {
     color: #51af81;

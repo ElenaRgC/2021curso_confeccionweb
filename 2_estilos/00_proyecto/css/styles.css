@@ -65,10 +65,6 @@ h3 :lang(ko) {
   font-family: "Noto Sans JP", sans-serif;
 }
 
-.shadow {
-  box-shadow: 8px 8px 16px #d1d1d1;
-}
-
 /*HEADER ESTRUCTURA*/
 
 header {
@@ -258,7 +254,6 @@ li :lang(ja) {
 /* FICHAS ESTRUCTURA */
 
 div.contenedor {
-  /* TODO: crear un estilo para pantallas muy grandes */
   min-width: 90%;
   margin: 1rem clamp(1rem, 5%, 2rem);
   display: flex;
@@ -653,6 +648,11 @@ footer nav {
   gap: 1rem;
 }
 
+.volver {
+  position: relative;
+  right: 100px;
+}
+
 /* 640px */
 
 @media screen and (max-width: 640px) {
@@ -660,7 +660,7 @@ footer nav {
   span.burger {
     display: block;
     font-size: 1.8rem;
-    color: white;
+    color: rgb(197, 183, 183);
     padding: 0.4rem 1rem;
   }
 
@@ -907,6 +907,10 @@ footer nav {
     border: solid 1px white;
   }
 
+  .shadow {
+    box-shadow: 8px 8px 16px #1b1b1b;
+  }
+
   /* MENÚ ESTILOS */
 
   nav.menu {
@@ -1083,6 +1087,10 @@ footer nav {
 
   .border {
     border: solid 1px black;
+  }
+
+  .shadow {
+    box-shadow: 8px 8px 16px #d1d1d1;
   }
 
   /* MENÚ ESTILOS */

@@ -19,8 +19,7 @@ html {
 
 body {
   background-image: url("../img/sjlogo.svg");
-  /* font-size: clamp(0.95rem, 1vw, 1.3rem); */
-  font-size: clamp(0.95rem, 0.75rem + 0.85vw, 1.3rem);
+  font-size: clamp(0.95rem, 1vw, 1.3rem);
 }
 
 h1 {
@@ -100,6 +99,7 @@ span.menu {
   text-transform: uppercase;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 [class^="datos-"] a {
@@ -339,6 +339,7 @@ section.rrss a {
 
 .ficha ul {
   list-style-type: "- ";
+  margin-left: 0.2rem;
 }
 
 ul.miembros a {
@@ -362,6 +363,10 @@ img.rrss {
 
 p.emoji {
   font-size: calc(1.5vw + 1rem);
+}
+
+img.imgalt {
+  display: none;
 }
 
 /* LOC ESTRUCTURA */
@@ -785,6 +790,21 @@ footer nav {
 
   .quienes {
     flex-direction: column;
+  }
+
+  /* FICHAS */
+
+  div.ficha {
+    flex-basis: 100%;
+  }
+
+  div.img {
+    display: none;
+  }
+
+  img.imgalt {
+    display: inline;
+    width: 100%;
   }
 }
 

@@ -353,7 +353,7 @@ ul.miembros a {
 }
 
 img.rrss {
-  width: 4rem;
+  width: calc(1.5vh + 3rem);
 }
 
 p.emoji {
@@ -641,7 +641,7 @@ section.musica * {
 
 footer {
   clear: both;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }

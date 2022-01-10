@@ -83,23 +83,26 @@
     </nav>
     <!-- Cuerpo de la página-->
 
-    <form action="mailto:info@example.com" method="get">
-      <fieldset>
-        <legend>Contacta con nosotros</legend>
-        <label for="nombre">Nombre:</label><br />
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required
-          title="Nombre con el que quieras que te refiramos." /><br />
-        <label for="email">Correo electrónico:</label><br />
-        <input type="email" id="email" name="cc" required placeholder="cuenta@ejemplo.com"
-          title="Recibirás una copia de este email en tu correo." /><br />
-        <label for="asunto">Asunto:</label><br />
-        <input type="text" id="asunto" name="subject" placeholder="Asunto" required title="Asunto del mensaje." /><br />
-        <label for="mensaje">Mensaje:</label><br />
-        <textarea rows="15" cols="60" id="mensaje" name="body" placeholder="Escriba aquí su mensaje." required
-          title="Cuerpo del mensaje."></textarea><br />
-        <input type="submit" value="Enviar" />
-      </fieldset>
-    </form>
+    <div class="formulario">
+      <form action="mailto:info@example.com" method="get">
+        <fieldset>
+          <legend>Contacta con nosotros</legend>
+          <label for="nombre">Nombre:</label><br />
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required
+            title="Nombre con el que quieras que te refiramos." /><br />
+          <label for="email">Correo electrónico:</label><br />
+          <input type="email" id="email" name="cc" required placeholder="cuenta@ejemplo.com"
+            title="Recibirás una copia de este email en tu correo." /><br />
+          <label for="asunto">Asunto:</label><br />
+          <input type="text" id="asunto" name="subject" placeholder="Asunto" required title="Asunto del mensaje." /><br />
+          <label for="mensaje">Mensaje:</label><br />
+          <textarea rows="15" id="mensaje" name="body" resize="none" placeholder="Escriba aquí su mensaje." required
+            title="Cuerpo del mensaje."></textarea><br />
+          <input type="submit" value="Enviar" />
+        </fieldset>
+      </form>
+    </div>
+
   </main>
 
   <footer>

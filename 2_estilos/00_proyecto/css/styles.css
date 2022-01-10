@@ -22,7 +22,7 @@ body {
   font-size: clamp(0.95rem, 1vw, 1.3rem);
 }
 
-h1 {
+h1, h2 {
   margin: 1rem;
 }
 
@@ -416,9 +416,15 @@ fieldset {
   padding: 1rem 2rem;
 }
 
+textarea {
+  width: clamp(20%, 20rem, 100%);
+  resize: none;
+}
+
 input,
 legend,
-label {
+label,
+textarea {
   margin: 0.5rem;
 }
 
@@ -1172,7 +1178,8 @@ footer nav {
 
   input[type~="text"],
   input[type~="password"],
-  input[type~="email"] {
+  input[type~="email"],
+  textarea {
     border: solid 1px lightgray;
   }
 

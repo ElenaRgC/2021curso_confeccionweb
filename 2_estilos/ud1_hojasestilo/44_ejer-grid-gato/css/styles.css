@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  color: black;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 40% 40% 1fr;
+  grid-template-rows: 3rem 1fr 25% 3rem;
+  grid-template-areas: "head  head  head  head"
+                       "lat-1 main  main  lat-2"
+                       "lat-1 art-1 art-2 lat-2"
+                       "foot  foot  foot  foot";
+                      }
+
+img {
+  width: 100%;
+}
+
+.principal {
+  background-color: lightskyblue;
+  grid-area: main;
+}
+
+.articulo-1 {
+  background-color: orange;
+  grid-area: art-1;
+}
+
+.articulo-2 {
+  background-color: green;
+  grid-area: art-2;
+}
+
+header {
+  background-color: aquamarine;
+  grid-area: head;
+}
+
+.lateral-1 {
+  background-color: lightpink;
+  grid-area: lat-1;
+}
+
+.lateral-2 {
+  background-color: lightsalmon;
+  grid-area: lat-2;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  grid-area: foot;
+}
+
+aside, footer, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr 40% 40%;
+    grid-template-rows: 3rem auto 30% 2rem;
+    grid-template-areas: "head  head  head"
+                         "lat-1 main  main"
+                         "lat-2 art-1 art-2"
+                         "foot  foot  foot";
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main {
+    grid-template-columns: 100%;
+    grid-template-rows: 3rem 2rem auto auto auto 2rem 2rem;
+    grid-template-areas: "head"
+                         "lat-1"
+                         "main"
+                         "art-1"
+                         "art-2"
+                         "lat-2"
+                         "foot";
+  }
+}
+  

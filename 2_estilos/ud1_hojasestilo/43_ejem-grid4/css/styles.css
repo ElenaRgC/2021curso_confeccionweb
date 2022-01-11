@@ -1,0 +1,39 @@
+* {
+  background-color: whitesmoke;
+  color: black;
+}
+
+header {
+  background-color: lightblue;
+}
+
+article {
+  background-color: blue;
+  display: grid;
+
+  grid-template-columns: 150px 1fr 8em;
+  grid-auto-rows: 80px 90px 4em;
+
+  grid-template-areas: ". . ."
+                       "v v ."
+                       "v v .";
+}
+
+section {
+  grid-area: v;
+}
+
+section:nth-child(odd) {
+  background-color: lightyellow;
+  border: solid 1px slategray;
+}
+
+section:nth-child(even) {
+  background-color: lightgrey;
+  border: solid 1px slategray;
+}
+
+footer {
+  background-color: pink;
+  width: 140px;
+}

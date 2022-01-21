@@ -3,3 +3,35 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
+
+/* New Styles */
+
+.flex {
+    flex-flow: column nowrap;
+}
+
+.flex article {
+    display: grid;
+    grid-template-areas:
+        "h4 . ."
+        "img p input";
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 1.5rem;
+  align-items: center;
+}
+
+.flex img {
+    grid-area: img;
+  margin-left: 2rem;
+}
+
+.flex h4 {
+    grid-area: h4;
+}
+
+.flex p {
+    grid-area: p;
+}
+.flex input {
+    grid-area: input;
+}

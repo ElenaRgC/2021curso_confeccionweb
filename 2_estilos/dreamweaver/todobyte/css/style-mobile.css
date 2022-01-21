@@ -34,3 +34,22 @@
 			font-size: 1em;
 			margin: 0;
 		}
+
+/* New styles */
+
+.flex article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.flex article h4, .flex article p, .flex article input {
+    order: -1;
+    flex-basis: 100%;
+}
+
+
+.flex article img {
+    display: none;
+}

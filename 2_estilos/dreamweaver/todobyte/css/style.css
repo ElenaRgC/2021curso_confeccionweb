@@ -234,7 +234,7 @@ ul.contact li > span {
 }
 ul.contact li .address, ul.contact li .mail, ul.contact li .phone {
   float: left;
-  width: 100px;
+  width: 150px;
   font-weight: 600;
 }
 ul.contact > :first-child {
@@ -543,6 +543,7 @@ input[type="submit"].small, input[type="reset"].small, input[type="button"].smal
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .flex h2 {
@@ -558,6 +559,7 @@ input[type="submit"].small, input[type="reset"].small, input[type="button"].smal
 
 .flex img {
     width: 60%;
+    transform: scaleX(-1);
 }
 
 .flex input {

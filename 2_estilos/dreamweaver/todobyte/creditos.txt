@@ -8,4 +8,19 @@ Photo by <a href="https://unsplash.com/@nickmorrison?utm_source=unsplash&utm_med
 
 Edición index:
 Photo by <a href="https://unsplash.com/@ajonesyyyyy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aaron Jones</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
+ 
+Low level
+
+<a href="https://www.flaticon.com/free-icons/empty-battery" title="empty battery icons">Empty battery icons created by Freepik - Flaticon</a>
+
+Medium level
+
+<a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Freepik - Flaticon</a>
+
+Full level
+
+<a href="https://www.flaticon.com/free-icons/battery" title="battery icons">Battery icons created by Freepik - Flaticon</a>
+
+Writing computer
+
+<a href='https://www.freepik.es/fotos/negocios'>Foto de Negocios creado por yanalya - www.freepik.es</a>

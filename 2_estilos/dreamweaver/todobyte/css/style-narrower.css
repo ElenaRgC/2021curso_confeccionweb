@@ -187,3 +187,38 @@
 	#footer section {
 		margin-bottom: 3em;
 	}
+
+/* New styles */
+
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    flex-flow: column nowrap;
+}
+
+.flex article {
+    display: grid;
+    grid-template-areas:
+        "h4 h4"
+        "img p"
+        "img input";
+}
+
+
+.flex img {
+    grid-area: img;
+}
+
+.flex h4 {
+    grid-area: h4;
+}
+
+.flex p {
+    grid-area: p;
+}
+.flex input {
+    grid-area: input;
+}

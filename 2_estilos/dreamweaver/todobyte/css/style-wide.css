@@ -10,3 +10,140 @@
 		font-size: 12pt;
 		line-height: 1.5em;
 	}
+
+/* New styles */ 
+
+.grid {
+    display: grid;
+    column-gap: 1.5rem;
+    grid-template-areas: 
+        "h2 img"
+        "h3 img"
+        "art img";
+    grid-template-columns: 50% 1fr;
+}
+
+.grid h2 {
+    grid-area: h2;
+}
+
+.grid h3 {
+    grid-area: h3;
+}
+
+.grid art {
+    grid-area: art;
+}
+
+.grid img {
+    grid-area: img;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.flex h2 {
+    flex-basis: 100%;
+}
+
+.flex > article {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.flex img {
+    width: 60%;
+    transform: scaleX(-1);
+}
+
+.flex input {
+    width: 80%;
+    max-width: 4rem;
+    font-size: 1rem;
+}
+
+.registration {
+    display: grid;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+    gap: 0.5rem;
+    grid-template-columns: auto auto 1fr auto auto;
+    grid-template-areas:
+        "nombrelabel . . . ."
+        "nombreinput nombreinput nombreinput nombreinput nombreinput"
+        "edadlabel edadinput . telefonolabel telefonoinput"
+        "emaillabel emailinput emailinput emailinput emailinput"
+        "cursoslabel cursosinput . nivellabel nivelinput"
+        "permiso permiso permiso permiso permiso"
+        "publicidad publicidad publicidad publicidad publicidad"
+        ". . . . enviarinput"
+}
+
+[for~="nombre"] {
+    grid-area: nombrelabel;
+}
+
+#nombre {
+    grid-area: nombreinput;
+}
+
+[for~="edad"] {
+    grid-area: edadlabel;
+}
+
+#edad {
+    grid-area: edadinput;
+}
+
+[for~="telefono"] {
+    grid-area: telefonolabel;
+}
+
+#telefono {
+    grid-area: telefonoinput;
+}
+
+[for~="email"] {
+    grid-area: emaillabel;
+}
+
+#email {
+    grid-area: emailinput;
+}
+
+[for~="cursos"] {
+    grid-area: cursoslabel;
+}
+
+#cursos {
+    grid-area: cursosinput;
+}
+
+[for~="nivel"] {
+    grid-area: nivellabel;
+}
+
+#nivel {
+    grid-area: nivelinput;
+}
+
+.permiso {
+    grid-area: permiso;
+}
+
+.publicidad {
+    grid-area: publicidad;
+}
+
+#enviar {
+    grid-area: enviarinput;
+}
+

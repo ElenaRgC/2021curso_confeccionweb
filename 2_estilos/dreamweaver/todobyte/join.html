@@ -90,13 +90,15 @@
       <header class="major">
         <h2>Inscríbete</h2>
         <span class="byline">Contactaremos contigo en menos de 24h para confirmar tu solicitud.</span> </header>
-      <form>
+      <form class="registration">
         <label for="nombre">Nombre y apellidos</label>
-        <input type="text" id="nombre">
+        <input type="text" id="nombre" name="nombre">
         <label for="edad">Fecha de nacimiento</label>
-        <input type="date" id="edad">
+        <input type="date" id="edad" name="edad">
         <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono">
+        <input type="tel" id="telefono" name="telefono">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email">
         <label for="cursos">Elige un curso</label>
         <select name="cursos" id="cursos">
           <optgroup label="Ofimática">
@@ -122,11 +124,13 @@
           <option value="intermedio">Intermedio</option>
           <option value="avanzado">Avanzado</option>
         </select>
-        <input type="checkbox" id="permiso">
-        <label for="permiso">Acepto que TODObyte trate los datos que he facilitado para mi inscripción.</label>
-        <input type="checkbox" id="publicidad">
-        <label for="publicidad">Acepto que TODObyte me envíe ofertas y promociones de cursos y productos.</label>
-        <input type="submit" id="enviar">
+          <div class="permiso">
+        <input type="checkbox" id="permiso" name="permiso">
+        <label for="permiso">Acepto que TODObyte trate los datos que he facilitado para mi inscripción.</label></div>
+          <div class="publicidad">
+        <input type="checkbox" id="publicidad" name="publicidad">
+        <label for="publicidad">Acepto que TODObyte me envíe ofertas y promociones.</label></div>
+        <input type="submit" id="enviar" name="enviar">
       </form>
     </section>
   </div>

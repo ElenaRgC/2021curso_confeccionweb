@@ -32,6 +32,23 @@
 .flex p {
     grid-area: p;
 }
+
 .flex input {
     grid-area: input;
+}
+
+.registration {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        "nombrelabel . ."
+        "nombreinput nombreinput nombreinput"
+        "edadlabel . telefonolabel"
+        "edadinput . telefonoinput"
+        "emaillabel . ."
+        "emailinput emailinput emailinput"
+        "cursoslabel . nivellabel"
+        "cursosinput . nivelinput"
+        "permiso permiso permiso"
+        "publicidad publicidad publicidad"
+        ". . enviarinput"
 }

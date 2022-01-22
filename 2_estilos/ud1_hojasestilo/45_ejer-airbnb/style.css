@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: "aileronbold";
+  src: url("./fonts/Aileron-Bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aileronregular";
+  src: url("./fonts/Aileron-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Estilos de toda la página */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,18 +24,31 @@
 }
 
 body {
-  background-color: black;
-  color: white;
-  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    black 0%,
+    black 30%,
+    #000000 30%,
+    white 30%,
+    white 100%
+  ); /* W3C */
+  font-family: "aileronregular", "Roboto", sans-serif;
+  margin-top: 10rem;
 }
 
 main {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
+}
+
+footer {
+  background-color: #ccc;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 header {
-    width: 100%;
+  width: 100%;
   background-color: white;
   color: black;
   display: flex;
@@ -37,20 +67,6 @@ header {
 
 .logo .fab {
   font-size: 2.5rem;
-}
-section,
-div {
-  border: solid 3px darkred;
-  border-radius: 10px;
-}
-
-div.cards {
-  display: flex;
-  gap: 1rem;
-}
-
-div.cards * {
-  flex: 1;
 }
 
 .listas {
@@ -91,7 +107,37 @@ nav a {
   color: black;
 }
 
+h3 {
+  font-size: 1.2rem;
+}
+
+/* Estilos de las tarjetas */
+
+.card {
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card p,
+.card h3 {
+  font-family: "aileronbold";
+}
+
+div.card.container {
+  display: flex;
+  gap: 1rem;
+}
+
+.card.big,
+.card.container {
+  margin-bottom: 10vh;
+}
+
+/* Estilos de los botones */
+
 button {
+  font-family: "Roboto", sans-serif;
   border: none;
   border-radius: 10px;
   padding: 1rem;
@@ -111,10 +157,22 @@ button.dark {
   color: white;
 }
 
+button.light:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+button.dark:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+/* Primer apartado */
+
 .card.big:nth-child(1) {
   background: url("img/japan.jpg") no-repeat center center;
   background-size: cover;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -126,6 +184,16 @@ button.dark {
   color: #71019b;
 }
 
+.card.big:nth-child(1) p {
+  font-size: 6vh;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card.big:nth-child(1) > * {
+  margin-bottom: 2rem;
+}
+
 @supports (background-clip: text) {
   button.light span {
     background-image: linear-gradient(to right, #71019b, #ae0186);
@@ -134,22 +202,56 @@ button.dark {
   }
 }
 
-.card.big:nth-child(1) button:hover {
-  background-color: rgb(238, 238, 221);
-}
-
-.card.big:nth-child(1) p {
-  font-size: 4vh;
-  font-weight: bold;
-}
-
-.card.big:nth-child(1) > * {
-  margin-bottom: 2rem;
-}
+/* Segundo apartado */
 
 .card.big:nth-child(2) {
-  background-color: #f0f0f0;
+  background: url("img/tarjetas.webp") no-repeat center center;
+  background-size: cover;
+  height: 70vh;
   color: #222;
+}
+
+.card.big:nth-child(2) div {
+  margin-top: 5%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card.big:nth-child(2) p {
+  font-size: 10vh;
+  text-align: center;
+}
+
+.card.big:nth-child(2) p:first-child {
+  font-size: 1.5rem;
+  font-family: "aileronregular", "Roboto", sans-serif;
+}
+
+.card.big:nth-child(2) button {
+  margin-top: 1rem;
+}
+
+/* Tercer apartado */
+
+div.card.container * {
+  flex: 1;
+}
+
+.card.small p,
+.card.small h3 {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.card.small p {
+  margin-bottom: 3rem;
+}
+
+.card.small h3 {
+  font-size: 4.5vh;
 }
 
 .card.small:nth-child(1) {
@@ -172,6 +274,47 @@ button.dark {
   width: 100%;
 }
 
-h3 {
-  font-size: 1.2rem;
+/* Cuarto apartado */
+
+.card.medium {
+  padding: auto;
+  height: 90vh;
+}
+
+.card.medium:nth-child(1) {
+  background: url("img/malasia.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.card.medium:nth-child(2) {
+  background: url("img/indonesia.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.card.medium:nth-child(1) > *,
+.card.medium:nth-child(2) > * {
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.card.medium:nth-child(1) > p,
+.card.medium:nth-child(2) > p {
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+/* Quinto apartado */
+.card.big:nth-child(7) {
+  background: url("img/filipinas.jpg") no-repeat center center;
+  background-size: cover;
+  height: 70vh;
+}
+
+.card.big:nth-child(7) > * {
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.card.big:nth-child(7) p {
+  font-size: 10vh;
 }

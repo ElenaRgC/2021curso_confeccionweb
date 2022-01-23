@@ -471,6 +471,10 @@ input[type="submit"].small, input[type="reset"].small, input[type="button"].smal
 #main {
   padding: 6em 0;
 }
+#main.wrapper.style1 {
+  padding: 2em;
+}
+
 #main .sidebar .major {
   padding-bottom: 2em;
 }

@@ -73,6 +73,10 @@ header {
 	text-align: center;
 	padding-left: 4%;
 }
+
+#content .mainContent.cart {
+text-align: left;
+}
 /*menubar's properties for menus in sidebar */
 #content .sidebar #menubar {
 	text-align: left;

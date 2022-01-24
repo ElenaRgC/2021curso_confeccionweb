@@ -929,9 +929,10 @@ footer nav {
     color: white;
   }
 
-  nav.menu a:hover,
-  span.menu:hover,
-  .burger:hover {
+  div.derecha a:hover,
+  div.izquierda span.menu:hover,
+  div.izquierda a:hover,
+  span.burger:hover {
     color: white;
     background-color: #001247;
     font-weight: bold;
@@ -1111,7 +1112,6 @@ footer nav {
     color: white;
   }
 
-  /* FIXME: the bg color works, why doesn't the bold text? */
 
   div.derecha a:hover,
   div.izquierda span.menu:hover,

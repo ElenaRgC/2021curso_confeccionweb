@@ -284,6 +284,10 @@ footer .footerlinks {
 #mainWrapper #offer p {
 	font-size: small;
 }
+    
+#mainWrapper #offer img {
+	width: 100%;
+}
 /* main content region of page */
 #mainWrapper #content .mainContent {
 	overflow: hidden;

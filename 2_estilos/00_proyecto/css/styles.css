@@ -22,7 +22,12 @@ body {
   font-size: clamp(0.95rem, 1vw, 1.3rem);
 }
 
-h1, h2 {
+main {
+  margin-bottom: 3rem;
+}
+
+h1,
+h2 {
   margin: 1rem;
 }
 
@@ -641,7 +646,7 @@ section.musica * {
 
 footer {
   clear: both;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   width: 100%;
 }
@@ -1111,7 +1116,6 @@ footer nav {
     background-color: #655d5e;
     color: white;
   }
-
 
   div.derecha a:hover,
   div.izquierda span.menu:hover,

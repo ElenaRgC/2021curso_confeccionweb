@@ -6,9 +6,7 @@ Algoritmo codpostal
 	escribir "Introduzca su Código Postal: "
 	leer cpostal_letras
 	
-	h=SubCadena(cpostal_letras,0,2)
-	
-	cpostal_num=ConvertirANumero(h)
+	cpostal_num=ConvertirANumero(SubCadena(cpostal_letras,0,2))
 	
 	Si cpostal_num=2
 		Escribir "La provincia es Albacete."

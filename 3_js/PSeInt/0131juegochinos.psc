@@ -42,21 +42,19 @@ Algoritmo chinos
 	
 	mano_total = mano_jugador + mano_maquina
 	
+	// Texto que se mostrará independientemente del resultado.
+	Escribir "Has jugadado " mano_jugador " y tu oponente ha jugado " mano_maquina ", para un total de " mano_total "."
+	Escribir "Has apostado que el total sería " apuesta_jugador " y tu oponente ha apostado un resultado de " apuesta_maquina "."
+	
 	Si mano_total = apuesta_jugador Entonces
-		Escribir "Has jugadado " mano_jugador " y la máquina ha jugado " mano_maquina ", para un total de " mano_total "."
-		Escribir "Has apostado que el total sería " apuesta_jugador " y la máquina ha apostado un resultado de " apuesta_maquina "."
 		Escribir "Eres el ganador."
 	FinSi
 	
 	Si mano_total = apuesta_maquina Entonces
-		Escribir "Has jugadado " mano_jugador " y la máquina ha jugado " mano_maquina ", para un total de " mano_total "."
-		Escribir "Has apostado que el total sería " apuesta_jugador " y la máquina ha apostado un resultado de " apuesta_maquina "."
 		Escribir "Has perdido."
 	FinSi
 	
 	Si mano_total <> apuesta_maquina Y mano_total <> apuesta_jugador Entonces
-		Escribir "Has jugadado " mano_jugador " y la máquina ha jugado " mano_maquina ", para un total de " mano_total "."
-		Escribir "Has apostado que el total sería " apuesta_jugador " y la máquina ha apostado un resultado de " apuesta_maquina "."
 		Escribir "No hay ganador."
 	FinSi
 	

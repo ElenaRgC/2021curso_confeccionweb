@@ -16,6 +16,9 @@ Algoritmo vencimiento
 	Definir meses Como Entero	
 	Dimension meses[365]
 	Definir dia_mes Como Entero
+	Dimension dias_mes[12]
+	Definir mes_siguiente Como Entero
+	Definir mes_segundo Como Entero
 	
 	// Bucle tipo para comprobar que el formato de fecha es correcto.
 	Mientras Longitud(fecha) <> 10 Hacer
@@ -46,7 +49,6 @@ Algoritmo vencimiento
 		
 	FinMientras
 	
-	
 	// Bucle para generar los días del año. Nos aprovechamos de un según.
 	Para i <- 1 Hasta 12
 		
@@ -74,7 +76,6 @@ Algoritmo vencimiento
 		FinPara
 		
 	FinPara
-	
 	
 	// Para cada mes, sumamos los días (excepto del mes indicado en la fecha, por eso llegamos hasta mes -1).
 	// Para enero no tenemos que sumar el total de días, solo los que han transcurrido, por eso indicamos mes > 1.
@@ -118,70 +119,88 @@ Algoritmo vencimiento
 	// Podemos saber el día de vencimiento extrayéndolo de la array meses.
 	dia_vencimiento = meses[contador]
 	
-	Segun mes Hacer
+	// Creamos una array con el número de dçias que hay en cada mes.
+	
+	Para i <- 1 Hasta 12 Hacer
 		
-		1: dia_mes = 31
-		2: dia_mes = 28
-		3: dia_mes = 31
-		4: dia_mes = 30
-		5: dia_mes = 31
-		6: dia_mes = 30
-		7: dia_mes = 31
-		8: dia_mes = 31
-		9: dia_mes = 30
-		10: dia_mes = 31
-		11: dia_mes = 30
-		12: dia_mes = 31
+		Segun i Hacer
+			
+			1: k = 31
+			2: k = 28
+			3: k = 31
+			4: k = 30
+			5: k = 31
+			6: k = 30
+			7: k = 31
+			8: k = 31
+			9: k = 30
+			10: k = 31
+			11: k = 30
+			12: k = 31	
+				
+		FinSegun
+		
+		dias_mes[i] = k
+		
+	FinPara
+	
+	// En los Si de más adelante podría introducir [mes + 1], pero surgirían problemas en los meses finales del año, por lo que los definimos previamente.
+	
+	mes_siguiente = mes + 1
+	
+	Si mes_siguiente > 12 Entonces
+		
+		mes_siguiente = mes_siguiente - 12
+		
+	FinSi
+	
+	mes_segundo = mes + 2
+	
+	Si mes_siguiente > 12 Entonces
+		
+		mes_segundo = mes_segundo - 12
+		
+	FinSi
+	
+	// Para un vencimiento de 30 días, el 1 de enero vencería el 31 del mismo mes, pero el 1 de febrero vencería el 2 de marzo.
+	// Este problema se acumula para 60 y 90 días, ya que hay que tener en cuanta los días de los meses siguientes y no solo del mes de entrada.
+	
+	// Si los días que tarda el vencimiento son más de los que tienen el total de meses (contando el día de inicio), me paso un mes más.
+	// Si los días que tarda el vencimiento son menos que el total de meses (contando el día de inicio), me quedo dentro del mes.
+	
+	Segun tipo_pago Hacer
+		
+		30: Si dias_mes[mes] > tipo_pago + dia Entonces
+				
+				mes_vencimiento = mes
+				
+			SiNo
+				
+				mes_vencimiento = mes + 1
+				
+			FinSi
+			
+		60:	Si dias_mes[mes] + dias_mes[mes_siguiente] > tipo_pago + dia 	Entonces
+				
+				mes_vencimiento = mes + 1
+				
+			SiNo
+				
+				mes_vencimiento = mes + 2
+				
+			FinSi
+			
+		90:	Si dias_mes[mes] + dias_mes[mes_siguiente] + dias_mes[mes_segundo] > tipo_pago + dia 	Entonces
+				
+				mes_vencimiento = mes + 2
+				
+			SiNo
+				
+				mes_vencimiento = mes + 3
+				
+			FinSi
 		
 	FinSegun
-	
-	// El 1 de enero vencería el 31 del mismo mes, pero el 1 de febrero vencería el 2 de marzo.
-	// Esto solo se da si el mes tiene 31 días y el pago entra el día 1.
-	
-	Si tipo_pago = 30 Entonces
-		
-		Si tipo_pago + dia > dia_mes Entonces 
-			
-			mes_vencimiento = mes + 1
-			
-		FinSi
-		
-		SiNo mes_vencimiento = mes
-		
-	FinSi
-	
-	// Con 60 y 90 días seguimos la misma lógica.
-	Si tipo_pago = 60 Entonces
-		
-		Si tipo_pago/2 + dia > dia_mes Entonces
-			
-			mes_vencimiento = mes + 2
-			
-		FinSi
-		
-		Si tipo_pago/2 + dia < dia_mes O dia_mes = 31 Entonces
-			
-			mes_vencimiento = mes + 1
-			
-		FinSi
-		
-	FinSi
-	
-	Si tipo_pago = 90 Entonces
-		
-		Si tipo_pago/3 + dia > dia_mes Y dia_mes = 30 Entonces
-			
-			mes_vencimiento = mes + 3
-			
-		FinSi
-		
-		Si tipo_pago/3 + dia < dia_mes O dia_mes = 31 Entonces
-			
-			mes_vencimiento = mes + 2
-			
-		FinSi
-		
-	FinSi
 	
 	Si mes_vencimiento > 12 Entonces
 		
@@ -189,48 +208,12 @@ Algoritmo vencimiento
 		
 	FinSi
 	
+	Escribir contador
+	Escribir meses[contador]
+	Escribir meses[37]
+	Escribir meses[1]
+	
 	Escribir "El día de vencimiento es el " dia_vencimiento " del " mes_vencimiento "."
 
-	// Permite comprobar que se han generado los meses correctamente.
-//	Para i <- 1 Hasta 12
-//		
-//		Segun i Hacer
-//			
-//			1: k = 31
-//				nombre_mes = "Enero"
-//			2: k = 28
-//				nombre_mes = "Febrero"
-//			3: k = 31
-//				nombre_mes = "Marzo"
-//			4: k = 30
-//				nombre_mes = "Abril"
-//			5: k = 31
-//				nombre_mes = "Mayo"
-//			6: k = 30
-//				nombre_mes = "Junio"
-//			7: k = 31
-//				nombre_mes = "Julio"
-//			8: k = 31
-//				nombre_mes = "Agosto"
-//			9: k = 30
-//				nombre_mes = "Septiembre"
-//			10: k = 31
-//				nombre_mes = "Octubre"
-//			11: k = 30
-//				nombre_mes = "Noviembre"
-//			12: k = 31
-//				nombre_mes = "Diciembre"
-//				
-//		FinSegun
-//		
-//		Escribir nombre_mes
-//		
-//		Para j <- 1 Hasta k
-//			
-//			Escribir meses[j]
-//			
-//		FinPara
-//		
-//	FinPara
 	
 FinAlgoritmo

@@ -137,55 +137,25 @@ Algoritmo vencimiento
 	
 	// El 1 de enero vencería el 31 del mismo mes, pero el 1 de febrero vencería el 2 de marzo.
 	// Esto solo se da si el mes tiene 31 días y el pago entra el día 1.
-	
-	Si tipo_pago = 30 Entonces
+	Si dia_mes = 31 Y dia = 1 Entonces
 		
-		Si tipo_pago + dia > dia_mes Entonces 
+		Segun tipo_pago Hacer
 			
-			mes_vencimiento = mes + 1
+			30: mes_vencimiento = mes
+			60: mes_vencimiento = mes + 1
+			90: mes_vencimiento = mes + 2	
 			
-		FinSi
+		FinSegun
 		
-		SiNo mes_vencimiento = mes
+	SiNo 
 		
-	FinSi
-	
-	// Con 60 y 90 días seguimos la misma lógica.
-	Si tipo_pago = 60 Entonces
-		
-		Si tipo_pago/2 + dia > dia_mes Entonces
+		Segun tipo_pago Hacer
 			
-			mes_vencimiento = mes + 2
+			30: mes_vencimiento = mes + 1
+			60: mes_vencimiento = mes + 2
+			90: mes_vencimiento = mes + 3	
 			
-		FinSi
-		
-		Si tipo_pago/2 + dia < dia_mes O dia_mes = 31 Entonces
-			
-			mes_vencimiento = mes + 1
-			
-		FinSi
-		
-	FinSi
-	
-	Si tipo_pago = 90 Entonces
-		
-		Si tipo_pago/3 + dia > dia_mes Y dia_mes = 30 Entonces
-			
-			mes_vencimiento = mes + 3
-			
-		FinSi
-		
-		Si tipo_pago/3 + dia < dia_mes O dia_mes = 31 Entonces
-			
-			mes_vencimiento = mes + 2
-			
-		FinSi
-		
-	FinSi
-	
-	Si mes_vencimiento > 12 Entonces
-		
-		mes_vencimiento = mes_vencimiento - 12
+		FinSegun
 		
 	FinSi
 	

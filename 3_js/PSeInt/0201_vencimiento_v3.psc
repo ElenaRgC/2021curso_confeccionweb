@@ -7,18 +7,17 @@ Algoritmo vencimiento
 	// Datos obtenidos a partir de los introducidos.
 	Definir dia Como Entero
 	Definir mes Como Entero
+	Definir mes_siguiente Como Entero
+	Definir mes_segundo Como Entero
 	Definir contador Como Entero
 	Definir dia_vencimiento Como Entero
 	Definir mes_vencimiento Como Entero
 	
 	// Datos independientes de los valores del usuario.
-	Definir nombre_mes Como Caracter
 	Definir meses Como Entero	
 	Dimension meses[365]
 	Definir dia_mes Como Entero
 	Dimension dias_mes[12]
-	Definir mes_siguiente Como Entero
-	Definir mes_segundo Como Entero
 	
 	// Bucle tipo para comprobar que el formato de fecha es correcto.
 	Mientras Longitud(fecha) <> 10 Hacer
@@ -49,13 +48,13 @@ Algoritmo vencimiento
 		
 	FinMientras
 	
-	// Bucle para generar los días del año. Nos aprovechamos de un según.
+	// Bucle para generar los días del año en la array meses.
+	// También añadimos los días de cada mes a la array dias_mes que necesitaremos más adelante.
 	Para i <- 1 Hasta 12
 		
 		Segun i Hacer
-			
 			1: k = 31
-			2: k = 28
+			2: k = 28				
 			3: k = 31
 			4: k = 30
 			5: k = 31
@@ -65,15 +64,18 @@ Algoritmo vencimiento
 			9: k = 30
 			10: k = 31
 			11: k = 30
-			12: k = 31	
-			
+			12: k = 31
 		FinSegun
 		
 		Para j <- 1 Hasta k
 			
-			meses[j] = j
+			meses[j+n] = j
 			
 		FinPara
+		
+		n = n + k
+		
+		dias_mes[i] = k
 		
 	FinPara
 	
@@ -96,7 +98,7 @@ Algoritmo vencimiento
 				9: k = 30
 				10: k = 31
 				11: k = 30
-				12: k = 31	
+				12: k = 31	// No llega a usarse.
 				
 			FinSegun
 			
@@ -118,31 +120,6 @@ Algoritmo vencimiento
 	
 	// Podemos saber el día de vencimiento extrayéndolo de la array meses.
 	dia_vencimiento = meses[contador]
-	
-	// Creamos una array con el número de dçias que hay en cada mes.
-	
-	Para i <- 1 Hasta 12 Hacer
-		
-		Segun i Hacer
-			
-			1: k = 31
-			2: k = 28
-			3: k = 31
-			4: k = 30
-			5: k = 31
-			6: k = 30
-			7: k = 31
-			8: k = 31
-			9: k = 30
-			10: k = 31
-			11: k = 30
-			12: k = 31	
-				
-		FinSegun
-		
-		dias_mes[i] = k
-		
-	FinPara
 	
 	// En los Si de más adelante podría introducir [mes + 1], pero surgirían problemas en los meses finales del año, por lo que los definimos previamente.
 	
@@ -167,7 +144,6 @@ Algoritmo vencimiento
 	
 	// Si los días que tarda el vencimiento son más de los que tienen el total de meses (contando el día de inicio), me paso un mes más.
 	// Si los días que tarda el vencimiento son menos que el total de meses (contando el día de inicio), me quedo dentro del mes.
-	
 	Segun tipo_pago Hacer
 		
 		30: Si dias_mes[mes] > tipo_pago + dia Entonces
@@ -202,16 +178,12 @@ Algoritmo vencimiento
 		
 	FinSegun
 	
+	// Si pasamos de diciembre, empezamos el año desde el mes siguiente.
 	Si mes_vencimiento > 12 Entonces
 		
 		mes_vencimiento = mes_vencimiento - 12
 		
 	FinSi
-	
-	Escribir contador
-	Escribir meses[contador]
-	Escribir meses[37]
-	Escribir meses[1]
 	
 	Escribir "El día de vencimiento es el " dia_vencimiento " del " mes_vencimiento "."
 

@@ -53,10 +53,7 @@ Algoritmo dni
 	
 	// El valor del módulo da la posición del array letras, considerando el 1 que hemos añadido antes.
 	// Ya podemos devolver al usuario la información.
-	
 	Escribir "La letra de su DNI es " letras[modulo_dni + 1] "."
 	Escribir "Su DNI es " numero_dni letras[modulo_dni + 1] "."
-	
-	
 	
 FinAlgoritmo

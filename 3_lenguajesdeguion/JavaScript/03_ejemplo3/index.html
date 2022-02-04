@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Código Postal</title>
+</head>
+
+<body>
+
+    <script>
+
+        var cpostal_num, cpostal, si_o_no;
+        cpostal = 0;
+        cpostal_num = 0;
+        si_o_no = "S"
+
+        while (si_o_no == "S") { // Cambiar a do while
+
+            cpostal = Number(prompt("Introduzca el Código Postal."));
+
+            cpostal_num = parseInt(cpostal / 1000);
+
+            if (cpostal_num = 2) {
+                alert("La provincia es Albacete.");
+            }
+
+            else if (cpostal_num = 13) {
+                alert("La provincia es Ciudad Real.");
+            }
+
+            else if (cpostal_num = 16) {
+                alert("La provincia es Cuenca.");
+            }
+
+            else if (cpostal_num = 19) {
+                alert("La provincia es Guadalajara.");
+            }
+
+            else if (cpostal_num = 45) {
+                alert("La provincia es Toledo.");
+            }
+
+            else {
+                alert("La provincia de ", cpostal_letras, " no pertenece a Castilla-La Mancha.");
+            }
+
+            si_o_no = prompt("¿Quiere continuar (S/N)");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

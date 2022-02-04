@@ -21,7 +21,7 @@ Algoritmo codpostal
 				Escribir "La provincia es Ciudad Real."
 				
 			16:
-				Escribir "La provincia es Guadalajara."
+				Escribir "La provincia es Cuenca."
 			
 			19:
 				Escribir "La provincia es Guadalajara."

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1 JS</title>
+</head>
+
+<body>
+
+    <script>
+
+        var numero1, numero2;
+        numero1 = 0;
+        numero2 = 0;
+        var sino;
+        sino = "s";
+
+        while (sino == "s") {
+
+            numero1 = Number(prompt("Escriba un número:"));
+            numero2 = Number(prompt("Escriba otro número:"));
+
+            if (numero1 > numero2) {
+                document.write("El mayor es ", numero1);
+            }
+            else { // Podría usarse un else if.
+                if (numero1 < numero2) {
+                    document.write("El mayor es ", numero2);
+                }
+                else {
+                    document.write("Los dos números son iguales.");
+                }
+            }
+
+            sino = prompt("¿Desea continuar? (s/n)");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

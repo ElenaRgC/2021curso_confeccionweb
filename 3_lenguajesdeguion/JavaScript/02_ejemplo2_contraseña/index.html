@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 2: Contraseña</title>
+</head>
+
+<body>
+
+    <script>
+
+        var password_user, password_saved;
+
+        password_saved = "abc123";
+
+        var tries;
+        tries = 0;
+
+
+        while (tries !== 3) {
+
+            password_user = prompt("Introduzca su contraseña.");
+
+            if (password_saved == password_user) {
+
+                tries = 3;
+            }
+            else {
+                alert("Ha introducido una contraseña incorrecta.");
+
+                tries = tries + 1;
+            }
+
+            alert(tries);
+        }
+
+
+        if (password_saved == password_user) {
+            document.write("Acceso permitido.");
+        }
+        else {
+            document.write("Ha introducido la contraseña incorrecta 3 veces.");
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

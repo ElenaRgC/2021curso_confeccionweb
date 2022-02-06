@@ -43,7 +43,7 @@ Algoritmo chinos
 	mano_total = mano_jugador + mano_maquina
 	
 	// Texto que se mostrará independientemente del resultado.
-	Escribir "Has jugadado " mano_jugador " y tu oponente ha jugado " mano_maquina ", para un total de " mano_total "."
+	Escribir "Has jugado " mano_jugador " y tu oponente ha jugado " mano_maquina ", para un total de " mano_total "."
 	Escribir "Has apostado que el total sería " apuesta_jugador " y tu oponente ha apostado un resultado de " apuesta_maquina "."
 	
 	Si mano_total = apuesta_jugador Entonces

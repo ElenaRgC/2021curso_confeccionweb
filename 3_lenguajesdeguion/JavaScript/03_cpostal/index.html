@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio Código Postal</title>
+    <title>Código Postal</title>
 </head>
 
 <body>
@@ -21,30 +21,30 @@
 
             cpostal = Number(prompt("Introduzca el Código Postal."));
 
-            cpostal_num = parseInt(cpostal / 1000);
+            cpostal_prefijo = parseInt(cpostal / 1000);
 
-            if (cpostal_num = 2) {
+            if (cpostal_prefijo == 2) {
                 alert("La provincia es Albacete.");
             }
 
-            else if (cpostal_num = 13) {
+            else if (cpostal_prefijo == 13) {
                 alert("La provincia es Ciudad Real.");
             }
 
-            else if (cpostal_num = 16) {
+            else if (cpostal_prefijo == 16) {
                 alert("La provincia es Cuenca.");
             }
 
-            else if (cpostal_num = 19) {
+            else if (cpostal_prefijo == 19) {
                 alert("La provincia es Guadalajara.");
             }
 
-            else if (cpostal_num = 45) {
+            else if (cpostal_prefijo == 45) {
                 alert("La provincia es Toledo.");
             }
 
             else {
-                alert("La provincia de ", cpostal_letras, " no pertenece a Castilla-La Mancha.");
+                alert("La provincia de " + cpostal + " no pertenece a Castilla-La Mancha.");
             }
 
             si_o_no = prompt("¿Quiere continuar (S/N)");

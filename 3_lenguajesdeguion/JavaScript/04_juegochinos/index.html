@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Chinos</title>
+</head>
+
+<body>
+
+    <script>
+
+        var mano_jugador, mano_maquina;
+
+        mano_jugador = 4;
+        mano_maquina = parseInt(Math.random() * 4);
+
+        var apuesta_jugador, apuesta_maquina;
+        apuesta_jugador = 7;
+
+        var mano_total;
+
+        while (mano_jugador > 3) {
+
+            mano_jugador = prompt("¿Cuántos chinos llevas en la mano?");
+
+            if (mano_jugador > 3) {
+                alert("No puedes jugar más de tres chinos.");
+            }
+        }
+
+        alert("Tu oponente ha hecho su elección.")
+        mano_total = mano_maquina + mano_jugador;
+
+
+
+        while (apuesta_jugador > 6) {
+
+            apuesta_jugador = prompt("¿Cuál es tu apuesta?");
+
+            if (apuesta_jugador > 6) {
+                alert("El total no puede ser mayor que 6.");
+            }
+        }
+
+        apuesta_maquina = apuesta_jugador;
+
+        while (apuesta_maquina === apuesta_jugador) {
+
+            apuesta_maquina = mano_maquina + parseInt(Math.random() * 4);
+        }
+
+        document.write("Has jugado " + mano_jugador + " y tu oponente ha jugado " + mano_maquina + " para un total de " + mano_total + "." + "<br>");
+        document.write("Has apostado que el total sería " + apuesta_jugador + " y tu oponente ha apostado por un resultado de " + apuesta_maquina + "." + "<br>");
+
+        if (mano_total === mano_jugador) {
+            document.write("Eres el ganador.");
+        }
+
+        else if (mano_total === mano_maquina) {
+            document.write("Has perdido.")
+        }
+
+        else {
+            document.write("No hay ganador.")
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

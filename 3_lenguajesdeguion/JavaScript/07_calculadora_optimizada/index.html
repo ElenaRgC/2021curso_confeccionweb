@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./calculo.js"></script>
+</head>
+
+<body>
+
+    <div class="calculadora">
+        <input type="text" id="valor1">
+        <input type="text" id="valor2"> <br>
+        <input type="button" id="suma" value="+" onclick="calculo('s')">
+        <input type="button" id="resta" value="-" onclick="calculo('r')">
+        <input type="button" id="multiplicacion" value="x" onclick="calculo('m')">
+        <input type="button" id="division" value="÷" onclick="calculo('d')"> <br>
+        <input type="text" id="resultado" disabled>
+        <input type="button" id="clear" value="C" onclick="clear()">
+    </div>
+
+</body>
+
+</html>

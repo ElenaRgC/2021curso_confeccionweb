@@ -9,6 +9,7 @@
 
     <style>
         body {
+            background-color: whitesmoke;
             box-sizing: border-box;
         }
 
@@ -22,7 +23,8 @@
         .calculadora>* {
             height: 2rem;
             font-size: 2rem;
-            margin: 0.5rem;
+
+            margin-block: 0.5rem;
         }
 
         #valor1,
@@ -37,6 +39,8 @@
         [type~="button"] {
             flex-basis: 20%;
             height: 3rem;
+
+            margin-inline: 0.5rem;
         }
 
         #resultado {
@@ -52,36 +56,43 @@
             var valor1 = Number(document.getElementById("valor1").value);
             var valor2 = Number(document.getElementById("valor2").value);
 
-            var resultado = valor1 + valor2
+            var resultado = valor1 + valor2;
 
-            document.getElementById("resultado").value = resultado
+            document.getElementById("resultado").value = resultado;
         }
 
         function resta() {
             var valor1 = Number(document.getElementById("valor1").value);
             var valor2 = Number(document.getElementById("valor2").value);
 
-            var resultado = valor1 - valor2
+            var resultado = valor1 - valor2;
 
-            document.getElementById("resultado").value = resultado
+            document.getElementById("resultado").value = resultado;
         }
 
         function multiplicacion() {
             var valor1 = Number(document.getElementById("valor1").value);
             var valor2 = Number(document.getElementById("valor2").value);
 
-            var resultado = valor1 * valor2
+            var resultado = valor1 * valor2;
 
-            document.getElementById("resultado").value = resultado
+            document.getElementById("resultado").value = resultado;
         }
 
         function division() {
             var valor1 = Number(document.getElementById("valor1").value);
             var valor2 = Number(document.getElementById("valor2").value);
 
-            var resultado = valor1 / valor2
+            var resultado = valor1 / valor2;
 
-            document.getElementById("resultado").value = resultado
+            document.getElementById("resultado").value = resultado;
+        }
+
+        function clear() {
+            document.getElementById("valor1").value = " ";
+            document.getElementById("valor2").value = " ";
+            document.getElementById("resultado").value = " ";
+            document.getElementById("valor1").focus();
         }
 
     </script>
@@ -91,13 +102,14 @@
 <body>
 
     <div class="calculadora">
-        <input type="text" id="valor1" placeholder="0,0">
-        <input type="text" id="valor2" placeholder="0,0"> <br>
+        <input type="text" id="valor1">
+        <input type="text" id="valor2"> <br>
         <input type="button" id="suma" value="+" onclick="suma()">
         <input type="button" id="resta" value="-" onclick="resta()">
         <input type="button" id="multiplicacion" value="x" onclick="multiplicacion()">
         <input type="button" id="division" value="÷" onclick="division()"> <br>
-        <input type="text" id="resultado" placeholder="Resultado" disabled>
+        <input type="text" id="resultado" disabled>
+        <input type="button" id="clear" value="C" onclick="clear()">
     </div>
 
 </body>

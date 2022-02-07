@@ -7,6 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
 
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        .calculadora {
+            width: 30%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .calculadora>* {
+            height: 2rem;
+            font-size: 2rem;
+            margin: 0.5rem;
+        }
+
+        #valor1,
+        #valor2 {
+            width: 40%;
+            flex-grow: 1;
+
+            text-align: right;
+            font-size: 2rem;
+        }
+
+        [type~="button"] {
+            flex-basis: 20%;
+            height: 3rem;
+        }
+
+        #resultado {
+            flex: 1;
+            text-align: right;
+            font-size: 2rem;
+        }
+    </style>
+
     <script>
 
         function suma() {
@@ -51,13 +90,15 @@
 
 <body>
 
-    <input type="text" id="valor1" placeholder="Primer valor">
-    <input type="text" id="valor2" placeholder="Segundo valor"> <br>
-    <input type="button" id="suma" value="+" onclick="suma()">
-    <input type="button" id="resta" value="-" onclick="resta()">
-    <input type="button" id="multiplicacion" value="x" onclick="multiplicacion()">
-    <input type="button" id="division" value="÷" onclick="division()"> <br>
-    <input type="text" id="resultado" disabled>
+    <div class="calculadora">
+        <input type="text" id="valor1" placeholder="0,0">
+        <input type="text" id="valor2" placeholder="0,0"> <br>
+        <input type="button" id="suma" value="+" onclick="suma()">
+        <input type="button" id="resta" value="-" onclick="resta()">
+        <input type="button" id="multiplicacion" value="x" onclick="multiplicacion()">
+        <input type="button" id="division" value="÷" onclick="division()"> <br>
+        <input type="text" id="resultado" placeholder="Resultado" disabled>
+    </div>
 
 </body>
 

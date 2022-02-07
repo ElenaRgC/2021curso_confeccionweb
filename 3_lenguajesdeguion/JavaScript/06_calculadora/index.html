@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <script>
+
+        function suma() {
+            var valor1 = Number(document.getElementById("valor1").value);
+            var valor2 = Number(document.getElementById("valor2").value);
+
+            var resultado = valor1 + valor2
+
+            document.getElementById("resultado").value = resultado
+        }
+
+        function resta() {
+            var valor1 = Number(document.getElementById("valor1").value);
+            var valor2 = Number(document.getElementById("valor2").value);
+
+            var resultado = valor1 - valor2
+
+            document.getElementById("resultado").value = resultado
+        }
+
+        function multiplicacion() {
+            var valor1 = Number(document.getElementById("valor1").value);
+            var valor2 = Number(document.getElementById("valor2").value);
+
+            var resultado = valor1 * valor2
+
+            document.getElementById("resultado").value = resultado
+        }
+
+        function division() {
+            var valor1 = Number(document.getElementById("valor1").value);
+            var valor2 = Number(document.getElementById("valor2").value);
+
+            var resultado = valor1 / valor2
+
+            document.getElementById("resultado").value = resultado
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <input type="text" id="valor1" placeholder="Primer valor">
+    <input type="text" id="valor2" placeholder="Segundo valor"> <br>
+    <input type="button" id="suma" value="+" onclick="suma()">
+    <input type="button" id="resta" value="-" onclick="resta()">
+    <input type="button" id="multiplicacion" value="x" onclick="multiplicacion()">
+    <input type="button" id="division" value="÷" onclick="division()"> <br>
+    <input type="text" id="resultado" disabled>
+
+</body>
+
+</html>

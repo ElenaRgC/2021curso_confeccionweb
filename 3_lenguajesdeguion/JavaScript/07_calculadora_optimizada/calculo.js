@@ -15,7 +15,7 @@ function calculo(operacion) {
   document.getElementById("resultado").value = resultado;
 }
 
-function clear() {
+function limpiar() {
   document.getElementById("valor1").value = " ";
   document.getElementById("valor2").value = " ";
   document.getElementById("resultado").value = " ";

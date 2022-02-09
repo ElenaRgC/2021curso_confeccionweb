@@ -9,9 +9,17 @@
     <script src="script.js"></script>
 
     <style>
+        #pistaHTML {
+            letter-spacing: 0.5rem;
+            margin-top: 2rem;
+            border: none;
+        }
+
         table {
             font-family: 'Courier New', Courier, monospace;
-            line-height: 0.5rem;
+            line-height: 0.75rem;
+            margin: 1rem;
+            border-collapse: collapse;
         }
 
         td {
@@ -19,63 +27,59 @@
             padding: 0;
         }
     </style>
-
-    <script>
-
-
-    </script>
 </head>
 
 <body>
-
+    <input type="text" id="pistaHTML" disabled> </input>
     <table>
         <tr>
             <td>&nbsp;</td>
-            <td id="fallo-4">|</td>
-            <td id="fallo-3">—</td>
-            <td id="fallo-3">—</td>
-            <td id="fallo-3">—</td>
+            <td id="fallo-4">┌</td>
+            <td id="fallo-33">—</td>
+            <td id="fallo-32">—</td>
+            <td id="fallo-31">—</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td id="fallo-5">O</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td id="fallo-2">|</td>
+            <td id="fallo-24">|</td>
         </tr>
         <tr>
             <td id="fallo-6">/</td>
             <td id="fallo-8">|</td>
             <td id="fallo-7">\</td>
             <td>&nbsp;</td>
-            <td id="fallo-2">|</td>
+            <td id="fallo-23">|</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td id="fallo-8">|</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td id="fallo-2">|</td>
+            <td id="fallo-22">|</td>
         </tr>
         <tr>
             <td id="fallo-9">/</td>
             <td>&nbsp;</td>
             <td id="fallo-10">\</td>
             <td>&nbsp;</td>
-            <td id="fallo-2">|</td>
+            <td id="fallo-21">|</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td id="fallo-1">—</td>
-            <td id="fallo-1">—</td>
+            <td id="fallo-12">—</td>
+            <td id="fallo-11">—</td>
         </tr>
     </table>
 
     <input type="text" id="entrada" pattern="[a-z]{1}">
-    <input type="button" id="boton" value="Probar" onclick="jugar()">
-
+    <input type="button" id="boton" value="Probar" onclick="probar();" disabled>
+    <br> <br>
+    <input type="button" id="nuevo" onclick="nueva_partida();ocultar();" value="Nueva Partida">
 </body>
 
 </html>

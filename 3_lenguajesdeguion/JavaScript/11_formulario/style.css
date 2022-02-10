@@ -11,3 +11,7 @@ body {
   border: none;
   background-color: whitesmoke;
 }
+
+.rojo {
+  border-color: red;
+}

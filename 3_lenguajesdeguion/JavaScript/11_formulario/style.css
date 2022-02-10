@@ -1,0 +1,13 @@
+body {
+  background-color: whitesmoke;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#datos1,
+#datos2,
+#datos3 {
+  width: 90%;
+  margin: auto;
+  border: none;
+  background-color: whitesmoke;
+}

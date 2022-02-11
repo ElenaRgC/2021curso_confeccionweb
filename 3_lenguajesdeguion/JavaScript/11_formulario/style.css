@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: whitesmoke;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -14,4 +18,81 @@ body {
 
 .rojo {
   border-color: red;
+}
+
+#divisorHijos {
+  border: solid 1px red;
+}
+
+.datos_personales {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto / 25% 25% 10% 35%;
+  gap: 0.5rem;
+}
+
+[for~="nombre"],
+[for~="dni"],
+[for~="fecha_nacimiento"],
+[for~="apellido1"],
+#apellido1 {
+  grid-column-start: 1;
+}
+
+[for~="nombre"],
+[for~="dni"],
+[for~="fecha_nacimiento"] {
+  grid-column-end: 2;
+}
+
+#nombre,
+#dni,
+#fecha_nacimiento {
+  grid-column-start: 2;
+}
+
+[for~="apellido1"],
+#apellido1,
+#nombre,
+#dni,
+#fecha_nacimiento {
+  grid-column-end: 3;
+}
+
+[for~="apellido2"],
+#apellido2,
+span.genero {
+  grid-column-start: 3;
+}
+
+.span.genero {
+  grid-column-end: 4;
+}
+
+div.hombre,
+div.mujer,
+div.otro {
+  grid-column-start: 4;
+}
+
+[for~="apellido2"],
+#apellido2,
+div.hombre,
+div.mujer,
+div.otro {
+  grid-column-end: 5;
+}
+
+[for~="apellido2"] {
+  grid-row: 1;
+}
+
+span.genero,
+div.hombre {
+  grid-row: 3;
+}
+
+[for~="fecha_nacimiento"],
+#fecha_nacimiento {
+  grid-row: 5;
 }

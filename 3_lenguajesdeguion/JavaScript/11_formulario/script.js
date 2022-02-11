@@ -1,6 +1,25 @@
+// Se definen las variables globales.
+var nombreUsuario,
+  apellido1Usuario,
+  apellido2Usuario,
+  dniUsuario,
+  fechaNacimientoUsuario,
+  domicilioUsuario,
+  localidadUsuario,
+  provinciaUsuario,
+  cPostalUsuario,
+  nHijosUsuario,
+  tratamiento,
+  aficiones = "",
+  datosPersonales,
+  datosDomicilio,
+  datosAficiones;
+
+var i,
+  j = 0;
+
 function comprobarDNI() {
-  var dniUsuario,
-    letraDNI,
+  var letraDNI,
     numeroDNI = "",
     letras = "TRWAGMYFPDXBNJZSQVHLCKE",
     resto = 0;
@@ -13,9 +32,7 @@ function comprobarDNI() {
     numeroDNI = numeroDNI + dniUsuario[i];
   }
 
-  numeroDNI = Number(numeroDNI);
-
-  resto = numeroDNI % 23;
+  resto = Number(numeroDNI) % 23;
 
   if (letras[resto] != letraDNI) {
     document.getElementById("dni").classList.add("rojo");
@@ -25,7 +42,7 @@ function comprobarDNI() {
 }
 
 function codigoPostal() {
-  var cPostalUsuario,
+  var cPostalInicio,
     localidadSeleccionada,
     localidadSeleccionadaIndice,
     localidadSeleccionadaValor;
@@ -38,41 +55,52 @@ function codigoPostal() {
   cPostalUsuario = localidadSeleccionadaValor;
   document.getElementById("c_postal").value = cPostalUsuario;
 
-  if (cPostalUsuario[0] + cPostalUsuario[1] == "02") {
+  cPostalInicio = cPostalUsuario[0] + cPostalUsuario[1];
+
+  if (cPostalInicio == "02") {
     document.getElementById("provincia").value = "Albacete";
   }
-  if (cPostalUsuario[0] + cPostalUsuario[1] == "13") {
+  if (cPostalInicio == "13") {
     document.getElementById("provincia").value = "Ciudad Real";
   }
-  if (cPostalUsuario[0] + cPostalUsuario[1] == "16") {
+  if (cPostalInicio == "16") {
     document.getElementById("provincia").value = "Cuenca";
   }
-  if (cPostalUsuario[0] + cPostalUsuario[1] == "19") {
+  if (cPostalInicio == "19") {
     document.getElementById("provincia").value = "Guadalajara";
   }
-  if (cPostalUsuario[0] + cPostalUsuario[1] == "45") {
+  if (cPostalInicio == "45") {
     document.getElementById("provincia").value = "Toledo";
   }
 }
 
-function enviarDatos() {
-  // Se definen las variables.
-  var nombreUsuario,
-    apellido1Usuario,
-    apellido2Usuario,
-    dniUsuario,
-    fechaNacimientoUsuario,
-    domicilioUsuario,
-    localidadUsuario,
-    provinciaUsuario,
-    cPostalUsuario,
-    nHijosUsuario,
-    tratamiento,
-    aficiones = "",
-    datosPersonales,
-    datosDomicilio,
-    datosAficiones;
+function anadirHijos() {
+  nHijosUsuario = document.getElementById("hijos").value;
 
+  if (nHijosUsuario != 0) {
+    // Solo se crea un div nuevo una vez, no cada vez que cambiemos la cantidad de hijos.
+    if (j == 0) {
+      divHijos = document.createElement("div");
+      divHijos.setAttribute("id", "divisorHijos");
+      document.getElementById("familia").appendChild(divHijos);
+      j = j + 1;
+    }
+
+    for (i = 0; i < nHijosUsuario; i++) {
+      nuevoHijoLabel = document.createElement("label");
+      nuevoHijoLabel.setAttribute("for", "hijo" + i);
+      nuevoHijoLabel.text = "Nombre y apellidos de hijo " + i + ":";
+      nuevoHijoInput = document.createElement("input");
+      nuevoHijoInput.setAttribute("type", "text");
+      divHijos.appendChild(nuevoHijoLabel);
+      divHijos.appendChild(nuevoHijoInput);
+    }
+  } else {
+    document.getElementById("divisorHijos").innerHTML = "";
+  }
+}
+
+function enviarDatos() {
   // Se extraen las variables tipo texto o número.
   nombreUsuario = document.getElementById("nombre").value;
   apellido1Usuario = document.getElementById("apellido1").value;
@@ -129,6 +157,7 @@ function enviarDatos() {
   if (nHijosUsuario != 0) {
     datosPersonales =
       tratamiento +
+      " " +
       nombreUsuario +
       " " +
       apellido1Usuario +

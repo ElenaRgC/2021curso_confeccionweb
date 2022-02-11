@@ -12,23 +12,29 @@
 
 <body>
     <form action="#">
-        <fieldset>
+        <fieldset class="datos_personales">
             <legend>Datos personales</legend>
             <label for="apellido1">Primer apellido:</label>
             <input type="text" id="apellido1">
             <label for="apellido2">Segundo apellido:</label>
-            <input type="text" id="apellido2"> <br>
+            <input type="text" id="apellido2">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre">
             <label for="dni">DNI:</label>
-            <input type="text" id="dni" onblur="comprobarDNI();"> <br>
-            Género: <br>
-            <input type="radio" id="hombre" name="genero" value="Don">
-            <label for="hombre">Hombre</label> <br>
-            <input type="radio" id="mujer" name="genero" value="Doña">
-            <label for="mujer">Mujer</label> <br>
-            <input type="radio" id="otro" name="genero" value="">
-            <label for="otro">Otro / NC</label> <br>
+            <input type="text" id="dni" onblur="comprobarDNI();">
+            <span class="genero">Género:</span>
+            <div class="hombre">
+                <input type="radio" id="hombre" name="genero" value="Don">
+                <label for="hombre">Hombre</label>
+            </div>
+            <div class="mujer">
+                <input type="radio" id="mujer" name="genero" value="Doña">
+                <label for="mujer">Mujer</label>
+            </div>
+            <div class="otro">
+                <input type="radio" id="otro" name="genero" value="">
+                <label for="otro">Otro / NC</label>
+            </div>
             <label for="fecha_nacimiento">Fecha de nacimiento:</label>
             <input type="date" id="fecha_nacimiento">
         </fieldset>
@@ -84,10 +90,10 @@
 
         </fieldset>
 
-        <fieldset>
+        <fieldset id="familia">
             <legend>Familia</legend>
             <label for="hijos">Número de hijos:</label>
-            <input type="number" id="hijos">
+            <input type="text" id="hijos" onchange="anadirHijos();">
         </fieldset>
 
         <input type="button" id="boton" value="Enviar" onclick="enviarDatos();">

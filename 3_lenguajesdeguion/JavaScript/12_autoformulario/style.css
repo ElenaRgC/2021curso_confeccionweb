@@ -94,6 +94,39 @@ div.hombre {
   grid-row: 5;
 }
 
+.datos_domicilio {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto / 15% 15% 30% 30%;
+  gap: 0.5rem;
+}
+
+[for~="localidad"],
+#localidad {
+  grid-column: 1 / span 2;
+}
+
+#domicilio {
+  grid-column: 2 / span 3;
+}
+
+[for~="localidad"],
+[for~="provincia"],
+[for~="c_postal"] {
+  grid-row: 1;
+}
+
+#localidad,
+#provincia,
+#c_postal {
+  grid-row: 2;
+}
+
+[for~="domicilio"],
+#domicilio {
+  grid-row: 3;
+}
+
 [type~="button"] {
   margin: 0.5rem;
 }

@@ -93,3 +93,7 @@ div.hombre {
 #fecha_nacimiento {
   grid-row: 5;
 }
+
+[type~="button"] {
+  margin: 0.5rem;
+}

@@ -16,9 +16,38 @@ var nombreUsuario,
   datosAficiones,
   datosHijos = "",
   nombresHijos = new Array();
+var passwordUsuario,
+  passwordSaved,
+  nIntentos = 0,
+  numeroUsuario;
 
-var i,
+var i = 0,
   j = 0;
+
+// Página de log-in.
+
+function iniciarSesion() {
+  if (nIntentos > 1) {
+    document.getElementById("mensaje").innerHTML =
+      "Ha introducido la contraseña incorrecta 3 veces.";
+    document.getElementById("inicio").disabled = true;
+  }
+
+  passwordSaved = "abc123";
+  passwordUsuario = document.getElementById("password").value;
+
+  if (passwordSaved == passwordUsuario) {
+    document.getElementById("mensaje").innerHTML = "Acceso permitido.";
+    nIntentos = 3;
+  } else {
+    document.getElementById("mensaje").innerHTML =
+      "Ha introducido una contraseña incorrecta.";
+    nIntentos = nIntentos + 1;
+  }
+
+  numeroUsuario = document.getElementById("usuario").value;
+}
+// Página de formulario
 
 function comprobarDNI() {
   var letraDNI,

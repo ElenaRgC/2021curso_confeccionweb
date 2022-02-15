@@ -8,10 +8,12 @@ img {
   max-width: 500px;
 }
 
+/* No queremos que se muestre el checkbox */
 input {
   display: none;
 }
 
+/* Por defecto la bombilla está apagada */
 #on {
   display: none;
 }

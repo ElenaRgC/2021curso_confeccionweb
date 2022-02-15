@@ -30,7 +30,14 @@ passwords = ["abc123", "m1contrasena", "iniciarsesi0n"];
 var usu1 = new Array();
 var usu2 = new Array();
 var usu3 = new Array();
-usu1 = [1, "Barragán", "Granados", "Luis", "92131280L", "Avda. Alameda, 86"];
+usu1 = [
+  1,
+  "Barragán",
+  "Granados",
+  "José Luis",
+  "92131280L",
+  "Avda. Alameda, 86",
+];
 usu2 = [
   2,
   "Sánchez",
@@ -320,5 +327,7 @@ function enviarDatos() {
     document.getElementById("datos4").value = datosHijos;
   }
 
-  todosDatos = datosPersonales + datosDomicilio + datosHijos;
+  todosDatos = datosPersonales + "<br>" + datosDomicilio + "<br>" + datosHijos;
+
+  localStorage.setItem("info", todosDatos);
 }

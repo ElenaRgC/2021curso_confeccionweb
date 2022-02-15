@@ -7,105 +7,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <script src="script.js"></script>
+    <script src="jspdf.min.js"></script>
+    <script>
+        function descargarPDF() {
+            todosDatos = localStorage.getItem("info");
+
+            var documento = new jsPDF();
+            documento.text(25, 15, todosDatos);
+
+            documento.save("Datos formulario.pdf");
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body onload="cargarUsuario();">
-    <form action="#">
-        <fieldset class="datos_personales">
-            <legend>Datos personales</legend>
-            <label for="apellido1">Primer apellido:</label>
-            <input type="text" id="apellido1">
-            <label for="apellido2">Segundo apellido:</label>
-            <input type="text" id="apellido2">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre">
-            <label for="dni">DNI:</label>
-            <input type="text" id="dni" onblur="comprobarDNI();">
-            <span class="genero">Género:</span>
-            <div class="hombre">
-                <input type="radio" id="hombre" name="genero" value="Don">
-                <label for="hombre">Hombre</label>
-            </div>
-            <div class="mujer">
-                <input type="radio" id="mujer" name="genero" value="Doña">
-                <label for="mujer">Mujer</label>
-            </div>
-            <div class="otro">
-                <input type="radio" id="otro" name="genero" value="">
-                <label for="otro">Otro / NC</label>
-            </div>
-            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-            <input type="date" id="fecha_nacimiento">
-        </fieldset>
-
-        <fieldset>
-            <legend>Aficiones</legend>
-            <input type="checkbox" value="cocinar" id="cocina">
-            <label for="cocina">Cocina</label>
-            <input type="checkbox" value="viajar" id="viajar">
-            <label for="viajar">Viajar</label>
-            <input type="checkbox" value="los idiomas" id="idiomas">
-            <label for="idiomas">Idiomas</label>
-            <input type="checkbox" value="el cine" id="cine">
-            <label for="cine">Cine</label>
-            <input type="checkbox" value="la lectura" id="lectura">
-            <label for="lectura">Lectura</label>
-            <input type="checkbox" value="los deportes" id="deportes">
-            <label for="deportes">Deportes</label>
-        </fieldset>
-
-        <fieldset class="datos_domicilio">
-            <legend>Domicilio</legend>
-            <label for="localidad">Localidad:</label>
-            <select name="localidad" id="localidad" onchange="codigoPostal();">
-                <option disabled>Albacete</option>
-                <option value="02004">Albacete</option>
-                <option value="02640">Almansa</option>
-                <option value="02409">Hellín</option>
-                <option value="02600">Villarobledo</option>
-                <option disabled>Ciudad Real</option>
-                <option value="13720">Alcázar de San Juan</option>
-                <option value="13002">Ciudad Real</option>
-                <option value="13500">Puertollano</option>
-                <option value="13700">Tomelloso</option>
-                <option value="13300">Valdepeñas</option>
-                <option disabled>Cuenca</option>
-                <option value="16003">Cuenca</option>
-                <option disabled>Guadalajara</option>
-                <option value="19200">Azuqueca de Henares</option>
-                <option value="19163">Guadalajara</option>
-                <option disabled>Toledo</option>
-                <option value="45200">Illescas</option>
-                <option value="45223">Seseña</option>
-                <option value="45600">Talavera de la Reina</option>
-                <option value="45001">Toledo</option>
-            </select>
-            <label for="provincia">Provincia:</label>
-            <input type="text" id="provincia" disabled> <br>
-            <label for="c_postal">Código postal:</label>
-            <input type="number" id="c_postal" disabled><br>
-            <label for="domicilio">Dirección:</label>
-            <input type="text" id="domicilio"> <br>
-
-        </fieldset>
-
-        <fieldset id="familia">
-            <legend>Familia</legend>
-            <label for="hijos">Número de hijos:</label>
-            <input type="text" id="hijos" onchange="quitarHijos();" onblur="anadirHijos();">
-        </fieldset>
-
-        <input type="button" id="boton" value="Enviar" onclick="enviarDatos();">
-
-        <fieldset>
-            <legend>Datos introducidos:</legend>
-            <input type="text" name="datosPersonales" id="datos1" disabled></input> <br>
-            <input type="text" name="datosDomicilio" id="datos2" disabled></input> <br>
-            <input type="text" name="datosAficiones" id="datos3" disabled></input>
-            <input type="text" name="datosAficiones" id="datos4" disabled></input>
-        </fieldset>
-    </form>
+    <main>
+        <form action="#">
+            <fieldset class="datos_personales">
+                <legend>Datos personales</legend>
+                <label for="apellido1">Primer apellido:</label>
+                <input type="text" id="apellido1">
+                <label for="apellido2">Segundo apellido:</label>
+                <input type="text" id="apellido2">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre">
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" onblur="comprobarDNI();">
+                <span class="genero">Género:</span>
+                <div class="hombre">
+                    <input type="radio" id="hombre" name="genero" value="Don">
+                    <label for="hombre">Hombre</label>
+                </div>
+                <div class="mujer">
+                    <input type="radio" id="mujer" name="genero" value="Doña">
+                    <label for="mujer">Mujer</label>
+                </div>
+                <div class="otro">
+                    <input type="radio" id="otro" name="genero" value="">
+                    <label for="otro">Otro / NC</label>
+                </div>
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nacimiento">
+            </fieldset>
+            <fieldset>
+                <legend>Aficiones</legend>
+                <input type="checkbox" value="cocinar" id="cocina">
+                <label for="cocina">Cocina</label>
+                <input type="checkbox" value="viajar" id="viajar">
+                <label for="viajar">Viajar</label>
+                <input type="checkbox" value="los idiomas" id="idiomas">
+                <label for="idiomas">Idiomas</label>
+                <input type="checkbox" value="el cine" id="cine">
+                <label for="cine">Cine</label>
+                <input type="checkbox" value="la lectura" id="lectura">
+                <label for="lectura">Lectura</label>
+                <input type="checkbox" value="los deportes" id="deportes">
+                <label for="deportes">Deportes</label>
+            </fieldset>
+            <fieldset class="datos_domicilio">
+                <legend>Domicilio</legend>
+                <label for="localidad">Localidad:</label>
+                <select name="localidad" id="localidad" onchange="codigoPostal();">
+                    <option disabled>Albacete</option>
+                    <option value="02004">Albacete</option>
+                    <option value="02640">Almansa</option>
+                    <option value="02409">Hellín</option>
+                    <option value="02600">Villarobledo</option>
+                    <option disabled>Ciudad Real</option>
+                    <option value="13720">Alcázar de San Juan</option>
+                    <option value="13002">Ciudad Real</option>
+                    <option value="13500">Puertollano</option>
+                    <option value="13700">Tomelloso</option>
+                    <option value="13300">Valdepeñas</option>
+                    <option disabled>Cuenca</option>
+                    <option value="16003">Cuenca</option>
+                    <option disabled>Guadalajara</option>
+                    <option value="19200">Azuqueca de Henares</option>
+                    <option value="19163">Guadalajara</option>
+                    <option disabled>Toledo</option>
+                    <option value="45200">Illescas</option>
+                    <option value="45223">Seseña</option>
+                    <option value="45600">Talavera de la Reina</option>
+                    <option value="45001">Toledo</option>
+                </select>
+                <label for="provincia">Provincia:</label>
+                <input type="text" id="provincia" disabled> <br>
+                <label for="c_postal">Código postal:</label>
+                <input type="number" id="c_postal" disabled><br>
+                <label for="domicilio">Dirección:</label>
+                <input type="text" id="domicilio"> <br>
+            </fieldset>
+            <fieldset id="familia">
+                <legend>Familia</legend>
+                <label for="hijos">Número de hijos:</label>
+                <input type="text" id="hijos" onchange="quitarHijos();" onblur="anadirHijos();">
+            </fieldset>
+            <input type="button" id="boton" value="Enviar" onclick="enviarDatos();">
+            <fieldset>
+                <legend>Resumen</legend>
+                <input type="text" name="datosPersonales" id="datos1" disabled></input> <br>
+                <input type="text" name="datosDomicilio" id="datos2" disabled></input> <br>
+                <input type="text" name="datosAficiones" id="datos3" disabled></input>
+                <input type="text" name="datosAficiones" id="datos4" disabled></input>
+            </fieldset>
+            <input type="button" value="Descargar como PDF" onclick="descargarPDF();">
+            <input type="button" value="Enviar por correo" onclick="enviarCorreo();">
+        </form>
+    </main>
 </body>
 
 </html>

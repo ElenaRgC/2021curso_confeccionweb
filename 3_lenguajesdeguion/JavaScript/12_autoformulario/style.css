@@ -7,6 +7,11 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+main {
+  max-width: 700px;
+  margin: auto;
+}
+
 #datos1,
 #datos2,
 #datos3,

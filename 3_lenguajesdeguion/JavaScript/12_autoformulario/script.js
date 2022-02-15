@@ -11,11 +11,12 @@ var nombreUsuario,
   nHijosUsuario,
   tratamiento = "",
   aficiones = "",
-  datosPersonales,
-  datosDomicilio,
-  datosAficiones,
+  datosPersonales = "",
+  datosDomicilio = "",
+  datosAficiones = "",
   datosHijos = "",
-  nombresHijos = new Array();
+  nombresHijos = new Array(),
+  todosDatos = "";
 var passwordUsuario,
   passwordSaved,
   nIntentos = 0,
@@ -318,4 +319,6 @@ function enviarDatos() {
     datosHijos = datosHijos + ".";
     document.getElementById("datos4").value = datosHijos;
   }
+
+  todosDatos = datosPersonales + datosDomicilio + datosHijos;
 }

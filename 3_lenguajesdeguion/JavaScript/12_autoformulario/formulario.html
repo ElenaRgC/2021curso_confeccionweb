@@ -10,10 +10,14 @@
     <script src="jspdf.min.js"></script>
     <script>
         function descargarPDF() {
-            todosDatos = localStorage.getItem("info");
+            datosPersonales = localStorage.getItem("infoPersonal");
+            datosDomicilio = localStorage.getItem("infoDomicilio");
+            datosHijos = localStorage.getItem("infoHijos");
 
             var documento = new jsPDF();
-            documento.text(25, 15, todosDatos);
+            documento.text(25, 15, datosPersonales);
+            documento.text(25, 25, datosDomicilio);
+            documento.text(25, 35, datosHijos);
 
             documento.save("Datos formulario.pdf");
         }

@@ -15,8 +15,7 @@ var nombreUsuario,
   datosDomicilio = "",
   datosAficiones = "",
   datosHijos = "",
-  nombresHijos = new Array(),
-  todosDatos = "";
+  nombresHijos = new Array();
 var passwordUsuario,
   passwordSaved,
   nIntentos = 0,
@@ -226,6 +225,9 @@ function anadirHijos() {
 function enviarDatos() {
   // Se extraen las variables tipo texto o número.
   nombreUsuario = document.getElementById("nombre").value;
+
+  localStorage.setItem("nombre", nombreUsuario);
+
   apellido1Usuario = document.getElementById("apellido1").value;
   apellido2Usuario = document.getElementById("apellido2").value;
   dniUsuario = document.getElementById("dni").value;
@@ -327,7 +329,28 @@ function enviarDatos() {
     document.getElementById("datos4").value = datosHijos;
   }
 
-  todosDatos = datosPersonales + "<br>" + datosDomicilio + "<br>" + datosHijos;
+  localStorage.setItem("infoPersonal", datosPersonales);
+  localStorage.setItem("infoDomicilio", datosDomicilio);
+  localStorage.setItem("infoHijos", datosHijos);
+}
 
-  localStorage.setItem("info", todosDatos);
+function enviarCorreo() {
+  var asuntoEmail, cuerpoEmail, direccionEmail;
+
+  nombreUsuario = localStorage.getItem("nombre");
+  asuntoEmail = asunto = "Datos de" + nombreUsuario;
+
+  localStorage.setItem("infoPersonal", datosPersonales);
+  localStorage.setItem("infoDomicilio", datosDomicilio);
+  localStorage.setItem("infoHijos", datosHijos);
+
+  cuerpoEmail = datosPersonales + datosDomicilio + datosHijos;
+
+  direccionEmail = prompt("Introduce tu dirección de correo electrónico:");
+
+  if (direccionEmail != null) {
+    var datosEmail =
+      direccionEmail + "?subject=" + asuntoEmail + "&body=" + cuerpoEmail;
+    window.open("mailto:" + datosEmail);
+  }
 }

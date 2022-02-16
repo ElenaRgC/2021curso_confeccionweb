@@ -18,8 +18,6 @@ var nombreUsuario,
   nombresHijos = new Array();
 var passwordUsuario,
   nIntentos = 0,
-  Usuario,
-  numeroUsuario,
   passwords = new Array();
 
 // Apellido 1, Apellido 2, Nombre, DNI, Dirección
@@ -32,7 +30,7 @@ var usuarios = [
     apellido2: "Granados",
     nombre: "José Luis",
     dni: "92131280L",
-    direccion: "Avda. Alameda, 86",
+    domicilio: "Avda. Alameda, 86",
     password: "abc123",
   },
   {
@@ -40,7 +38,7 @@ var usuarios = [
     apellido2: "Camacho",
     nombre: "Nazario",
     dni: "52762149B",
-    direccion: "Calle Comandante Izarduy, 61",
+    domicilio: "Calle Comandante Izarduy, 61",
     password: "m1contrasena",
   },
   {
@@ -48,7 +46,7 @@ var usuarios = [
     apellido2: "Menéndez",
     nombre: "Piedad",
     dni: "02831435C",
-    direccion: "Plaza Extramuros, 68",
+    domicilio: "Plaza Extramuros, 68",
     password: "iniciarsesi0n",
   },
 ];
@@ -66,7 +64,13 @@ function iniciarSesion() {
   passwordUsuario = document.getElementById("password").value;
   localStorage.setItem("dniLogIn", dniUsuario);
 
-  for (i = 0; i <= usuarios.length; i++) {
+  for (i = 0; i < usuarios.length; i++) {
+    // Las comprobaciones se realizarán con un else if
+    // para evitar que realice todas las acciones si la primera se cumple,
+    // ya que aunque funcione para un usuario, fallará para todos los demás.
+
+    // Primero comprobamos el caso menos probable y más importante.
+    // Coinciden DNI y contraseña.
     if (
       usuarios[i].dni == dniUsuario &&
       usuarios[i].password == passwordUsuario
@@ -75,6 +79,7 @@ function iniciarSesion() {
       document.getElementById("mensaje").innerHTML = "Acceso permitido.";
       nIntentos = 4;
       location.href = "formulario.html";
+      // DNI correcto pero contraseña equivocada.
     } else if (
       usuarios[i].dni == dniUsuario &&
       usuarios[i].password != passwordUsuario
@@ -82,13 +87,14 @@ function iniciarSesion() {
       document.getElementById("mensaje").innerHTML =
         "Ha introducido una contraseña incorrecta.";
       nIntentos = nIntentos + 1;
+      // DNI no existe en la base de datos.
     } else if (usuarios[i].dni != dniUsuario) {
       document.getElementById("mensaje").innerHTML =
         "No existe una cuenta con ese DNI.";
     }
   }
-  alert(nIntentos);
-  if (nIntentos >= 2) {
+
+  if (nIntentos >= 3) {
     document.getElementById("mensaje").innerHTML =
       "Ha introducido la contraseña incorrecta 3 veces.";
     document.getElementById("inicio").disabled = true;
@@ -98,29 +104,16 @@ function iniciarSesion() {
 // Página de formulario
 
 function cargarUsuario() {
-  numeroUsuario = localStorage.getItem("Usuario");
+  dniUsuario = localStorage.getItem("dni");
 
-  if (numeroUsuario == 1) {
-    document.getElementById("apellido1").value = usu1[1];
-    document.getElementById("apellido2").value = usu1[2];
-    document.getElementById("nombre").value = usu1[3];
-    document.getElementById("dni").value = usu1[4];
-    document.getElementById("domicilio").value = usu1[5];
-  }
-  if (numeroUsuario == 2) {
-    document.getElementById("apellido1").value = usu2[1];
-    document.getElementById("apellido2").value = usu2[2];
-    document.getElementById("nombre").value = usu2[3];
-    document.getElementById("dni").value = usu2[4];
-    document.getElementById("domicilio").value = usu2[5];
-  }
-
-  if (numeroUsuario == 3) {
-    document.getElementById("apellido1").value = usu3[1];
-    document.getElementById("apellido2").value = usu3[2];
-    document.getElementById("nombre").value = usu3[3];
-    document.getElementById("dni").value = usu3[4];
-    document.getElementById("domicilio").value = usu3[5];
+  for (i = 1; i < usuarios.length; i++) {
+    if (usuarios[i].dni == dniUsuario) {
+      document.getElementById("apellido1").value = usuarios[i].apellido1;
+      document.getElementById("apellido2").value = usuarios[i].apellido2;
+      document.getElementById("nombre").value = usuarios[i].nombre;
+      document.getElementById("dni").value = usuarios[i].dni;
+      document.getElementById("domicilio").value = usuarios[i].domicilio;
+    }
   }
 }
 

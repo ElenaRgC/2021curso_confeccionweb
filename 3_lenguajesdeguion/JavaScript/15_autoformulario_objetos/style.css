@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+}
+
+#datos1,
+#datos2,
+#datos3,
+#datos4 {
+  width: 90%;
+  margin: auto;
+  border: none;
+  background-color: whitesmoke;
+}
+
+.rojo {
+  border-color: red;
+}
+
+.datos_personales {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto / 25% 25% 10% 35%;
+  gap: 0.5rem;
+}
+
+[for~="nombre"],
+[for~="dni"],
+[for~="fecha_nacimiento"],
+[for~="apellido1"],
+#apellido1 {
+  grid-column-start: 1;
+}
+
+[for~="nombre"],
+[for~="dni"],
+[for~="fecha_nacimiento"] {
+  grid-column-end: 2;
+}
+
+#nombre,
+#dni,
+#fecha_nacimiento {
+  grid-column-start: 2;
+}
+
+[for~="apellido1"],
+#apellido1,
+#nombre,
+#dni,
+#fecha_nacimiento {
+  grid-column-end: 3;
+}
+
+[for~="apellido2"],
+#apellido2,
+span.genero {
+  grid-column-start: 3;
+}
+
+.span.genero {
+  grid-column-end: 4;
+}
+
+div.hombre,
+div.mujer,
+div.otro {
+  grid-column-start: 4;
+}
+
+[for~="apellido2"],
+#apellido2,
+div.hombre,
+div.mujer,
+div.otro {
+  grid-column-end: 5;
+}
+
+[for~="apellido2"] {
+  grid-row: 1;
+}
+
+span.genero,
+div.hombre {
+  grid-row: 3;
+}
+
+[for~="fecha_nacimiento"],
+#fecha_nacimiento {
+  grid-row: 5;
+}
+
+.datos_domicilio {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto / 15% 15% 30% 30%;
+  gap: 0.5rem;
+}
+
+[for~="localidad"],
+#localidad {
+  grid-column: 1 / span 2;
+}
+
+#domicilio {
+  grid-column: 2 / span 3;
+}
+
+[for~="localidad"],
+[for~="provincia"],
+[for~="c_postal"] {
+  grid-row: 1;
+}
+
+#localidad,
+#provincia,
+#c_postal {
+  grid-row: 2;
+}
+
+[for~="domicilio"],
+#domicilio {
+  grid-row: 3;
+}
+
+[type~="button"] {
+  margin: 0.5rem;
+}

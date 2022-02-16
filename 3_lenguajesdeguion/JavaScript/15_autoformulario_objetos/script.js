@@ -17,41 +17,40 @@ var nombreUsuario,
   datosHijos = "",
   nombresHijos = new Array();
 var passwordUsuario,
-  passwordSaved,
   nIntentos = 0,
   Usuario,
   numeroUsuario,
   passwords = new Array();
 
-passwords = ["abc123", "m1contrasena", "iniciarsesi0n"];
+// Apellido 1, Apellido 2, Nombre, DNI, Dirección
 
-// Array = Nº Usuario, Apellido 1, Apellido 2, Nombre, DNI, Dirección
-var usu1 = new Array();
-var usu2 = new Array();
-var usu3 = new Array();
-usu1 = [
-  1,
-  "Barragán",
-  "Granados",
-  "José Luis",
-  "92131280L",
-  "Avda. Alameda, 86",
-];
-usu2 = [
-  2,
-  "Sánchez",
-  "Camacho",
-  "Nazario",
-  "52762149B",
-  "Calle Comandante Izarduy, 61",
-];
-usu3 = [
-  3,
-  "Arriaga",
-  "Menéndez",
-  "Piedad",
-  "02831435C",
-  "Plaza Extramuros, 68",
+//var usuarios = new Array();
+
+var usuarios = [
+  {
+    apellido1: "Barragán",
+    apellido2: "Granados",
+    nombre: "José Luis",
+    dni: "92131280L",
+    direccion: "Avda. Alameda, 86",
+    password: "abc123",
+  },
+  {
+    apellido1: "Sánchez",
+    apellido2: "Camacho",
+    nombre: "Nazario",
+    dni: "52762149B",
+    direccion: "Calle Comandante Izarduy, 61",
+    password: "m1contrasena",
+  },
+  {
+    apellido1: "Arriaga",
+    apellido2: "Menéndez",
+    nombre: "Piedad",
+    dni: "02831435C",
+    direccion: "Plaza Extramuros, 68",
+    password: "iniciarsesi0n",
+  },
 ];
 
 var i = 0,
@@ -60,32 +59,39 @@ var i = 0,
 // Página de log-in.
 
 function iniciarSesion() {
-  Usuario = document.getElementById("usuario").value;
+  // Crearemos la función de inicio de sesión con el DNI,
+  // porque varias personas pueden compartir nombre o apellido,
+  // pero el DNI es único.
+  dniUsuario = document.getElementById("dni").value;
   passwordUsuario = document.getElementById("password").value;
-  localStorage.setItem("Usuario", Usuario);
+  localStorage.setItem("dniLogIn", dniUsuario);
 
-  // Comprobamos que el número de usuario coincida con la posición de la array passwords.
-  // Como la array empieza en 0 pero los usuarios en 1, restamos una posición.
-  for (i = 0; i < 3; i++) {
-    if (Usuario - 1 == i) {
-      passwordSaved = passwords[i];
+  for (i = 0; i <= usuarios.length; i++) {
+    if (
+      usuarios[i].dni == dniUsuario &&
+      usuarios[i].password == passwordUsuario
+    ) {
+      localStorage.setItem("dni", dniUsuario);
+      document.getElementById("mensaje").innerHTML = "Acceso permitido.";
+      nIntentos = 4;
+      location.href = "formulario.html";
+    } else if (
+      usuarios[i].dni == dniUsuario &&
+      usuarios[i].password != passwordUsuario
+    ) {
+      document.getElementById("mensaje").innerHTML =
+        "Ha introducido una contraseña incorrecta.";
+      nIntentos = nIntentos + 1;
+    } else if (usuarios[i].dni != dniUsuario) {
+      document.getElementById("mensaje").innerHTML =
+        "No existe una cuenta con ese DNI.";
     }
   }
-
-  if (nIntentos > 1) {
+  alert(nIntentos);
+  if (nIntentos >= 2) {
     document.getElementById("mensaje").innerHTML =
       "Ha introducido la contraseña incorrecta 3 veces.";
     document.getElementById("inicio").disabled = true;
-  }
-
-  if (passwordSaved == passwordUsuario) {
-    document.getElementById("mensaje").innerHTML = "Acceso permitido.";
-    nIntentos = 3;
-    location.href = "formulario.html";
-  } else {
-    document.getElementById("mensaje").innerHTML =
-      "Ha introducido una contraseña incorrecta.";
-    nIntentos = nIntentos + 1;
   }
 }
 

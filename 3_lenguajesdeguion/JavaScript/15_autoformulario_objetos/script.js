@@ -361,3 +361,20 @@ function enviarCorreo() {
     window.open("mailto:" + datosEmail);
   }
 }
+
+function descargarPDF() {
+  // Llamamos los datos guardados.
+  datosPersonales = localStorage.getItem("infoPersonal");
+  datosDomicilio = localStorage.getItem("infoDomicilio");
+  datosHijos = localStorage.getItem("infoHijos");
+
+  // Introducimos cada dato en una línea.
+  // El segundo valor indica el margen superior de la línea,
+  // por lo que si ponemos el mismo se superpondrían entre ellas.
+  var documento = new jsPDF();
+  documento.text(25, 15, datosPersonales);
+  documento.text(25, 25, datosDomicilio);
+  documento.text(25, 35, datosHijos);
+
+  documento.save("Datos formulario.pdf");
+}

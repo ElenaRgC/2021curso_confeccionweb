@@ -8,20 +8,6 @@
     <title>Formulario</title>
     <script src="script.js"></script>
     <script src="jspdf.min.js"></script>
-    <script>
-        function descargarPDF() {
-            datosPersonales = localStorage.getItem("infoPersonal");
-            datosDomicilio = localStorage.getItem("infoDomicilio");
-            datosHijos = localStorage.getItem("infoHijos");
-
-            var documento = new jsPDF();
-            documento.text(25, 15, datosPersonales);
-            documento.text(25, 25, datosDomicilio);
-            documento.text(25, 35, datosHijos);
-
-            documento.save("Datos formulario.pdf");
-        }
-    </script>
     <link rel="stylesheet" href="style.css">
 </head>
 

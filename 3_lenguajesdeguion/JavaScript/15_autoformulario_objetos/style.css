@@ -7,7 +7,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main {
+.acceso {
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -44,6 +44,13 @@ form.login {
   grid-auto-flow: row;
   grid-template: auto / 25% 25% 10% 35%;
   gap: 0.5rem;
+}
+
+#datos1,
+#datos2,
+#datos3,
+#datos4 {
+  width: 100%;
 }
 
 [for~="nombre"],

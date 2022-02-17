@@ -1,5 +1,3 @@
-// Se definen las variables globales.
-
 // Datos introducidos por el usuario.
 var nombreUsuario,
   apellido1Usuario,
@@ -13,7 +11,8 @@ var nombreUsuario,
   nHijosUsuario,
   passwordUsuario;
 
-// Datos generados para el funcionamiento de la página.
+// Variables intermedias para el funcionamiento de la página o
+// datos finales a mostrar al usuario.
 var tratamiento = "",
   aficiones = "",
   datosPersonales = "",
@@ -129,7 +128,7 @@ function cargarUsuario() {
   datosUsuarios = localStorage.getItem("arrayUsuarios");
   usuarios = JSON.parse(datosUsuarios);
 
-  for (i = 1; i <= usuarios.length; i++) {
+  for (i = 0; i < usuarios.length; i++) {
     if (usuarios[i].dni == dniUsuario) {
       document.getElementById("apellido1").value = usuarios[i].apellido1;
       document.getElementById("apellido2").value = usuarios[i].apellido2;
@@ -188,26 +187,31 @@ function codigoPostal() {
   // Decidimos la provincia en base a los dos primeros dígitos del código postal.
   cPostalInicio = cPostalUsuario[0] + cPostalUsuario[1];
 
-  if (cPostalInicio == "02") {
-    document.getElementById("provincia").value = "Albacete";
-  }
-  if (cPostalInicio == "13") {
-    document.getElementById("provincia").value = "Ciudad Real";
-  }
-  if (cPostalInicio == "16") {
-    document.getElementById("provincia").value = "Cuenca";
-  }
-  if (cPostalInicio == "19") {
-    document.getElementById("provincia").value = "Guadalajara";
-  }
-  if (cPostalInicio == "45") {
-    document.getElementById("provincia").value = "Toledo";
+  switch (cPostalInicio) {
+    case "02":
+      document.getElementById("provincia").value = "Albacete";
+      break;
+    case "13":
+      document.getElementById("provincia").value = "Ciudad Real";
+      break;
+    case "16":
+      document.getElementById("provincia").value = "Cuenca";
+      break;
+    case "19":
+      document.getElementById("provincia").value = "Guadalajara";
+      break;
+    case "45":
+      document.getElementById("provincia").value = "Toledo";
+      break;
   }
 }
 
 function quitarHijos() {
-  // En el caso de que el usuario se equivoque en el número de hijos, se eliminan los cuadros de texto.
-  document.getElementById("divisorHijos").innerHTML = "";
+  // En el caso de que el usuario se equivoque en el número de hijos,
+  // se eliminan los cuadros de texto.
+  if (document.getElementById("divisorHijos")) {
+    document.getElementById("divisorHijos").innerHTML = "";
+  }
 }
 
 function anadirHijos() {
@@ -226,7 +230,10 @@ function anadirHijos() {
         j = j + 1;
       }
 
-      // Por cada hijo nuevo creamos una label y un input, que añadimos al contenedor divisorHijos.
+      // Por cada hijo nuevo creamos una label y un input,
+      // que añadimos al contenedor divisorHijos.
+      // Podría añadirse texto simple, pero es mejor añadir una label
+      // para facilitar la accesibilidad de los usuarios.
       for (i = 0; i < nHijosUsuario; i++) {
         k = i + 1;
         nuevoHijoLabel = document.createElement("label");
@@ -240,26 +247,31 @@ function anadirHijos() {
         divHijos.innerHTML += "<br>";
       }
     } else {
-      // Si el número de hijos es 0, eliminamos los cuadros de texto.
+      // Si el número de hijos es 0, eliminamos los cuadros de texto y
+      // los datos que se muestran escritos.
       document.getElementById("divisorHijos").innerHTML = "";
+      datosHijos = "";
+      document.getElementById("datos4").value = datosHijos;
     }
   }
 }
 
 function enviarDatos() {
-  // Se extraen las variables tipo texto o número.
-  nombreUsuario = document.getElementById("nombre").value;
-
-  localStorage.setItem("nombre", nombreUsuario);
-
+  // Se extraen las variables tipo texto o número
+  // introducidas en el formulario.
   apellido1Usuario = document.getElementById("apellido1").value;
   apellido2Usuario = document.getElementById("apellido2").value;
+  nombreUsuario = document.getElementById("nombre").value;
   dniUsuario = document.getElementById("dni").value;
   fechaNacimientoUsuario = document.getElementById("fecha_nacimiento").value;
   domicilioUsuario = document.getElementById("domicilio").value;
   nHijosUsuario = document.getElementById("hijos").value;
   cPostalUsuario = document.getElementById("c_postal").value;
   provinciaUsuario = document.getElementById("provincia").value;
+
+  // Guardamos el nombre por separado porque lo usaremos
+  // para el asunto del email.
+  localStorage.setItem("nombre", nombreUsuario);
 
   // Se extrae la localidad (desplegable).
   localidadSeleccionada = document.getElementById("localidad");
@@ -270,10 +282,13 @@ function enviarDatos() {
   // Se extraen las variables de tipo radio (género).
   // Según el género elegido cambiará la forma en la que nos dirigiremos al usuario.
   if (document.getElementById("hombre").checked) {
-    tratamiento = document.getElementById("hombre").value + "";
+    tratamiento = document.getElementById("hombre").value + " ";
   }
   if (document.getElementById("mujer").checked) {
-    tratamiento = document.getElementById("mujer").value + "";
+    tratamiento = document.getElementById("mujer").value + " ";
+  }
+  if (document.getElementById("otro").checked) {
+    tratamiento = "";
   }
 
   // Se extraen las variables de tipo check (aficiones).
@@ -296,11 +311,9 @@ function enviarDatos() {
     aficiones = aficiones + document.getElementById("deportes").value + ", ";
   }
 
-  // Se almacenan las variables en el texto a mostrar.
-
+  // Se almacenan las variables en los texto a mostrar.
   datosPersonales =
     tratamiento +
-    " " +
     nombreUsuario +
     " " +
     apellido1Usuario +
@@ -341,11 +354,20 @@ function enviarDatos() {
 
     for (i = 0; i < nHijosUsuario; i++) {
       nombresHijos[i] = document.getElementById("hijo" + i).value;
-      datosHijos = datosHijos + nombresHijos[i] + " ,";
+      datosHijos = datosHijos + nombresHijos[i];
+
+      // Para añadir una coma entre los hijos,
+      // siempre que no sean el último o el penúltimo
+      if (
+        nHijosUsuario > 1 &&
+        i != nHijosUsuario - 1 &&
+        nHijosUsuario > 1 &&
+        i != nHijosUsuario - 2
+      ) {
+        datosHijos = datosHijos + ", ";
+      }
 
       // Para añadir un "y" antes del último hijo,
-      // restamos dos posiciones porque la última posición nunca se alcanzaría (i menor que)
-      // y la penúltima (-1), que es realmente la última, escribiría "y" detrás del nombre del último hijo.
       if (i == nHijosUsuario - 2) {
         datosHijos = datosHijos + " y ";
       }
@@ -366,15 +388,14 @@ function enviarCorreo() {
   var asuntoEmail, cuerpoEmail, direccionEmail;
 
   nombreUsuario = localStorage.getItem("nombre");
-  asuntoEmail = asunto = "Datos de" + nombreUsuario;
+  asuntoEmail = "Datos de" + nombreUsuario;
 
   // Llamamos los datos que hemos guardado anteriormente.
-  // La función seguiría funcionando aunque eliminásemos este paso.
   localStorage.setItem("infoPersonal", datosPersonales);
   localStorage.setItem("infoDomicilio", datosDomicilio);
   localStorage.setItem("infoHijos", datosHijos);
 
-  cuerpoEmail = datosPersonales + datosDomicilio + datosHijos;
+  cuerpoEmail = datosPersonales + " " + datosDomicilio + " " + datosHijos;
 
   direccionEmail = prompt("Introduce tu dirección de correo electrónico:");
 
@@ -390,14 +411,17 @@ function descargarPDF() {
   datosPersonales = localStorage.getItem("infoPersonal");
   datosDomicilio = localStorage.getItem("infoDomicilio");
   datosHijos = localStorage.getItem("infoHijos");
+  titulo = "Datos de " + nombreUsuario;
 
   // Introducimos cada dato en una línea.
-  // El segundo valor indica el margen superior de la línea,
+  // El segundo valor indica el margen superior de cada línea,
   // por lo que si ponemos el mismo se superpondrían entre ellas.
   var documento = new jsPDF();
-  documento.text(25, 15, datosPersonales);
-  documento.text(25, 25, datosDomicilio);
-  documento.text(25, 35, datosHijos);
+  documento.text(25, 25, titulo);
+  documento.setFontSize(12);
+  documento.text(25, 35, datosPersonales);
+  documento.text(25, 42, datosDomicilio);
+  documento.text(25, 49, datosHijos);
 
   documento.save("Datos formulario.pdf");
 }

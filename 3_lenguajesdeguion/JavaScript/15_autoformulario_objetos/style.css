@@ -8,8 +8,21 @@ body {
 }
 
 main {
-  max-width: 700px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form.login {
+  text-align: center;
+}
+
+#dniusuario,
+#password {
+  width: 220px;
+  margin-bottom: 0.6rem;
 }
 
 #datos1,

@@ -1,4 +1,6 @@
 // Se definen las variables globales.
+
+// Datos introducidos por el usuario.
 var nombreUsuario,
   apellido1Usuario,
   apellido2Usuario,
@@ -9,21 +11,19 @@ var nombreUsuario,
   provinciaUsuario,
   cPostalUsuario,
   nHijosUsuario,
-  tratamiento = "",
+  passwordUsuario;
+
+// Datos generados para el funcionamiento de la página.
+var tratamiento = "",
   aficiones = "",
   datosPersonales = "",
   datosDomicilio = "",
   datosAficiones = "",
   datosHijos = "",
   nombresHijos = new Array();
-var passwordUsuario,
-  nIntentos = 0,
-  passwords = new Array();
 
-// Apellido 1, Apellido 2, Nombre, DNI, Dirección
-
-//var usuarios = new Array();
-
+// Datos predefinidos de los usuarios.
+// (Apellido 1, Apellido 2, Nombre, DNI, Dirección, Contraseña)
 var usuarios = [
   {
     apellido1: "Barragán",
@@ -51,6 +51,8 @@ var usuarios = [
   },
 ];
 
+// Índices de los bucles.
+var nIntentos = 0;
 var i = 0,
   j = 0;
 
@@ -60,7 +62,7 @@ function iniciarSesion() {
   // Crearemos la función de inicio de sesión con el DNI,
   // porque varias personas pueden compartir nombre o apellido,
   // pero el DNI es único.
-  dniUsuario = document.getElementById("dni").value;
+  dniUsuario = document.getElementById("dniusuario").value;
   passwordUsuario = document.getElementById("password").value;
   localStorage.setItem("dniLogIn", dniUsuario);
 
@@ -75,7 +77,10 @@ function iniciarSesion() {
       usuarios[i].dni == dniUsuario &&
       usuarios[i].password == passwordUsuario
     ) {
+      // Guardamos los datos en el local storage antes de irnos a otra página.
+      localStorage.setItem("arrayUsuarios", JSON.stringify(usuarios));
       localStorage.setItem("dni", dniUsuario);
+
       document.getElementById("mensaje").innerHTML = "Acceso permitido.";
       nIntentos = 4;
       location.href = "formulario.html";
@@ -101,12 +106,30 @@ function iniciarSesion() {
   }
 }
 
+function nuevoUsuario() {
+  dniUsuario = prompt("Introduzca su DNI.");
+  passwordUsuario = prompt("Introduzca una contraseña.");
+
+  usuarios.push({
+    apellido1: "",
+    apellido2: "",
+    nombre: "",
+    dni: dniUsuario,
+    domicilio: "",
+    password: passwordUsuario,
+  });
+  document.getElementById("mensaje").innerHTML =
+    "Puede iniciar sesión con su DNI y contraseña.";
+}
+
 // Página de formulario
 
 function cargarUsuario() {
   dniUsuario = localStorage.getItem("dni");
+  datosUsuarios = localStorage.getItem("arrayUsuarios");
+  usuarios = JSON.parse(datosUsuarios);
 
-  for (i = 1; i < usuarios.length; i++) {
+  for (i = 1; i <= usuarios.length; i++) {
     if (usuarios[i].dni == dniUsuario) {
       document.getElementById("apellido1").value = usuarios[i].apellido1;
       document.getElementById("apellido2").value = usuarios[i].apellido2;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda patrón</title>
+    <script>
+
+        function buscarPatron() {
+            document.getElementById("salida").innerHTML = "";
+
+            var patron = document.getElementById("busqueda");
+            var entrada = document.getElementById("texto").value;
+
+            var coincidencias;
+
+            while ((coincidencias = patron.exec(entrada)) !== null) {
+                var texto = "Existe una coincidencia en " + coincidencias[0] + ".";
+                texto += "La siguiente concidencia está en la posición " + patron.lastIndex;
+                document.getElementById("salida").innerHTML = texto;
+                document.getElementById("salida").innerHTML += "a";
+            }
+        }
+
+        /* var myRe = /ab/g;
+        var str = 'abbcdefabh';
+        var myArray;
+        while ((myArray = myRe.exec(str)) !== null) {
+          var msg = 'Se ha encontrado ' + myArray[0] + '. ';
+          msg += 'La siguiente coincidencia empieza en el indice ' + myRe.lastIndex;
+          console.log(msg);
+        }*/
+
+    </script>
+</head>
+
+<body>
+    <form action="#">
+        <label for="texto">Texto:</label><br>
+        <textarea name="texto" id="texto" cols="30" rows="10"></textarea><br>
+        <label for="busqueda">Patrón:</label><br>
+        <input type="text" name="busqueda" id="busqueda">
+        <input type="button" value="Enviar" onclick="buscarPatron();">
+    </form>
+
+    <div id="salida"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+    <script>
+
+        function validar() {
+            var patron = /^\({1}\d{1,3}\,{1}\d{1,3}\)$/;
+            var valor = document.getElementById("caja").value;
+
+            if (patron.test(valor))
+                alert("CORRECTO");
+            else
+                alert("INCORRECTO");
+        }
+
+    </script>
+</head>
+
+<body>
+    <form action="#">
+        Solicitar el ingreso de la coordenada de un punto. El formato a ingresar por teclado es:
+        (999,999) Los números pueden tener entre 1 y 3 dígitos.
+        <br>
+        <input type="text" id="caja">
+        <input type="button" value="Comprobar" onclick="validar();">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+    <script>
+        function validar() {
+
+            var valor = document.getElementById("caja").value;
+            valor = valor.toLowerCase();
+
+            var patron = /^(lunes|martes|miercoles|jueves|viernes|sabado|domingo)\s\d{1-2}$/;
+
+            if (patron.test(valor))
+                alert("CORRECTO");
+            else {
+                alert("INCORRECTO");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="#">
+        Confeccionar una expresión regular que valide el ingreso del nombre de un día de la
+        semana, un espacio y un número de 1 o 2 dígitos.
+        <br>
+        <input type="text" id="caja">
+        <input type="button" value="Comprobar" onclick="validar();">
+    </form>
+</body>
+
+</html>

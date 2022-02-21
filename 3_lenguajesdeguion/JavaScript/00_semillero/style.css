@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "main main main aside"
+    "footer footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr 230px;
+  grid-template-rows: auto 1fr auto;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+
+header {
+  background-color: lightblue;
+  grid-area: header;
+  width: 100%;
+  padding: 2rem;
+
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: -1px 0px black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+main {
+  background-color: pink;
+  grid-area: main;
+}
+
+.contenedor {
+  border: solid 1px black;
+  margin: 2rem;
+  height: 85%;
+}
+
+aside {
+  background-color: palegreen;
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+aside > * {
+  width: 100%;
+}
+
+.buscador {
+  position: relative;
+}
+
+.buscador > input {
+  width: 100%;
+  padding: 1rem;
+}
+
+.buscador > button {
+  position: absolute;
+  left: 180px;
+  top: 5px;
+
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+footer {
+  background-color: bisque;
+  grid-area: footer;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem;
+}
+
+input {
+  height: 2.5rem;
+  border-radius: 20px;
+}

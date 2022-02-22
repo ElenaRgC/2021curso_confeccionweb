@@ -15,8 +15,7 @@
         function validar() {
             var valor = document.getElementById("caja").value;
 
-            //var patron = /^((([-+]?[1-9]\d*)|0)|(([-+]?(0|[1-9]\d*))([.,]\d*[1-9]\d?)?))$/;
-            var patron = /^([-+]?(0|[1-9]\d*))([.,]\d*[1-9]\d?)?$/;
+            var patron = /(?=.*[0-9])+(?=.*[A-Z])+(?=.*[a-z])+[0-9a-zA-Z]{8,12}/;
 
             if (patron.test(valor))
                 alert("CORRECTO");
@@ -30,8 +29,8 @@
 <body>
 
     <form action="#">
-        <p>Validar que se ingresa un número real (positivo o negativo),</p>
-        <p>cuyo separador de decimales puede ser la coma o el punto</p>
+        <p>Queremos comprobar la fortaleza de una contraseña teniendo en cuenta que debe tener entre 8 y 12 caracteres,
+            y al menos una mayúscula, una minúscula, y un dígito.</p>
         <input type="text" id="caja">
         <input type="button" value="Comprobar" onclick="validar();">
     </form>

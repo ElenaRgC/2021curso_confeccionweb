@@ -15,7 +15,7 @@
         function validar() {
             var valor = document.getElementById("caja").value;
 
-            var patron = /^$/;
+            var patron = /^[@][a-zA-Z0-9-_]+$/;
 
             if (patron.test(valor))
                 alert("CORRECTO");

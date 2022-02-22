@@ -15,8 +15,7 @@
         function validar() {
             var valor = document.getElementById("caja").value;
 
-            //var patron = /^((([-+]?[1-9]\d*)|0)|(([-+]?(0|[1-9]\d*))([.,]\d*[1-9]\d?)?))$/;
-            var patron = /^([-+]?(0|[1-9]\d*))([.,]\d*[1-9]\d?)?$/;
+            var patron = /^(978|979)[0-9]{10}$/;
 
             if (patron.test(valor))
                 alert("CORRECTO");
@@ -30,8 +29,7 @@
 <body>
 
     <form action="#">
-        <p>Validar que se ingresa un número real (positivo o negativo),</p>
-        <p>cuyo separador de decimales puede ser la coma o el punto</p>
+        <p>Validar ISBN de 13 dígitos, siempre empieza en 978 o 979</p>
         <input type="text" id="caja">
         <input type="button" value="Comprobar" onclick="validar();">
     </form>

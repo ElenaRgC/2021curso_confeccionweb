@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+    <style>
+        [id~="caja"] {
+            width: 200px;
+        }
+    </style>
+    <script>
+        function validar() {
+            var valor = document.getElementById("caja").value;
+
+            //var patron = /^((\d|(1?[1-9]\d)|(2[0-4]\d)|(25[0-5]))[.]){3}(\d|(1?[1-9]\d)|(2[0-4]\d)|(25[0-5]))$/
+            var patron = /^(([1-9]?\d|(1\d{2})|(2[0-4]\d)|(25[0-5]))[.]){3}(\d|(1?[1-9]\d)|(2[0-4]\d)|(25[0-5]))$/
+
+            if (patron.test(valor))
+                alert("CORRECTO");
+            else {
+                alert("INCORRECTO");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="#">
+        <p>Validar una dirección IP. Sabiendo que el formato es:</p>
+        <p>Num.num.num.num y que cada “num” está entre 0 y 255, incluidos.</p>
+        <input type="text" id="caja">
+        <input type="button" value="Comprobar" onclick="validar();">
+    </form>
+</body>
+
+</html>

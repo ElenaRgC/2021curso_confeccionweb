@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+    <style>
+        [id~="caja"] {
+            width: 200px;
+        }
+    </style>
+    <script>
+        function validar() {
+            var valor = document.getElementById("caja").value;
+
+            var patron = /^[A-ZÁ-Ú][a-zá-ú]+(\s[A-ZÁ-Ú][a-zá-ú]+)?$/;
+
+            if (patron.test(valor))
+                alert("CORRECTO");
+            else {
+                alert("INCORRECTO");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="#">
+        <p>Validar un nombre, incluyendo nombres compuestos por dos palabras como mucho</p>
+        <input type="text" id="caja">
+        <input type="button" value="Comprobar" onclick="validar();">
+    </form>
+</body>
+
+</html>

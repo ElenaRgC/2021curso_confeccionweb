@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+    <style>
+        [id~="caja"] {
+            width: 200px;
+        }
+    </style>
+    <script>
+        function validar() {
+            var valor = document.getElementById("caja").value;
+
+            var patron = /^$/;
+
+            if (patron.test(valor))
+                alert("CORRECTO");
+            else {
+                alert("INCORRECTO");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="#">
+        <p>Valida un nombre de usuario en Twitter,</p>
+        <p>empieza por @ y puede contener letras mayúsculas y minúsculas, números, guiones y guiones bajos.</p>
+        <input type="text" id="caja">
+        <input type="button" value="Comprobar" onclick="validar();">
+    </form>
+</body>
+
+</html>

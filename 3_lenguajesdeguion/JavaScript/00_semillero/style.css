@@ -36,10 +36,9 @@ main {
   grid-area: main;
 }
 
-.contenedor {
+#contenedor {
   border: solid 1px black;
   margin: 2rem;
-  height: 85%;
 }
 
 aside {
@@ -55,22 +54,31 @@ aside > * {
   width: 100%;
 }
 
-.buscador {
+.buscador,
+.sumador {
   position: relative;
 }
 
-.buscador > input {
+.buscador > input,
+.sumador > input {
   width: 100%;
   padding: 1rem;
 }
 
-.buscador > button {
+.buscador > button,
+.sumador > button {
   position: absolute;
   left: 180px;
   top: 5px;
 
   border-radius: 50%;
   aspect-ratio: 1;
+
+  cursor: pointer;
+}
+
+.sumador i {
+  font-size: larger;
 }
 
 footer {
@@ -85,4 +93,8 @@ footer {
 input {
   height: 2.5rem;
   border-radius: 20px;
+}
+
+input[type~="button"] {
+  cursor: pointer;
 }

@@ -14,17 +14,20 @@
 <body>
     <header>Semilleros Reunidos de Puertollano, SAL</header>
     <main>
-        <div class="contenedor">
+        <div id="contenedor">
 
         </div>
     </main>
     <aside>
         <div class="buscador">
             <input type="text" name="busqueda" id="busqueda" placeholder="Buscar semilla">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button onclick="buscarSemilla();"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <input type="button" value="Añadir semillas">
-        <input type="button" value="Comprobar inventario">
+        <div class="sumador">
+            <input type="text" name="anadir" id="anadir" placeholder="Añadir semillas">
+            <button onclick="masSemilla();"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <input type="button" value="Comprobar inventario" onclick="mostrarInventario();">
     </aside>
     <footer>Ejercicio realizado por Elena Rodríguez Calderón.</footer>
 </body>

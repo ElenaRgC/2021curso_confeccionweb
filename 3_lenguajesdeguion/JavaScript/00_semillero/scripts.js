@@ -62,13 +62,48 @@ function masSemilla() {
   var tipoSemilla = document.getElementById("anadir").value.toLowerCase();
 
   // Preguntamos con un prompt cuántas semillas se quieren añadir.
-  var cantidadSemilla = prompt(
-    "¿Cuántas semillas de " + tipoSemilla + " desea añadir?"
+  var cantidadSemilla = Number(
+    prompt("¿Cuántas semillas de " + tipoSemilla + " desea añadir?")
   );
 
+  // Comprobamos que se haya introducido un valor numérico en el prompt.
   if (typeof cantidadSemilla != "number") {
     document.getElementById("contenedor").innerHTML =
       "Por favor, introduzca un valor numérico.";
   } else {
+    // Se crean dos bucles independientes para que no corramos el riesgo de
+    // añadir en múltiples ocasiones la cantidad de semillas introducida.
+    for (i = 0; i < inventario.length; i++) {
+      // En el primer caso comprobamos si existe ese tipoSemilla.
+      // Si existe incrementaremos la cantidad.
+      if (inventario[i].nombre == tipoSemilla) {
+        inventario[i].cantidad = inventario[i].cantidad + cantidadSemilla;
+        document.getElementById("contenedor").innerHTML =
+          "Ahora disponemos de " +
+          inventario[i].cantidad +
+          " semillas de " +
+          tipoSemilla +
+          ".";
+        i = inventario.length;
+      }
+    }
+
+    for (i = 0; i < inventario.length; i++) {
+      // En el caso de que no exista esa semilla,
+      // la añadiremos al objeto en la cantidad indicada.
+      if (inventario[i].nombre != tipoSemilla) {
+        inventario.push({
+          nombre: tipoSemilla,
+          cantidad: cantidadSemilla,
+        });
+        document.getElementById("contenedor").innerHTML =
+          "Se han añadido " +
+          cantidadSemilla +
+          " semillas de " +
+          tipoSemilla +
+          " al inventario.";
+        i = inventario.length;
+      }
+    }
   }
 }

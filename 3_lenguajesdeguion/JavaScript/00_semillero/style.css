@@ -29,15 +29,16 @@ header {
   color: white;
   text-align: center;
   text-shadow: -1px 0px black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  border-bottom: inset 4px darkgreen;
 }
 
 main {
-  background-color: pink;
+  background-color: whitesmoke;
   grid-area: main;
 }
 
 #contenedor {
-  border: solid 1px black;
   margin: 2rem;
 }
 
@@ -53,6 +54,17 @@ aside {
 aside > * {
   width: 100%;
 }
+
+footer {
+  background-color: bisque;
+  grid-area: footer;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem;
+}
+
+/* BOTONES Y ENTRADA DE TEXTO */
 
 .buscador,
 .sumador {
@@ -73,21 +85,10 @@ aside > * {
 
   border-radius: 50%;
   aspect-ratio: 1;
-
-  cursor: pointer;
 }
 
 .sumador i {
   font-size: larger;
-}
-
-footer {
-  background-color: bisque;
-  grid-area: footer;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  padding: 1rem;
 }
 
 input {
@@ -95,6 +96,56 @@ input {
   border-radius: 20px;
 }
 
-input[type~="button"] {
+input[type~="button"],
+.buscador > button,
+.sumador > button {
+  color: white;
+  font-weight: bold;
   cursor: pointer;
+  border-color: #04aa6d;
+  background-color: #04aa6d;
+}
+
+input[type~="button"]:active,
+.buscador > button:active,
+.sumador > button:active {
+  background-color: #238863;
+  border-color: #238863;
+}
+
+input[type~="button"]:active {
+  text-indent: 2px;
+}
+
+/* TABLA */
+
+#tablaSemillas {
+  border-collapse: collapse;
+  width: 40%;
+  min-width: max-content;
+  margin: auto;
+
+  text-transform: capitalize;
+  text-align: center;
+}
+
+#tablaSemillas td,
+#tablaSemillas th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tablaSemillas tr:nth-child(even) {
+  background-color: rgb(203, 234, 241);
+}
+
+#tablaSemillas tr:hover {
+  font-weight: bold;
+}
+
+#tablaSemillas th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #04aa6d;
+  color: white;
 }

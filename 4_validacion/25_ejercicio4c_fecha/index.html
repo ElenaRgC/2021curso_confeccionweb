@@ -14,18 +14,37 @@
     <script>
         function validar() {
             var fecha = document.getElementById("caja").value;
-            var patron = /^(0[1-9]|[12]\d|3[01])[/](0[1-9]|1[0-2])[/](\d{3}[1-9])$/;
+            var patron = /^(0[1-9]|[12]\d|3[01])[/](0[1-9]|1[0-2])[/](\d{4})$/;
             if (patron.test(fecha)) {
                 var dia = Number(fecha.substring(0, 1));
                 var mes = Number(fecha.substring(3, 4));
-                var mes = Number(fecha.substring(6, 9));
+                var ano = Number(fecha.substring(6, 10));
+
+                var meses = new Array();
+                meses = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+                // Modificar la array meses para considerar los años bisiestos.
+                if (ano % 4 == 0) {
+                    var esBisiesto = true;
+                    if (ano % 100 == 0 && ano % 400 != 0) {
+                        esBisiesto = false;
+                    }
+                }
+                if (esBisiesto) {
+                    meses.splice(1, 1, 29);
+                }
+
+                if (dia > meses[mes]) {
+                    alert("Ese mes no tiene tantos días.");
+                }
+
+
+
+
+
             }
-
-
-
-
             else {
-                alert("INCORRECTO");
+                alert("El formato de la fecha es incorrecto.");
             }
         }
     </script>

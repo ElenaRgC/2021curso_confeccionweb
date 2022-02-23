@@ -27,8 +27,8 @@
 
             resto = Number(numeroDNI) % 23;
 
-            var patron = /^\d{8}[-]?[TRWAGMYFPDXBNJZSQVHLCKE]$/;
-            var patron_letras = /^\d{8}[-]?[EIOUÑ]$/;
+            var patron = /^\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/;
+            var patron_letras = /^\d{8}[EIOUÑ]$/;
 
             if (patron.test(dniUsuario) && (letras[resto] == letraDNI))
                 alert("DNI correcto");

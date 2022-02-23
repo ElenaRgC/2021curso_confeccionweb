@@ -13,12 +13,17 @@
     </style>
     <script>
         function validar() {
-            var valor = document.getElementById("caja").value;
+            var fecha = document.getElementById("caja").value;
+            var patron = /^(0[1-9]|[12]\d|3[01])[/](0[1-9]|1[0-2])[/](\d{3}[1-9])$/;
+            if (patron.test(fecha)) {
+                var dia = Number(fecha.substring(0, 1));
+                var mes = Number(fecha.substring(3, 4));
+                var mes = Number(fecha.substring(6, 9));
+            }
 
-            var patron = /^[@][a-zA-Z0-9_\-]{3,15}$/;
 
-            if (patron.test(valor))
-                alert("CORRECTO");
+
+
             else {
                 alert("INCORRECTO");
             }
@@ -29,9 +34,7 @@
 <body>
 
     <form action="#">
-        <p>Valida un nombre de usuario en Twitter, empieza por @ y puede contener letras mayúsculas y minúsculas,
-            números, guiones y guiones bajos.</p>
-        <p>Entre 3 y 15 caracteres.</p>
+        <p>Validar una fecha con formato dd/mm/aaaa</p>
         <input type="text" id="caja">
         <input type="button" value="Comprobar" onclick="validar();">
     </form>

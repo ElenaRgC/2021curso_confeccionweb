@@ -15,7 +15,7 @@
         function validar() {
             var valor = document.getElementById("caja").value;
 
-            var patron = /(?=.*[0-9])+(?=.*[A-Z])+(?=.*[a-z])+[0-9a-zA-Z]{8,12}/;
+            var patron = /(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])[0-9a-zA-Z]{8,12}/;
 
             if (patron.test(valor))
                 alert("CORRECTO");

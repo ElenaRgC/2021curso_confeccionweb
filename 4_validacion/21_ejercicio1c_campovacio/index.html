@@ -12,13 +12,20 @@
         }
     </style>
     <script>
-        function validar() {
+        function validarCampoObligatorio() {
             var valor = document.getElementById("caja").value;
 
-            var patron = /^[@][a-zA-Z0-9_\-]{3,15}$/;
+            //var patron_vacio = /^\S$/;
+            var patron_caracteres = /^(?=.*\S)$/;
 
-            if (patron.test(valor))
-                alert("CORRECTO");
+            /*  if (valor != "" && patron_vacio.test(valor).false && patron_caracteres.test(valor))
+                 alert("CORRECTO");
+             else {
+                 alert("INCORRECTO");
+             } */
+
+            if (patron_caracteres.test(valor))
+                alert("CAMPO VACÍO");
             else {
                 alert("INCORRECTO");
             }
@@ -29,11 +36,9 @@
 <body>
 
     <form action="#">
-        <p>Valida un nombre de usuario en Twitter, empieza por @ y puede contener letras mayúsculas y minúsculas,
-            números, guiones y guiones bajos.</p>
-        <p>Entre 3 y 15 caracteres.</p>
+        Rellene este campo:
         <input type="text" id="caja">
-        <input type="button" value="Comprobar" onclick="validar();">
+        <input type="button" value="Comprobar" onclick="validarCampoObligatorio();">
     </form>
 </body>
 

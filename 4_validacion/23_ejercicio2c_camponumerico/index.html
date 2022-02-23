@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+    <style>
+        [id~="caja"] {
+            width: 200px;
+        }
+    </style>
+    <script>
+        function validarCampoTexto() {
+            var longitud_maxima = document.getElementById("cajanumeros").value;
+            patron_numeros = /\d+/;
+
+            if (patron_numeros.test(longitud_maxima)) {
+                var campo_texto = document.getElementById("caja").value.trim;
+                patron_texto = /^\D+$/;
+                if (patron_texto.test(campo_texto) && campo_texto.lenght <= longitud_maxima)
+                    alert("La cadena no contiene números.");
+                else {
+                    alert("La cadena está vacía o contiene números.");
+                }
+            }
+            else {
+                alert("El número máximo de caracteres debe ser un número.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="#">
+        Rellene este campo con texto:
+        <input type="text" id="caja">
+        <br>
+        Número máximo de caracteres: <input type="text" id="cajanumeros">
+        <input type="button" value="Comprobar" onclick="validarCampoTexto();">
+    </form>
+</body>
+
+</html>

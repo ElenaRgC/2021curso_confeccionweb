@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+    <style>
+        [id~="caja"] {
+            width: 200px;
+        }
+    </style>
+    <script>
+        function validarDNI() {
+            var letraDNI,
+                numeroDNI = "",
+                letras = "TRWAGMYFPDXBNJZSQVHLCKE",
+                resto = 0,
+                dniUsuario = document.getElementById("caja").value;
+
+            var letraDNI = dniUsuario[8];
+
+            for (i = 0; i < dniUsuario.length - 1; i++) {
+                numeroDNI = numeroDNI + dniUsuario[i];
+            }
+
+            resto = Number(numeroDNI) % 23;
+
+            var patron = /^\d{8}[-]?[TRWAGMYFPDXBNJZSQVHLCKE]$/;
+            var patron_letras = /^\d{8}[-]?[EIOUÑ]$/;
+
+            if (patron.test(dniUsuario) && (letras[resto] == letraDNI))
+                alert("DNI correcto");
+            else if (patron.test(dniUsuario)) {
+                alert("Letra incorrecta.");
+            }
+            else if (patron_letras.test(dniUsuario)) {
+                alert("Letra no posible en DNI.");
+            }
+            else {
+                alert("No ha introducido un patrón válido.");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="#">
+        Introduzca su DNI:
+        <input type="text" id="caja">
+        <input type="button" value="Comprobar" onclick="validarDNI();">
+    </form>
+</body>
+
+</html>

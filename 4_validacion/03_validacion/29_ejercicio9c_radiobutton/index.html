@@ -6,23 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expresiones regulares</title>
-    <style>
-        [id~="caja"] {
-            width: 200px;
-        }
-    </style>
     <script>
         function validarCheckbox() {
             var opciones = document.getElementsByName("productoB");
 
             for (i = 0; i < opciones.length; i++) {
                 if (opciones[i].checked) {
-                    var texto = opciones[i].value + " ";
+                    var opcion = opciones[i].value;
                 }
             }
 
-            if (texto)
-                alert("Ha seleccionado la opción: " + texto);
+            if (opcion)
+                alert("Ha seleccionado la opción: " + opcion);
             else {
                 alert("No ha seleccionado ninguna opción.");
             }
@@ -46,7 +41,7 @@
         <input type="radio" name="productoC" id="color2C" value="Color 2"> Color 2 <br>
         <input type="radio" name="productoC" id="color3C" value="Color 3"> Color 3 <br>
         <br>
-        <input type="button" value="Comprobar color B" onclick="validarCheckbox();">
+        <input type="button" value="Comprobar producto B" onclick="validarCheckbox();">
     </form>
 </body>
 

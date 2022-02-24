@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+form > div,
+form > label,
+form > fieldset {
+  display: inline-block;
+  width: 260px;
+  margin: 0.25rem;
+}
+
+.textoOK {
+  color: green;
+}
+
+.textoError {
+  color: red;
+}

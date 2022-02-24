@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+    <style>
+        [id~="caja"] {
+            width: 200px;
+        }
+    </style>
+    <script>
+        function validarSelect() {
+            var estadoCivilSeleccionado = document.getElementById("seleccion");
+            var estadoCivilIndice = estadoCivilSeleccionado.selectedIndex;
+
+            //alert(estadoCivilIndice);
+
+            if (estadoCivilIndice != 0)
+                alert("Ha seleccionado la opción: " + estadoCivilIndice);
+            else {
+                alert("Debe elegir un estado civil.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="#">
+        Seleccione un estado civil:
+        <select id="seleccion">
+            <option>Seleccione una opción:</option>
+            <option>Soltero/a</option>
+            <option>Casado/a</option>
+            <option>Separado/a</option>
+            <option>Divorciado/a</option>
+            <option>Viudo/a</option>
+        </select>
+        <input type="button" value="Comprobar" onclick="validarSelect();">
+    </form>
+</body>
+
+</html>

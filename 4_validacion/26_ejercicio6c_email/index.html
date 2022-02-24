@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+    <style>
+        [id~="caja"] {
+            width: 200px;
+        }
+    </style>
+    <script>
+        function validarEmail() {
+            var valor = document.getElementById("caja").value.trim();
+            //alert(valor);
+
+            var patron = /^\w+([\.\-]\w?)*[@]\w+([\.\-]\w?)*\.[a-zA-Z]{2,4}$/;
+            //var patron = /^\w+([.-]\w+)*[@]\w+([.-]\w+)*[.]\w{2,4}$/;
+
+            if (patron.test(valor))
+                alert("Formato de e-mail correcto.");
+            else {
+                alert("Formato de e-mail no válido.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="#">
+        Introduce tu correo electrónico:
+        <input type="text" id="caja">
+        <input type="button" value="Comprobar" onclick="validarEmail();">
+    </form>
+</body>
+
+</html>

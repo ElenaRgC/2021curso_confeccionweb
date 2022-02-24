@@ -69,6 +69,12 @@ footer {
   font-weight: bold;
 }
 
+#contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* BOTONES Y ENTRADA DE TEXTO */
 
 .buscador,
@@ -125,6 +131,13 @@ input[type~="button"]:active,
 
 input[type~="button"]:active {
   text-indent: 2px;
+}
+
+#borrar {
+  width: 200px;
+  margin: auto;
+  padding: 0;
+  margin-top: 1rem;
 }
 
 /* TABLA */

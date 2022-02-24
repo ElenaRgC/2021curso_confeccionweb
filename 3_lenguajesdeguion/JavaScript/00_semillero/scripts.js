@@ -186,4 +186,19 @@ function mostrarInventario() {
       }
     }
   }
+
+  crearBoton();
+}
+
+function crearBoton() {
+  var nuevoBoton = document.createElement("input");
+  document.getElementById("contenedor").appendChild(nuevoBoton);
+  nuevoBoton.setAttribute("id", "borrar");
+  nuevoBoton.setAttribute("type", "button");
+  nuevoBoton.setAttribute("value", "Limpiar pantalla");
+  nuevoBoton.setAttribute("onclick", "limpiarPantalla();");
+}
+
+function limpiarPantalla() {
+  document.getElementById("contenedor").innerHTML = "";
 }

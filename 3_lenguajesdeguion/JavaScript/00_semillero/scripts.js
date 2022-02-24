@@ -18,11 +18,19 @@ inventario = [
 
 var i = 0;
 
-// TODO: Añadir patrón a la búsqueda.
-
 function buscarSemilla() {
   // Creamos la variable semilla según la búsqueda del usuario.
-  var semilla = document.getElementById("busqueda").value.toLowerCase();
+  var semilla = document.getElementById("busqueda").value.trim().toLowerCase();
+
+  patron = /[a-zA-zá-úÁ-Ú\s]+/;
+
+  // Comprobamos que el valor introducido no contenga números,
+  // caracteres extraños o esté vacío.
+  if (!patron.test(semilla)) {
+    document.getElementById("contenedor").innerHTML =
+      "El nombre de la semilla no puede estar vacío ni contener números o caracteres especiales.";
+    return;
+  }
 
   // Recorreremos el objeto inventario para la variable semilla y
   // mostraremos un mensaje acorde en el contenedor designado en el HTML.
@@ -61,65 +69,65 @@ function buscarSemilla() {
 
 function masSemilla() {
   // Creamos la variable tipoSemilla según la entrada del usuario.
-  var tipoSemilla = document.getElementById("anadir").value.toLowerCase();
+  var tipoSemilla = document
+    .getElementById("anadir")
+    .value.trim()
+    .toLowerCase();
 
-  var patron = /[a-zA-zá-úÁ-Ú]+/;
+  // La función avisará al usuario si ha introducido
+  // un nombre incorrecto para la semilla y terminará la función.
+  var patron = /[a-zA-zá-úÁ-Ú\s]+/;
 
-  // La función sólo continuará si la semilla está compuesta únicamente por letras.
-  if (patron.test(tipoSemilla)) {
-    var cantidadSemilla = Number(
-      // Preguntamos con un prompt cuántas semillas se quieren añadir.
-      prompt("¿Cuántas semillas de " + tipoSemilla + " desea añadir?")
-    );
-    if (typeof cantidadSemilla != "number" || cantidadSemilla <= 0) {
-      // Comprobamos los casos que podrían dar error para detener la función.
-      document.getElementById("contenedor").innerHTML =
-        "Por favor, introduzca un valor numérico válido.";
-    } else {
-      // Existen dos opciones posibles a la hora de añadir semillas.
-      for (i = 0; i < inventario.length; i++) {
-        // En el primer caso comprobamos si existe ese tipoSemilla.
-        // Si existe incrementaremos la cantidad.
-        if (inventario[i].nombre == tipoSemilla) {
-          inventario[i].cantidad = inventario[i].cantidad + cantidadSemilla;
-          document.getElementById("contenedor").innerHTML =
-            "Ahora disponemos de " +
-            inventario[i].cantidad +
-            " semillas de " +
-            tipoSemilla +
-            ".";
-
-          // Modificamos el índice i para salir del bucle,
-          // y añadimos un marcador p para saber que la semilla ya existía.
-          i = inventario.length;
-          var p = 1;
-        }
-      }
-
-      // En el caso de que no exista esa semilla,
-      // la añadiremos al objeto en la cantidad indicada.
-      if (p != 1) {
-        inventario.push({
-          nombre: tipoSemilla,
-          cantidad: cantidadSemilla,
-        });
-        document.getElementById("contenedor").innerHTML =
-          "Se han añadido " +
-          cantidadSemilla +
-          " semillas de " +
-          tipoSemilla +
-          " al inventario.";
-        i = inventario.length;
-      }
-    }
-  } else {
-    // La función avisará al usuario de que ha introducido
-    // un nombre incorrecto para la semilla,
+  if (!patron.test(tipoSemilla)) {
     document.getElementById("contenedor").innerHTML =
-      "El nombre de la semilla no puede estar vacío ni contener números.";
+      "El nombre de la semilla no puede estar vacío ni contener números o caracteres especiales.";
+    return;
   }
 
-  // Comprobamos que se haya introducido un valor numérico en el prompt.
+  // Preguntamos con un prompt cuántas semillas se quieren añadir.
+  var cantidadSemilla = Number(
+    prompt("¿Cuántas semillas de " + tipoSemilla + " desea añadir?").trim()
+  );
+
+  // Forzamos que la entrada sea numérica y distinta de 0.
+  patron = /[1-9]+/;
+
+  if (!patron.test(cantidadSemilla)) {
+    document.getElementById("contenedor").innerHTML =
+      "Por favor, introduzca un valor numérico distinto de cero.";
+    return;
+  }
+
+  // Existen dos opciones posibles a la hora de añadir semillas.
+  for (i = 0; i < inventario.length; i++) {
+    // En el primer caso comprobamos si existe ese tipoSemilla.
+    // Si existe incrementaremos la cantidad.
+    if (inventario[i].nombre == tipoSemilla) {
+      inventario[i].cantidad = inventario[i].cantidad + cantidadSemilla;
+      document.getElementById("contenedor").innerHTML =
+        "Ahora disponemos de " +
+        inventario[i].cantidad +
+        " semillas de " +
+        tipoSemilla +
+        ".";
+
+      //Terminamos la función para que no añada la semilla como un elemento nuevo.
+      return;
+    }
+  }
+
+  // En el caso de que no exista esa semilla,
+  // la añadiremos al objeto en la cantidad indicada.
+  inventario.push({
+    nombre: tipoSemilla,
+    cantidad: cantidadSemilla,
+  });
+  document.getElementById("contenedor").innerHTML =
+    "Se han añadido " +
+    cantidadSemilla +
+    " semillas de " +
+    tipoSemilla +
+    " al inventario.";
 }
 
 function mostrarInventario() {
@@ -152,7 +160,7 @@ function mostrarInventario() {
   }
 
   // Añadimos el contenido a la tabla, creando filas nuevas en el bucle i,
-  // el cual recorre todo el inveentario.
+  // el cual recorre todo el inventario.
   // Creamos celdas en el bucle j que añade a las filas el nombre y
   // la cantidad de semillas.
   for (i = 0; i < inventario.length; i++) {

@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+/* ESTRUCTURA DE LA PÁGINA */
+
 body {
   display: grid;
   grid-template-areas:
@@ -19,7 +21,7 @@ body {
 }
 
 header {
-  background-color: lightblue;
+  background-color: #343a40;
   grid-area: header;
   width: 100%;
   padding: 2rem;
@@ -30,11 +32,11 @@ header {
   text-align: center;
   text-shadow: -1px 0px black, 0 1px black, 1px 0 black, 0 -1px black;
 
-  border-bottom: inset 4px darkgreen;
+  border-bottom: inset 4px #495057;
 }
 
 main {
-  background-color: whitesmoke;
+  background-color: #e9ecef;
   grid-area: main;
 }
 
@@ -43,7 +45,7 @@ main {
 }
 
 aside {
-  background-color: palegreen;
+  background-color: #adb5bd;
   grid-area: aside;
   display: flex;
   flex-direction: column;
@@ -56,12 +58,15 @@ aside > * {
 }
 
 footer {
-  background-color: bisque;
+  background-color: #343a40;
   grid-area: footer;
   position: fixed;
   width: 100%;
   bottom: 0;
   padding: 1rem;
+
+  color: white;
+  font-weight: bold;
 }
 
 /* BOTONES Y ENTRADA DE TEXTO */
@@ -75,6 +80,7 @@ footer {
 .sumador > input {
   width: 100%;
   padding: 1rem;
+  border: none;
 }
 
 .buscador > button,
@@ -87,8 +93,12 @@ footer {
   aspect-ratio: 1;
 }
 
+.buscador i {
+  font-size: 1.1rem;
+}
+
 .sumador i {
-  font-size: larger;
+  font-size: 1.25rem;
 }
 
 input {
@@ -102,15 +112,15 @@ input[type~="button"],
   color: white;
   font-weight: bold;
   cursor: pointer;
-  border-color: #04aa6d;
-  background-color: #04aa6d;
+  background-color: #495057;
+  border: none;
 }
 
 input[type~="button"]:active,
 .buscador > button:active,
 .sumador > button:active {
-  background-color: #238863;
-  border-color: #238863;
+  background-color: #212529;
+  border-color: #212529;
 }
 
 input[type~="button"]:active {
@@ -121,22 +131,29 @@ input[type~="button"]:active {
 
 #tablaSemillas {
   border-collapse: collapse;
-  width: 40%;
+  width: 50%;
   min-width: max-content;
+  max-width: 500px;
   margin: auto;
 
   text-transform: capitalize;
   text-align: center;
+  border-radius: 35px;
+  overflow: hidden;
 }
 
 #tablaSemillas td,
 #tablaSemillas th {
-  border: 1px solid #ddd;
-  padding: 8px;
+  padding: 1em;
+  background: #ced4da;
 }
 
-#tablaSemillas tr:nth-child(even) {
-  background-color: rgb(203, 234, 241);
+#tablaSemillas tr {
+  border-bottom: 2px solid #e9ecef;
+}
+
+#tablaSemillas tr:last-child {
+  border-bottom: none;
 }
 
 #tablaSemillas tr:hover {
@@ -146,6 +163,40 @@ input[type~="button"]:active {
 #tablaSemillas th {
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: #04aa6d;
+  background-color: #495057;
   color: white;
+}
+
+/* ESTILOS PARA PANTALLAS PEQUEÑAS */
+@media (max-width: 600px) {
+  body {
+    grid-template-areas:
+      "header"
+      "aside"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content max-content 1fr min-content;
+  }
+
+  header {
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+
+  .buscador > input,
+  .sumador > input {
+    width: 100%;
+  }
+
+  input[type~="button"],
+  .buscador,
+  .sumador {
+    width: 215px;
+    margin: auto;
+  }
+
+  footer {
+    position: static;
+  }
 }

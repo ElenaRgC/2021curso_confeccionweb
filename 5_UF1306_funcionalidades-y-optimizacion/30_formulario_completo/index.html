@@ -11,54 +11,51 @@
 </head>
 
 <body>
+    <h1>Formulario de registro</h1>
     <form action="#" name="formulario">
-        <label for="nombre">*Nombre:</label><input type="text" name="nombre" id="nombre"
-            onblur="validarCampoTexto(this, 'mensaje_nombre');"><span id="mensaje_nombre"></span>
-        <br>
-        <label for="apellidos">*Apellidos:</label><input type="text" name="" id="apellidos"
-            onblur="validarCampoTexto(this, 'mensaje_apellidos');" ;><span id="mensaje_apellidos"></span>
-        <br>
-        <label for="dni">*D.N.I.:</label><input type="text" name="" id="dni"
-            onblur="validarCampoDNI(this, 'mensaje_dni');"><span id="mensaje_dni"></span>
-        <br>
-        <label for="fechaNacimiento">Fecha de nacimiento (DD/MM/AAAA):</label><input type="text" name=""
-            id="fechaNacimiento" onblur="validarFechaNacimiento(this, 'mensaje_fecha_nacimiento');"><span
-            id="mensaje_fecha_nacimiento"></span>
-        <br>
-        <label for="telefono">Número de teléfono</label><input type="text" name="" id="telefono"
-            onblur="validarNumeroTelefono(this, 'mensaje_telefono');"><span id="mensaje_telefono"></span>
-        <br>
-        <label for="email">Correo electrónico:</label><input type="text" name="" id="email"
-            onblur="validarEmail(this, 'mensaje_email');"><span id="mensaje_email"></span>
-        <br>
-        <label for="ocupacion">*Ocupación:</label><select id="ocupacion"
-            onblur="validarOcupacion(this, 'mensaje_ocupacion');">
-            <option disabled selected>Seleccione una opción:</option>
-            <option>Estudiante</option>
-            <option>Desempleado</option>
-            <option>Autónomo</option>
-            <option>Cuenta ajena</option>
-        </select><span id="mensaje_ocupacion"></span>
-        <br>
-        <div>*Aficiones: <br> <span id="mensaje_aficiones"></span>
+        <div class="form-grid" id="form">
+            <label for="nombre">*Nombre:</label><input type="text" name="nombre" id="nombre"
+                onblur="validarCampoTexto(this, 'mensaje_nombre');"><span id="mensaje_nombre"></span>
+            <label for="apellidos">*Apellidos:</label><input type="text" name="" id="apellidos"
+                onblur="validarCampoTexto(this, 'mensaje_apellidos');" ;><span id="mensaje_apellidos"></span>
+            <label for="dni">*D.N.I.:</label><input type="text" name="" id="dni"
+                onblur="validarCampoDNI(this, 'mensaje_dni');"><span id="mensaje_dni"></span>
+            <label for="fechaNacimiento">Fecha de nacimiento:</label><input type="text" name="" id="fechaNacimiento"
+                title="(DD/MM/AAAA)" onblur="validarFechaNacimiento(this, 'mensaje_fecha_nacimiento');"><span
+                id="mensaje_fecha_nacimiento"></span>
+            <label for="telefono">Número de teléfono</label><input type="text" name="" id="telefono"
+                onblur="validarNumeroTelefono(this, 'mensaje_telefono');"><span id="mensaje_telefono"></span>
+            <label for="email">Correo electrónico:</label><input type="text" name="" id="email"
+                onblur="validarEmail(this, 'mensaje_email');"><span id="mensaje_email"></span>
+            <label for="ocupacion">*Ocupación:</label><select id="ocupacion"
+                onblur="validarOcupacion(this, 'mensaje_ocupacion');">
+                <option disabled selected>Seleccione una opción:</option>
+                <option>Estudiante</option>
+                <option>Desempleado</option>
+                <option>Autónomo</option>
+                <option>Cuenta ajena</option>
+            </select><span id="mensaje_ocupacion"></span>
+            <div class="label">*Aficiones:
+            </div>
+            <fieldset class="checkbox">
+                <input type="checkbox" name="aficion" id="deporte"><label for="deporte">Deporte</label>
+                <input type="checkbox" name="aficion" id="cine"><label for="cine">Cine</label>
+                <input type="checkbox" name="aficion" id="lectura"><label for="lectura">Lectura</label>
+            </fieldset>
+            <span id="mensaje_aficiones"></span>
+            <div class="label">*Sexo</div>
+            <fieldset class="radio-button">
+                <input type="radio" name="sexo" id="hombre"><label for="hombre">Hombre</label>
+                <input type="radio" name="sexo" id="mujer"><label for="mujer">Mujer</label>
+                <input type="radio" name="sexo" id="otro"><label for="otro">Otro</label>
+                <input type="radio" name="sexo" id="nsnc"><label for="nsnc">Prefiero no decirlo</label>
+            </fieldset>
+            <span id="mensaje_sexo"></span>
+            <div class="label">(*) Campos obligatorios</div>
         </div>
-        <fieldset onblur="validarAficiones('mensaje_aficiones');">
-            <input type="checkbox" name="aficion" id="deporte"><label for="deporte">Deporte</label><br>
-            <input type="checkbox" name="aficion" id="cine"><label for="cine">Cine</label><br>
-            <input type="checkbox" name="aficion" id="lectura"><label for="lectura">Lectura</label><br>
-        </fieldset>
-        <br>
-        <div>*Sexo <br> <span id="mensaje_sexo"></span></div>
-        <fieldset>
-            <input type="radio" name="sexo" id="hombre"><label for="hombre">Hombre</label><br>
-            <input type="radio" name="sexo" id="mujer"><label for="mujer">Mujer</label><br>
-            <input type="radio" name="sexo" id="otro"><label for="otro">Otro</label><br>
-            <input type="radio" name="sexo" id="nsnc"><label for="nsnc">Prefiero no decirlo</label><br>
-        </fieldset>
-        <br>
-        <input type="button" value="Enviar" onclick="validarSexo('mensaje_sexo');"><input type="button" value="Limpiar">
-        <br>
-        <div>(*) Campos obligatorios</div>
+        <input class="button" type="button" value="Enviar"
+            onclick="validarSexo('mensaje_sexo'); validarAficiones('mensaje_aficiones');">
+        <input class="button" type="button" value="Limpiar" onclick="limpiarFormulario();">
     </form>
 </body>
 

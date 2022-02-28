@@ -2,12 +2,39 @@
   box-sizing: border-box;
 }
 
-form > div,
-form > label,
-form > fieldset {
-  display: inline-block;
-  width: 260px;
-  margin: 0.25rem;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 90%;
+  margin: auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto) 1fr;
+  grid-gap: 0.5rem;
+}
+
+.form-grid > label,
+.form-grid > .label {
+  grid-column: 1;
+  font-weight: bold;
+}
+
+.form-grid > .checkbox,
+.form-grid > .radio-button {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+}
+
+.button {
+  margin: 0.8rem;
 }
 
 .textoOK {

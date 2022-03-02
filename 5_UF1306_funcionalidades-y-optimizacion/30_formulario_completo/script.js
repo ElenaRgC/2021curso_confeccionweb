@@ -41,8 +41,92 @@ function validarCampoDNI(elemento, mensaje) {
   }
 }
 
-function validarAficiones(mensaje) {
-  var opciones = document.getElementsByName("aficion");
+/*function validarFechaNacimiento(elemento, mensaje) {
+  var fecha = elemento.value.trim();
+  if (fecha != "") {
+    if (validarFormatoFecha(fecha)) {
+      if (existeFecha(fecha)) {
+        document.getElementById(mensaje).className = "textoOK";
+        document.getElementById(mensaje).innerHTML =
+          "Campo rellenado correctamente.";
+        return true;
+      } else {
+        document.getElementById(mensaje).className = "textoError";
+        document.getElementById(mensaje).innerHTML =
+          "La fecha introducida no existe.";
+        return false;
+      }
+    } else {
+      document.getElementById(mensaje).className = "textoError";
+      document.getElementById(mensaje).innerHTML =
+        "El formato de la fecha es incorrecto.";
+      return false;
+    }
+  } else {
+    document.getElementById(mensaje).innerHTML = "";
+    return true;
+  }
+}*/
+
+function validarNumeroTelefono(elemento, mensaje) {
+  var dato = elemento.value.trim();
+  var patron = /^[6-9]\d{2}(\s\d{2}){3}$/;
+
+  if (patron.test(dato)) {
+    document.getElementById(mensaje).className = "textoOK";
+    document.getElementById(mensaje).innerHTML =
+      "Campo rellenado correctamente.";
+    return true;
+  } else {
+    document.getElementById(mensaje).className = "textoError";
+    document.getElementById(mensaje).innerHTML =
+      "Debe rellenar este campo correctamente.";
+    return false;
+  }
+}
+
+function validarCampoAlfanumerico(elemento, mensaje) {
+  var dato = elemento.value.trim();
+  var patron = /\w/;
+
+  if (dato == "") {
+    document.getElementById(mensaje).innerHTML = "";
+    return true;
+  } else if (patron.test(dato)) {
+    document.getElementById(mensaje).className = "textoOK";
+    document.getElementById(mensaje).innerHTML =
+      "Campo rellenado correctamente.";
+    return true;
+  } else {
+    document.getElementById(mensaje).className = "textoError";
+    document.getElementById(mensaje).innerHTML =
+      "Debe rellenar este campo correctamente.";
+    return false;
+  }
+}
+
+function validarCampoCodigoPostal(elemento, mensaje) {
+  var dato = elemento.value.trim();
+  var patron = /^((0[1-9])|([1-4]\d)|(5[0-2]))\d{3}$/;
+
+  if (dato == "") {
+    document.getElementById(mensaje).innerHTML = "";
+    return true;
+  } else if (patron.test(dato)) {
+    document.getElementById(mensaje).className = "textoOK";
+    document.getElementById(mensaje).innerHTML =
+      "Campo rellenado correctamente.";
+    return true;
+  } else {
+    document.getElementById(mensaje).className = "textoError";
+    document.getElementById(mensaje).innerHTML =
+      "Debe rellenar este campo correctamente.";
+    return false;
+  }
+}
+
+function validarCheckBox(nombre, mensaje) {
+  var opciones = document.getElementsByName(nombre);
   opcion = new Array();
 
   for (i = 0; i < opciones.length; i++) {
@@ -53,6 +137,7 @@ function validarAficiones(mensaje) {
 
   // Solo entrará en el bucle si hay al menos un elemento,
   // es decir, si opción tiene longitud.
+  // Es lo mismo que usar opcion == null
   if (opcion.length) {
     document.getElementById(mensaje).className = "textoOK";
     document.getElementById(mensaje).innerHTML =
@@ -64,8 +149,8 @@ function validarAficiones(mensaje) {
   }
 }
 
-function validarSexo(mensaje) {
-  var opciones = document.getElementsByName("sexo");
+function validarRadioButton(nombre, mensaje) {
+  var opciones = document.getElementsByName(nombre);
 
   for (i = 0; i < opciones.length; i++) {
     if (opciones[i].checked) {
@@ -84,22 +169,38 @@ function validarSexo(mensaje) {
   }
 }
 
-function limpiarFormulario() {
-  // Definimos el div que contiene el formulario pero no los botones.
-  // O borraríamos el nombre de los botones también.
-  var formulario = document.getElementById("form");
-  var cuadrosTexto = formulario.getElementsByTagName("input");
-  for (i = 0; i < cuadrosTexto.length; i++) {
-    cuadrosTexto[i].value = "";
-  }
+function validarFormulario() {
+  bool_nombre = validarCampoTexto(document.formulario.nombre, "mensaje_nombre");
+  bool_apellidos = validarCampoTexto(
+    document.formulario.apellidos,
+    "mensaje_apellidos"
+  );
+  bool_dni = validarDni(document.formulario.dni, "mensaje_dni");
+  // bool_fecha = validarFecha(document.formulario.fecha, "mensaje_fecha");
+  bool_telefono = validarNumeroTelefono(
+    document.formulario.telefono,
+    "mensaje_telefono"
+  );
+  //bool_correo = validarEmail(document.formulario.email, "mensaje_email");
+  //bool_ocupacion = validarSelect(document.formulario.ocupacion,"mensaje_ocupacion");
+  bool_aficiones = validarCheckBox("aficion", "mensaje_aficiones");
+  bool_sexo = validarRadioButton("sexo", "mensaje_sexo");
+  bool_usuario = validarRadioButton("nuevo-usuario", "mensaje_nuevo_usuario");
 
-  var aficion = document.getElementsByName("aficion");
-  for (i = 0; i < aficion.length; i++) {
-    aficion[i].checked = false;
-  }
+  return (
+    bool_nombre &&
+    bool_apellidos &&
+    bool_dni &&
+    bool_telefono &&
+    bool_aficiones &&
+    bool_sexo &&
+    bool_usuario
+  );
+}
 
-  var sexo = document.getElementsByName("sexo");
-  for (i = 0; i < sexo.length; i++) {
-    sexo[i].checked = false;
+function limpiarSpansFormulario() {
+  var mensajes = document.getElementsByTagName("span");
+  for (var i in mensajes) {
+    mensajes[i].innerHTML = "";
   }
 }

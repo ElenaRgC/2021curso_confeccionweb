@@ -12,22 +12,33 @@
 
 <body>
     <h1>Formulario de registro</h1>
-    <form action="#" name="formulario">
+    <form name="formulario" action="mailto:alguien@dominio.com?subject=Datos de contacto" method="POST"
+        onsubmit="return validarFormulario();">
         <div class="form-grid" id="form">
             <label for="nombre">*Nombre:</label><input type="text" name="nombre" id="nombre"
                 onblur="validarCampoTexto(this, 'mensaje_nombre');"><span id="mensaje_nombre"></span>
             <label for="apellidos">*Apellidos:</label><input type="text" name="" id="apellidos"
                 onblur="validarCampoTexto(this, 'mensaje_apellidos');" ;><span id="mensaje_apellidos"></span>
-            <label for="dni">*D.N.I.:</label><input type="text" name="" id="dni"
+            <label for="dni">*D.N.I.:</label><input type="text" name="dni" id="dni"
                 onblur="validarCampoDNI(this, 'mensaje_dni');"><span id="mensaje_dni"></span>
             <label for="fechaNacimiento">Fecha de nacimiento:</label><input type="text" name="" id="fechaNacimiento"
                 title="(DD/MM/AAAA)" onblur="validarFechaNacimiento(this, 'mensaje_fecha_nacimiento');"><span
                 id="mensaje_fecha_nacimiento"></span>
-            <label for="telefono">Número de teléfono</label><input type="text" name="" id="telefono"
-                onblur="validarNumeroTelefono(this, 'mensaje_telefono');"><span id="mensaje_telefono"></span>
-            <label for="email">Correo electrónico:</label><input type="text" name="" id="email"
+            <label for="telefono">Número de teléfono:</label><input type="text" name="telefono" id="telefono"
+                title="XXX XX XX XX" onblur="validarNumeroTelefono(this, 'mensaje_telefono');"><span
+                id="mensaje_telefono"></span>
+            <label for="foto">Fotografía:</label><input type="file" name="foto" id="foto" accept="image/jpeg, image/png"
+                title="Solo documentos en formato png o jpg/jpeg" onblur="validarCampoFoto(this, 'mensaje_foto');"><span
+                id="mensaje_foto"></span>
+            <label for=" domicilio">Dirección:</label><input type="text" name="domicilio" id="domicilio"
+                title="No se aceptan caracteres especiales."
+                onblur="validarCampoAlfanumerico(this, 'mensaje_domicilio');"><span id="mensaje_domicilio"></span>
+            <label for="codigoPostal">Código postal:</label><input type="text" name="codigo-postal" id="codigo-postal"
+                onblur="validarCampoCodigoPostal(this, 'mensaje_codigo_postal');"><span
+                id="mensaje_codigo_postal"></span>
+            <label for="email">Correo electrónico:</label><input type="text" name="email" id="email"
                 onblur="validarEmail(this, 'mensaje_email');"><span id="mensaje_email"></span>
-            <label for="ocupacion">*Ocupación:</label><select id="ocupacion"
+            <label for="ocupacion">*Ocupación:</label><select name="ocupacion" id="ocupacion"
                 onblur="validarOcupacion(this, 'mensaje_ocupacion');">
                 <option disabled selected>Seleccione una opción:</option>
                 <option>Estudiante</option>
@@ -37,25 +48,30 @@
             </select><span id="mensaje_ocupacion"></span>
             <div class="label">*Aficiones:
             </div>
-            <fieldset class="checkbox">
+            <fieldset class="checkbox" onclick="validarCheckBox('aficion','mensaje_aficiones');">
                 <input type="checkbox" name="aficion" id="deporte"><label for="deporte">Deporte</label>
                 <input type="checkbox" name="aficion" id="cine"><label for="cine">Cine</label>
                 <input type="checkbox" name="aficion" id="lectura"><label for="lectura">Lectura</label>
             </fieldset>
             <span id="mensaje_aficiones"></span>
-            <div class="label">*Sexo</div>
-            <fieldset class="radio-button">
+            <div class="label">*Sexo:</div>
+            <fieldset class="radio-button" onclick="validarRadioButton('sexo','mensaje_sexo');">
                 <input type="radio" name="sexo" id="hombre"><label for="hombre">Hombre</label>
                 <input type="radio" name="sexo" id="mujer"><label for="mujer">Mujer</label>
                 <input type="radio" name="sexo" id="otro"><label for="otro">Otro</label>
                 <input type="radio" name="sexo" id="nsnc"><label for="nsnc">Prefiero no decirlo</label>
             </fieldset>
             <span id="mensaje_sexo"></span>
+            <div class="label">*¿Nuevo usuario?:</div>
+            <fieldset class="radio-button" onclick="validarRadioButton('nuevo-usuario','mensaje_nuevo_usuario');">
+                <input type="radio" name="nuevo-usuario" id="nuevo-si"><label for="hombre">Sí</label>
+                <input type="radio" name="nuevo-usuario" id="nuevo-no"><label for="mujer">No</label>
+            </fieldset>
+            <span id="mensaje_nuevo_usuario"></span>
             <div class="label">(*) Campos obligatorios</div>
         </div>
-        <input class="button" type="button" value="Enviar"
-            onclick="validarSexo('mensaje_sexo'); validarAficiones('mensaje_aficiones');">
-        <input class="button" type="button" value="Limpiar" onclick="limpiarFormulario();">
+        <input class="button" type="button" value="Enviar">
+        <input class="button" type="reset" value="Limpiar" onclick="limpiarSpansFormulario();">
     </form>
 </body>
 

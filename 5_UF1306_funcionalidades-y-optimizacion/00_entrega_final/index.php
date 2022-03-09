@@ -143,41 +143,41 @@ if ($enviarcorreo == false) {
         </div>
         <label for="nombre" class="columna-uno">* Nombre:</label>
         <input id="nombre" name="nombre" type="text" class="columna-dos
-        <?php if (isset($errores['nombre']) || $nombre == "")  
+        <?php if (isset($errores['nombre']) || $nombre == '')  
             echo 'input-error'; 
               else 
             echo 'input-bien';?>" onblur="validarCampoTexto(this);"
             value="<?php if (isset($nombre)) echo $nombre; ?>" />
         <label for="apellidos" clase="columna-tres">* Apellidos:</label>
         <input id="apellidos" name="apellidos" type="text" class="columna-cuatro
-        <?php if (isset($errores['apellidos']) || $apellidos == "")  
+        <?php if (isset($errores['apellidos']) || $apellidos == '')  
             echo 'input-error'; 
               else 
             echo 'input-bien';?>" onblur="validarCampoTexto(this);"
             value="<?php if (isset($apellidos)) echo $apellidos; ?>" />
         <label for="domicilio" class="columna-uno">* Domicilio:</label>
         <input id="domicilio" name="domicilio" type="text" clase="columna-dos
-        <?php if (isset($errores['domicilio']) || $domicilio == "")  
+        <?php if (isset($errores['domicilio']) || $domicilio == '')  
             echo 'input-error'; 
               else 
             echo 'input-bien';?>" onblur="validarDomicilio(this);"
             value="<?php if (isset($domicilio)) echo $domicilio; ?>" />
         <label for="cpostal" class="columna-uno">* Código Postal:</label>
         <input id="cpostal" name="cpostal" type="text" clase="columna-dos
-        <?php if (isset($errores['cpostal']) || $cpostal == "" )  
+        <?php if (isset($errores['cpostal']) || $cpostal == '' )  
             echo 'input-error'; 
               else 
             echo 'input-bien';?>" onblur="validarCPostal(this);"
             value="<?php if (isset($cpostal)) echo $cpostal; ?>" />
         <label for="correo" class="columna-tres">* Email:</label>
         <input id="correo" name="correo" type="text" class="
-        <?php if (isset($errores['correo']) || $correo == "")  
+        <?php if (isset($errores['correo']) || $correo == '')  
             echo 'input-error'; 
               else 
             echo 'input-bien';?>" onblur="validarEmail(this);" value="<?php if (isset($correo)) echo $correo; ?>" />
         <label for="ingles" class="columna-uno">* Conocimientos de inglés:</label>
         <select name="ingles" id="ingles" class="columna-uno
-        <?php if (isset($errores['ingles']) || $ingles == "") 
+        <?php if (isset($errores['ingles']) || $ingles == '') 
             echo 'input-error'; 
               else 
             echo 'input-bien';?>" onchange="validarSelect(this);">

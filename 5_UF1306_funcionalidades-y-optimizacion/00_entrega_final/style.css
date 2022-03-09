@@ -8,10 +8,14 @@ body {
 
 form {
   width: 90%;
+  max-width: 800px;
   margin: 2rem auto;
   display: grid;
   grid-template-columns: auto fit-content fit-content 1fr;
   gap: 0.5rem;
+  border: solid 1px black;
+  padding: 2rem;
+  background-color: whitesmoke;
 }
 
 .columna-uno {
@@ -33,35 +37,40 @@ form {
   grid-column-end: 3;
 }
 
-.tratamiento,
+.tratamiento {
+  grid-row-start: 1;
+  grid-column-end: 3;
+  display: flex;
+}
+
 [for~="nombre"],
 [for~="apellidos"],
 [id~="nombre"],
 [id~="apellidos"] {
-  grid-row-start: 1;
+  grid-row-start: 2;
 }
 
 [for~="domicilio"],
 [id~="domicilio"] {
-  grid-row-start: 2;
+  grid-row-start: 3;
 }
 
 [for~="cpostal"],
 [id~="cpostal"],
 [for~="correo"],
 [id~="correo"] {
-  grid-row-start: 3;
+  grid-row-start: 4;
 }
 
 [for~="otra-info"] {
-  grid-row-start: 4;
+  grid-row-start: 5;
   grid-column-start: 3;
   grid-column-end: 5;
 }
 
 textarea {
-  grid-row-start: 5;
-  grid-row-end: 8;
+  grid-row-start: 6;
+  grid-row-end: 10;
   grid-column-end: 5;
 }
 

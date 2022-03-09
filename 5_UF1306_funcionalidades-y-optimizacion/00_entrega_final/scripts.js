@@ -111,16 +111,6 @@ function validarFormulario() {
   bool_correo = validarEmail(document.formulario.correo);
   bool_ingles = validarSelect(document.formulario.ingles);
 
-  alert(
-    bool_tratamiento &&
-      bool_nombre &&
-      bool_apellidos &&
-      bool_domicilio &&
-      bool_cpostal &&
-      bool_correo &&
-      bool_ingles
-  );
-
   return (
     bool_tratamiento &&
     bool_nombre &&

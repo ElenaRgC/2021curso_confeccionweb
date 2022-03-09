@@ -15,6 +15,21 @@ function validarCampoTexto(elemento) {
   }
 }
 
+function validarDomicilio(elemento) {
+  var dato = elemento.value.trim();
+  var patron = /^[a-zA-Z\d\s\-\.\,]+$/;
+
+  if (patron.test(dato)) {
+    elemento.classList.remove("input-error");
+    elemento.classList.add("input-bien");
+    return true;
+  } else {
+    elemento.classList.remove("input-bien");
+    elemento.classList.add("input-error");
+    return false;
+  }
+}
+
 function validarCPostal(elemento) {
   var dato = elemento.value.trim();
   var patron = /^(0[1-9]|[1-4]\d|5[0-2])\d{3}$/;
@@ -22,8 +37,6 @@ function validarCPostal(elemento) {
   if (patron.test(dato)) {
     elemento.classList.remove("input-error");
     elemento.classList.add("input-bien");
-    return true;
-  } else if (dato == "") {
     return true;
   } else {
     elemento.classList.remove("input-bien");
@@ -46,6 +59,10 @@ function validarEmail(elemento) {
       elemento.classList.add("input-error");
       return false;
     }
+  } else {
+    elemento.classList.remove("input-bien");
+    elemento.classList.add("input-error");
+    return false;
   }
 }
 
@@ -55,16 +72,16 @@ function validarSelect(elemento) {
   if (opcion != "") {
     elemento.classList.remove("input-error");
     elemento.classList.add("input-bien");
-    return false;
+    return true;
   } else {
     elemento.classList.remove("input-bien");
     elemento.classList.add("input-error");
-    return true;
+    return false;
   }
 }
 
-function validarRadioButton(grupo) {
-  var lista = document.getElementsByName(grupo);
+function validarRadioButton() {
+  var lista = document.getElementsByName("tratamiento");
   var marcado;
 
   for (var posicion in lista) {
@@ -73,22 +90,44 @@ function validarRadioButton(grupo) {
     }
   }
 
-  // TODO: comprobar elemento no definido
-
   if (marcado != null) {
-    document.getElementById(radio).classList.remove("input-error");
-    document.getElementById(radio).classList.add("input-bien");
-    return false;
-  } else {
-    document.getElementById(radio).classList.remove("input-bien");
-    document.getElementById(radio).classList.add("input-error");
+    document.getElementById("radio").classList.remove("input-error");
+    //document.getElementById("radio").classList.add("input-bien");
     return true;
+  } else {
+    //document.getElementById("radio").classList.remove("input-bien");
+    document.getElementById("radio").classList.add("input-error");
+    return false;
   }
 }
 
-function limpiarSpansFormulario() {
-  var mensajes = document.getElementsByTagName("span");
-  for (var i in mensajes) {
-    mensajes[i].innerHTML = "";
-  }
+// Comprobaciones para el envío del formulario
+function validarFormulario() {
+  bool_tratamiento = validarRadioButton("tratamiento");
+  bool_nombre = validarCampoTexto(document.formulario.nombre);
+  bool_apellidos = validarCampoTexto(document.formulario.apellidos);
+  bool_domicilio = validarDomicilio(document.formulario.domicilio);
+  bool_cpostal = validarCPostal(document.formulario.cpostal);
+  bool_correo = validarEmail(document.formulario.correo);
+  bool_ingles = validarSelect(document.formulario.ingles);
+
+  alert(
+    bool_tratamiento &&
+      bool_nombre &&
+      bool_apellidos &&
+      bool_domicilio &&
+      bool_cpostal &&
+      bool_correo &&
+      bool_ingles
+  );
+
+  return (
+    bool_tratamiento &&
+    bool_nombre &&
+    bool_apellidos &&
+    bool_domicilio &&
+    bool_cpostal &&
+    bool_correo &&
+    bool_ingles
+  );
 }

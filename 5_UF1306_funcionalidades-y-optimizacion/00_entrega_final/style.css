@@ -72,6 +72,7 @@ textarea {
   grid-row-start: 6;
   grid-row-end: 10;
   grid-column-end: 5;
+  resize: none;
 }
 
 [id~="domicilio"] {

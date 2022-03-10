@@ -1,8 +1,10 @@
 <?php
 // Funciones de validación
-function validarCampoTexto($texto)
+function validarCampoTexto($elemento)
 {
+    $texto = trim($elemento);
     $patron = '/^[a-zA-Z\s]+$/';
+    
     if (preg_match($patron, $texto)) {
         return true;
     } else {
@@ -10,10 +12,11 @@ function validarCampoTexto($texto)
     }
 }
 
-function validarDomicilio($domicilio)
+function validarDomicilio($elemento)
 {
-    $patron = '/^([a-zA-Z]+\d\s[-]?[.]?[,]?)+$/';
-    if (preg_match($patron, $domicilio)) {
+    $patron = '/([a-zA-Z\d\s]+[-.,]?)+/';
+    
+    if (preg_match($patron, $elemento)) {
         return true;
     } else {
         return false;
@@ -22,12 +25,9 @@ function validarDomicilio($domicilio)
 
 function validarCPostal($elemento)
 {
-    $dato = trim($elemento);
     $patron = '/^(0[1-9]|[1-4]\d|5[0-2])\d{3}$/';
 
-    if (preg_match($patron, $dato)) {
-        return true;
-    } else if ($dato == "") {
+    if (preg_match($patron, $elemento)) {
         return true;
     } else {
         return false;
@@ -39,14 +39,10 @@ function validarEmail($elemento)
     $correo = trim($elemento);
     $patron = '/^\w+([.-]\w+)*@\w+([.-]\w+)*\.\w{2,4}$/';
 
-    if ($correo != "") {
-        if (preg_match($patron, $correo)) {
-            return true;
-        } else {
-            return false;
-        }
-    } else {
+    if (preg_match($patron, $correo)) {
         return true;
+    } else {
+        return false;
     }
 }
 
@@ -81,11 +77,11 @@ $enviarcorreo = false;
 if (isset($_REQUEST['btn_Enviar'])) {
     //Sólo entra si viene de una llamada del botón Enviar del formulario 
     //Se recogen los valores del formulario
-    $nombre = trim($_REQUEST['nombre']);
-    $apellidos = trim($_REQUEST['apellidos']);
-    $domicilio = trim($_REQUEST['domicilio']);
-    $cpostal = trim($_REQUEST['cpostal']);
-    $correo = trim($_REQUEST['correo']);
+    $nombre = $_REQUEST['nombre'];
+    $apellidos = $_REQUEST['apellidos'];
+    $domicilio = $_REQUEST['domicilio'];
+    $cpostal = $_REQUEST['cpostal'];
+    $correo = $_REQUEST['correo'];
     if (isset($_REQUEST['ingles'])) {
         $ingles = $_REQUEST['ingles'];
     }
@@ -95,7 +91,7 @@ if (isset($_REQUEST['btn_Enviar'])) {
     if (isset($_REQUEST['tratamiento'])) {
         $tratamiento = $_REQUEST['tratamiento'];
     }
-    $comentarios = trim($_REQUEST['otra-info']);
+    $comentarios = $_REQUEST['otra-info'];
 
     //REALIZO LAS COMPROBACIONES
     if (!isset($tratamiento)) {
@@ -110,13 +106,13 @@ if (isset($_REQUEST['btn_Enviar'])) {
     if (validarDomicilio($domicilio) == false) {
         $errores['domicilio'] = "Debe rellenar el domicilio correctamente.";
     }
-    if (validarEmail($correo) == false) {
-        $errores['correo'] = "Debe rellenar el correo correctamente.";
-    }
     if (validarCPostal($cpostal) == false) {
         $errores['cpostal'] = "Debe rellenar el código postal correctamente.";
     }
-    if (!isset($ingles) || validarSelect($ingles) == false) {
+    if (validarEmail($correo) == false) {
+        $errores['correo'] = "Debe rellenar el correo correctamente.";
+    }
+    if (!isset($ingles)) {
         $errores['ingles'] = "Debe indicar su nivel de inglés.";
     }
     
@@ -141,45 +137,51 @@ if ($enviarcorreo == false) {
                 <?php if ( (isset($tratamiento)) && ($tratamiento=='srta') ) echo 'checked';?> />
             <label for="Srta">Srta.</label>
         </div>
+
         <label for="nombre" class="columna-uno">* Nombre:</label>
         <input id="nombre" name="nombre" type="text" class="columna-dos
-        <?php if (isset($errores['nombre']) || $nombre == '')  
+        <?php if (isset($errores['nombre']))  
             echo 'input-error'; 
-              else 
+              else if ($nombre != '')
             echo 'input-bien';?>" onblur="validarCampoTexto(this);"
             value="<?php if (isset($nombre)) echo $nombre; ?>" />
+
         <label for="apellidos" clase="columna-tres">* Apellidos:</label>
         <input id="apellidos" name="apellidos" type="text" class="columna-cuatro
-        <?php if (isset($errores['apellidos']) || $apellidos == '')  
+        <?php if (isset($errores['apellidos']))  
             echo 'input-error'; 
-              else 
+              else if ($apellidos != '')
             echo 'input-bien';?>" onblur="validarCampoTexto(this);"
             value="<?php if (isset($apellidos)) echo $apellidos; ?>" />
+
         <label for="domicilio" class="columna-uno">* Domicilio:</label>
-        <input id="domicilio" name="domicilio" type="text" clase="columna-dos
-        <?php if (isset($errores['domicilio']) || $domicilio == '')  
+        <input id="domicilio" name="domicilio" type="text" class="columna-dos
+        <?php if (isset($errores['domicilio']))  
             echo 'input-error'; 
-              else 
+              else if ($domicilio != '')
             echo 'input-bien';?>" onblur="validarDomicilio(this);"
             value="<?php if (isset($domicilio)) echo $domicilio; ?>" />
+
         <label for="cpostal" class="columna-uno">* Código Postal:</label>
-        <input id="cpostal" name="cpostal" type="text" clase="columna-dos
-        <?php if (isset($errores['cpostal']) || $cpostal == '' )  
+        <input id="cpostal" name="cpostal" type="text" class="columna-dos
+        <?php if (isset($errores['cpostal']))  
             echo 'input-error'; 
-              else 
+              else if ($cpostal != '')
             echo 'input-bien';?>" onblur="validarCPostal(this);"
             value="<?php if (isset($cpostal)) echo $cpostal; ?>" />
+
         <label for="correo" class="columna-tres">* Email:</label>
         <input id="correo" name="correo" type="text" class="
-        <?php if (isset($errores['correo']) || $correo == '')  
+        <?php if (isset($errores['correo']))  
             echo 'input-error'; 
-              else 
+              else if ($correo != '')
             echo 'input-bien';?>" onblur="validarEmail(this);" value="<?php if (isset($correo)) echo $correo; ?>" />
+
         <label for="ingles" class="columna-uno">* Conocimientos de inglés:</label>
         <select name="ingles" id="ingles" class="columna-uno
-        <?php if (isset($errores['ingles']) || $ingles == '') 
+        <?php if (isset($errores['ingles'])) 
             echo 'input-error'; 
-              else 
+              else if ($ingles != '')
             echo 'input-bien';?>" onchange="validarSelect(this);">
             <option value="" disabled selected>
                 Seleccione un nivel</option>
@@ -192,6 +194,7 @@ if ($enviarcorreo == false) {
             <option value="c1" <?php if ( (isset($ingles)) && ($ingles=='c1') ) echo 'selected';?>>C1</option>
             <option value="c2" <?php if ( (isset($ingles)) && ($ingles=='c2') ) echo 'selected';?>>C2</option>
         </select>
+
         <label for="informatica" class="columna-uno">Conocimientos informáticos:</label>
         <div class="checkbox columna-uno">
             <input type="checkbox" name="informatica[]" id="ofimatica" value="ofimatica"
@@ -215,9 +218,11 @@ if ($enviarcorreo == false) {
                 <?php if ( (isset($informatica)) && (in_array('js',$informatica)) ) echo 'checked';?> />
             <label for="js">JavaScript</label>
         </div>
+
         <label for="otra-info" class="columna-tres">Otra información de interés:</label>
         <textarea class="columna-tres" name="otra-info"
             id="otra-info"><?php if (isset($comentarios)) echo $comentarios; ?></textarea>
+
         <input type="submit" name="btn_Enviar" value="Enviar">
         <input type="reset" name="btn_Limpiar" value="Limpiar">
     </form>
@@ -231,7 +236,7 @@ if ($enviarcorreo == false) {
     $descripcion= "<HTML><HEAD>\n";
     $descripcion.= "<meta charset='UTF-8'>\n";
     $descripcion.= "<style type='text/css'>\n";
-    /*$descripcion.= ".textoRojo{\n";
+    $descripcion.= ".textoRojo{\n";
     $descripcion.= "color: red;\n";
     $descripcion.= "}\n";
     $descripcion.= ".textoVerde{\n";
@@ -240,21 +245,19 @@ if ($enviarcorreo == false) {
     $descripcion.= "</style>\n";
     $descripcion.= "<TITLE>Formulario de contacto recibido</TITLE></HEAD><BODY>";
     $descripcion.= "<H2 class='textoRojo'>Se ha recibido un nuevo contacto:</H2>\n";
+    $descripcion.="<H3 class='textoVerde'>Tratamiento : </H3>$tratamiento<BR>";
     $descripcion.="<H3 class='textoVerde'>Nombre : </H3>$nombre<BR>";
     $descripcion.="<H3 class='textoVerde'>Apellidos : </H3>$apellidos<BR>";
-    $descripcion.="<H3 class='textoVerde'>DNI : </H3>$dni<BR>";
-    $descripcion.="<H3 class='textoVerde'>Fecha Nacimiento : </H3>$fecha<BR>";
-    $descripcion.="<H3 class='textoVerde'>Teléfono : </H3>$telefono<BR>";
-    $descripcion.="<H3 class='textoVerde'>E-mail : </H3>$correo<BR>";
     $descripcion.="<H3 class='textoVerde'>Domicilio : </H3>$domicilio<BR>";
     $descripcion.="<H3 class='textoVerde'>Código Postal : </H3>$cpostal<BR>";
-    $descripcion.="<H3 class='textoVerde'>Ocupación : </H3>$ocupacion<BR>";
-    $descripcion.="<H3 class='textoVerde'>Aficiones : </H3>";
-    foreach ($aficiones as $aficion) {
-        $descripcion.="$aficion -";
+    $descripcion.="<H3 class='textoVerde'>E-mail : </H3>$correo<BR>";
+    $descripcion.="<H3 class='textoVerde'>Nivel de inglés : </H3>$ingles<BR>";
+    $descripcion.="<H3 class='textoVerde'>Conocimientos informáticos : </H3>";
+    foreach ($informatica as $conocimiento) {
+        $descripcion.="$conocimiento ,";
     }
     $descripcion.="<BR>";
-    $descripcion.="<H3 class='textoVerde'>Sexo : </H3>$sexo<BR>";*/
+    $descripcion.="<H3 class='textoVerde'>Otra información de interés : </H3>$comentarios<BR>";
     $descripcion.= "</BODY></HTML>";
     
     // Para enviar un correo con formato HTML, debe establecerse la cabecera Content-type

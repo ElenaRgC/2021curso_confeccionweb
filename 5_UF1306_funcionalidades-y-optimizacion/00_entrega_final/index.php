@@ -236,28 +236,24 @@ if ($enviarcorreo == false) {
     $descripcion= "<HTML><HEAD>\n";
     $descripcion.= "<meta charset='UTF-8'>\n";
     $descripcion.= "<style type='text/css'>\n";
-    $descripcion.= ".textoRojo{\n";
-    $descripcion.= "color: red;\n";
+    $descripcion.= "body {\n";
+    $descripcion.= "font-family = sans-serif;\n";
     $descripcion.= "}\n";
-    $descripcion.= ".textoVerde{\n";
-    $descripcion.= "color: green;\n";
-    $descripcion.= "}\n";
+
     $descripcion.= "</style>\n";
     $descripcion.= "<TITLE>Formulario de contacto recibido</TITLE></HEAD><BODY>";
-    $descripcion.= "<H2 class='textoRojo'>Se ha recibido un nuevo contacto:</H2>\n";
-    $descripcion.="<H3 class='textoVerde'>Tratamiento : </H3>$tratamiento<BR>";
-    $descripcion.="<H3 class='textoVerde'>Nombre : </H3>$nombre<BR>";
-    $descripcion.="<H3 class='textoVerde'>Apellidos : </H3>$apellidos<BR>";
-    $descripcion.="<H3 class='textoVerde'>Domicilio : </H3>$domicilio<BR>";
-    $descripcion.="<H3 class='textoVerde'>Código Postal : </H3>$cpostal<BR>";
-    $descripcion.="<H3 class='textoVerde'>E-mail : </H3>$correo<BR>";
-    $descripcion.="<H3 class='textoVerde'>Nivel de inglés : </H3>$ingles<BR>";
-    $descripcion.="<H3 class='textoVerde'>Conocimientos informáticos : </H3>";
+    $descripcion.= "<H2>Se han tramitado los siguientes datos del siguiente usuario:</H2>\n";
+    $descripcion.= "$tratamiento $nombre $apellidos ";
+    $descripcion.= "con residencia en $domicilio (Código Postal: $cpostal).<BR>";
+    $descripcion.= "<b>Código Postal : </b>$cpostal<BR>";
+    $descripcion.= "<b>E-mail : </b>$correo<BR>";
+    $descripcion.= "<b>Nivel de inglés : </b>$ingles<BR>";
+    $descripcion.= "<b>Conocimientos informáticos : </b>";
     foreach ($informatica as $conocimiento) {
         $descripcion.="$conocimiento ,";
     }
     $descripcion.="<BR>";
-    $descripcion.="<H3 class='textoVerde'>Otra información de interés : </H3>$comentarios<BR>";
+    $descripcion.="<b>Otra información de interés : </b>$comentarios<BR>";
     $descripcion.= "</BODY></HTML>";
     
     // Para enviar un correo con formato HTML, debe establecerse la cabecera Content-type

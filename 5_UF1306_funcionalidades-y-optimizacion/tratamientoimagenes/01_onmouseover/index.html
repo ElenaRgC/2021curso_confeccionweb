@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TRATAMIENTO DE IMÁGENES</title>
+    <script>
+        function cambiarImagen(elemento, ruta) {
+            elemento.src = ruta;
+        }
+    </script>
+</head>
+
+<body>
+    <img src="./img/play.png" alt="" onmouseover="cambiarImagen(this,'../img/play_over.png');"
+        onmouseout="cambiarImagen(this,'../img/play.png');">
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+#boton_play {
+  background: url("../img/play.png") no-repeat;
+  height: 225px;
+  width: 225px;
+  cursor: default;
+  border: solid black 5px;
+}
+#boton_play:hover {
+  background: url("../img/play_over.png") no-repeat;
+  height: 225px;
+  width: 225px;
+  cursor: pointer;
+  opacity: 0.5;
+}

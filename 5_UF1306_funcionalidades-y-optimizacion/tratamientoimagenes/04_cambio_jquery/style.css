@@ -1,0 +1,11 @@
+.imagen {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+}
+#imagen1 {
+  background: url(../img/imagen1.jpg) no-repeat;
+}
+#imagen2 {
+  background: url(../img/imagen2.png) no-repeat;
+}

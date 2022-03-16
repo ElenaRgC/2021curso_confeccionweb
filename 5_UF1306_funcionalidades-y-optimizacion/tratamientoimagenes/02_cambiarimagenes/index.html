@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TRATAMIENTO DE IMÁGENES</title>
+    <script>
+        function cambiarImagen(elemento) {
+            var radioButton = document.getElementsByName("radio");
+            for (var seleccionado in radioButton) {
+                if (radioButton[seleccionado].checked) {
+                    ruta = radioButton[seleccionado].value;
+                } else {
+                    ruta = elemento.src;
+                }
+            }
+            elemento.src = ruta;
+        }
+
+        function crearImagen() {
+            var nuevaImagen = document.getElementById("archivo");
+            var nuevaImagenURL = URL.createObjectURL(nuevaImagen);
+
+        }
+
+        function cambiarTodasImagenes() {
+            var imagenes = document.getElementsByTagName("img");
+            var radioButton = document.getElementsByName("radio");
+
+            for (var seleccionado in radioButton) {
+                if (radioButton[seleccionado].checked) {
+                    for (var imagen in imagenes) {
+                        if (radioButton[seleccionado].checked.value = "archivo") {
+                            imagenes[imagen].src = adjuntoURL.src;
+                        } else {
+                            imagenes[imagen].src = radioButton[seleccionado].value;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../img/play.png" alt="" onmouseover="cambiarImagen(this);">
+    <img src="../img/play.png" alt="" onmouseover="cambiarImagen(this);">
+    <img src="../img/play.png" alt="" onmouseover="cambiarImagen(this);">
+    <br>
+    <br>
+    <form action="#">
+        <input type="radio" name="radio" id="radio-1" value="../img/imagen1.jpg"> Imagen 1 <br>
+        <input type="radio" name="radio" id="radio-2" value="../img/imagen2.png"> Imagen 2 <br>
+        <input type="radio" name="radio" id="radio-3" value="../img/imagen3.png"> Imagen 3 <br>
+        <input type="radio" name="radio" id="radio-4" value="../img/imagen3.png"> Imagen adjunta <br> <br>
+        <input type="file" name="archivo" id="archivo" accept="image/*" onchange="crearImagen();">
+        <br><br>
+        <input type="button" value="Cambiar Imagenes" onclick="cambiarTodasImagenes();">
+    </form>
+</body>
+
+</html>

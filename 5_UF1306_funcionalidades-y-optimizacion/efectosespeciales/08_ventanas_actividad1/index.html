@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventanas</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        function abrirVentana() {
+            var popupWinWidth = 640;
+            var popupWinHeight = 480;
+            var ventana = window.open("datos.html", "_blank", "top=0, left=0, width=" + popupWinWidth + ", height=" + popupWinHeight + ", toolbar=0, location=0");
+
+            if (ventana == null || typeof (ventana) == 'undefined') {
+                alert("Para visualizar correctamente este sitio debe deshabilitar la opción de bloqueo de ventanas emergentes");
+            }
+        }
+
+        function recibirDatos(nombre, apellidos) {
+            document.getElementById("nombre-padre").value = nombre;
+            document.getElementById("apellidos-padre").value = apellidos;
+        }
+    </script>
+</head>
+
+<body>
+    Nombre: <input id="nombre-padre" type="text" readonly><br>
+    Apellidos: <input id="apellidos-padre" type="text" readonly><br>
+    <input type="button" value="Abrir página" onclick="abrirVentana()">
+</body>
+
+</html>

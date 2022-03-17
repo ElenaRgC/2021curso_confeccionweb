@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <title>Tabs</title>
+</head>
+
+<body>
+    <h1>Pestañas</h1>
+    <div class="tabs">
+        <nav class="tab-list">
+            <a class="tab active" href="#tab-1">Tab 1</a>
+            <a class="tab" href="#tab-2">Tab 2</a>
+            <a class="tab" href="#tab-3">Tab 3</a>
+        </nav>
+        <div id="tab-1" class="tab-content show">Pellentesque aptent rhoncus feugiat
+            ullamcorper suscipit ante cras bibendum massa suspendisse nascetur nulla
+            sociosqu, curabitur eros magna morbi hac ultrices natoque varius condimentum
+            tristique tortor porta.</div>
+        <div id="tab-2" class="tab-content">Lorem ipsum dolor sit amet consectetur
+            adipiscing elit condimentum, litora pellentesque lobortis mus suscipit
+            integer.</div>
+        <div id="tab-3" class="tab-content">Sapien hac fermentum erat congue sodales
+            egestas suspendisse lobortis, non tristique quam penatibus vehicula mus
+            ultricies.</div>
+    </div>
+    <script>
+        $(".tab-list").on("click", ".tab", function (event) {
+            event.preventDefault();
+            $(".tab").removeClass("active");
+            $(".tab-content").removeClass("show");
+            $(this).addClass("active");
+            $($(this).attr('href')).addClass("show");
+        });
+    </script>
+</body>
+
+</html>

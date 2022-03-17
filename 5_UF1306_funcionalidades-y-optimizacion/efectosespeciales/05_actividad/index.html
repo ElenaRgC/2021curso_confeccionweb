@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+    <title>Galería y formulario</title>
+</head>
+
+<body>
+    <div class="tabs">
+        <nav class="tab-list">
+            <a class="tab active" href="#tab-1">Galería</a>
+            <a class="tab" href="#tab-2">Formulario</a>
+        </nav>
+        <div id="tab-1" class="tab-content show">
+            <div class="galeria">
+                <li>
+                    <a href="#">
+                        <img src="../img/animales-domesticos.jpg" alt="">
+                        <span><img src="../img/animales-domesticos.jpg" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/anochecer.jpg" alt="">
+                        <span><img src="../img/anochecer.jpg" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/dibujo-3d-de-lobos.jpg" alt="">
+                        <span><img src="../img/dibujo-3d-de-lobos.jpg" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/fondo-3d-de-gatos.jpg" alt="">
+                        <span><img src="../img/fondo-3d-de-gatos.jpg" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/foto-del-big-ben.jpg" alt="">
+                        <span><img src="../img/foto-del-big-ben.jpg" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/ice-age.jpg" alt="">
+                        <span><img src="../img/ice-age.jpg" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/imagen1.jpg" alt="">
+                        <span><img src="../img/imagen1.jpg" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/imagen2.png" alt="">
+                        <span><img src="../img/imagen2.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/imagen3.png" alt="">
+                        <span><img src="../img/imagen3.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/imagen4.jpg" alt="">
+                        <span><img src="../img/imagen4.jpg" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/imagen5.jpg" alt="">
+                        <span><img src="../img/imagen5.jpg" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/imagen6.jpg" alt="">
+                        <span><img src="../img/imagen6.jpg" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/imagen7.png" alt="">
+                        <span><img src="../img/imagen7.png" alt=""></span>
+                    </a>
+                </li>
+            </div>
+        </div>
+        <div id="tab-2" class="tab-content">
+
+            <div>
+                <form name="formulario" action="#" onsubmit="validarFormulario()">
+                    <div id="radio" class="tratamiento columna-uno">
+                        <label for="tratamiento">* Tratamiento:</label>
+                        <input type="radio" name="tratamiento" id="Sr" value="sr" />
+                        <label for="Sr">Sr.</label>
+                        <input type="radio" name="tratamiento" id="Sra" value="sra" />
+                        <label for="Sra">Sra.</label>
+                        <input type="radio" name="tratamiento" id="Srta" value="srta" />
+                        <label for="Srta">Srta.</label>
+                    </div>
+
+                    <label for="nombre" class="columna-uno">* Nombre:</label>
+                    <input id="nombre" name="nombre" type="text" class="columna-dos" onblur="validarCampoTexto(this);"
+                        value="" />
+
+                    <label for="apellidos" clase="columna-tres">* Apellidos:</label>
+                    <input id="apellidos" name="apellidos" type="text" class="columna-cuatro"
+                        onblur="validarCampoTexto(this);" value="" />
+
+                    <label for="domicilio" class="columna-uno">* Domicilio:</label>
+                    <input id="domicilio" name="domicilio" type="text" class="columna-dos"
+                        onblur="validarDomicilio(this);" value="" />
+
+                    <label for="cpostal" class="columna-uno">* Código Postal:</label>
+                    <input id="cpostal" name="cpostal" type="text" class="columna-dos" onblur="validarCPostal(this);"
+                        value="" />
+
+                    <label for="correo" class="columna-tres">* Email:</label>
+                    <input id="correo" name="correo" type="text" class="" onblur="validarEmail(this);" value="" />
+
+                    <label for="ingles" class="columna-uno">* Conocimientos de inglés:</label>
+                    <select name="ingles" id="ingles" class="columna-uno" onchange="validarSelect(this);">
+                        <option value="" disabled selected>
+                            Seleccione un nivel</option>
+                        <option value="ninguno">
+                            Ninguno</option>
+                        <option value="a1">A1</option>
+                        <option value="a2">A2</option>
+                        <option value="b1">B1</option>
+                        <option value="b2">B2</option>
+                        <option value="c1">C1</option>
+                        <option value="c2">C2</option>
+                    </select>
+
+                    <label for="informatica" class="columna-uno">Conocimientos informáticos:</label>
+                    <div class="checkbox columna-uno">
+                        <input type="checkbox" name="informatica[]" id="ofimatica" value="ofimatica" />
+                        <label for="ofimatica">Ofimática</label>
+                        <input type="checkbox" name="informatica[]" id="diseno" value="diseno" />
+                        <label for="diseno">Diseño gráfico</label>
+                        <input type="checkbox" name="informatica[]" id="programacion" value="programacion" />
+                        <label for="programacion">Programación</label>
+                    </div>
+                    <div class="checkbox columna-dos">
+                        <input type="checkbox" name="informatica[]" id="bases-datos" value="bases-datos" />
+                        <label for="bases-datos">Bases de datos</label>
+                        <input type="checkbox" name="informatica[]" id="html" value="html" />
+                        <label for="html">HTML</label>
+                        <input type="checkbox" name="informatica[]" id="js" value="js" />
+                        <label for="js">JavaScript</label>
+                    </div>
+
+                    <label for="otra-info" class="columna-tres">Otra información de interés:</label>
+                    <textarea class="columna-tres" name="otra-info" id="otra-info"></textarea>
+
+                    <input type="submit" name="btn_Enviar" value="Enviar">
+                    <input type="reset" name="btn_Limpiar" value="Limpiar">
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".tab-list").on("click", ".tab", function (event) {
+            event.preventDefault();
+            $(".tab").removeClass("active");
+            $(".tab-content").removeClass("show");
+            $(this).addClass("active");
+            $($(this).attr('href')).addClass("show");
+        });
+    </script>
+</body>
+
+</html>

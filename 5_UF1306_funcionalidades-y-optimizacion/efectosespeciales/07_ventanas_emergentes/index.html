@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventanas</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        //var x = $(document);
+        //x.ready(comprobar);
+        function comprobar() {
+            var enlace = document.getElementById("direccion").value;
+            var popupWinWidth = 640;
+            var popupWinHeight = 480;
+            var ventana = window.open(enlace, "_blank", "top=" + (screen.height - popupWinHeight) / 4 + ", left=" + (screen.width - popupWinWidth) / 2 + ", width=" + popupWinWidth + ", height=" + popupWinHeight + ", toolbar=0, location=0");
+            var ventana = window.open(enlace, "_blank", "top=" + (screen.height - popupWinHeight) / 4 + ", left=" + (screen.width - popupWinWidth) / 2 + ", width=" + popupWinWidth + ", height=" + popupWinHeight + ", toolbar=0, location=0");
+            if (ventana == null || typeof (ventana) == 'undefined') {
+                alert("Para visualizar correctamente este sitio debe deshabilitar la opción de bloqueo de ventanas emergentes");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input id="direccion" type="url"><input type="button" value="Ir" onclick="comprobar()">
+</body>
+
+</html>

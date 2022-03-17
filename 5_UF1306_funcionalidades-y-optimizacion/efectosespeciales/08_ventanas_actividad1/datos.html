@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+    <script>
+        function enviarDatos() {
+            var nombre = document.getElementById("nombre").value;
+            var apellidos = document.getElementById("apellidos").value;
+
+            window.opener.recibirDatos(nombre, apellidos);
+            windows.close();
+        }
+    </script>
+</head>
+
+<body>
+    Nombre: <input id="nombre" type="text"><br>
+    Apellidos: <input id="apellidos" type="text"><br>
+    <input type="button" value="Volver" onclick="enviarDatos()">
+</body>
+
+</html>

@@ -8,11 +8,11 @@ h1 {
 
 .menu {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 #contenedor {
-  border: solid 1px black;
+  width: max-content;
+  margin: auto;
   margin-top: 2rem;
-  padding: 1rem;
 }

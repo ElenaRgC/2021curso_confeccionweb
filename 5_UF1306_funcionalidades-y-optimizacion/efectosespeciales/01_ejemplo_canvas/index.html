@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PRUEBA CANVAS</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <canvas id="mi_canvas" width="1366">
+        <script>
+            var posicion, canvas, ctx, direccion;
+            var logo = new Image();
+            logo.src = "../img/imagen3.png";
+            window.onload = function () {
+                canvas = document.getElementById("mi_canvas");
+                ctx = canvas.getContext("2d");
+                posicion = 0;
+                direccion = 0;
+                setInterval("movimiento()", 25);
+            }
+            function movimiento() {
+                if (direccion == 0) { posicion++ } else { posicion-- }
+                if (posicion == 1166) { direccion = 1 }
+                if (posicion == 0) { direccion = 0 }
+                canvas.width = canvas.width;
+                ctx.drawImage(logo, posicion, 0);
+            }
+        </script>
+    </canvas>
+</body>
+
+</html>

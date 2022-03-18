@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORMULARIO CONTACTO</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="formulario_contacto.css">
+        <script src="formulario_contacto.js"></script>
+    </head>
+    <body onload="limpiarFormulario()">
+        <form name="formulario" action="mailto:alguien@dominio.com?subject=Datos de contacto" 
+        method="POST" onsubmit="return validarFormulario()"> 
+            <table>
+                <tr>
+                    <td>*Nombre:</td>
+                    <td>
+                        <input type="text" id="nombre" name="nombre" 
+                        onblur="validarCampoTexto(this, 'mensaje_nombre')">
+                        <span id="mensaje_nombre"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>*Apellidos:</td>
+                    <td>
+                        <input type="text" id="apellidos" name="apellidos" 
+                        onblur="validarCampoTexto(this, 'mensaje_apellidos')">
+                        <span id="mensaje_apellidos"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>*D.N.I.:</td>
+                    <td>
+                        <input type="text" id="dni" name="dni" 
+                        onblur="validarDni(this, 'mensaje_dni')">
+                        <span id="mensaje_dni" class="textoError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Foto:</td>
+                    <td>
+                        <input type="file" id="foto" name="foto" accept="image/jpeg, image/png"><br/>
+                        <small>Solo JPG, JPEG o PNG</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de nacimiento (dd/mm/aaaa):</td>
+                    <td>
+                        <input type="text" id="fecha" name="fecha" 
+                        onblur="validarFecha(this, 'mensaje_fecha')">
+                        <span id="mensaje_fecha" class="textoError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de teléfono (NNN NN NN NN):</td>
+                    <td>
+                        <input type="text" id="telefono" name="telefono" 
+                        onblur="validarTelefono(this, 'mensaje_telefono')">
+                        <span id="mensaje_telefono" class="textoError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <input type="text" id="correo" name="correo" 
+                        onblur="validarEmail(this, 'mensaje_correo')">
+                        <span id="mensaje_correo" class="textoError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Domicilio:</td>
+                    <td>
+                        <input type="text" id="domicilio" name="domicilio" 
+                        onblur="validarCampoNoObligatorio(this, 'mensaje_domicilio')">
+                        <span id="mensaje_domicilio" class="textoError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código Postal:</td>
+                    <td>
+                        <input type="text" id="cpostal" name="cpostal" 
+                        onblur="validarCPostal(this, 'mensaje_cpostal')">
+                        <span id="mensaje_cpostal" class="textoError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>*Ocupación:</td>
+                    <td>
+                        <select id="ocupacion" name="ocupacion" 
+                        onchange="validarSelect(this, 'mensaje_ocupacion')">
+                            <option value="">-Seleccione una ocupación-</option>
+                            <option value="Empleado">Empleado</option>
+                            <option value="Desempleado">Desempleado</option>
+                            <option value="Estudiante">Estudiante</option>
+                        </select>
+                        <span id="mensaje_ocupacion" class="textoError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>*Aficiones:</td>
+                    <td>
+                        <fieldset id="grupo_aficiones" 
+                        onclick="validarCheckbox('aficiones', 'mensaje_aficiones')">
+                            <input type="checkbox" value="Deporte" id="afi-1" name="aficiones"/>Deporte<br/>
+                            <input type="checkbox" value="Cine" id="afi-2" name="aficiones"/>Cine<br/>
+                            <input type="checkbox" value="Lectura" id="afi-3" name="aficiones"/>Lectura<br/>
+                        </fieldset>
+                        <br/>
+                        <span id="mensaje_aficiones" class="textoError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>*Sexo:</td>
+                    <td>
+                        <fieldset id="grupo_sexo" onclick="validarRadioButton('sexo', 'mensaje_sexo')">
+                            <input type="radio" value="Varón" id="sexo-1" name="sexo"/> Varón<br/>
+                            <input type="radio" value="Mujer" id="sexo-2" name="sexo"/> Mujer<br/>
+                            <input type="radio" value="Otro" id="sexo-3" name="sexo"/> Otro<br/>
+                            <input type="radio" value="Prefiero no decirlo" id="sexo-4" name="sexo"/> Prefiero no decirlo<br/>
+                        </fieldset>
+                        <span id="mensaje_sexo" class="textoError"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>*Nuevo Usuario:</td>
+                    <td>
+                        <fieldset id="grupo_usuario" onclick="validarRadioButton('usuario', 'mensaje_usuario')">
+                            <input type="radio" value="Si" id="usuario-1" name="usuario"/> Sí<br/>
+                            <input type="radio" value="No" id="usuario-2" name="usuario"/> No<br/>
+                        </fieldset>
+                        <span id="mensaje_usuario" class="textoError"></span>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <input type="submit" name="btn_Enviar" value="Enviar"/>
+                <input type="reset" name="btn_Limpiar" value="Limpiar" onclick="limpiarSpansFormulario()"/>
+            </div>
+            <br>(*) Campos obligatorios
+        </form>
+    </body>
+</html>

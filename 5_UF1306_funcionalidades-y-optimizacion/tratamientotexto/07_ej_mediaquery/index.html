@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        var ancho = 0, alto = 0;
+        if (typeof (window.innerWidth) == 'number') {
+            ancho = window.innerWidth;
+            alto = window.innerHeight;
+            cargar();
+        }
+
+        function cargar() {
+            if (ancho >= 800) {
+                var archivo = document.createElement('link');
+                archivo.setAttribute("rel", "stylesheet");
+                archivo.setAttribute("href", "style.css");
+                document.getElementsByTagName("head")[0].appendChild(archivo);
+            } else {
+                var archivo = document.createElement('link');
+                archivo.rel = 'stylesheet';
+                archivo.href = 'tablets.css';
+                archivo.type = 'text/css';
+                archivo.media = 'all';
+                document.getElementsByTagName("head")[0].appendChild(archivo);
+            }
+
+        }
+        $(window).on('resize', function () {
+            this.location.href = this.location.href;
+        });
+    </script>
+    <title>Fondo JS</title>
+</head>
+
+<body>
+    <div id="parrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatem excepturi iusto
+        consectetur, fugit architecto cupiditate provident omnis voluptatibus velit vitae eius tenetur nam cum, sed ea
+        saepe! Quae, tempore.</div>
+</body>
+
+</html>

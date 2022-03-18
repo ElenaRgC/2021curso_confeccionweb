@@ -1,0 +1,18 @@
+@keyframes desliza {
+  from {
+    top: 0em;
+  }
+  to {
+    top: 10em;
+  }
+}
+#parrafo {
+  animation-name: desliza;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-color: #c60;
+  color: #fff;
+  position: relative;
+  padding: 0.5em;
+}

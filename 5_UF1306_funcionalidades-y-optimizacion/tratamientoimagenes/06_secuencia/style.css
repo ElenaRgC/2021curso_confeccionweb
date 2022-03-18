@@ -1,0 +1,22 @@
+.imagensec {
+  height: 15em;
+  width: 15em;
+  display: inline-block;
+  opacity: 0;
+}
+#imagenessec {
+  margin: 0 auto;
+  width: 90%;
+}
+#imagensec1 {
+  background: url(../img/imagen1.jpg) no-repeat;
+}
+#imagensec2 {
+  background: url(../img/imagen2.png) no-repeat;
+}
+#imagensec3 {
+  background: url(../img/imagen3.png) no-repeat;
+}
+#imagensec4 {
+  background: url(../img/imagen4.jpg) no-repeat;
+}

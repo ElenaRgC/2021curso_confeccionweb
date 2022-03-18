@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: auto fit-content fit-content 1fr;
+  gap: 0.5rem;
+  border: solid 1px black;
+  padding: 3rem 2rem;
+  background-color: whitesmoke;
+}
+
+.columna-uno {
+  grid-column-start: 1;
+}
+.columna-dos {
+  grid-column-start: 2;
+}
+.columna-tres {
+  grid-column-start: 3;
+}
+.columna-cuatro {
+  grid-column-start: 4;
+}
+
+[for~="ingles"],
+[for~="informatica"] {
+  grid-column-end: 3;
+}
+
+[id~="ingles"] {
+  grid-column-end: 5;
+}
+
+.tratamiento {
+  grid-row-start: 2;
+  grid-column-end: 3;
+  display: flex;
+}
+
+[for~="nombre"],
+[for~="apellidos"],
+[id~="nombre"],
+[id~="apellidos"] {
+  grid-row-start: 1;
+}
+
+[for~="domicilio"],
+[id~="domicilio"] {
+  grid-row-start: 3;
+}
+
+[for~="cpostal"],
+[id~="cpostal"],
+[for~="correo"],
+[id~="correo"] {
+  grid-row-start: 4;
+}
+
+[for~="otra-info"] {
+  grid-row-start: 5;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+textarea {
+  grid-row-start: 6;
+  grid-row-end: 10;
+  grid-column-end: 5;
+  resize: none;
+}
+
+[id~="domicilio"] {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: min-content auto;
+  align-items: center;
+}
+
+.checkbox > input {
+  grid-column: 1;
+}
+
+.input-error {
+  border: solid 2px red;
+  background-color: rgb(235, 213, 213);
+}
+.input-bien {
+  border: solid 2px green;
+  background-color: rgb(213, 235, 213);
+}

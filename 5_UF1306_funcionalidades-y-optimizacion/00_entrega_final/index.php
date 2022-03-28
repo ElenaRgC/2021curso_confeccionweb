@@ -239,13 +239,11 @@ if ($enviarcorreo == false) {
     $descripcion.= "body {\n";
     $descripcion.= "font-family = sans-serif;\n";
     $descripcion.= "}\n";
-
     $descripcion.= "</style>\n";
     $descripcion.= "<TITLE>Formulario de contacto recibido</TITLE></HEAD><BODY>";
     $descripcion.= "<H2>Se han tramitado los siguientes datos del siguiente usuario:</H2>\n";
     $descripcion.= "$tratamiento $nombre $apellidos ";
     $descripcion.= "con residencia en $domicilio (Código Postal: $cpostal).<BR>";
-    $descripcion.= "<b>Código Postal : </b>$cpostal<BR>";
     $descripcion.= "<b>E-mail : </b>$correo<BR>";
     $descripcion.= "<b>Nivel de inglés : </b>$ingles<BR>";
     $descripcion.= "<b>Conocimientos informáticos : </b>";

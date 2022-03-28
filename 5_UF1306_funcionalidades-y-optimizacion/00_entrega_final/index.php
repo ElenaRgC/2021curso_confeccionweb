@@ -224,7 +224,7 @@ if ($enviarcorreo == false) {
             id="otra-info"><?php if (isset($comentarios)) echo $comentarios; ?></textarea>
 
         <input type="submit" name="btn_Enviar" value="Enviar">
-        <input type="reset" name="btn_Limpiar" value="Limpiar">
+        <input type="reset" name="btn_Limpiar" value="Limpiar" onclick="limpiarInputs();">
     </form>
     <?php
 } else {

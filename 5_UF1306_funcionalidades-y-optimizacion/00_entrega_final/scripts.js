@@ -121,3 +121,14 @@ function validarFormulario() {
     bool_ingles
   );
 }
+
+// Botón de limpieza
+
+function limpiarInputs() {
+  var inputs = document.getElementsByTagName("input");
+
+  for (var i = 0; i < inputs.length; i++) {
+    inputs[i].classList.remove("input-bien");
+    inputs[i].classList.remove("input-error");
+  }
+}

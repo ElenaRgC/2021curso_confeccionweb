@@ -125,6 +125,10 @@ if ($enviarcorreo == false) {
 ?>
 
     <form name="formulario" action="index.php" method="POST" onsubmit="validarFormulario()">
+
+        <h1>Formulario de contacto</h1>
+        <small>(*) Datos obligatorios</small>
+
         <div id="radio" class="tratamiento columna-uno">
             <label for="tratamiento">* Tratamiento:</label>
             <input type="radio" name="tratamiento" id="Sr" value="sr"
@@ -197,34 +201,37 @@ if ($enviarcorreo == false) {
 
         <label for="informatica" class="columna-uno">Conocimientos informáticos:</label>
         <div class="checkbox columna-uno">
-            <input type="checkbox" name="informatica[]" id="ofimatica" value="ofimatica"
+            <input type="checkbox" name="informatica[]" id="ofimatica" value="Ofimática"
                 <?php if ( (isset($informatica)) && (in_array('ofimatica',$informatica)) ) echo 'checked';?> />
             <label for="ofimatica">Ofimática</label>
-            <input type="checkbox" name="informatica[]" id="diseno" value="diseno"
-                <?php if ( (isset($informatica)) && (in_array('diseno',$informatica)) ) echo 'checked';?> />
-            <label for="diseno">Diseño gráfico</label>
-            <input type="checkbox" name="informatica[]" id="programacion" value="programacion"
+
+            <input type="checkbox" name="informatica[]" id="programacion" value="Programación"
                 <?php if ( (isset($informatica)) && (in_array('programacion',$informatica)) ) echo 'checked';?> />
             <label for="programacion">Programación</label>
-        </div>
-        <div class="checkbox columna-dos">
-            <input type="checkbox" name="informatica[]" id="bases-datos" value="bases-datos"
-                <?php if ( (isset($informatica)) && (in_array('bases-datos',$informatica)) ) echo 'checked';?> />
-            <label for="bases-datos">Bases de datos</label>
-            <input type="checkbox" name="informatica[]" id="html" value="html"
+
+            <input type="checkbox" name="informatica[]" id="html" value="HTML"
                 <?php if ( (isset($informatica)) && (in_array('html',$informatica)) ) echo 'checked';?> />
             <label for="html">HTML</label>
-            <input type="checkbox" name="informatica[]" id="js" value="js"
+        </div>
+        <div class="checkbox columna-dos">
+            <input type="checkbox" name="informatica[]" id="diseno" value="Diseño"
+                <?php if ( (isset($informatica)) && (in_array('diseno',$informatica)) ) echo 'checked';?> />
+            <label for="diseno">Diseño gráfico</label>
+
+            <input type="checkbox" name="informatica[]" id="bases-datos" value="Bases de datos"
+                <?php if ( (isset($informatica)) && (in_array('bases-datos',$informatica)) ) echo 'checked';?> />
+            <label for="bases-datos">Bases de datos</label>
+
+            <input type="checkbox" name="informatica[]" id="js" value="JavaScript"
                 <?php if ( (isset($informatica)) && (in_array('js',$informatica)) ) echo 'checked';?> />
             <label for="js">JavaScript</label>
         </div>
 
         <label for="otra-info" class="columna-tres">Otra información de interés:</label>
-        <textarea class="columna-tres" name="otra-info"
-            id="otra-info"><?php if (isset($comentarios)) echo $comentarios; ?></textarea>
-
+        <textarea class="columna-tres" name="otra-info" id="otra-info">
+            <?php if (isset($comentarios)) echo $comentarios; ?></textarea>
         <input type="submit" name="btn_Enviar" value="Enviar">
-        <input type="reset" name="btn_Limpiar" value="Limpiar" onclick="limpiarInputs();">
+        <input type="reset" name="btn_Limpiar" value="Limpiar" onclick="limpiarClases();">
     </form>
     <?php
 } else {
@@ -242,16 +249,16 @@ if ($enviarcorreo == false) {
     $descripcion.= "</style>\n";
     $descripcion.= "<TITLE>Formulario de contacto recibido</TITLE></HEAD><BODY>";
     $descripcion.= "<H2>Se han tramitado los siguientes datos del siguiente usuario:</H2>\n";
-    $descripcion.= "$tratamiento $nombre $apellidos ";
+    $descripcion.= "$tratamiento $nombre $apellidos";
     $descripcion.= "con residencia en $domicilio (Código Postal: $cpostal).<BR>";
-    $descripcion.= "<b>E-mail : </b>$correo<BR>";
-    $descripcion.= "<b>Nivel de inglés : </b>$ingles<BR>";
-    $descripcion.= "<b>Conocimientos informáticos : </b>";
+    $descripcion.= "<B>E-mail : </B>$correo<BR>";
+    $descripcion.= "<B>Nivel de inglés : </B>$ingles<BR>";
+    $descripcion.= "<B>Conocimientos informáticos : </B>";
     foreach ($informatica as $conocimiento) {
         $descripcion.="$conocimiento ,";
     }
     $descripcion.="<BR>";
-    $descripcion.="<b>Otra información de interés : </b>$comentarios<BR>";
+    $descripcion.="<B>Otra información de interés : </B>$comentarios<BR>";
     $descripcion.= "</BODY></HTML>";
     
     // Para enviar un correo con formato HTML, debe establecerse la cabecera Content-type
@@ -266,7 +273,7 @@ if ($enviarcorreo == false) {
     } else {
         echo "<H2>Se ha producido un error al enviar el formulario.</H2>";
     }
-    echo "<H3><a href='index.php'>Pulse para continuar</a></H3>"; 
+    echo "<H3><A href='index.php'>Pulse para continuar</A></H3>"; 
 }
 ?>
 </body>

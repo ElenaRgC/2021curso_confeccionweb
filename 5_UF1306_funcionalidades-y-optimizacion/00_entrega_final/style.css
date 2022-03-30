@@ -11,11 +11,23 @@ form {
   max-width: 800px;
   margin: 2rem auto;
   display: grid;
-  grid-template-columns: auto fit-content fit-content 1fr;
+  grid-template-columns: min-content min-content auto 1fr;
   gap: 0.5rem;
   border: solid 1px black;
   padding: 2rem;
   background-color: whitesmoke;
+}
+
+h1 {
+  grid-column: 1 / 4;
+  margin: 0;
+  padding: 0;
+}
+
+small {
+  align-self: flex-end;
+  padding-bottom: 0.4rem;
+  grid-column: 4 / 5;
 }
 
 .columna-uno {
@@ -38,7 +50,7 @@ form {
 }
 
 .tratamiento {
-  grid-row-start: 1;
+  grid-row-start: 2;
   grid-column-end: 3;
   display: flex;
 }
@@ -47,30 +59,30 @@ form {
 [for~="apellidos"],
 [id~="nombre"],
 [id~="apellidos"] {
-  grid-row-start: 2;
+  grid-row-start: 3;
 }
 
 [for~="domicilio"],
 [id~="domicilio"] {
-  grid-row-start: 3;
+  grid-row-start: 4;
 }
 
 [for~="cpostal"],
 [id~="cpostal"],
 [for~="correo"],
 [id~="correo"] {
-  grid-row-start: 4;
+  grid-row-start: 5;
 }
 
 [for~="otra-info"] {
-  grid-row-start: 5;
+  grid-row-start: 6;
   grid-column-start: 3;
   grid-column-end: 5;
 }
 
 textarea {
-  grid-row-start: 6;
-  grid-row-end: 10;
+  grid-row-start: 7;
+  grid-row-end: 11;
   grid-column-end: 5;
   resize: none;
 }

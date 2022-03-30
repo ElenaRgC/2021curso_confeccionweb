@@ -124,11 +124,17 @@ function validarFormulario() {
 
 // Botón de limpieza
 
-function limpiarInputs() {
+function limpiarClases() {
   var inputs = document.getElementsByTagName("input");
+  var selects = document.getElementsByTagName("select");
 
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].classList.remove("input-bien");
     inputs[i].classList.remove("input-error");
+  }
+
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].classList.remove("input-bien");
+    selects[i].classList.remove("input-error");
   }
 }

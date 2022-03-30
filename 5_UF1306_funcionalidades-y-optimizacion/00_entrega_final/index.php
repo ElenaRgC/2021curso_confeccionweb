@@ -131,14 +131,14 @@ if ($enviarcorreo == false) {
 
         <div id="radio" class="tratamiento columna-uno">
             <label for="tratamiento">* Tratamiento:</label>
-            <input type="radio" name="tratamiento" id="Sr" value="sr"
-                <?php if ( (isset($tratamiento)) && ($tratamiento=='sr') ) echo 'checked';?> />
+            <input type="radio" name="tratamiento" id="Sr" value="Sr."
+                <?php if ( (isset($tratamiento)) && ($tratamiento=='Sr.') ) echo 'checked';?> />
             <label for="Sr">Sr.</label>
-            <input type="radio" name="tratamiento" id="Sra" value="sra"
-                <?php if ( (isset($tratamiento)) && ($tratamiento=='sra') ) echo 'checked';?> />
+            <input type="radio" name="tratamiento" id="Sra" value="Sra."
+                <?php if ( (isset($tratamiento)) && ($tratamiento=='Sra.') ) echo 'checked';?> />
             <label for="Sra">Sra.</label>
-            <input type="radio" name="tratamiento" id="Srta" value="srta"
-                <?php if ( (isset($tratamiento)) && ($tratamiento=='srta') ) echo 'checked';?> />
+            <input type="radio" name="tratamiento" id="Srta" value="Srta."
+                <?php if ( (isset($tratamiento)) && ($tratamiento=='Srta.') ) echo 'checked';?> />
             <label for="Srta">Srta.</label>
         </div>
 
@@ -191,12 +191,12 @@ if ($enviarcorreo == false) {
                 Seleccione un nivel</option>
             <option value="ninguno" <?php if ( (isset($ingles)) && ($ingles=='ninguno') ) echo 'selected';?>>
                 Ninguno</option>
-            <option value="a1" <?php if ( (isset($ingles)) && ($ingles=='a1') ) echo 'selected';?>>A1</option>
-            <option value="a2" <?php if ( (isset($ingles)) && ($ingles=='a2') ) echo 'selected';?>>A2</option>
-            <option value="b1" <?php if ( (isset($ingles)) && ($ingles=='b1') ) echo 'selected';?>>B1</option>
-            <option value="b2" <?php if ( (isset($ingles)) && ($ingles=='b2') ) echo 'selected';?>>B2</option>
-            <option value="c1" <?php if ( (isset($ingles)) && ($ingles=='c1') ) echo 'selected';?>>C1</option>
-            <option value="c2" <?php if ( (isset($ingles)) && ($ingles=='c2') ) echo 'selected';?>>C2</option>
+            <option value="A1" <?php if ( (isset($ingles)) && ($ingles=='A1') ) echo 'selected';?>>A1</option>
+            <option value="B2" <?php if ( (isset($ingles)) && ($ingles=='A2') ) echo 'selected';?>>A2</option>
+            <option value="B1" <?php if ( (isset($ingles)) && ($ingles=='B1') ) echo 'selected';?>>B1</option>
+            <option value="B2" <?php if ( (isset($ingles)) && ($ingles=='B2') ) echo 'selected';?>>B2</option>
+            <option value="C1" <?php if ( (isset($ingles)) && ($ingles=='C1') ) echo 'selected';?>>C1</option>
+            <option value="C2" <?php if ( (isset($ingles)) && ($ingles=='C2') ) echo 'selected';?>>C2</option>
         </select>
 
         <label for="informatica" class="columna-uno">Conocimientos informáticos:</label>
@@ -248,9 +248,9 @@ if ($enviarcorreo == false) {
     $descripcion.= "}\n";
     $descripcion.= "</style>\n";
     $descripcion.= "<TITLE>Formulario de contacto recibido</TITLE></HEAD><BODY>";
-    $descripcion.= "<H2>Se han tramitado los siguientes datos del siguiente usuario:</H2>\n";
+    $descripcion.= "<H3>Se han tramitado los siguientes datos del siguiente usuario:</H3>\n";
     $descripcion.= "$tratamiento $nombre $apellidos";
-    $descripcion.= "con residencia en $domicilio (Código Postal: $cpostal).<BR>";
+    $descripcion.= " con residencia en $domicilio (Código Postal: $cpostal).<BR>";
     $descripcion.= "<B>E-mail : </B>$correo<BR>";
     $descripcion.= "<B>Nivel de inglés : </B>$ingles<BR>";
     $descripcion.= "<B>Conocimientos informáticos : </B>";

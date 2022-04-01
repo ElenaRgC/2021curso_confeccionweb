@@ -292,7 +292,8 @@ if ($enviarcorreo == false) {
     } else {
         echo "<H2>Se ha producido un error al enviar el formulario.</H2>";
     }
-    echo "<H3><A href='index.php'>Pulse para continuar</A></H3>"; 
+
+    echo "<a href='index.php'><button>Volver al formulario</button></a>";
 }
 ?>
 </body>

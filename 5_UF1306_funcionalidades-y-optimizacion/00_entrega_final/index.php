@@ -91,9 +91,14 @@ if (isset($_REQUEST['btn_Enviar'])) {
     if (isset($_REQUEST['tratamiento'])) {
         $tratamiento = $_REQUEST['tratamiento'];
     }
-    $comentarios = $_REQUEST['otra-info'];
+    if (isset($_REQUEST['otra-info'])) {
+        $comentarios = $_REQUEST['otra-info'];
+    }
+
 
     //REALIZO LAS COMPROBACIONES
+    // El contenido de estos errores podría ser cualquiera, ya que no se están mostrando los mensajes.
+    // Su única funcionalidad es comprobar si están o no vacíos para determinar si se envía el correo.
     if (!isset($tratamiento)) {
         $errores['tratamiento'] = "Debe seleccionar su tratamiento.";
     }
@@ -235,38 +240,52 @@ if ($enviarcorreo == false) {
     </form>
     <?php
 } else {
-    //Aqui viene la parte de enviar el correo, ya que entra cuando no hay que mostrar el formulario
-    $para = "elenarodriguezcalderon@gmail.com";
+    // Asunto y receptor del mensaje.
     $asunto = "FORMULARIO CONTACTO";
+    $para = "ejercicio1@cursoweb.com";
     
-    // Se construye el cuerpo del correo como un documento con etiquetas HTML
+    // Cuerpo del mensaje.
     $descripcion= "<HTML><HEAD>\n";
     $descripcion.= "<meta charset='UTF-8'>\n";
     $descripcion.= "<style type='text/css'>\n";
     $descripcion.= "body {\n";
-    $descripcion.= "font-family = sans-serif;\n";
+    $descripcion.= "font-family: sans-serif;\n";
+    $descripcion.= "line-height: 1.5rem;\n";
+    $descripcion.= "}\n";
+    $descripcion.= "div {\n";
+    $descripcion.= "border: solid 1px black;\n";
+    $descripcion.= "padding: 1rem\n";
+    $descripcion.= "width: fit-content;\n";
+    $descripcion.= "margin: auto;\n";
     $descripcion.= "}\n";
     $descripcion.= "</style>\n";
     $descripcion.= "<TITLE>Formulario de contacto recibido</TITLE></HEAD><BODY>";
     $descripcion.= "<H3>Se han tramitado los siguientes datos del siguiente usuario:</H3>\n";
-    $descripcion.= "$tratamiento $nombre $apellidos";
+    $descripcion.= "<em>$tratamiento $nombre $apellidos </em>";
     $descripcion.= " con residencia en $domicilio (Código Postal: $cpostal).<BR>";
-    $descripcion.= "<B>E-mail : </B>$correo<BR>";
-    $descripcion.= "<B>Nivel de inglés : </B>$ingles<BR>";
-    $descripcion.= "<B>Conocimientos informáticos : </B>";
-    foreach ($informatica as $conocimiento) {
-        $descripcion.="$conocimiento ,";
+    $descripcion.= "<B>E-mail: </B><a href='mailto:$correo'>$correo</a><BR>";
+    $descripcion.= "<B>Nivel de inglés: </B>$ingles<BR>";
+    // Comprobamos que se haya seleccionado algún conocimiento informático,
+    // y si es así, mostramos los que se hayan seleccionado.
+    if (isset($informatica)) {
+        $descripcion.= "<B>Conocimientos informáticos: </B>";
+        foreach ($informatica as $conocimiento) {
+            $descripcion.= "$conocimiento, ";
+        }
+        $descripcion.= "<BR>";
     }
-    $descripcion.="<BR>";
-    $descripcion.="<B>Otra información de interés : </B>$comentarios<BR>";
+    // Se comprueba que se haya introducido algún comentario.
+    if (isset($comentarios)) {
+        $descripcion.= "<B>Otra información de interés: </B>$comentarios<BR>";
+    }
     $descripcion.= "</BODY></HTML>";
     
-    // Para enviar un correo con formato HTML, debe establecerse la cabecera Content-type
+    // Content-type para que el correo se formatee correctamente.
     $cabeceras  = 'MIME-Version: 1.0' . "\n";
     $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\n";
     $cabeceras .= 'From: elenarodriguezcalderon@gmail.com';
 
-    //Finalmente se muestra un mensaje informando y un enlace para volver a cargar el formulario vacío
+    // Mensaje en caso de fallo en el envío y opción para volver a realizar el formulario.
     if (mail($para, $asunto, $descripcion, $cabeceras))
     {
         echo "<H2>Formulario enviado correctamente.</H2>";

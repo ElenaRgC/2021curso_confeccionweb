@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/w3.css">
+    <title>Contratar un dominio con IONOS</title>
+</head>
+
+<body>
+
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px;" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+        <a class="w3-bar-item w3-button" href="dominio.html">Home</a>
+        <a class="w3-bar-item w3-button" href="#informacion-general">Información previa</a>
+    </div>
+    <header class="w3-container w3-blue w3-main" style="margin-left:200px"">
+        <button class=" w3-button w3-blue w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <h1>Contratar un dominio con IONOS</h1>
+    </header>
+
+    <main class="w3-main" style="margin-left:200px">
+        <article id="pagina-inicio" class="w3-container">
+            <h3>¿Dónde debo acceder desde la página principal de IONOS?</h3>
+            <img src="./img/pagina-inicio.png" class="w3-image"
+                alt="Recorte del menú principal de ionos.es donde se ha resaltado con un borde rojo la palabra DOMINIOS.">
+            <p>En el menú horizontal situado en la parte superior, se hará click en "Dominios", como indica la imagen.
+            </p>
+
+            <img src="./img/menu-dominios.png" class="w3-image"
+                alt="Recorte del despegable al hacer click en el menú DOMINIOS.">
+            <p>Según el tipo de dominio que deseemos, podremos hacer click en cualquiera de los enlaces que se muestran
+                en
+                el desplegable. En nuestro caso, hemos pinchado en el primero: Dominios.
+            </p>
+        </article>
+        <article id="seleccion-plan" class="w3-container">
+            <h3>¿Qué plan debo seleccionar?</h3>
+            <img src="./img/seleccion-plan.png" class="w3-image"
+                alt="Recorte del menú principal de ionos.es donde se ha resaltado con un borde rojo la palabra DOMINIOS.">
+            <p>Bajando en la página web podremos encontrar distintos planes, para dominios <em>.es</em>, <em>.com</em>,
+                <em>.org</em> y <em>.net</em>.
+            </p>
+            <p>Como nos resulta interesante la opción de 0€ al año por un dominio <em>.es</em>, vamos a seleccionar esa
+                opción.</p>
+        </article>
+        <article id="busqueda-dominio" class="w3-container">
+            <h3>¿Cómo busco el dominio?</h3>
+            <img src="./img/busqueda-dominio.png" class="w3-image"
+                alt="Recorte de ionos.es donde se ve una barra de búsqueda de dominios.">
+            <p>Nos encontramos un buscador donde podremos introducir el dominio que deseemos.
+            </p>
+            <p>Yo voy a comprobar si <em>elenarc.es</em> está disponible.</p>
+            <img src="./img/elenarc-disponible.png" class="w3-image"
+                alt="Recorte de la busqueda de elenarc en ionos.es donde se muestra que el dominio elenarc.es está disponible.">
+        </article>
+        <article id="dominio-no-disponible" class="w3-container">
+            <h3>Mi dominio no está disponible</h3>
+            <p>En la parte inferior se ofrecen dominios alternativos. Si tampoco te interesan, tendrás que realizar una
+                nueva búsqueda.</p>
+        </article>
+        <article id="dominio-disponible" class="w3-container">
+            <h3>Mi dominio está disponible</h3>
+            <p>Pulsaremos en el botón seleccionar en el dominio que deseemos y encontraremos las siguientes opciones:
+            </p>
+            <img src="./img/opciones-dominio.png" class="w3-image"
+                alt="Opciones disponibles en ionos.es para adquirir el dominio elenarc.es">
+            <p>Como podemos ver, la atractiva oferta de 0€ era ficticia, ya que no hay opción de continuar con el pago
+                si
+                no seleccionamos alguno de los otros paquetes disponibles.</p>
+            <p>Ya que no nos interesa tener otros dominios, seleccionaremos la protección de dominios por 1€/año.</p>
+            <img src="./img/carrito.png" class="w3-image"
+                alt="Recorte de un carrito de ionos.es en el que se indica que hay dos productos añadidos.">
+            <img src="./img/eliminar-proteccion.png" class="w3-image"
+                alt="Recorte de un carrito de ionos.es en el que se indica que hay dos productos añadidos.">
+            <p>Al añadir la protección de dominios nos aparece el carrito. Si queremos, podemos eliminar la protección e
+                intentar continuar por los 0€/año. Pulsaremos en la papelera y haremos click en continuar.</p>
+        </article>
+        <article id="paquetes" class="w3-container">
+            <h3>Elegir un paquete</h3>
+            <img src="./img/paquetes.png" class="w3-image" alt="Paquetes disponibles en ionos.es">
+            <p>IONOS ofrece hosting aparte de dominios, podemos seleccionar la opción que más nos guste.</p>
+            <small>Si solo te interesa obtener un dominio, continúa leyendo, en caso contrario visita
+                <a href="hosting.html">Servicio de hosting en IONOS</a> para conocer qué ofrece IONOS como servidor de
+                hosting.</small>
+            <p>En nuestro caso seleccionaremos "Solo el dominio".</p>
+        </article>
+        <article id="compra-dominio" class="w3-container">
+            <h3>Efectuar la compra del dominio</h3>
+            <img src="./img/pago-dominio.png" class="w3-image" alt="Opciones de pago">
+            <p>Finalmente, sólo tendremos que completar el método de pago y aceptar con el botón "Continuar".</p>
+        </article>
+    </main>
+
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

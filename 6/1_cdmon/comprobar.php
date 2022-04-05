@@ -1,7 +1,9 @@
 <html>
+
 <head></head>
+
 <body>
-<?php
+    <?php
 
 //Conecta con el servidor PON LOS DATOS QUE VIENEN EN EL HOSTING:
 $conexion=new mysqli("localhost","myelenarc","F4g0YnT7","ejemplopublica04");
@@ -35,6 +37,7 @@ else
 				echo "<b>USUARIO: </b>$fila[0]<b>, con CLAVE: </b>$fila[1]<b> y NOMBRE: </b>$fila[2]<b>. HAS CONSEGUIDO ENTRAR EN LA PAGINA WEB!</b><br>";
 				echo "<br><a href='dominio.html'>Información sobre la contratación de un DOMINIO</a>";
 				echo "<br><a href='hosting.html'>Información sobre la contratación de un HOSTING</a>";
+				echo "<br><a href='posicionamiento.html'>Información sobre el posicionamiento SEO</a>";
 			
 	}
 
@@ -43,6 +46,5 @@ else
 mysqli_close($conexion);
 ?>
 </body>
+
 </html>
-
-

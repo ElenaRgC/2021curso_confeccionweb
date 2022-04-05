@@ -17,7 +17,7 @@ $mysqli = new mysqli("localhost","myelenarc","F4g0YnT7","ejemplopublica04");
 
 
 //Conecta con el servidor
-$conexion=mysqli_connect("localhost","root","Sepecam2020-21");
+$conexion=mysqli_connect("localhost","myelenarc","F4g0YnT7");
 if (!$conexion){
 	echo "ERROR: Imposible establecer conexión con la base de datos para ese usuario y esa clave.<br>\n";
 }else{
@@ -25,7 +25,7 @@ if (!$conexion){
 }
 
 //Conecta con la base de datos
-$db = mysqli_select_db($conexion,"ejemplo");
+$db = mysqli_select_db($conexion,"ejemplopublica04");
 if (!$db){
 		echo "ERROR: Imposible seleccionar la base de datos.<br>\n";
 	}

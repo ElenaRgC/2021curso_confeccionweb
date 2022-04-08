@@ -9,6 +9,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
+
+    <script>
+        function comprobarInput(input) {
+            var almohadilla = /[#]/;
+            var comilla = /[']/;
+            if (almohadilla.test(input.value) || comilla.test(input.value)) {
+                alert("Detectada inyeccion SQL.");
+                input.value = "";
+                location.reload();
+                return false;
+            }
+        }
+    </script>
     <style type="text/css">
         html,
         body {
@@ -59,16 +72,19 @@
             <h2 class="h4 mb-3 fw-normal">Inyecciones SQL</h1>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInput" name="usu" placeholder="Usuario">
+                    <input type="text" class="form-control" id="floatingInput" name="usu" placeholder="Usuario"
+                        onchange="comprobarInput(this);">
                     <label for="floatingInput">USUARIO:</label>
                 </div>
                 <div class="form-floating">
                     <input type="password" class="form-control" name="clave" id="floatingPassword"
-                        placeholder="Contrase�a">
+                        placeholder="Contrase�a" onchange="comprobarInput(this);">
                     <label for="floatingPassword">CLAVE:</label>
                 </div>
 
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Verificar</button> <br> <br>
+                <button class="w-100 btn btn-lg btn-primary" type="submit"
+                    onclick="comprobarInput(document.getElementById('floatingInput'));comprobarInput(document.getElementById('floatingPassword'));">Verificar</button>
+                <br> <br>
         </form>
         <a href="alta.html"><button class="w-100 btn btn-lg btn-primary">Alta</button></a>
         <p class="mt-5 mb-3 text-muted">&copy; Joaquin Rubio Molero</p>

@@ -12,11 +12,13 @@
     <script>
         $(document).ready(function () {
             $(".label_better").label_better({
-                easing: "bounce"
+                position: "top",
+                easing: "bounce",
+                offset: 10,
             });
         });
     </script>
-    <title>Nueva ventana</title>
+    <title>Abrir página web</title>
 </head>
 
 <body>
@@ -36,15 +38,19 @@
                     <div class="opciones"><label for="www">WWW.</label><input type="checkbox" name="www" id="www"
                             value="www."></div>
                     <input type="text" id="url" class="label_better" data-new-placeholder="URL" placeholder="URL"
-                        onblur="validarURL($('#url').val());">
+                        onblur="validarURL($('#url').val(), $('#error_url'));"> <br>
+                    <span id="error_url"></span>
                 </fieldset>
 
                 <h2>Opciones de la ventana:</h2>
-                <fieldset>
+                <fieldset class="grid">
                     <input type="text" id="ancho" class="label_better" data-new-placeholder="Anchura"
-                        placeholder="Anchura" onchange="validarAnchura(parseInt($('#ancho').val()))">
+                        placeholder="Anchura"
+                        onchange="validarAnchura(parseInt($('#ancho').val()), $('#error_anchura'))">
                     <input type="text" id="alto" class="label_better" data-new-placeholder="Altura" placeholder="Altura"
-                        onblur="validarAltura(parseInt($('#alto').val()));">
+                        onblur="validarAltura(parseInt($('#alto').val()), $('#error_altura'));">
+                    <span id="error_anchura"></span>
+                    <span id="error_altura"></span>
                 </fieldset>
                 <fieldset class="flex">
                     <div class="flex">

@@ -160,15 +160,14 @@ div.opciones {
   margin-inline: 0.5rem;
 }
 
-div.opciones:hover,
-input[type~="text"]:hover {
-  background: rgba(255, 255, 255, 0.3);
+div.opciones > input {
+  cursor: pointer;
 }
 
-div.opciones:hover > label,
-div.opciones:hover > select,
+div.opciones:hover,
+input[type~="text"]:hover,
 input[type~="text"]:hover > .lb_label {
-  color: white;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 input {
@@ -191,4 +190,29 @@ h4 {
 .btn:active {
   border-top: inset 2px #3d4245;
   border-left: inset 2px #3d4245;
+}
+
+span {
+  opacity: 0;
+  height: 1rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.correcto {
+  color: green;
+  font-size: 12px;
+}
+
+fieldset.grid {
+  width: fit-content;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
 }

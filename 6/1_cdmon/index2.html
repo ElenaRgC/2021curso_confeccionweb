@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inyección SQL</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script>
+        function comprobarInput(input) {
+            var almohadilla = /[#]/;
+            var comilla = /[']/;
+            if (almohadilla.test(input.value) || comilla.test(input.value)) {
+                alert("Detectada inyeccion SQL.");
+                input.value = "";
+                location.reload();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Taller de seguridad</h1>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+                <li><a href='../index.html'>Home</a></li>
+                <li><a href='../inyeccion/index.html'>Inyección SQL</a></li>
+                <li><a href='../multicines/index.php'>WordPress</a></li>
+                <li><a class='dropdown-arrow' href='http://'>Otros ejercicios</a>
+                    <ul class='sub-menus'>
+                        <li><a href='../curriculum/index.html'>Curriculum</a></li>
+                        <li><a href='../calculadora/index.html'>Calculadora</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contentliquid">
+        <div id="content">
+            <form name="formulario" method="post" action="comprobar.php">
+                <h2>Inyecciones SQL</h1>
+                    <label for="floatingInput">USUARIO:</label>
+                    <input type="text" class="form-control" id="floatingInput" name="usu" placeholder="Usuario"
+                        onchange="comprobarInput(this);">
+
+                    <label for="floatingPassword">CLAVE:</label>
+                    <input type="password" class="form-control" name="clave" id="floatingPassword"
+                        placeholder="Contraseña" onchange="comprobarInput(this);">
+
+                    <button class="testbutton" type="submit"
+                        onclick="comprobarInput(document.getElementById('floatingInput'));comprobarInput(document.getElementById('floatingPassword'));">Verificar</button>
+            </form>
+            <div class="alta">
+                <a href="alta.html">
+                    <button class="testbutton">Alta</button></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Joaquin Rubio Molero, modificado por Elena Rodríguez Calderón</p>
+    </footer>
+
+</body>
+
+</html>

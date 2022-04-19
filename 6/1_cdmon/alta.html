@@ -2,21 +2,47 @@
 <html>
 
 <head>
-    <center>
-        <h1>ALTA USUARIOS</h1>
-        <h3>EN LA BASE DE DATOS ACCESO</h3>
-    </center>
-    <br><br>
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+    <header>
+        <h1>Alta</h1>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+                <li><a href='../index.html'>Home</a></li>
+                <li><a href='../inyeccion/index.html'>Inyección SQL</a></li>
+                <li><a href='../multicines/index.php'>WordPress</a></li>
+                <li><a class='dropdown-arrow' href='http://'>Otros ejercicios</a>
+                    <ul class='sub-menus'>
+                        <li><a href='../curriculum/index.html'>Curriculum</a></li>
+                        <li><a href='../calculadora/index.html'>Calculadora</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
 <body>
-
-    <form name="formulario" method="post" action="alta.php">
-        NOMBRE Y APELLIDOS: <input type="text" name="nya" size="50"><br><br>
-        USUARIO: <input type="text" name="usu" size="30"><br><br>
-        CLAVE-->: <input type="password" name="clave" size="30"><br><br>
-        <input type="submit" value="ALTA">
-    </form>
+    <main id="contentliquid">
+        <div id="content">
+            <h2>Alta de usuarios</h2>
+            <h2>En la base de datos de acceso</h2>
+            <form name="formulario" method="post" action="alta.php">
+                <label for="nya">NOMBRE Y APELLIDOS:</label> <input type="text" id="nya" name="nya" size="50"><br><br>
+                <label for="usu">USUARIO:</label> <input type="text" id="usu" name="usu" size="30"><br><br>
+                <label for="clave">CLAVE:</label> <input type="password" id="clave" name="clave" size="30"><br><br>
+                <input class="testbutton" type="submit" value="ALTA">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Joaquin Rubio Molero, modificado por Elena Rodríguez Calderón</p>
+    </footer>
 
 </body>
 

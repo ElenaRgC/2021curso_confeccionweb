@@ -24,7 +24,11 @@ function calculo(operacion) {
   } else if (operacion == "m") {
     resultado = valor1 * valor2;
   } else if (operacion == "d") {
-    resultado = valor1 / valor2;
+    if (valor2 == 0) {
+      resultado = "Error";
+    } else {
+      resultado = valor1 / valor2;
+    }
   }
 
   document.getElementById("resultado").value = resultado;

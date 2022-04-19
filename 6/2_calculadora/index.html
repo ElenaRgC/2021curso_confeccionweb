@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script src="./calculo.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora</h1>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+                <li><a href='../index.html'>Home</a></li>
+                <li><a href='../inyeccion/index.html'>Inyección SQL</a></li>
+                <li><a href='../multicines/index.php'>WordPress</a></li>
+                <li><a class='dropdown-arrow' href='http://'>Otros ejercicios</a>
+                    <ul class='sub-menus'>
+                        <li><a href='../curriculum/index.html'>Curriculum</a></li>
+                        <li><a href='../calculadora/index.html'>Calculadora</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contentliquid">
+        <div id="content">
+            <div class="calculadora">
+                <label for="valor1">Primer valor</label>
+                <label for="valor2">Segundo valor</label>
+                <input type="text" id="valor1">
+                <input type="text" id="valor2"> <br>
+                <input class="testbutton" type="button" id="suma" value="+" onclick="calculo('s')">
+                <input class="testbutton" type="button" id="resta" value="-" onclick="calculo('r')">
+                <input class="testbutton" type="button" id="multiplicacion" value="x" onclick="calculo('m')">
+                <input class="testbutton" type="button" id="division" value="÷" onclick="calculo('d')"> <br>
+                <input type="text" id="resultado" disabled placeholder="Resultado">
+                <input class="testbutton" type="button" id="C" value="C" onclick="limpiar()">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Creado por Elena Rodríguez Calderón</p>
+    </footer>
+</body>
+
+</html>

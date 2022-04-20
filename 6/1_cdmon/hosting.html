@@ -5,284 +5,307 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Hosting en IONOS</title>
 </head>
 
 <body>
-    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px;" id="mySidebar">
-        <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-        <a class="w3-bar-item w3-button" href="#home">Home</a>
-        <a class="w3-bar-item w3-button" href="#donde-dosting">Dónde empezar</a>
-        <a class="w3-bar-item w3-button" href="#paquetes">Paquetes generales</a>
-        <a class="w3-bar-item w3-button" href="#paquetes-hosting">Paquetes específicos de IONOS</a>
-        <a class="w3-bar-item w3-button" href="#paquetes-cdmon">Paquetes específicos de CDMON</a>
-        <a class="w3-bar-item w3-button" href="#ionos-cdmon">IONOS vs CDMON</a>
-
-    </div>
-    <header id="home" class="w3-container w3-blue w3-main" style="margin-left:200px"">
-        <button class=" w3-button w3-blue w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
-        <h1>Contratar un dominio</h1>
+    <header>
+        <h1>Hosting en IONOS</h1>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+                <li><a href='../index.html'>Home</a></li>
+                <li><a href='../inyeccion/index.html'>Inyección SQL</a></li>
+                <li><a href='../multicines/index.php'>WordPress</a></li>
+                <li><a class='dropdown-arrow' href='http://'>Otros ejercicios</a>
+                    <ul class='sub-menus'>
+                        <li><a href='../curriculum/index.html'>Curriculum</a></li>
+                        <li><a href='../calculadora/index.html'>Calculadora</a></li>
+                    </ul>
+                </li>
+                <li><a class='dropdown-arrow' href="#home">Hosting en IONOS</a>
+                    <ul class='sub-menus'>
+                        <li><a href="#donde-dosting">Dónde empezar</a></li>
+                        <li><a href="#paquetes">Paquetes generales</a></li>
+                        <li><a href="#paquetes-hosting">Paquetes específicos de IONOS</a>
+                        </li>
+                        <li><a href="#paquetes-cdmon">Paquetes específicos de CDMON</a>
+                        </li>
+                        <li><a href="#ionos-cdmon">IONOS vs CDMON</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <main class="w3-main" style="margin-left:200px">
-        <article id="donde-hosting" class="w3-container">
-            <h3>¿Dónde puedo conseguir hosting?</h3>
-            <p>Existen múltiples empresas que ofrecen servicios de hosting. En nuestro caso, explicaremos las opciones
-                que ofrece IONOS, que ha sido la empresa que nos ha proporcionado nuestro dominio en nuestra guía <a
-                    href="dominio-con-ionos.html">Contratar un dominio con IONOS</a>.</p>
-            </p>
-        </article>
-        <article id="paquetes" class="w3-container">
-            <h3>Paquetes ofrecidos por IONOS</h3>
-            <img src="./img/paquetes.png" class="w3-image" alt="Paquetes disponibles en ionos.es">
-            <p>
-                <small>En nuestra guía <a href="dominio-con-ionos.html">Contratar un dominio con IONOS</a> indicamos
-                    cómo llegar a este punto. Si no estás aquí, pincha el enlace y vuelve cuando hayas llegado.
-                </small>
-            </p>
-            <p>En principio, IONOS ofrece los siguientes paquetes:</p>
-            <table class="w3-table-all w3-hoverable">
-                <thead>
-                    <tr class="w3-blue">
-                        <th>WordPress</th>
-                        <th>Hosting</th>
-                        <th>MyWebsite</th>
+    <main id="contentliquid">
+        <div id="content">
+            <article id="donde-hosting" class="w3-container">
+                <h3>¿Dónde puedo conseguir hosting?</h3>
+                <p>Existen múltiples empresas que ofrecen servicios de hosting. En nuestro caso, explicaremos las
+                    opciones
+                    que ofrece IONOS, que ha sido la empresa que nos ha proporcionado nuestro dominio en nuestra guía <a
+                        href="dominio-con-ionos.html">Contratar un dominio con IONOS</a>.</p>
+                </p>
+            </article>
+            <article id="paquetes" class="w3-container">
+                <h3>Paquetes ofrecidos por IONOS</h3>
+                <img src="./img/paquetes.png" class="w3-image" alt="Paquetes disponibles en ionos.es">
+                <p>
+                    <small>En nuestra guía <a href="dominio-con-ionos.html">Contratar un dominio con IONOS</a> indicamos
+                        cómo llegar a este punto. Si no estás aquí, pincha el enlace y vuelve cuando hayas llegado.
+                    </small>
+                </p>
+                <p>En principio, IONOS ofrece los siguientes paquetes:</p>
+                <table class="w3-table-all w3-hoverable">
+                    <thead>
+                        <tr class="w3-deep-purple">
+                            <th>WordPress</th>
+                            <th>Hosting</th>
+                            <th>MyWebsite</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>1 dominio incluído el primer año</td>
+                        <td>1 dominio incluído el primer año</td>
+                        <td>1 dominio incluído el primer año</td>
                     </tr>
-                </thead>
-                <tr>
-                    <td>1 dominio incluído el primer año</td>
-                    <td>1 dominio incluído el primer año</td>
-                    <td>1 dominio incluído el primer año</td>
-                </tr>
-                <tr>
-                    <td>5 cuentas de email</td>
-                    <td>1 cuenta de email</td>
-                    <td>1 cuenta de email</td>
-                </tr>
-                <tr>
-                    <td>Certificado SSL</td>
-                    <td>Certificado SSL</td>
-                    <td>Certificado SSL</td>
-                </tr>
-                <tr>
-                    <td>Filtro antispam</td>
-                    <td>100 GB de almacenamiento</td>
-                    <td>Todo el espacio que necesites</td>
-                </tr>
-                <tr>
-                    <td>Webmail</td>
-                    <td>100 bases de datos (1GB SSD)</td>
-                    <td>Editor web</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Rendimiento escalable</td>
-                    <td>Widgets para redes sociales</td>
-                </tr>
-            </table>
-            <p>Sin embargo, estas no son todas los paquetes que ofrece IONOS. Si hacemos click en "Ver todos los packs"
-                podemos ver aún más opciones.</p>
-            <p>Como no necesitamos espacio ilimitado ni vamos a crear nuestra web en WordPress, seleccionamos "Ver
-                todos los packs de Web Hosting".</p>
-        </article>
-        <article id="paquetes-hosting" class="w3-container">
-            <h3>Todos los paquetes de hosting</h3>
-            <img src="./img/paquetes-hosting.png" class="w3-image" alt="Paquetes disponibles en ionos.es">
-            <p>Los paquetes de hosting de IONOS ofrecen las siguientes características:
-            <table class="w3-table-all w3-hoverable">
-                <thead>
-                    <tr class="w3-blue">
-                        <th>Essential</th>
-                        <th>Business</th>
-                        <th>Expert</th>
-                        <th>Premium</th>
+                    <tr>
+                        <td>5 cuentas de email</td>
+                        <td>1 cuenta de email</td>
+                        <td>1 cuenta de email</td>
                     </tr>
-                </thead>
-                <tr>
-                    <td>3€/mes</td>
-                    <td>8€/mes</td>
-                    <td>10€/mes</td>
-                    <td>15€/mes</td>
-                </tr>
-                <tr>
-                    <td>50 GB de almacenamiento</td>
-                    <td>100 GB de almacenamiento</td>
-                    <td>250 GB de almacenamiento</td>
-                    <td>500 GB de almacenamiento</td>
-                </tr>
-                <tr>
-                    <td>5 bases de datos: MariaDB o MySQL</td>
-                    <td>100 bases de datos: MariaDB o MySQL</td>
-                    <td>250 bases de datos: MariaDB o MySQL</td>
-                    <td>500 bases de datos: MariaDB o MySQL</td>
-                </tr>
-                <tr>
-                    <td>Dominio incluído el primer año</td>
-                    <td>Dominio incluído el primer año</td>
-                    <td>Dominio incluído el primer año</td>
-                    <td>Dominio incluído el primer año</td>
-                </tr>
-                <tr>
-                    <td>Incluye dirección de email profesional</td>
-                    <td>Incluye dirección de email profesional</td>
-                    <td>Incluye dirección de email profesional</td>
-                    <td>Incluye dirección de email profesional</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Capacidad básica de almacenamiento</td>
-                    <td>2 veces más rendimiento</td>
-                    <td>3 veces más rendimiento</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Red de distribución de contenido</td>
-                </tr>
-            </table>
-            </p>
-        </article>
-        <article id="paquetes-cdmon" class="w3-container">
-            <h3>Hosting en CDMON</h3>
-            <img src="./img/paquetes-cdmon.png" class="w3-image" alt="Paquetes disponibles en ionos.es">
-            <p>Los paquetes de hosting de CDMON ofrecen las siguientes características:
-            <table class="w3-table-all w3-hoverable">
-                <thead>
-                    <tr class="w3-blue">
-                        <th>Junior</th>
-                        <th>Senior</th>
-                        <th>Master</th>
-                        <th>Preserver</th>
+                    <tr>
+                        <td>Certificado SSL</td>
+                        <td>Certificado SSL</td>
+                        <td>Certificado SSL</td>
                     </tr>
-                </thead>
-                <tr>
-                    <td>5€/mes</td>
-                    <td>11€/mes</td>
-                    <td>21€/mes</td>
-                    <td>50€/mes</td>
-                </tr>
-                <tr>
-                    <td>5 GB de almacenamiento</td>
-                    <td>10 GB de almacenamiento</td>
-                    <td>20 GB de almacenamiento</td>
-                    <td>40 GB de almacenamiento</td>
-                </tr>
-                <tr>
-                    <td>100 GB de transferencia</td>
-                    <td>500 GB de transferencia</td>
-                    <td>800 GB de transferencia</td>
-                    <td>1000 GB de transferencia</td>
-                </tr>
-                <tr>
-                    <td>10 cuentas de correo 5GB</td>
-                    <td>50 cuentas de correo 5GB</td>
-                    <td>75 cuentas de correo 5GB</td>
-                    <td>100 cuentas de correo 5GB</td>
-                </tr>
-                <tr>
-                    <td>CMS auto instalable en un click</td>
-                    <td>CMS auto instalable en un click</td>
-                    <td>CMS auto instalable en un click</td>
-                    <td>CMS auto instalable en un click</td>
-                </tr>
-            </table>
-            </p>
-        </article>
-        <article id="ionos-cdmon" class="w3-container">
-            <h3>Comparativa entre IONOS y CDMON</h3>
-            <h4 class="w3-center">Essential vs Junior</h4>
-            <table class="w3-table-all w3-hoverable w3-content w3-centered">
-                <thead>
-                    <tr class="w3-blue">
-                        <th>Essential (IONOS)</th>
-                        <th>Junior (CDMON)</th>
+                    <tr>
+                        <td>Filtro antispam</td>
+                        <td>100 GB de almacenamiento</td>
+                        <td>Todo el espacio que necesites</td>
                     </tr>
-                </thead>
-                <tr>
-                    <td>3€/mes</td>
-                    <td>5€/mes</td>
-                </tr>
-                <tr>
-                    <td>50 GB de almacenamiento</td>
-                    <td>5 GB de almacenamiento</td>
-                </tr>
-                <tr>
-                    <td>5 bases de datos: MariaDB o MySQL</td>
-                    <td>Bases de datos ilimitadas: MariaDB o MySQL</td>
-                </tr>
-            </table>
+                    <tr>
+                        <td>Webmail</td>
+                        <td>100 bases de datos (1GB SSD)</td>
+                        <td>Editor web</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Rendimiento escalable</td>
+                        <td>Widgets para redes sociales</td>
+                    </tr>
+                </table>
+                <p>Sin embargo, estas no son todas los paquetes que ofrece IONOS. Si hacemos click en "Ver todos los
+                    packs"
+                    podemos ver aún más opciones.</p>
+                <p>Como no necesitamos espacio ilimitado ni vamos a crear nuestra web en WordPress, seleccionamos "Ver
+                    todos los packs de Web Hosting".</p>
+            </article>
+            <article id="paquetes-hosting" class="w3-container">
+                <h3>Todos los paquetes de hosting</h3>
+                <img src="./img/paquetes-hosting.png" class="w3-image" alt="Paquetes disponibles en ionos.es">
+                <p>Los paquetes de hosting de IONOS ofrecen las siguientes características:
+                <table class="w3-table-all w3-hoverable">
+                    <thead>
+                        <tr class="w3-deep-purple">
+                            <th>Essential</th>
+                            <th>Business</th>
+                            <th>Expert</th>
+                            <th>Premium</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>3€/mes</td>
+                        <td>8€/mes</td>
+                        <td>10€/mes</td>
+                        <td>15€/mes</td>
+                    </tr>
+                    <tr>
+                        <td>50 GB de almacenamiento</td>
+                        <td>100 GB de almacenamiento</td>
+                        <td>250 GB de almacenamiento</td>
+                        <td>500 GB de almacenamiento</td>
+                    </tr>
+                    <tr>
+                        <td>5 bases de datos: MariaDB o MySQL</td>
+                        <td>100 bases de datos: MariaDB o MySQL</td>
+                        <td>250 bases de datos: MariaDB o MySQL</td>
+                        <td>500 bases de datos: MariaDB o MySQL</td>
+                    </tr>
+                    <tr>
+                        <td>Dominio incluído el primer año</td>
+                        <td>Dominio incluído el primer año</td>
+                        <td>Dominio incluído el primer año</td>
+                        <td>Dominio incluído el primer año</td>
+                    </tr>
+                    <tr>
+                        <td>Incluye dirección de email profesional</td>
+                        <td>Incluye dirección de email profesional</td>
+                        <td>Incluye dirección de email profesional</td>
+                        <td>Incluye dirección de email profesional</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Capacidad básica de almacenamiento</td>
+                        <td>2 veces más rendimiento</td>
+                        <td>3 veces más rendimiento</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Red de distribución de contenido</td>
+                    </tr>
+                </table>
+                </p>
+            </article>
+            <article id="paquetes-cdmon" class="w3-container">
+                <h3>Hosting en CDMON</h3>
+                <img src="./img/paquetes-cdmon.png" class="w3-image" alt="Paquetes disponibles en ionos.es">
+                <p>Los paquetes de hosting de CDMON ofrecen las siguientes características:
+                <table class="w3-table-all w3-hoverable">
+                    <thead>
+                        <tr class="w3-deep-purple">
+                            <th>Junior</th>
+                            <th>Senior</th>
+                            <th>Master</th>
+                            <th>Preserver</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>5€/mes</td>
+                        <td>11€/mes</td>
+                        <td>21€/mes</td>
+                        <td>50€/mes</td>
+                    </tr>
+                    <tr>
+                        <td>5 GB de almacenamiento</td>
+                        <td>10 GB de almacenamiento</td>
+                        <td>20 GB de almacenamiento</td>
+                        <td>40 GB de almacenamiento</td>
+                    </tr>
+                    <tr>
+                        <td>100 GB de transferencia</td>
+                        <td>500 GB de transferencia</td>
+                        <td>800 GB de transferencia</td>
+                        <td>1000 GB de transferencia</td>
+                    </tr>
+                    <tr>
+                        <td>10 cuentas de correo 5GB</td>
+                        <td>50 cuentas de correo 5GB</td>
+                        <td>75 cuentas de correo 5GB</td>
+                        <td>100 cuentas de correo 5GB</td>
+                    </tr>
+                    <tr>
+                        <td>CMS auto instalable en un click</td>
+                        <td>CMS auto instalable en un click</td>
+                        <td>CMS auto instalable en un click</td>
+                        <td>CMS auto instalable en un click</td>
+                    </tr>
+                </table>
+                </p>
+            </article>
+            <article id="ionos-cdmon" class="w3-container">
+                <h3>Comparativa entre IONOS y CDMON</h3>
+                <h4 class="w3-center">Essential vs Junior</h4>
+                <table class="w3-table-all w3-hoverable w3-content w3-centered">
+                    <thead>
+                        <tr class="w3-deep-purple">
+                            <th>Essential (IONOS)</th>
+                            <th>Junior (CDMON)</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>3€/mes</td>
+                        <td>5€/mes</td>
+                    </tr>
+                    <tr>
+                        <td>50 GB de almacenamiento</td>
+                        <td>5 GB de almacenamiento</td>
+                    </tr>
+                    <tr>
+                        <td>5 bases de datos: MariaDB o MySQL</td>
+                        <td>Bases de datos ilimitadas: MariaDB o MySQL</td>
+                    </tr>
+                </table>
 
-            <h4 class="w3-center">Business vs Senior</h4>
+                <h4 class="w3-center">Business vs Senior</h4>
 
-            <table class="w3-table-all w3-hoverable w3-content w3-centered">
-                <thead>
-                    <tr class="w3-blue">
-                        <th>Business (IONOS)</th>
-                        <th>Senior (CDMON)</th>
+                <table class="w3-table-all w3-hoverable w3-content w3-centered">
+                    <thead>
+                        <tr class="w3-deep-purple">
+                            <th>Business (IONOS)</th>
+                            <th>Senior (CDMON)</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>8€/mes</td>
+                        <td>11€/mes</td>
                     </tr>
-                </thead>
-                <tr>
-                    <td>8€/mes</td>
-                    <td>11€/mes</td>
-                </tr>
-                <tr>
-                    <td>100 GB de almacenamiento</td>
-                    <td>10 GB de almacenamiento</td>
-                </tr>
-                <tr>
-                    <td>100 bases de datos: MariaDB o MySQL</td>
-                    <td>Bases de datos ilimitadas: MariaDB o MySQL</td>
-                </tr>
-            </table>
-
-            <h4 class="w3-center">Expert vs Master</h4>
-
-            <table class="w3-table-all w3-hoverable w3-content w3-centered">
-                <thead>
-                    <tr class="w3-blue">
-                        <th>Expert (IONOS)</th>
-                        <th>Master (CDMON)</th>
+                    <tr>
+                        <td>100 GB de almacenamiento</td>
+                        <td>10 GB de almacenamiento</td>
                     </tr>
-                </thead>
-                <tr>
-                    <td>10€/mes</td>
-                    <td>21€/mes</td>
-                </tr>
-                <tr>
-                    <td>250 GB de almacenamiento</td>
-                    <td>20 GB de almacenamiento</td>
-                </tr>
-                <tr>
-                    <td>250 bases de datos: MariaDB o MySQL</td>
-                    <td>Bases de datos ilimitadas: MariaDB o MySQL</td>
-                </tr>
-            </table>
-
-            <h4 class="w3-center">Premium vs Preserver</h4>
-
-            <table class="w3-table-all w3-hoverable w3-content w3-centered">
-                <thead>
-                    <tr class="w3-blue">
-                        <th>Premium (IONOS)</th>
-                        <th>Preserver (CDMON)</th>
+                    <tr>
+                        <td>100 bases de datos: MariaDB o MySQL</td>
+                        <td>Bases de datos ilimitadas: MariaDB o MySQL</td>
                     </tr>
-                </thead>
-                <tr>
-                    <td>15€/mes</td>
-                    <td>50€/mes</td>
-                </tr>
-                <tr>
-                    <td>500 GB de almacenamiento</td>
-                    <td>40 GB de almacenamiento</td>
-                </tr>
-                <tr>
-                    <td>500 bases de datos: MariaDB o MySQL</td>
-                    <td>Bases de datos ilimitadas: MariaDB o MySQL</td>
-                </tr>
-            </table>
-        </article>
+                </table>
+
+                <h4 class="w3-center">Expert vs Master</h4>
+
+                <table class="w3-table-all w3-hoverable w3-content w3-centered">
+                    <thead>
+                        <tr class="w3-deep-purple">
+                            <th>Expert (IONOS)</th>
+                            <th>Master (CDMON)</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>10€/mes</td>
+                        <td>21€/mes</td>
+                    </tr>
+                    <tr>
+                        <td>250 GB de almacenamiento</td>
+                        <td>20 GB de almacenamiento</td>
+                    </tr>
+                    <tr>
+                        <td>250 bases de datos: MariaDB o MySQL</td>
+                        <td>Bases de datos ilimitadas: MariaDB o MySQL</td>
+                    </tr>
+                </table>
+
+                <h4 class="w3-center">Premium vs Preserver</h4>
+
+                <table class="w3-table-all w3-hoverable w3-content w3-centered">
+                    <thead>
+                        <tr class="w3-deep-purple">
+                            <th>Premium (IONOS)</th>
+                            <th>Preserver (CDMON)</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>15€/mes</td>
+                        <td>50€/mes</td>
+                    </tr>
+                    <tr>
+                        <td>500 GB de almacenamiento</td>
+                        <td>40 GB de almacenamiento</td>
+                    </tr>
+                    <tr>
+                        <td>500 bases de datos: MariaDB o MySQL</td>
+                        <td>Bases de datos ilimitadas: MariaDB o MySQL</td>
+                    </tr>
+                </table>
+            </article>
+        </div>
     </main>
+    <footer>
+        <p>Creado por Elena Rodríguez Calderón</p>
+    </footer>
 </body>
 
 </html>

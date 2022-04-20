@@ -5,132 +5,161 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Cómo contratar un dominio</title>
 </head>
 
 <body>
-
-    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px;" id="mySidebar">
-        <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-        <a class="w3-bar-item w3-button" href="#home">Home</a>
-        <a class="w3-bar-item w3-button" href="#informacion-general">Información previa</a>
-        <a class="w3-bar-item w3-button" href="#lista-dominios">Dominios ya existentes</a>
-        <a class="w3-bar-item w3-button" href="#terminos-prohibidos">Términos prohibidos</a>
-        <a class="w3-bar-item w3-button" href="#normas-sintaxis">Normas de sintaxis</a>
-        <a class="w3-bar-item w3-button" href="#terminos-reservados">Términos reservados</a>
-        <a class="w3-bar-item w3-button" href="#contratar-dominio">Contratar un dominio</a>
-    </div>
-    <header id="home" class="w3-container w3-blue w3-main" style="margin-left:200px"">
-        <button class=" w3-button w3-blue w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+    <header id="home">
         <h1>Contratar un dominio</h1>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+                <li><a href='../index.html'>Home</a></li>
+                <li><a href='../inyeccion/index.html'>Inyección SQL</a></li>
+                <li><a href='../multicines/index.php'>WordPress</a></li>
+                <li><a class='dropdown-arrow' href='http://'>Otros ejercicios</a>
+                    <ul class='sub-menus'>
+                        <li><a href='../curriculum/index.html'>Curriculum</a></li>
+                        <li><a href='../calculadora/index.html'>Calculadora</a></li>
+                    </ul>
+                </li>
+                <li><a class='dropdown-arrow' href="#home">Contratar un dominio</a>
+                    <ul class='sub-menus'>
+                        <li> <a href="#informacion-general">Información previa</a>
+                        </li>
+                        <li> <a href="#lista-dominios">Dominios ya existentes</a>
+                        </li>
+                        <li> <a href="#terminos-prohibidos">Términos prohibidos</a>
+
+                        </li>
+                        <li> <a href="#normas-sintaxis">Normas de sintaxis</a>
+
+                        </li>
+                        <li> <a href="#terminos-reservados">Términos reservados</a>
+                        </li>
+                        <li> <a href="#contratar-dominio">Contratar un dominio</a>
+
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="w3-main" style="margin-left:200px">
-        <article id="informacion-general" class="w3-container">
-            <h2>¿Qué debo tener en cuenta antes de contratar un dominio?</h2>
-            <p>Cuando ya hemos decidido el nombre que queremos darle a nuestro dominio, antes de contratarlo primero hay
-                que
-                tener en cuenta los siguientes factores.</p>
-            <ul class="w3-ul w3-hoverable">
-                <li>Comprobar que no existe un dominio con ese nombre.</li>
-                <li>Que no esté incluído en la lista de términos prohibidos.</li>
-                <li>Comprobar que cumple las normas de sintaxis.</li>
-                <li>Comprobar que no se encuentra entre la lista de terminos reservados.</li>
-            </ul>
-            <p>Exploraremos cada uno de estos puntos en detalle a continuación.</p>
-        </article>
-        <article id="lista-dominios" class="w3-container">
-            <h3>¿Cómo sé que no existe ya un dominio con el nombre que quiero?</h3>
-            <p>Es muy sencillo, podemos acceder a la web de registro de dominios y buscar el dominio que queremos.</p>
-            <p>Existen múltiples páginas web que facilitan este servicio a través de buscadores. Por ejemplo: <a
-                    href="https://www.dominios.es/es">www.dominios.es</a></p>
-
-        </article>
-        <article id="terminos-prohibidos" class="w3-container">
-            <h3>¿Cuales son los términos prohibidos?</h3>
-            <p>Los términos prohibidos están basados en los siguientes supuestos:</p>
-            <ul class="w3-ul w3-hoverable">
-                <li>Es un nombre de dominio de segundo nivel que coindice con un nombre de dominio de primer nivel
-                    (tales
-                    como ".edu", ".com", ".gov", ".mil", ".uk", ".fr"...).</li>
-                <li>Es un nombre de dominio de segundo nivel que coindice con un término de Internet generalmente
-                    conocido.
-                </li>
-                <li>Es un nombre de dominio prohibido por Resolución Judicial.</li>
-                <li>Es un nombre de dominio prohibido por haber sido anteriormente objeto de ciberocupación.</li>
-                <li>Es un nombre de dominio prohibido por ser objeto de un procedimiento extrajudicial de conflictos, de
-                    un
-                    procedimiento judicial o de un procedimiento de cancelación.</li>
-                <li>Es un nombre de dominio ya solicitado cuya asignación no ha podido aún tramitarse por razones
-                    técnicas.
-                </li>
-            </ul>
-            <p>En el siguiente enlace, de donde hemos extraído la información anterior, podemos comprobar el Anexo I en
-                el que se indican todos los términos prohibidos con fecha de 12 de noviembre de 2005.</p>
-            <ul class="w3-ul">
-                <li><a href="https://www.dominios.es/sobre-dominios/normativa/Lista-terminos-prohibidos-120905">Lista de
-                        términos prohibidos</a></li>
-            </ul>
-        </article>
-        <article id="normas-sintaxis" class="w3-container">
-            <h3>¿Cuáles son las normas de sintaxis?</h3>
-            <p>Los únicos caracteres permitidos para un nombre de dominio son:</p>
-            <ul class="w3-ul w3-hoverable">
-                <li>Los pertenecientes al alfabeto español: de la "a" a la "z".</li>
-                <li>Los dígitos del 0 al 9.</li>
-                <li>El guión: "-" (No puede ser ni el primero ni el último carácter del nombre).</li>
-                <li>Caracteres multilingües: "á,à,é,è,í,ï,ó,ò,ú,ü,ñ,ç,l·l".</li>
-            </ul>
-            <p>No hay distinción entre minúsculas y mayúsculas.</p>
-        </article>
-        <article id="terminos-reservados" class="w3-container">
-            <h3>¿Cuáles son los términos reservados?</h3>
-            <p>Las listas de términos reservados que no podrán ser objeto de asignación libre, son tres:</p>
-            <ul class="w3-ul w3-hoverable">
-                <li>Nombres de dominio relativos a denominaciones de órganos constitucionales u otras instituciones del
-                    Estado, así como términos relativos a la Casa Real.</li>
-                <li>Nombres de dominio relativos a denominaciones de organizaciones internacionales y supranacionales
-                    oficialmente acreditadas.</li>
-                <li>Topónimos que coincidan con la denominación oficial de Administraciones públicas territoriales.</li>
-            </ul>
-            <p>Para más información, consulte el siguiente enlace:</p>
-            <ul class="w3-ul">
-                <li><a href="https://www.dominios.es/sobre-dominios/normativa#terminos-reservados">Listas de
-                        términos reservados</a></li>
-            </ul>
-        </article>
-        <article id="contratar-dominio" class="w3-container">
-            <h2>¿Cómo contrato mi dominio?</h2>
-            <p>Una vez que ya hemos comprobado que el dominio que queremos registrar no se encuentra registrado
-                previamente ni incumple las normas de sintaxis o incluye términos reservados o prohibidos, podemos pasar
-                a la parte de contratación de nuestro dominio. </p>
-            <p>Existen múltiples páginas web que permiten la adquisición de dominios. En <a
-                    href="https://www.dominios.es/">www.dominios.es</a> nos ofrecen una gran variedad de agentes
-                registradores con los que contratar nuestro dominio. Podemos acceder a ese listado desde el siguiente
-                enlace:</p>
-            <ul class="w3-ul">
-                <li><a
-                        href="https://www.dominios.es/agentes-registradores/nuestros-agentes-registradores#block-views-block-agentes-registradores">Listado
-                        de
-                        agentes registradores</a></li>
-            </ul>
-            <p>Puedes ver un ejemplo para contratar un dominio con <a href="https://www.ionos.es/">www.ionos.es</a> en
-                el enlace a continuación:</p>
-            <ul class="w3-ul">
-                <li><a href="./dominio-con-ionos.html">Contratar un dominio con IONOS.</a></li>
-            </ul>
-        </article>
+    <main id="contentliquid">
+        <div id="content">
+            <article id="informacion-general" class="w3-container">
+                <h2>¿Qué debo tener en cuenta antes de contratar un dominio?</h2>
+                <p>Cuando ya hemos decidido el nombre que queremos darle a nuestro dominio, antes de contratarlo primero
+                    hay
+                    que
+                    tener en cuenta los siguientes factores.</p>
+                <ul class="w3-ul w3-hoverable">
+                    <li>Comprobar que no existe un dominio con ese nombre.</li>
+                    <li>Que no esté incluído en la lista de términos prohibidos.</li>
+                    <li>Comprobar que cumple las normas de sintaxis.</li>
+                    <li>Comprobar que no se encuentra entre la lista de terminos reservados.</li>
+                </ul>
+                <p>Exploraremos cada uno de estos puntos en detalle a continuación.</p>
+            </article>
+            <article id="lista-dominios" class="w3-container">
+                <h3>¿Cómo sé que no existe ya un dominio con el nombre que quiero?</h3>
+                <p>Es muy sencillo, podemos acceder a la web de registro de dominios y buscar el dominio que queremos.
+                </p>
+                <p>Existen múltiples páginas web que facilitan este servicio a través de buscadores. Por ejemplo: <a
+                        href="https://www.dominios.es/es">www.dominios.es</a></p>
+            </article>
+            <article id="terminos-prohibidos" class="w3-container">
+                <h3>¿Cuales son los términos prohibidos?</h3>
+                <p>Los términos prohibidos están basados en los siguientes supuestos:</p>
+                <ul class="w3-ul w3-hoverable">
+                    <li>Es un nombre de dominio de segundo nivel que coindice con un nombre de dominio de primer nivel
+                        (tales
+                        como ".edu", ".com", ".gov", ".mil", ".uk", ".fr"...).</li>
+                    <li>Es un nombre de dominio de segundo nivel que coindice con un término de Internet generalmente
+                        conocido.
+                    </li>
+                    <li>Es un nombre de dominio prohibido por Resolución Judicial.</li>
+                    <li>Es un nombre de dominio prohibido por haber sido anteriormente objeto de ciberocupación.</li>
+                    <li>Es un nombre de dominio prohibido por ser objeto de un procedimiento extrajudicial de
+                        conflictos, de
+                        un
+                        procedimiento judicial o de un procedimiento de cancelación.</li>
+                    <li>Es un nombre de dominio ya solicitado cuya asignación no ha podido aún tramitarse por razones
+                        técnicas.
+                    </li>
+                </ul>
+                <p>En el siguiente enlace, de donde hemos extraído la información anterior, podemos comprobar el Anexo I
+                    en
+                    el que se indican todos los términos prohibidos con fecha de 12 de noviembre de 2005.</p>
+                <ul class="w3-ul">
+                    <li><a href="https://www.dominios.es/sobre-dominios/normativa/Lista-terminos-prohibidos-120905">Lista
+                            de
+                            términos prohibidos</a></li>
+                </ul>
+            </article>
+            <article id="normas-sintaxis" class="w3-container">
+                <h3>¿Cuáles son las normas de sintaxis?</h3>
+                <p>Los únicos caracteres permitidos para un nombre de dominio son:</p>
+                <ul class="w3-ul w3-hoverable">
+                    <li>Los pertenecientes al alfabeto español: de la "a" a la "z".</li>
+                    <li>Los dígitos del 0 al 9.</li>
+                    <li>El guión: "-" (No puede ser ni el primero ni el último carácter del nombre).</li>
+                    <li>Caracteres multilingües: "á,à,é,è,í,ï,ó,ò,ú,ü,ñ,ç,l·l".</li>
+                </ul>
+                <p>No hay distinción entre minúsculas y mayúsculas.</p>
+            </article>
+            <article id="terminos-reservados" class="w3-container">
+                <h3>¿Cuáles son los términos reservados?</h3>
+                <p>Las listas de términos reservados que no podrán ser objeto de asignación libre, son tres:</p>
+                <ul class="w3-ul w3-hoverable">
+                    <li>Nombres de dominio relativos a denominaciones de órganos constitucionales u otras instituciones
+                        del
+                        Estado, así como términos relativos a la Casa Real.</li>
+                    <li>Nombres de dominio relativos a denominaciones de organizaciones internacionales y
+                        supranacionales
+                        oficialmente acreditadas.</li>
+                    <li>Topónimos que coincidan con la denominación oficial de Administraciones públicas territoriales.
+                    </li>
+                </ul>
+                <p>Para más información, consulte el siguiente enlace:</p>
+                <ul class="w3-ul">
+                    <li><a href="https://www.dominios.es/sobre-dominios/normativa#terminos-reservados">Listas de
+                            términos reservados</a></li>
+                </ul>
+            </article>
+            <article id="contratar-dominio" class="w3-container">
+                <h2>¿Cómo contrato mi dominio?</h2>
+                <p>Una vez que ya hemos comprobado que el dominio que queremos registrar no se encuentra registrado
+                    previamente ni incumple las normas de sintaxis o incluye términos reservados o prohibidos, podemos
+                    pasar
+                    a la parte de contratación de nuestro dominio. </p>
+                <p>Existen múltiples páginas web que permiten la adquisición de dominios. En <a
+                        href="https://www.dominios.es/">www.dominios.es</a> nos ofrecen una gran variedad de agentes
+                    registradores con los que contratar nuestro dominio. Podemos acceder a ese listado desde el
+                    siguiente
+                    enlace:</p>
+                <ul class="w3-ul">
+                    <li><a
+                            href="https://www.dominios.es/agentes-registradores/nuestros-agentes-registradores#block-views-block-agentes-registradores">Listado
+                            de
+                            agentes registradores</a></li>
+                </ul>
+                <p>Puedes ver un ejemplo para contratar un dominio con <a href="https://www.ionos.es/">www.ionos.es</a>
+                    en
+                    el enlace a continuación:</p>
+                <ul class="w3-ul">
+                    <li><a href="./dominio-con-ionos.html">Contratar un dominio con IONOS.</a></li>
+                </ul>
+            </article>
+        </div>
     </main>
-
-    <script>
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-        }
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-        }
-    </script>
+    <footer>
+        <p>Creado por Elena Rodríguez Calderón</p>
+    </footer>
 </body>
 
 </html>

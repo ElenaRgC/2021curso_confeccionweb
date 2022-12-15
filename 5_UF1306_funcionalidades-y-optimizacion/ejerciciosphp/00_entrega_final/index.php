@@ -229,7 +229,7 @@ if ($enviarcorreo == false) {
     <?php
 } else {
     //Aqui viene la parte de enviar el correo, ya que entra cuando no hay que mostrar el formulario
-    $para = "elenarodriguezcalderon@gmail.com";
+    $para = "@gmail.com";
     $asunto = "FORMULARIO CONTACTO";
     
     // Se construye el cuerpo del correo como un documento con etiquetas HTML

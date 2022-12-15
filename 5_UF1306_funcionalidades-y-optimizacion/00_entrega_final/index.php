@@ -283,7 +283,7 @@ if ($enviarcorreo == false) {
     // Content-type para que el correo se formatee correctamente.
     $cabeceras  = 'MIME-Version: 1.0' . "\n";
     $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\n";
-    $cabeceras .= 'From: elenarodriguezcalderon@gmail.com';
+    $cabeceras .= 'From: @gmail.com';
 
     // Mensaje en caso de fallo en el envío y opción para volver a realizar el formulario.
     if (mail($para, $asunto, $descripcion, $cabeceras))
